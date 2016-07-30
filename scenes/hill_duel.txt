@@ -1,0 +1,977 @@
+*temp gained_height_advantage false
+*temp blinded false
+*temp hug_time 0
+*temp kissed false
+*temp arm_trapped false
+You know you're too slow to prevent this, so it's now or never.
+*choice
+	#Charge her before she gets the high ground.
+		*goto charge
+	#Let her have the high ground. You can still take her.
+		*goto lethave
+
+*label lethave
+Tamara races uphill, circles around you, and takes the high ground.
+
+"You really want to do this?" she barks.
+*choice
+	#"I'm just finishing what you started."
+		*goto finishing
+	#"I only drew to defend myself."
+		*goto defend
+	#"No, Tamara, this is crazy!"
+		*goto crazy
+
+*label finishing
+*label defend
+"Nobody laughs at me!" Tamara cries. "YOU started this."
+*choice
+	#"I'm sorry about that. I really am."
+		*goto sorryam
+	#"But it was just too funny!"
+		*goto funny
+	#"You drew on me, so if you're going to attack, stop talking and just do it already."
+		*goto attackalready
+
+*label sorryam
+"Why did you do it then?" Tamara demands.
+
+"Well," you say, "You've always presented such a strong image, so it was nice to see that you actually have a softer side. I didn't mean to laugh AT you, just that I was happy." It's not totally true, but it's partially true.
+
+Tamara seems to relax a little but is still on guard. "I'll put my sword away if you do likewise," she says finally.
+*choice
+	#Put your sword away.
+		*goto putswordaway
+	#Wait for her to put her sword away first.
+		*goto waitswordaway
+	#Tell her to put hers away first.
+		*goto tellswordaway
+
+*label putswordaway
+As soon as you start to put your sword away, Tamara shealths hers as well. Then she laughs. 
+*label stupidduel
+"This was the stupidest duel I have ever fought," she says. "What are we? Little children? Come sit by me, and let's talk."
+
+*temp down ""
+*if gained_height_advantage
+	*set down "down"
+You climb ${down} the hill and sit next to her.
+
+*goto parley
+
+*label waitswordaway
+She moves her sword toward her shealth, sees that you aren't moving yours, so she stops. You move yours a little closer to your shealth, so she moves hers a little closer. Inch by inch, the two of you gradually ease your swords back into their shealths, all the time eye-balling each other warily.
+
+Finally, the extreme silliness of it all becomes clear to both of you, and you laugh. 
+*goto stupidduel
+
+*label tellswordaway
+"Nay," Tamara says. "I would, but your request makes me suspect a trap."
+
+"Then we are at an impasse," you say.
+
+"Seems like," Tamara says, and the two of you continue to stare at each other, swords drawn.
+
+Tamara glares at you. You glare back. It turns into a staring contest. The minutes tick by, neither of you giving ground.
+
+Slowly, a grin begins to play at the corner of Tamara's lips, the utter stupidity of this battle of wills finally creeping into her consciousness. "Okay," she says, half-grinning, "I will move the tip of my sword one inch toward my scabbard. You do the same, and inch by inch, we will put our swords away."
+
+She moves her sword tip and inch. You move yours an inch. She moves hers another inch, and slowly but surely, you both find that your swords are easing back into their shealths, all the while, the two of you eye-balling each other warily. Finally, Tamara bursts out laughing.
+*goto stupidduel
+
+*label funny
+Good idea. You goad her, trying to make her angrier in order to make her more reckless. That was your intention, wasn't it? Not that you're just a big meanie?
+
+"I'll show you what else is funny," Tamara says and begins advancing upon you. She's moving with measured steps on the steep incline and uneven ground.
+*choice
+	#Stand your ground, ready to parry and counterattack.
+		*goto deadlyrain
+	#Back up, taunting her, hoping to make her charge.
+		*goto backuptaunt
+	#Charge uphill. It might catch her unawares.
+		*goto unawares
+
+*label backuptaunt
+You take a step back, careful not to trip on the uneven terrain.
+
+*label taunt
+"I always knew you were a weak little person," you sneer. "Your bawling just now only proves it."
+
+Tamara doesn't take the bait, makes no reply and merely continues her advance. Though her eyes are aglow with anger, you can see she's not stupid enough to let herself lose control, at least not yet.
+*choice
+	#Keep backing up and try to think of another taunt.
+		*goto moretaunt
+	#Time to man up. Stand and ready yourself for her assault.
+		Once within sword range, 
+		*goto deadlyrain
+
+*label moretaunt
+You can't think of anything in the spur of the moment, take another step, and because you were distracted, miss seeing a tree root, partially obscured by leaves. You stumble, and though you catch your balance, Tamara seizes the tiny gap in your defense, charging in.
+
+While you could have turned her charge to your advantage when you had stable footing, now your options are more limited.
+*choice
+	#Fall and then roll backwards. It will take you out of range.
+		*goto backroll
+	#Cry out, "No, Tamara, wait!"
+		*goto cryout
+	#Blindly lash out with your sword.
+		*goto lashout
+
+*label backroll
+Your roll takes you well out of the danger zone, and Tamara checks her advance, leaving a safe gap between you. The two of you stand facing each other, swords ready.
+*label backrollchoice
+*choice
+	#Try to make peace with her.
+		*goto peace
+	#Charge uphill.
+		*goto unawares
+	*disable_reuse #Wait for her to make a move.
+		*goto waitmove
+	#Try and circle around her to get the high ground.
+		*goto circle
+
+*label waitmove
+Tamara remains motionless, knowing this duel is stupid but too angry to make the first move toward contrition. She's waiting for you to make the first move, either in aggression or reconciliation.
+*goto backrollchoice
+
+*label circle
+Two can play the strategy game. You begin to circle her the same way she circled you to get the advantage, but Tamara moves to prevent you. With her greater agility, she manages to keep pace with you, and the two of you wind up maneuvering in a horizontal line across the hillside with you remaining just out of sword range downhill from her.
+
+"I can do this all day," Tamara says. "Make your move."
+*choice
+	#"Fight fair, you coward!"
+		*goto coward
+	#Make your move, charging uphill at her.
+		*goto makemove
+	#Try to make peace with her.
+		*goto peace
+
+*label coward
+"Proper strategy is not cowardice," Tamara says, not taking the bait, still matching you step for step. "But confusing the two is stupidity."
+*choice
+	#She's called you stupid for the last time. Attack!
+		*goto stupidattack
+	#"Be that as it may, I'm not the weak little person caught crying in the woods."
+		*goto weakcry
+	#Try to make peace with her.
+		*goto peace
+
+*label stupidattack
+Stupid is as stupid does.
+
+*label makemove
+You charge up the hill and engage Tamara in a sword-to-sword duel.
+
+*goto deadlyrain
+
+*label weakcry
+"You'll pay for that," Tamara says, "Just as soon as you have the balls to engage me. Who's the coward now?"
+*choice
+	#Show her you're no coward. Attack!
+		*goto cowardattack
+	#Try to make peace with her.
+		*goto peace
+
+*label cowardattack
+Well, you're definitely not a coward...
+
+You advance up the hill and engage Tamara in a sword-to-sword duel.
+
+*goto deadlyrain
+
+*label cryout
+You cringe defensively, holding your sword over your head in a desperate bid to block a coming strike you're not truly ready for. 
+
+Tamara, however, listens to your plea, and checks the downward movement of her sword, instead plowing her body into yours. Despite her smaller stature, because of your poor position, this bowls you over, and the two of you roll down the hill in a tight clinch.
+
+"Don't make me regret showing you this mercy," Tamara hisses. "Drop your sword now, or I will kill you!"
+*choice
+	#Drop your sword.
+		*goto dropsword
+	#Take advantage of her mercy. You may be on the bottom now, but with your superior size and strength, you ought to be able to win a wrestling match.
+		*goto takeadvantage
+	#Tell her to let go of you first.
+		*goto letgofirst
+
+*label dropsword
+*set tamara_respect %+10
+You honorably let go of your sword, though you suspect you could've eventually overpowered Tamara in a ground duel. Tamara holds her sword to your throat. "Do you surrender?" she asks, and you nod.
+
+She gets off you and moves to a sitting position up the slope from you, but in her haste, distracted by her anger, she leaves your sword next to you. You're able to pick it up again.
+
+*goto askapol
+
+*label takeadvantage
+*set pommelpummeled true
+*set tamara_respect %-40
+Tamara wraps her legs around you and holds your sword arm's wrist with one hand while she tries to pummel you with the butt of her sword's handle with the other.
+*choice
+	#Muscle your sword arm free.
+		*goto muscle
+	#Grab the wrist of her swordarm.
+		*goto grabhers
+	#Try to throw her off you or get on top of her.
+		*goto reversal
+
+*label muscle
+While trying to muscle your sword arm free, you can only block some of her blows. One smashes into your face, stunning you, and this gives Tamara the chance she needs. She lands several more vicious blows, and you lose consciousness. 
+
+You awaken later still lying in the same place where you were, but your sword is staked into the earth between your legs. Tamara is nowhere to be seen.
+*set duel_outcome "knockedout"
+*set tamara_enemy true
+*set with_tamara false
+*return
+
+*label grabhers
+Tamara manages to avoid your grasp, and because your hand is extended, she's able to cut your fingers with the blade. It's just a surface wound, but your hand is less functional now. Tamara is then able to put the blade of her sword against your throat.
+
+"Surrender or die, cur!" she sneers.
+*choice
+	#Surrender.
+		*goto surrenderground
+	#Die.
+		"Die!" you say, and Tamara doesn't hesitate to rake her blade across your throat.
+		
+		*goto end5
+
+*label surrenderground
+*set tamara_enemy true
+*set with_tamara false
+"Surrender," you say and raise your hands in submission.
+
+Tamara pushes your sword out of your grasp and carefully gets off you, only removing the blade of her sword from your throat when she's well out of range of a grab.
+
+"You took advantage of my mercy," she says. "We are no longer friends, and if I see you again, I will kill you."
+
+She turns around and walks away.
+
+*return
+
+*label reversal
+*set gained_height_advantage true
+*achieve height
+By pushing with your feet and arching your back, you're able to off-balance Tamara enough to reduce her attacks, but she still has a hold of your wrist. She manages to get one hit in, which stuns you, but you're able to turn over and get on top of her. She still has her legs wrapped around you, restricting your movement, but because your arms are stronger, you're able to trap her arms beneath your weight. Before you can turn this to your advantage, however, Tamara thrusts with both her legs against your hips, freeing herself. She scrambles out from under you, and you're both on your feet again, except this time you have the hill advantage.
+
+Tamara stands below you, breathing heavily, sword in her hand by her side.
+*choice
+	#Charge downhill. 
+		*goto chargedown
+	#Engage in swordplay while trying to prevent her from circling around to higher ground.
+		*goto swordplay
+	#Try to make peace.
+		*goto curpeace
+
+*label curpeace
+"You want to make peace now?" Tamara cries, aghast. "You just took advantage of my mercy. I should kill you. Kill you!"
+
+She speaks aggressively, but she doesn't move, still remains standing downhill from you.
+*choice
+	#Explain that you were just scared and were acting on instinct. You didn't mean to take advantage.
+		*goto explain
+	#"You were so angry that I thought you might kill me. I couldn't drop my sword just then, but I didn't mean to take advantage."
+		*goto neverkill
+
+*label explain
+"I guess that makes sense," Tamara says, "But supposing you got the upperhand, would you have killed me? You turned this silly fight into mortal combat when you took the first swing."
+*choice
+	#"If you kept fighting back with deadly force then yes. Otherwise, no."
+		*goto deadlyforce
+	#"No, of course not."
+		*goto notdeadly
+	
+*label deadlyforce
+"I can accept that," Tamara says, "But why did you laugh at me in the first place?"
+*goto laughchoice
+
+*label notdeadly
+"I hope you know I wouldn't have killed you either, even after your great insult. I didn't mean to fight you when I drew my sword. 
+*goto whydraw
+
+*label neverkill
+"I would never kill you," Tamara says. "I didn't even want to fight you. 
+*label whydraw
+Why did you draw your sword when I drew mine? I wasn't close enough to be a threat."
+
+*label whydraw2
+"Why did you draw yours???" you cry.
+
+"Look," Tamara says. "I was angry. It was a meaningless gesture. Why did you laugh at me?"
+*label laughchoice
+*choice
+	#"I'm sorry about that. I really am."
+		*goto sorryam
+	#"Because it was just too funny!"
+		*goto funnyup
+	
+*label funnyup
+*set gained_height_advantage false
+"I'll show you what else is funny," Tamara says and begins advancing, angling to the right again to regain the hill advantage. "I just said I wouldn't kill you. I lied."
+*choice
+	#Charge downhill. 
+		*goto chargedown
+	#Engage in swordplay while trying to prevent her from circling around to higher ground.
+		*goto swordplay
+
+*label chargedown
+You barrel down the hill, knowing that unless you act now, she'll likely be able to circle around to higher ground again. You get one attack before losing the height advantage, and just like at the very beginning of the battle, Tamara begins running to the side to circle around.
+*choice
+	#Attack her flank. It won't be a strong blow, but it has the best chance of hitting. 
+		*goto flank
+	#Skewer her as you barrel down on her from above.
+		*goto skewer
+	#Slam your body into her.
+		*goto bodycheck
+	#Attack straight on with a powerful downward stroke, maximizing your height advantage.
+		*goto downstroke
+
+*label swordplay
+It doesn't work. She's just too nimble, and Tamara manages to gain the higher ground again.
+
+*goto deadlyrain
+
+*label letgofirst
+Tamara sees that you're not fighting back, so slowly she eases her body off yours, all the while keeping her sword between you, blocking both a grab attempt or strike. Once out of range, she says, "Okay, now drop your sword."
+*goto dropswordchoice
+
+*label lashout
+Against a lesser opponent, a blind attack like that might've worked, but Tamara parries it easily. You regain your footing eventually but can never recover.
+
+*goto deadlyrain
+
+*label unawares
+Just before Tamara enters sword range, you charge. The slope slows you, but you still cross the distance quickly and slash at her legs. Tamara quickly ceases her advance and parries. 
+
+*goto deadlyrain
+
+*label attackalready
+"I never meant to actually fight you," Tamara says. "I drew my sword in anger, and it was a meaningless gesture. Why did you laugh at me?"
+*goto laughchoice
+
+*label crazy
+"Why did you draw your sword then?" Tamara asks.
+
+*goto whydraw2
+
+*label charge
+By running at an angle along the slope, you're able to reach Tamara with a slight height advantage, but after this attack, you will lose it. Tamara, running perpendicular to your charge, is forced to leave her right flank slightly vulnerable. She was smart enough to have run to her left, so now, her sword, being in her right hand, is on the side of her body that's facing you. She's holding it in a position where you don't yet know what she plans to do with it.
+*choice
+	#Attack her flank. It won't be a strong blow, but it has the best chance of hitting. 
+		*goto flank
+	#Skewer her as you barrel down on her from above.
+		*goto skewer
+	#Slam your body into her.
+		*goto bodycheck
+	#Attack straight on with a powerful downward stroke, maximizing your height advantage.
+		*goto downstroke
+
+*label flank
+Just as you enter sword range with her, you quickly change direction to slip behind her. This gives away the high ground, but for a brief moment, you can attack from the rear. Already Tamara is beginning to spin to turn and face you.
+*choice
+	#Attack her mid-section.
+		*goto midsection
+	#Attack her leg.
+		*goto leg
+
+*label midsection
+Tamara ducks lower than you though she could by lunging into a very deep stance and putting her left hand on the ground. She swings at you with her other hand.
+*choice
+	#Stand your ground and try to block it.
+		*goto standground
+	#Let gravity help move you back. You'll fall, but you'll be safe.
+		*goto fall
+
+*label standground
+Tamara's stroke is too low, and you are too close to properly defend. Her sword bashes into your shin, but it wasn't a strong stroke, mostly a defensive one. The cut hardly phases you.
+*choice
+	#Grab her sword arm while it's still extended.
+		*goto grabarm
+	#Move forward and slam her into the ground while she's in such a low, immobile stance.
+		*goto slam
+	#Aim a finishing blow to her body.
+		*goto aimbody
+	#Hit her vulnerably extended leg.
+		*goto vuleg
+
+*label grabarm
+You check her extended sword hand with your sword hand and manage to grab her wrist with your left.
+
+"Damn you!" Tamara cries, turns onto her back, and kicks out with both her legs into your mid-section.
+*choice
+	#Let go. You'll fall downhill, but you'll be safe.
+		*goto letgo
+	#Hold on. Her kicks won't hurt much. You might be vulnerable briefly, but after that, your sword arm will be free while hers isn't.
+		*goto holdon
+
+*label letgo
+Because you let go, Tamara's kicks do no damage, merely propelling you down the hill. You fall but manage to tuck and do a backward roll, returning to your feet. 
+
+Tamara also regains her feet, and the two of you stand facing each other, swords ready.
+*choice
+	#Try to make peace with her.
+		*goto peace
+	#Charge uphill.
+		*goto chargeuphill
+	#Taunt her.
+		*goto taunt
+	#Wait for her to make a move.
+		*goto waitmove
+	#Try and circle around her to get the high ground.
+		*goto circle
+
+*label peace
+"Why are we doing this, Tamara?" you say, trying to make peace. "Let's stop this foolishness."
+
+"You're only saying that because I'm at the advantage," she retorts and raises her sword to one side. "En garde!"
+*choice
+	#"I will still beat you even downhill!"
+		*goto talkback
+	#"No, Tamara. I don't want to fight anymore."
+		*goto nomore
+
+*label talkback
+"You can try," Tamara says and begins advancing down upon you.
+
+Even enraged, 
+*label deadlyrain
+Tamara fights with discipline, raining blows upon you with deadly precision, never over-extending herself. You do your best to block but can mount only a feeble counterattack. Perhaps on level ground, the two of you would be evenly matched, but here, Tamara presses her advantage for all its worth. In a little while, you begin to tire, and she manages a solid blow to your forearm, making you nearly drop your sword. Blood gushes from the nasty gouge, and after the searing pain, your arm goes numb. You could fight on, but you doubt you'd win. Tamara backs off slightly, her attacks coming a bit less furiously, enabling you to still block.
+*choice
+	#"Stop toying with me, Wench. Let's finish this!"
+		*goto toying
+	#Surrender.
+		*goto surrender
+
+*label toying
+With a bone-chilling glare, Tamara raises her sword. You lift yours to block, too weak to attack. Tamara swings in a cunning arc, bypassing your sword and slamming hers into your neck and shoulder. 
+
+It's a mortal wound, and you fall, finally defeated.
+
+*goto end5
+
+*label surrender
+"Tamara, enough," you say and lower your sword.
+
+Tamara, who had just been raising hers to attack again, checks her movement and quickly steps out of range. "You surrender?" she asks.
+*fake_choice
+	#Yes.
+*label askapol
+She studies you a moment, deciding how angry she still is. "Do you apologize for laughing at me?"
+*choice
+	#Yes.
+		*goto apollaugh
+	#"I apologize to no one. Do what you will."
+		*set tamara_enemy true
+		*set with_tamara false
+		"I should kill you right here," Tamara hisses coldly. "If I ever see you again, I will."
+		
+		She turns around and walks away.
+		*return
+
+*label apollaugh
+Tamara exhales with relief. "Okay," she says. "I'm still angry, but okay."
+
+She looks down at you for a moment, and you look up at her, both wondering what comes next.
+
+"And to think I was about to offer to make you my apprentice, to teach you dragonlore," she says ruefully. "Why did you have to do that?"
+
+She sits down on the side of the hill.
+
+"Drop your sword downhill and come talk to me," she says.
+*label dropswordchoice
+*choice
+	#"I drop my sword for no one. We can speak like this."
+		*goto refusedrop
+	#Do as she says.
+		*goto droptalk
+
+*label refusedrop
+*set tamara_enemy true
+*set with_tamara false
+"I could have just killed you!" Tamara says. "I could still kill you, and you have the nerve to talk back to me? I have nothing more to say to you."
+
+Tamara gets up and walks away.
+*return
+
+*label droptalk
+You put your sword on the ground and climb up to where Tamara's sitting. You notice she's still holding her sword and could easily swipe your head off.
+*choice
+	#Ask her to put her sword away.
+		*goto askaway
+	#Keep going. If she was going to kill you, she'd have done it already.
+		*goto trust
+
+*label askaway
+"No," Tamara says. "There's implicit trust between us, isn't there, since we shook hands this morning?"
+*choice
+	#"Then where's your trust, making me drop my sword?"
+		*goto wheretrust
+	#Trust her.
+		*goto trusther
+
+*label wheretrust
+"I'm following the rules of honorable combat," Tamara says. "The loser leaves his weapon to parley."
+
+You've never heard of such rules, but you suppose it makes sense. You continue climbing up to where Tamara's sitting, enter sword range, and sit downhill from her a few feet away.
+
+*goto parley
+
+*label trusther
+You hesitate only a moment before entering sword range and sitting downhill from her a few feet away.
+
+*label parley
+*set hill_duel_outcome "parley"
+*return
+
+*label trust
+You knowingly take your life into your own hands as you step into sword range, but Tamara doesn't attack, just keeps holding her sword, resting it against her shoulder. You sit downhill a few feet away.
+
+*goto parley
+
+*label nomore
+"Why did you laugh at me?" Tamara asks, face red with rage.
+*goto laughchoice
+
+*label holdon
+One of Tamara's feet slams into your stomach, and the other goes straight for your balls. You bend at the waist to absorb as much of the force as you can, but both blows still hurt. You're able to maintain your grip on her wrist.
+
+Tamara pulls herself forward, curling into a ball beneath you, making you too close to swing on her, though you could still draw back and stab. Closer now, she's able to begin to wrench her sword arm free, but for the time being, the advantage is still yours.
+*choice
+	#Fall upon her.
+		*goto crush
+	#Stab.
+		*goto stab
+
+*label crush
+*set arm_trapped true
+You trap Tamara's sword arm between your two bodies while yours is still free. Tamara's legs are wrapped around you, preventing you from drawing back to stab, but you could still try to place the blade against her throat.
+*choice
+	#Maneuver to place your blade against her throat.
+		*goto maneuver
+	#Pummel her with the butt of your sword's handle.
+		*goto pummel
+	#Bearhug her.
+		*goto bearhug
+	
+*label maneuver
+*if arm_trapped
+	*set arm_trapped false
+	Tamara sees she's at a disadvantage, so she places both feet against your hips and kicks strongly. This pushes you off her body freeing her sword arm, and you find yourself lying on your stomach downhill between her spread legs.
+	*goto maneuverchoice
+*else
+	Tamara sees she's at a disadvantage, so she places both feet against your hips and kicks strongly. This pushes you off her body, and you find yourself lying on your stomach downhill between her spread legs.
+*label maneuverchoice
+*choice
+	*disable_reuse #Enjoy the view.
+		That goes without saying. Now try something else.
+		*goto maneuverchoice
+	*disable_reuse #Perform cunnilingus.
+		Better not. She's about to clobber you. Still... it's very tempting...
+		*goto maneuverchoice
+	#Poke her with your sword. It won't be a strong attack, but it's something.
+		*goto poke
+	#Crawl back and away, sword ready.
+		*goto distance
+
+*label poke
+[This option is yet to be written.]
+
+*label distance
+[This option is yet to be written.]
+
+*label pummel
+*if arm_trapped
+	*set arm_trapped false
+	You rise up slightly in order to raise your sword arm, and this frees Tamara's arm. She lets go of her sword in order to push up on your chin, twisting your head upward and to one side, making it impossible to strike down with anything close to full force. You do get a few hits in, but instead of knocking her out, they only seem to enrage her further. You feel the fingers of her other hand snaking toward your eyes to poke at them.
+	*goto pummelchoice
+*else
+	As you rise up to raise your sword arm, Tamara pushes up on your chin, twisting your head upward and to one side, making it impossible to strike down with anything close to full force. You do get a few hits in, but instead of knocking her out, they only seem to enrage her further. You feel the fingers of her other hand snaking toward your eyes to poke at them.
+*label pummelchoice
+*choice
+	#Try to get off and away from her.
+		*goto getoff
+	#Keep pummeling.
+		*goto keeppummel
+	#Fight to get her hands away from your face.
+		*goto handsaway
+	
+*label getoff
+You try to rise, but it's difficult because Tamara's holding you with her legs. You manage to get to your feet, but just as you do, Tamara grabs you behind the heel and pulls, causing you to tumble backwards downhill. Tamara lets go with her legs, picks up her sword, and stands. She lets you get to your feet, as she's now well out of sword range, uphill from you.
+*goto backrollchoice
+
+*label keeppummel
+*set blinded true
+Tamara starts poking you in the eyes but seems to be holding back. Probably she could permanently blind you if she wanted, but even so, it hurts. Your eyes water, and temporarily, you can no longer see. You continue to try and hit her head with the hilt of your sword, but not being able to see, you fail to penetrate her defense.
+*choice
+	#Rise up and strike down hard with the hilt of your sword.
+		*goto riseup
+	#Try to get off and away from her.
+		*goto getoff
+	#Fight to get her hands away from your face.
+		*goto handsaway
+	
+*label riseup
+You rise up, and in so doing, free yourself from Tamara's hands on your face. You intend to strike down hard, crush any defense she can mount, and slam your hilt into her face, but before you can, the heel of her right foot slams into your chin. It doesn't knock you out, but you are stunned, enabling Tamara to scramble free.
+
+She stands uphill, her figure blurry through your watery eyes at first, but she waits until you can see again.
+*goto backrollchoice
+
+*label handsaway
+You get Tamara's hand off your chin and can now avoid further eye-gouges, allowing you to regain your vision. However, Tamara begins to rabbit punch you on the back of the head and hit your kidneys with her heels. Neither hurt you very much, but you better do something before the damage starts to add up.
+*choice
+	#Maneuver to place your blade against her throat.
+		*goto maneuver
+	#Bearhug her.
+		*goto bearhug
+	#Rise up and strike down hard with the hilt of your sword.
+		*goto riseup
+	#Try to get off and away from her.
+		*goto getoff
+
+*label bearhug
+*if arm_trapped
+	Your bearhug keeps Tamara's sword arm trapped, and her left arm, though still free, is ineffectual. She tries to rabbit punch you on the back of the head, but they're not strong blows. She also hits your kidneys with her heels, but this doesn't bother you much.
+	*goto hugchoice
+*else
+	You wrap your arms around Tamara, pulling her close, but she begins to rabbit punch you on the back of the head and hit your kidneys with her heels. Neither hurt you very much, but over time the damage will start to add up.
+*label hugchoice
+*choice
+	#Maneuver to place your blade against her throat.
+		*goto maneuver
+	#Pummel her with the butt of your sword's handle.
+		*goto pummel
+	#Kiss her.
+		*goto kiss
+	#Grow a boner.
+		*goto boner
+	#Just keep hugging her.
+		*goto keephugging
+
+*label kiss
+*if hug_time > 1
+	*set kissed true
+	Tamara fights against your kiss at first, but you keep your lips pressed against hers. She turns her head from side to side to try and get away, but she can't. Then you feel her melt beneath you, her lips purse, and she returns your kiss.
+	
+	"Let my arms free," she says.
+	*goto kissarms
+*else
+	Tamara thrashes her head violently from side to side to escape your lips. "How dare you!" she cries. 
+	
+	Her fist bashes into the side of your head, and though she's unable to put her weight behind it, it does jar you a bit. You grip on her eases just enough for her to free her sword arm, but she has to let go of her sword to do so. She presses up on your chin, wrenching you head up and to one side, and with the fingers of her other hand, she goes for your eyes.
+	
+	*goto keeppummel
+
+*label kissarms
+*choice
+	#Let her arms free.
+		*goto freearms
+	#Not just yet.
+		*goto nofreearms
+	
+*label freearms
+Tamara lets her sword fall by her side as her arms circle around you in an embrace.
+*label freearmschoice
+*choice
+	#Grow a boner.
+		*goto boner
+	#Keep kissing her.
+		*goto keepkissing
+	#Get off her.
+		*goto getoffkiss
+	
+*label keepkissing
+The two of you kiss for a long time.
+
+*goto dragonkiss
+
+*label getoffkiss
+You lift your body from Tamara's, and she releases the hold she has on you with her legs. She sits up and draws her knees to her chest, looking at you.
+*fake_choice
+	#Apologize for laughing at her. 
+		"I don't care about that anymore," Tamara says. 
+	#Ask why she was crying.
+		"Don't you know?" Tamara says.
+	#Ask if she wants to fight some more.
+		"No," Tamara says. "But if you want, you can stab me with your 'sword' again and again in a special place."
+*goto dragonkiss
+		
+*label nofreearms
+Tamara lets go of her sword and pushes to try and free her arm, but you don't let her.
+*choice
+	#Let her now.
+		*goto nowfreearm
+	#Still don't let her.
+		*goto stillnoarm
+	
+*label nowfreearm
+Tamara's arm snakes around your neck, and she runs her fingers through your hair as she kisses you.
+*goto freearmschoice
+
+*label stillnoarm
+Tamara relaxes her struggle and lets you keep her arm where you want it while the two of you continue to kiss.
+*goto freearmschoice
+
+*label boner
+*if (hug_time > 1) and (kissed)
+	*goto coming
+*else
+	"Eww!!!" Tamara screams, feeling your sex pressing against hers.
+	
+	Her fist bashes into the side of your head, and though she's unable to put her weight behind it, it does jar you a bit. You grip on her eases just enough for her to free her sword arm, but she has to let go of her sword to do so. She presses up on your chin, wrenching you head up and to one side, and with the fingers of her other hand, she goes for your eyes.
+	
+	*goto keeppummel
+	
+*label coming
+"I feel something growing between us," Tamara whispers, eyes closed, but a little sly grin on one side of her mouth.
+
+"Is it love?" you ask, grinning.
+
+"I think it's a little more cylindrical," Tamara laughs.
+
+You push your hips forward rhythmically a few times and feel yourself grow even more.
+
+"Don't stop," Tamara says, putting a hand on your tailbone and pulling toward herself.
+
+"Yesssss...." she breathes, feeling you push your now fully hard member against her sex. Her legs entwine with yours, and she stretches her body.
+
+*goto dragonsex
+
+*label keephugging
+*if hug_time = 0
+	Tamara keeps up the rabbit punches and kidney kicks, and though they don't hurt too much at first, powered by her fury, it starts to add up. 
+	*set hug_time +1
+	*goto hugchoice
+*elseif hug_time = 1
+	You're only a little light-headed, and yeah, you might pee red tomorrow. Tamara seems to tire, or maybe it's just that her rage is calming. Slightly. She keeps up the attacks with as much viciousness as she can muster.
+	*set hug_time +1
+	*goto hugchoice
+*elseif hug_time = 2
+	You struggle to minimize Tamara's little bee-sting-like blows, and your vise-like grip on her wavers only for a moment. However, that's all Tamara needs to free one arm and go for your eyes with her fingers. 
+	*goto keeppummel
+
+*label stab
+You move your sword into position to stab, but just before you can, Tamara swipes the heel of your right foot out from under you with her still free, left hand. As you tumble down the hill, she manages to wrench her sword arm free from your grasp and stand.
+
+Prone and downhill, with Tamara advancing upon you, do you continue the fight?
+*choice
+	#Surrender.
+		*goto surrenderprone
+	#Fight on.
+		*goto fighton
+
+*label surrenderprone
+"Stop! Tamara, stop!" you cry. "What are we doing?"
+
+Tamara stops just out of range of your weapon.
+
+"Nobody laughs at me!" she cries.
+
+She leaps into the air and raises her sword above her head.
+*choice
+	#Skewer her as she comes down.
+		*goto lyingskewer
+	#Block her blow and try to get to your feet.
+		*goto getup
+	#Do nothing and hope she decides to spare your life.
+		*goto spare
+
+*label lyingskewer
+*achieve ending5
+Tamara kicks out with one of her feet and dashes your sword out of the way, but it still rakes against her leg, opening a nasty-looking gash. Her blow, however, comes full force and cracks your skull wide-open, powered by her descent and her rage in equal measure.
+
+*label end5
+Thus ends your quest, a meaningless duel because you mocked a woman in her moment of vulnerability. Perhaps someone knows the fate that befell Princess Elsbeth and Juliette the knight, but it's not you. At least not in this life.
+
+You have reached Ending #5 of 5: Meaningless duel.
+
+THE END
+*page_break
+*ending
+
+*label getup
+Tamara's blow, powered by the downward force of gravity, is extra strong, but you still manage to block it. Uphill, with the advantage already, she allows you to get to your feet before continuing the duel.
+
+*goto deadlyrain
+
+*label spare
+You know you're at an extreme disadvantage, so all that's left is to beg for mercy. You drop your sword and raise your hands in surrender.
+
+Tamara checks her downward stroke at the last minute and lands on top of you, knocking the wind from your lungs. She puts her sword to your throat and sneers, "I should kill you right here!" She glares at you and fights the urge to kill you for a long moment before she finally calms. She gets off you, climbs the hill a ways and sits down.
+
+*goto askapol
+
+*label fighton
+You're only half on your feet when Tamara reaches you and never lets you regain your balance.
+
+*goto deadlyrain
+
+*label slam
+With your wounded leg, you're not quite fast enough. You do manage to get on top of Tamara and make her fall, but she kicks free, pulls herself up the hill, and stands once again.
+
+*label aimbody
+[This option is yet to be written.]
+
+*label vuleg
+[This option is yet to be written.]
+
+*label fall
+[This option is yet to be written.]
+
+*label leg
+[This option is yet to be written.]
+
+*label skewer
+[This option is yet to be written.]
+
+*label bodycheck
+[This option is yet to be written.]
+
+*label downstroke
+[This option is yet to be written.]
+
+*label dragonkiss
+A shadow passes overhead, momentarily darkening everything around you.
+
+"By the gods!" Tamara cries in a panicked whisper. "You made me angry enough that the dragon has found us. Quick, take off your pants!"
+
+*goto dragonwhy
+
+*label dragonsex
+A shadow passes overhead, momentarily darkening everything around you.
+
+"By the gods!" Tamara cries in a panicked whisper. "You made me angry enough that the dragon has found us."
+
+She quickly undoes her belt and pulls her breeches down to her ankles.
+
+"Fuck me," she whispers urgently. "Now!"
+
+*label dragonwhy
+"Why?" you whisper back confusedly.
+
+"We can hide from the dragon if we feel only positive emotions!" Tamara says, speaking quickly. "It obviously hasn't pinpointed our location because if it did, we'd be roasted by now. It's sensing our fear. Banish it from your mind by fucking me. Hurry!"
+
+You rip off your pants but find your manhood unfortunately shrunken and unable to perform.
+
+"Laugh!" Tamara commands. "Laugh at the irony of this situation. Remember, positive emotions only. Me, I like sucking dicks back to life. Not really, but today, yes. This is a happy day!"
+
+She literally flies at your crotch and takes your flaccid little member into her mouth. You feel it flopping all around inside her as her tongue goes to work on it, and it just doesn't return to life.
+
+"That's it. We're dead," you say apologetically.
+
+Tamara looks up at you, your cock falling from her mouth. She inhales deeply, closes her eyes, and a profound relaxation moves over her body. She opens her eyes, and looking right into yours says, "I'm going to lick your cock like the inside of a ripe mango." (Ten points if you know where that's from.)
+*choice
+	#Go for the ten points.
+		In what movie is the line, "I'm going to lick your cock like the inside of a ripe mango?"
+		*choice
+			#The Devil in Ms. Jones
+				"That's not iiiiiit!" (Ten points if you know where that's from.)
+				*choice
+					#Go for the ten points
+						*goto notit
+					#Just get me back to the sex scene already.
+						*goto dragonsex2
+			#Talk Dirty to Me
+				"That's not iiiiiit!" (Ten points if you know where that's from.)
+				*choice
+					#Go for the ten points
+						*goto notit
+					#Just get me back to the sex scene already.
+						*goto dragonsex2
+			#The Opening of Misty Beethoven
+				You must be a true connoisseur of vintage pornography!
+				
+				*achieve mango
+				*goto dragonsex2
+			#Ten Thousand Illustrious Fruitcakes
+				Huh? There was never a porno named that, was there???
+				
+				*goto dragonsex2
+			#Behind the Green Door
+				"That's not iiiiiit!" (Ten points if you know where that's from.)
+				*choice
+					#Go for the ten points
+						*goto notit
+					#Just get me back to the sex scene already.
+						*goto dragonsex2
+			#Caligula
+				"That's not iiiiiit!" (Ten points if you know where that's from.)
+				*choice
+					#Go for the ten points
+						*goto notit
+					#Just get me back to the sex scene already.
+						*goto dragonsex2
+	#Go back to the sex scene.
+		*goto dragonsex2
+*label notit
+What comedian said, "That's not iiiiiit?"
+*choice
+	#Bill Cosby
+		Sorry, no.
+		
+		*goto dragonsex2
+	#Eddie Murphy
+		Bingo! Yes.
+		
+		*achieve eddiemurphy
+		*goto dragonsex2
+	#Ellen Degeneres
+		Sorry, no.
+		
+		*goto dragonsex2
+	#Brittany Murphy
+		She did comedy?
+		
+		*goto dragonsex2
+	#Bing Crosby
+		Sorry, he was a singer, not a comedian.
+		
+		*goto dragonsex2
+	#Tamara the Generous
+		Right now she is. Very... but let's hope she doesn't say that.
+		
+		*goto dragonsex2
+			
+*label dragonsex2
+Slowly, without a care in the world, Tamara begins to run her tongue up and down your flaccid member, and she's so carefree that you relax too and get into it, forgetting for a moment there's a giant, fire-breathing lizard roaming the skies right above you. Your member grows again as long as you focus on Tamara, not the dragon.
+
+When you're marginally hard again, Tamara pushes you down and climbs on top of you, pushing you inside of her even though she's not very wet. You feel your member pushing into her dry hole, and then she begins to bounce up and down furiously.
+
+"Look at this!" she says and rips open her vest, her two breasts spilling forth and starting to bounce. It works. You aren't thinking about the dragon...
+
+That is, until it makes another pass.
+*page_break
+"Oh, hmmm... must be a big bird going by," Tamara says. "That's not scary or anything. You feel so good inside me. It's good. No negative emotions I'm feeling at all!"
+
+Soon, Tamara's inner walls wetten, and you're sliding in and out of her easily, as she continues to bounce up and down on you. Her breathing quickens as the pleasure fills her body, and she closes her eyes, concentrating only on that.
+
+You hear a roaring sound coming from somewhere above, and the trees in a nearby part of the forest burst into flame.
+
+"Ignore that," Tamara says, her voice strained from the sensations coursing in her body. A wave of heat reaches you, and Tamara says, "That's just the heat of our lust, nothing to worry about."
+*page_break
+She starts to move faster and faster. "Cover my mouth!" she cries. 
+
+You quickly cover her mouth with one hand, and hold the back of her head with the other as she explodes into a violent orgasm that rocks her whole body. You feel her thrashing on top of you, and all your strength is barely enough to prevent her from ripping free of your grasp.
+
+Finally, the spasms subside, and she lowers herself on top of you.
+
+"I think the dragon's gone," she says, "And I came."
+
+As if that wasn't obvious.
+
+"You didn't finish, did you?" she says. "Impressive." 
+
+Yeah, fear will do that to you.
+
+She climbs off you. "We better get going," she says, pulling her breeches on, and you watch her luscious sex disappear again under her breeches. "The fire might head our way."
+
+She picks up her sword and starts walking away, putting her breasts back in her vest and re-tying the strings.
+
+"Are you coming?" she asks.
+
+You wish.
+
+"Look," she says. "We really gotta get going, and well, this was just a one time thing. It was just to save us from the dragon, and we need to maintain a professional relationship. Save the lust you're feeling now for the princess. Yes? Now come on!"
+
+She walks away.
+*page_break
+
+*set hill_duel_outcome "dragon"
+*return

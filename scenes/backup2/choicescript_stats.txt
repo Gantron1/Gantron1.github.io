@@ -1,0 +1,31 @@
+*label stats
+
+*temp numRels 0
+[b]Relationships[/b]
+*if met_el
+	*set numRels +1
+	*stat_chart
+		percent rel_el Ella
+*if met_d1
+	*set numRels +1
+	*stat_chart
+		percent rel_d1 Jennifer
+*if met_d2
+	*set numRels +1
+	*stat_chart
+		percent rel_d2 Rebekah
+*if numRels = 0
+	None yet
+
+[b]Other Options:[/b]
+*choice
+	#The artists behind the images contained in this game
+		*goto attributions
+	#Return to the game
+		Click "Next" below to return to the game. You can also click the "Return to the Game" button at the top of the screen.
+		*finish
+	
+*label attributions
+
+*page_break
+*goto stats

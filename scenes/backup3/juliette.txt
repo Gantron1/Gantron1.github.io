@@ -1,0 +1,149 @@
+*temp wary false
+
+Tamara wakes you up just before dawn by nudging you in the ribs.
+*choice
+	#Have morning sex.
+		*goto morningsex
+	#Ask her what she wants.
+		*goto whatwants
+		
+*label morningsex
+You notice you have morning wood, so it's just a simple matter of slipping into her and...
+
+"There's no time for that," Tamara says. "We need to get up early to catch up with Juliette at her special morning time."
+*choice
+	#"Can't we have sex first?"
+		*goto cantsex
+	#"But it's too eeeaaarly!"
+		*goto early
+		
+*label cantsex
+"No we can't," Tamara says, already up and getting dressed. She kicks you with her foot.
+
+*goto hike
+
+*label early
+"Don't be a cry-baby," Tamara says, already up and getting dressed. She kicks you with her foot.
+
+*goto hike
+
+*label whatwants
+"We need to get up early to catch up with Juliette at her special morning time," Tamara says, already up and getting dressed. She kicks you with her foot.
+
+*label hike
+The crisp morning air refreshes you as you follow behind Tamara, resuming your march uphill. Your muscles are a bit sore, but not too bad.
+
+You and Tamara share your smoked pork and beef jerky while walking in silence and the morning mist. All you hear is the regular crunch-crunch of the pine needles under your feet.
+
+After perhaps an hour, the dim, near darkness gives way to rosy dawn, but the chill lingers in the air. Tamara motions for you to be quiet, and carefully, the two of you creep from tree to tree until finally Tamara says, "There she is."
+
+You peer around the tree the two of you are hiding behind and see Juliette still sleeping next to a small fire.
+
+Tamara nudges you. "Seduction time," she whispers. "Go!"
+*choice
+	#Approach the sleeping Juliette.
+		*goto approach
+	#Tell Tamara you want to wait until Juliette awakens.
+		*goto nosneak
+	
+*label approach
+How do you approach?
+*choice
+	#Sneak up and join Juliette under her blanket.
+		*goto join
+	#Hail her.
+		*goto hail
+	
+*label join
+*set wary true
+You get perhaps ten feet from Juliette when she bursts awake and leaps to her feet. Out of the corner of your eye, you see Tamara smack herself on the forehead and mutter something about your stupidity to herself.
+
+Juliette's still in her armor, and apparently even sleeps in her helm. She whips out her sword but her shield is still propped against a log near the fire.
+
+"State your business, cretin," she demands, but already she's advancing on you.
+
+Tamara shows herself, causing Juliette to cease her advance.
+
+"We come as friends," Tamara says.
+
+"Why send your compatriot forward in stealth then," Juliette says, eyes narrowed suspiciously as she retreats a few steps and picks up her shield.
+
+"Yeah, why?" Tamara says, looking at you. 
+*choice
+	#"Um, you looked lonely sleeping there all by yourself?"
+		*goto lonely
+	#"Banes said we could make friends with you by seducing you?"
+		*goto banessaid
+	#"Um, uh..."
+		*goto umuh
+	
+*label lonely
+"And you thought you'd keep me company, I presume?" Juliette says disgustedly. "I should slay you where you stand."
+
+Tamara steps in front of you and shoves you behind her. "I apologize for him," she says. "He means well but gets crazy ideas sometimes. Why just yesterday, he was... Well, never mind that. Suffice it to say he did many unusual things yesterday.
+
+"Didn't you?"
+*temp nothingscount 0
+*label lonelychoice
+*choice
+	#Say nothing.
+		*if nothingscount = 0
+			"Didn't you?" Tamara says again.
+			*set nothingscount +1
+			*goto lonelychoice
+		*else
+			"DIDN'T YOU?" Tamara says, glaring at you.
+			*set nothingscount +1
+			*goto lonelychoice
+	#"Yes."
+		*goto tamaratakesover
+	
+*label banessaid
+"You met Banes?" Juliette asks. After a pause, she says, "And he said WHAT???"
+
+"Yes, we met Banes," Tamara says, stepping in front of you and shoving you behind her. "But, noooo, he did not say anything of the kind. You'll have to forgive my compatriot here. He confuses fantasy with reality.
+
+"Don't you?"
+*temp nothingscount 0
+*label banessaidchoice
+*choice
+	#Say nothing.
+		*if nothingscount = 0
+			"Don't you?" Tamara says again.
+			*set nothingscount +1
+			*goto banessaidchoice
+		*else
+			"DON'T YOU?" Tamara says, glaring at you.
+			*set nothingscount +1
+			*goto banessaidchoice
+	#"Yes."
+		*goto tamaratakesover
+
+*label umuh
+[This option is yet to be written.]
+
+
+
+*label hail
+[This option is yet to be written.]
+
+*label wait
+[This option is yet to be written.]
+
+*label tamaratakesover
+"We met Banes shortly after Chardell," Tamara says. "He told us of your quest, and as it is our quest as well, we endeavored to catch you. Perhaps we can join forces?"
+
+Juliette looks the both of you over.
+
+*if wary
+	"I decline," she says. "Leave now, and I will not consider us enemies."
+	
+	*goto noinvite
+*else
+	"I thank you for your offer," Juliette says, "But I'm sorry. I must decline. However, perhaps you would care to join me in breakfast? Even here, in the wilds, we can, after all, enjoy civilized behavior."
+	
+*label breakfast
+
+*label noinvite
+[This option is yet to be written.]
+

@@ -1,0 +1,13 @@
+@startuml
+state tryfind {
+tryfind: You hurry forward in the direction she ran, but there's no sign of her.
+KeepLookingOption -> KeepLookingText
+}
+
+state KeepLookingText {
+KeepLookingText: You charge through the...
+keeplooking -> keeplookingtext
+ReturnToCamp -> lost
+}
+
+@enduml

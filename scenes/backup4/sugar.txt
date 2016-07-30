@@ -1,0 +1,30 @@
+"Give me some sugar," Tamara says, abruptly stopping next to a tree.
+
+"What?"
+
+"I said give me some sugar," she repeats.
+
+"I heard you, but... you can't mean..."
+
+"Look," Tamara says, "We're going to catch up with Juliette soon, and when that happens, I want you to focus all your amorous attention on her. ALL. Got it? So now, THIS ONE TIME, I'm asking you to break our master-apprentice deal and GIVE ME SOME SUGAR!"
+
+She roughly pushes you down onto your knees in front of her, undoes her belt buckle, and pulls her breeches down as far as they'll go without taking off her knee-high boots. She spreads her legs as wide as she can, exposing her luscious sex, inches from your face.
+
+*temp honeypot false
+*if has_honey
+	*set has_honey false
+	*set honeypot true
+	*achieve honeypot
+	You're about to dive in when she says, "Give me your honey," and begins rifling through your pack. She pulls it out and smears it all over her twat, even pushing some inside it.
+	
+"Okay, go," she says 
+*if honeypot
+	*set honeysugar true
+	and pulls your face right into the honey. You begin to lick at the honey, and Tamara urges you on. "Harder!" she whispers, and you begin making strong lapping motions, pushing hard with your tongue to scrape as much honey off her outer labia as possible. 
+	
+	"Yes, like that!" Tamara says, her voice already showing strain. "Like that everywhere."
+	*goto lap
+*else
+	*set nohoneysugar true
+	and pulls your head forward until your mouth is on her sex, already warm and moist. Your tongue slips easily inside her, exploring that most secret of places your cock is much more suited to.
+	

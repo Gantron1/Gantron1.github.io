@@ -1,0 +1,178 @@
+*if jul_alliance
+	*goto alliancestart
+*else
+	*goto noalliancestart
+
+*label noalliancestart
+The three of you walk in uncomfortable silence for a good half-hour, and all the while, DragonKeep looms larger and larger until it's towering above you, silent and foreboding.
+
+"The hidden entrance lies within a narrow crack near here," Tamara says. "The vaulted entrance is around on the other side, just up ahead."
+
+"Our fates seem bound," Juliette says, still refusing to meet either of your eyes. "My plan is to issue declaration of challenge upon the entry bridge. You will enter the back way?"
+
+While the two women talk, you suddenly sense something, something very not good...
+*page_break
+Your thoughts had wandered, and you looked at DragonKeep, then thought of the dragon itself. Suddenly, you remembered the mystic awareness granted you by the dragoneye, and you felt a stirring that seemed at once deep within yourself as well as the mountain.
+
+The tension in the air because of the weird liaison earlier... you sense it hanging like a fog around you. There's almost an acrid smell to it, a smell that wafts even to the heights of DragonKeep, to the dragon itself!
+
+Then, with your mind's eye, you sense flying, searching... 
+
+"The dragon's coming!" you cry.
+
+Tamara concentrates, then gasps.
+
+"Good gods, he's right," she says with horror. "Quick! Into the crack."
+*page_break
+Like a flash, Tamara's off, skittering silently over the rocky slope, through the last of the trees before the sheer granite face of the foot of DragonKeep. 
+
+Already she slips within, you following close behind, having learned the silent step well. Juliette, despite her load, is only a shade behind you, though her mailed feet crash loudly, metal against stone, with every step. You cringe, but it can't be helped.
+*page_break
+The crack, only a few feet wide, runs the entire height of the mountain, as if it were a solid mass of granite that at one point in the distant past split in two under some unimaginable force.
+
+Though filled with shale, you easily climb in, seeing that it extends upward and inward, perhaps even to the heart of the mountain.
+
+Juliette's armor clatters against the sides, but she gets in.
+*page_break
+"We're sitting ducks," Juliette hisses, gazing out the crack. "One breath from above the trees and we're roasted. Why did you bring us here?"
+
+"To roast, the dragon must find," Tamara says. "To hide, we must... Well, apprentice, tell her. What must we do?"
+*fake_choice
+	#"Get rid of all negative emotion."
+"That's right," Tamara says. "All fear. All anger. Even your aggression, Juliette."
+
+"Not possible," Juliette says. "I'm going out."
+
+Tamara rips open the front of her vest.
+*page_break
+Juliette, who just the moment before had been fully resolved to striding forth and facing the dragon here and now, does a double-take and hesitates, eyes glued to Tamara chest.
+
+"What are you doing?" she asks, brow creasing, but her eyes never leave Tamara's now naked flesh.
+
+"Come and get it," Tamara says.
+
+Juliette hesitates only a moment longer before saying, "Weeell, I suppose this area is not strategically optimal..."
+
+She glances up at the narrow, towering walls.
+
+"The dragon could merely rain fire from above, and this confined space would funnel it directly upon us on all sides," she muses.
+
+"Or crush us in an avalanche. Now get your ass over here!" Tamara cries.
+*page_break
+*goto threesome
+
+*label alliancestart
+The three of you walk for another half-hour in the foreboding shadow of DragonKeep, the stuff of nightmare and legend, finally arriving just before the very foot of the mountain, a sheer cliff-face that ascends another thousand feet, fully unscalable.
+
+*if crack_quip
+	"See this giant crack?" Tamara says, pointing to the cliff, and you can barely make out a narrow crack running up the entire side of the otherwise faultless granite. "It's only a few feet wide, so much smaller than my apprentice's."
+
+	What?!?
+
+	"Yeah, and within, after a short, non-technical climb is the secret entrance, only hinted at in lore, which is more than I can say for my apprentice's 'secret, rear entrance,'" Tamara says, nary cracking a smile.
+
+	WHAT?!?
+
+	"My idea is that apprentice, if he can stow his homophobia long enough, enter this way, rescue Princess Elsbeth, and flank the dragon while you and I, Juliette, proceed to the front. Come, I will show you the way into the crack."
+
+*if not(crack_quip)
+	"Look there," Tamara says, pointing at the sheer granite cliff. "Can you see the vaguest vertical line? That is the nearly unknown crack that leads to the secret entrance mentioned in rare, nearly forgotten lore. My idea is that apprentice enter this way to rescue Princess Elsbeth and flank the dragon while you and I, Juliette, proceed to the front. Come, I will show you the way into the crack."
+
+You take a few steps forward when Tamara turns again.
+
+"I need not remind you," she says. "We are very close to the lair, and the dragon is watching. We can remain therein until its attention lapses again, hiding, but remember, at this range, the slightest whiff of anger or brush of metal on stone... it WILL sense it and come for us, except when its attention lapses."
+
+"How often are these lapses, and how long do they last?" Juliette asks.
+
+"Between one and three per day, on average," Tamara replies. "One time it was as much as four, but they were shorter that day and oddly spaced. Most days they are longer and evenly spaced. I'd guess we need only wait an hour or two this time, and it might give us a window of an hour, though sometimes it's two or three. One should be enough for what we have to do."
+
+While the two women talk, you suddenly sense something, something very not good...
+*page_break
+Your thoughts had wandered, and you looked at DragonKeep, then thought of the dragon itself. Suddenly, you remembered the mystic awareness granted you by the dragoneye, and you felt a stirring that seemed at once deep within yourself as well as the mountain.
+
+The tension in the air because of the weird liaison earlier... you sense it hanging like a fog around you. There's almost an acrid smell to it, a smell that wafts even to the heights of DragonKeep, to the dragon itself!
+
+Then, with your mind's eye, you sense flying, searching... 
+
+"The dragon's coming!" you cry.
+
+Tamara concentrates, then gasps.
+
+"Good gods, he's right," she says with horror. "Quick! Into the crack."
+*page_break
+Like a flash, Tamara's off, skittering silently over the rocky slope, through the last of the trees before the sheer granite face of the foot of DragonKeep. 
+
+Already she slips within, you following close behind, having learned the silent step well. Juliette, despite her load, is only a shade behind you, though her mailed feet crash loudly, metal against stone, with every step. You cringe, but it can't be helped.
+*page_break
+The crack, only a few feet wide, runs the entire height of the mountain, as if it were a solid mass of granite that at one point in the distant past split in two under some unimaginable force.
+
+Though filled with shale, you easily climb in, seeing that it extends upward and inward, perhaps even to the heart of the mountain.
+
+Juliette's armor clatters against the sides, but she gets in.
+*page_break
+*if jul_alliance
+	*goto crackalliance
+*else
+	*goto nocrackalliance
+
+*label crackalliance
+"We will be safe here?" Juliette asks.
+
+"It's uncertain," Tamara says, glancing about and quickly assessing the tactical layout of the place. "If we climb higher in, it will see us, but here, we have lost, somewhat, the shelter of the trees. If it passes very near, we are doomed, but at least we will be safe from the forest fires of its random breath attacks. That's how The Merrie Knights perished to the last man."
+
+A shadow fills the crack briefly.
+
+"That was close," Tamara says. "The dragon's circling near here. I think we must execute the strategy of last resort. Everyone, take off your clothes.
+*page_break
+starthere
+*page_break
+*goto threesome
+
+*label nocrackalliance
+"We're sitting ducks," Juliette hisses, gazing out the crack. "One breath from above the trees and we're roasted. Why did you bring us here?"
+
+"To roast, the dragon must find," Tamara says. "To hide, we must... Well, apprentice, tell her. What must we do?"
+*fake_choice
+	#"Get rid of all negative emotion."
+"That's right," Tamara says. "All fear. All anger. Even your aggression, Juliette."
+
+"Not possible," Juliette says. "I'm going out."
+
+Tamara rips open the front of her vest.
+*page_break
+Juliette, who just the moment before had been fully resolved to striding forth and facing the dragon here and now, does a double-take and hesitates, eyes glued to Tamara chest.
+
+"What are you doing?" she asks, brow creasing, but her eyes never leave Tamara's now naked flesh.
+
+"Come and get it," Tamara says.
+
+Juliette hesitates only a moment longer before saying, "Weeell, I suppose this area is not strategically optimal..."
+
+She glances up at the narrow, towering walls.
+
+"The dragon could merely rain fire from above, and this confined space would funnel it directly upon us on all sides," she muses.
+
+"Or crush us in an avalanche. Now get your ass over here!" Tamara cries.
+*page_break
+*goto threesome
+
+*label threesome
+[This option is yet to be written.]
+
+*label explanation
+*comment For after crack sex scene.
+"Why did the dragon come out?" Juliette asks. "Did it sense something?"
+
+"Oh, I'm sure it has been sensing us for days, and thus engaged in daily sorties. It could also be that, well, most humans have poor mental hygiene. We are thinking all the time, so if I, for example, had the passing thought of all the gold and felt greed, or you, Juliette, if you envisioned the coming battle in your mind and felt aggression... or apprentice, if you glanced at Juliette and happened to feel lust, knowing your advances would be repulsive but entertained the them anyway... such things might've been enough to give the dragon a vague sense, enough to launch a search. Luckily, they don't leave their horde for long, not when the horde has grown so large, both in treasure and maidens."
+
+"How many maidens, do you think?" you ask.
+
+"More than you could handle," Tamara quips. "Don't count your chicks, apprentice. Put the horse before the cart, for this is a rooster to be reckoned with."
+
+"But approximately how many maidens?" Juliette asks.
+
+Tamara shakes her head and walks off. 
+
+"You guys think of only one thing," she mutters.
+
+*comment Maybe after whole thing, part of epilogue, find the Merrie Knights' bodies. Tam went back a longer way, having the leisure now, hoping to find a magic sword one was rumored to have, but the area is picked clean. The talking sword of Djornal.

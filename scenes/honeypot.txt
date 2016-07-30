@@ -1,0 +1,498 @@
+"Ohh! Look, a beehive," Tamara says suddenly, pointing into the boughs of a nearby tree. Indeed, you see a beehive up there.
+*choice
+	#You like honey, but it's not worth getting stung.
+		*goto notworth
+	#"What about it?"
+		*goto whatabout
+	
+*label notworth
+You continue on, and the hive is not mentioned again.
+
+*return
+
+*label whatabout
+"Oh, nothing, nothing," Tamara says, but she gives the hive a wistful glance as you pass it.
+
+"What? Do you like honey or something?" you ask.
+
+"Yes, but we can't stop for silly things like that, can we?"
+*choice
+	#"How much do you like honey?"
+		*goto howmuch
+	#Agree and continue on.
+		The two of you continue on, and the hive is not mentioned again.
+		
+		*return
+		
+*label howmuch
+"A lot," Tamara says, "But stop talking about it!" She glares at you with her piercing green eyes, and her intensity almost scares you. You better not talk about it anymore.
+*choice
+	#Keep talking about it.
+		*goto keeptalking
+	#Stay silent.
+		The two of you continue on, and the hive is not mentioned again.
+		
+		*return
+		
+*label keeptalking
+"Okay, dammit!" Tamara says. "My weakness is honey. Smear some on me, and I'll let you lick it off."
+
+"Smear some on you where?" you ask.
+
+"Anywhere, but there's no time now. 
+*if had_pro_talk
+	Remember our little talk? Put it OUT of your mind."
+	
+	*goto keeptalking2
+*else
+	Even if there was, you and I have a professional relationship, so I expect there to be NO funny business between us. Understand?"
+	*set had_pro_talk true
+
+*if not (has_honey)
+	You kick yourself. If only you hadn't eaten the last of your honey at breakfast!
+	
+*label keeptalking2
+*choice
+	*selectable_if (has_honey) #"I have some honey!"
+		*goto hashoney
+	*if (not (has_honey)) #Sneak back later, climb the tree, and get some honey.
+		*goto sneakback
+	*if (not (has_honey)) #Stay focused on the journey.
+		*goto focus
+	*if (has_honey) #Better not mention that you have honey.
+		*goto focus
+	
+*label hashoney
+"You do???" Tamara says, eyes wide with excitement at first, but she quickly controls herself. "Well, good for you. Make sure you eat it. We don't need any temptation."
+
+She seems pensive and upset now, increases her pace, and just concentrates on looking at the ground.
+*choice
+	#Show her the honey. (Ten points if you know where that's from.)
+		*goto showhoney
+	#Ask nicely.
+		*goto ask
+	#Smear honey on her boobs.
+		*goto smear
+	
+*label showhoney
+*set has_honey false
+You "show her the honey."
+
+"That's nice," Tamara says and bats the honey from your hand. It falls to the ground, gets dirty, and now you have no more honey.
+*temp moneyquestion
+*temp moneyhint 0
+*temp another "a"
+*choice
+	#Continue on.
+		*goto focus
+	#Answer the question for ten points.
+		*label moneyquestion
+		*if moneyhint = 1
+			*set another "another"
+			*goto moneyquestion2
+		*elseif moneyhint = 2
+			*set another "yet another"
+		*label moneyquestion2
+		What is your final answer?
+		*input_text moneyquestion
+		*if moneyquestion = "Jerry Maguire"
+			*achieve money
+			Yes! Ten points for you!
+			*page_break
+			*goto focus
+		*else
+			Sorry that is not the correct answer. Try again?
+			*choice
+				#Yes.
+					*goto moneyquestion
+				#Yes, but I need ${another} hint.
+					*set moneyhint +1
+					*if moneyhint = 1
+						HINT: Exact capitalization is important.
+						
+						*goto moneyquestion
+					*elseif moneyhint = 2
+						HINT: It's a movie.
+						
+						*goto moneyquestion
+					*elseif moneyhint = 3
+						HINT: Cuba Gooding Jr. is in it.
+						
+						*goto moneyquestion
+					*else
+						All three hints:
+						
+						1. Exact capitalization is important.
+						*line_break
+						2. It's a movie.
+						*line_break
+						3. Cuba Gooding Jr. is in it.
+						
+						*goto moneyquestion
+				#No.
+					*goto focus
+
+*label ask
+"No, no, no, dammit, no!" Tamara shouts, stomping her feet.
+
+I guess that's it then.
+
+*goto focus
+
+*label smear
+*set has_honey false
+*set slapped_honey true
+You carefully take out your honey, making sure Tamara doesn't see. You sneak up behind her, and...
+*page_break
+SLAM! You slap the honey right on her chest!
+
+"Oh no, you didn't!" Tamara cries as the honey begins to ooze between her luscious globes. "This vest cost 10,000 gold pieces!" She quickly unties its strings and rips it open, and the honey continues to travel down her body onto her stomach. Her honey covered breasts stand before you in all their heavenly glory.
+
+"Well?" Tamara says. "Are you going to finish what you started or not?"
+
+"Really?" you stammer.
+
+"Yes," Tamara says. "It's my fetish, but don't get any funny ideas. After this, nothing changes, got it?"
+*choice
+	#Go at it!
+		*goto lick
+	#Ask her to lie down first.
+		*goto liedown
+	
+*label lick
+You can't believe such a fierce woman would allow it, but she lets you come right up to her and put your face right into her bosom. 
+*choice
+	#Put your arms around her to hold her steady.
+		*goto steady
+	#Better not touch her without permission.
+		*goto permission
+	
+*label steady
+You gently place your hands on Tamara's shoulder blades, wondering if she will allow it or not.
+
+She allows it!
+
+You bend and begin licking the honey from Tamara's breasts. Her hands reach around and pull your face into her body, smearing it with honey. "That's what you get for being naughty," she says.
+*page_break
+*label dripdown
+"Oooh!" she says and begins undoing her belt. You look down and realize the honey has flowed down her body and has reached her navel. She pulls down her breeches just in time, for the honey is beginning to flow past her navel toward her mound of venus.
+
+"Now look what you have to do," she says and pushes you down her body until you're on your knees. Her sex is right before you, but the honey has not yet reached it.
+*choice
+	#Put your tongue on her sex, waiting for the honey to come. (Either one.)
+		*goto tongueon
+	#Dab at her navel with your tongue.
+		*goto dab
+	#Stand back up to finish her boobs first.
+		*goto stand
+	
+*label tongueon
+Neither one comes just yet, though Tamara's sex is engorged and overflowing copiously. She pulls your head off of her. "There's no honey there," she says. 
+
+Reluctantly, you depart from heaven and go to the purgatory of her navel. 
+
+*goto dab
+
+*label dab
+"Yesss..." Tamara purrs as you begin dabbing at her navel with your tongue.
+
+First you clean the honey from its rim, and as you start to push your tongue further in, she giggles. "It tickles, but I like it," she says, holding your head hard against her belly. It's warm from the exertion of the hike, and you can feel her muscles tensing and relaxing as well as the rise and fall of her breath. You look up, and her chest is heaving. You time your licks to the mesmerizing rhythm of the rise and fall of her breasts, working your way back up to them when all the honey is gone from below.
+
+"Oh gods," Tamara moans when your tongue plays over her breasts again. "That feels so good."
+
+She falls to her knees, taking you with her, her hands holding your head tight against her chest. She cradles it like a baby as you finish your ministrations, finally finding no more honey no matter where your tongue roves.
+
+"Ohhh... that was good," Tamara says, releasing your head and starting to ease her mammaries back into her vest, pulling the strings taut once again. She stands and pulls her breeches back up, and you wonder if you'll ever see again that alluring sight she keeps hidden in there.
+
+"Well, let's get going," she says.
+*choice
+	#What about your turn?
+		*goto myturn
+	#That's it then?
+		Yes, you can tell Tamara's no longer in an amorous mood, and in fact, she seems a little standoff-ish now. You fall in behind her as she resumes the climb up the foothill.
+		*page_break
+		*return
+		
+*label stand
+"Quick. It's dripping down," Tamara says and pushes you back down.
+*choice
+	#Tell her you want to finish her boobs first.
+		*goto boobsfirst
+	#Put your tongue on her sex, waiting for the honey to come. (Either one.)
+		*goto tongueon
+	#Dab at her navel with your tongue.
+		*goto dab
+
+*label boobsfirst
+*set tamara_respect %+5
+Tamara's respect for you goes up slightly:
+*stat_chart
+	percent tamara_respect Tamara's Respect
+	
+*line_break
+"Okay..." Tamara says, too turned on to resist further. "But get it before any drips on my breeches."
+
+You watch the honey creep ever so slowly down her lower stomach and onto her mound of venus, but you continue running your tongue all over her breasts, left to right and up and down in long slow strokes slowly but surely finding every last trace of honey. Tamara moans and keeps running her fingers through your hair, and you watch the honey finally reach the very top of her vulva.
+
+You begin following the honey trail downward over her quivering stomach and finally to her navel, while meanwhile, the honey below infuses into the folds of her inner and outer lips.
+
+You use your lips and tongue on her navel, making Tamara giggle. "It tickles," she says, "But I like it."
+
+*set honey_breeches true
+A drip of honey falls from her sex and onto her breeches, and you decide it's time. You move down her body, your tongue never leaving her, and that makes her shiver.
+
+You feel your tongue leave the softness of her stomach, reach her mound, crest it, and continue down into the mystery of mysteries below. You put your mouth over her clitoral nub and dab it gently with your tongue while simultaneously mouthing it with your lips, and the honey thins, dripping more into her breeches. You look up at her face, and she either hasn't notice or no longer cares, her head thrown back, eyes closes, mouth open. She breathes heavily and moves her head from side to side in ecstasy.
+*page_break
+*achieve honeypot
+*gosub_scene check_achievements
+You extend your tongue so that it covers the whole of her opening and lick the honey from the outer lips. She's so soft and engored, and sopping wet too. You cover her entire sex with your mouth and use your tongue to tease the honey from her folds. Then you begin to probe deeper, first between her inner and outer lips, then between the inner lips themselves. Tamara gasps then, and a hand snakes around your neck to pull your head into her crotch.
+
+"Use your tongue! Use your tongue!" she cries, and you push it forward into her gushy softness again and again until she's screaming with pleasure.
+
+You feel her body begin to crumple to the ground, but she keeps your head locked in place. "Don't stop!" she cries as she falls to her knees, and by twisting your head upside-down, you're able to maintain constant contact with your tongue throughout the maneuver. 
+
+Tamara leans back, her legs still bent under her, until her shoulders touch the ground, her back arched. "Keep going," she begs, and you move so that you're hovering over her, your hands on the ground to either side of her. She bucks her hips wildly, all the while locking your head to her sex, your tongue squirming all about until she shudders for nearly an entire minute. It seemed it would never end, but at long last, the spasms wracking Tamara's body subside. She releases your head, and her hands fall to either side as she collapses into profound relaxation. You watch her chest as it still heaves in her contorted position, and finally she rolls to one side to pull her feet out from under her.
+
+"Wow," she says finally. "I never had a fun honey time like that before."
+*choice
+	#And... now is it your turn?
+		*goto myturn
+	#I guess we're done?
+		Yes, you can tell Tamara's no longer in an amorous mood, and in fact, she seems a little standoff-ish now. You fall in behind her as she resumes the climb up the foothill.
+		*page_break
+		*return
+	#Apologize for letting some honey drip into her breeches.
+		"Oh, don't worry about that," Tamara says. "It wasn't much, and I kind of like it now. It'll make me think of you while I walk today."
+		
+		She stands and pulls her breeches back up, and you watch her sex, that which you just touched so intimately, disappear, perhaps never to be seen again by you. She then eases her mammaries back into her vest, and as she refastens the strings, you wonder if you'll ever see them again as well. You wish you had more honey!
+		*page_break
+		*return
+			
+*label permission
+Good thinking. You bend at the knees and keep your hands well off her as you start to lick the honey from her breasts. Sometimes she sways on her feet, causing you to break contact, and after this happens a few times, she encircles your head with her arms and holds it against her body. You feel the softness of her breast against your cheek and rest it there, cradled like a baby, as you slowly move your tongue up and down, gradually removing the sticky sweet honey.
+*page_break
+*goto dripdown
+
+*label liedown
+"Oh, you!" Tamara says, but she does indeed lie down, gently easing her body down onto a nearby patch of grass. "Hurry up," she says.
+
+You kneel beside her and lower your head to her chest, savoring the sight of that which you may never see again. 
+
+Tamara grabs your head and shoves it right between her bosoms and smears they honey all over your face. "That's what you get for not hurrying up," she says.
+*choice
+	#Start lapping.
+		*goto lap
+	#Lick her sensually and slowly.
+		*goto slow
+	
+*label lap
+You start licking Tamara's boobs like a dog cleaning its bowl. Her breasts are so soft under your tongue you can hardly stand it! You make long strokes to get most of the honey, then give special attention to the heavy spots, sucking and slurping and having a grand 'ol time. Tamara seems to enjoy it too, moaning softly from time to time, and she puts a hand on your back.
+
+All too soon, it's over, and you can taste no more honey on her body no matter where you try to find it.
+
+"That's it, then?" Tamara asks, and sadly, you have to agree.
+
+"Thanks!" she says as she eases her mammaries back into her vest and pulls the strings tight once again. "That was fun." She stands and gets ready to resume the hike.
+*choice
+	#And... now is it your turn?
+		*goto myturn
+	#I guess we're done?
+		Yes, you can tell Tamara's no longer in an amorous mood, and in fact, she seems a little standoff-ish now. You fall in behind her as she resumes the climb up the foothill.
+		*page_break
+		*return
+
+*label myturn
+It looks like you don't get a turn.
+*choice
+	#Push it.
+		"I don't see any honey on your dick," Tamara says. "And besides, it's a one-way fetish."
+		
+		I guess that's that. Well, it was still fun, right?
+		*page_break
+		*return
+	#Accept your sad fate.
+		Thoughts of Princess Elsbeth and her overflowing gratitude console you as you ruefully resume your hike up the foothill.
+		*page_break
+		*return
+		
+*label slow
+*set tamara_respect %+5
+Tamara's respect for you goes up slightly:
+*stat_chart
+	percent tamara_respect Tamara's Respect
+	
+*line_break
+Though you enjoy the sweet taste, you enjoy Tamara's body more, and it shows as you take your time exploring every inch of her chest with your lips and tongue. Her breasts are so soft under your tongue you can hardly stand it! You make long strokes to get most of the honey, then give special attention to the heavy spots, sucking and slurping and having a grand 'ol time. Tamara seems to enjoy it too, moaning softly from time to time, and she puts a hand on your back. She runs her hands up and down your spine, neck, and head, her fingers playing in your hair. She stretches her body and arches her back, pressing upward into the pleasure your tongue is giving her.
+*choice
+	#Remove her breeches.
+		*goto breeches
+	#Just keep licking her chest.
+		*goto justkeep
+	
+*label breeches
+"No, there's no honey there," Tamara breathes softly, grasping your hands but not even opening her eyes. "Stay up here..." She pulls your head back down onto her chest.
+
+You resume licking, and she resumes her caresses up and down your back until finally, you can find no more trace of sweetness despite where you search all over her luscious mounds.
+
+*label liedone
+Tamara stirs and starts to sit up. "Thank you," she says and kisses you on the lips before starting to ease her mammaries back into the confines of her vest and refasten the strings.
+*choice
+	#Keep kissing her.
+		Tamara pulls away and looks at you funny. "Come on," she says. "We've wasted enough time as it is."
+		*page_break
+		*return
+	#Ask if it's your turn now.
+		*goto myturn
+	#I guess we're done?
+		Yes, you can tell Tamara's no longer in an amorous mood, and in fact, she seems a little standoff-ish now. You fall in behind her as she resumes the climb up the foothill.
+		*page_break
+		*return
+		
+*label justkeep
+"Oh gods," she moans. "I don't know why I like this so much."
+
+Her body continues to writhe sensually beneath you, but if ever you put a hand on her body, she stops you. You have no choice but to focus on the honey until finally, sadly, it's all gone.
+
+At long last, 
+*goto liedone
+
+*label sneakback
+In a short while, you say, "Um, Tamara? I have to go shake the dew of MY lilypad, now."
+
+"You don't have to announce it to the whole world. Just go do it," Tamara retorts.
+
+You go back to the beehive, and it seems Tamara has not shadowed you.
+*choice
+	#Climb the tree.
+		*goto climb
+	#Throw a rock at the hive to knock it down.
+		*goto throw
+	
+*label climb
+*set climbed_tree true
+You climb the tree and reach the beehive. The bees buzz about lazily, ignoring your presence. You wish you had time to light a fire and smoke them out, but you don't. Even so, you believe that if you're careful enough, you should be able to break off a piece of honeycomb without angering the bees.
+*choice
+	#Reach in and break off a piece of honeycomb.
+		*goto reach
+	#Knock the hive down.
+		*goto knock
+	#Think better of this plan and climb back down empty-handed.
+		*goto empty
+	
+*label reach
+You carefully reach inside the hive and feel a solid wall of honeycomb as well as bees crawling all over your hand.
+*choice
+	#Push your fingers in and rip off a fistful of honeycomb.
+		*goto fist
+	#Feel around further.
+		*goto feelfurther
+	
+*label fist
+*set bee_sex true
+*set fell_from_tree true
+As you begin to push your fingers into the honeycomb, you feel a sting, 
+*label fall
+which makes you jerk. This makes your hand hit other bees who also sting you. 
+*label fall2
+Bees begin to cover your body, all stinging you, and you fall from the tree. You feel bees stinging you as you're falling, and then the ground hits you. As you're losing consciousness, you feel your throat swelling shut.
+
+"Well, looks like this is the end," you think to yourself. "The risk was worth it, though."
+*page_break
+Consciousness returns... Hey! You can breathe again. How did that happen? And your body is no longer covered in bee stings.
+
+Tamara's sitting nearby licking honey off her fingers. When she sees you're awake, she stands and says, "Good. Let's get going."
+
+A few bees, no longer hostile, waft by on a gentle breeze.
+
+"What happened?" you ask
+
+"Nothing," Tamara says, obviously impatient to resume your journey. She's already walking on ahead.
+
+As you're standing up, you feel something odd in your trousers. They're on funny, and your belt seems hastily refastened. Your penis too... it feels like it just had sex.
+*choice
+	#Push Tamara for answers.
+		*goto answers
+	#Better not.
+		*goto noanswers
+
+*label answers
+You start to ask Tamara for answers, but before half your sentence is out of your mouth, she launches into a half-hour long tirade about how "men are all alike," "only want one thing," "do such stupid things to get it," and "make women clean up after them."
+
+In the end, you get no answer.
+*page_break
+*return
+
+*label noanswers
+You silently join Tamara, resuming your hike.
+
+"We will not speak of this ever," Tamara says and then says nothing more, just keeps walking.
+*page_break
+*return
+
+*label feelfurther
+You reach deeper in and feel where someone in the past has already broken off a piece of honeycomb, and you're able to break off another piece from the same place, which you wrap in a leaf and put in your pack. 
+
+You believe you could break off a second piece from the same place just as easily.
+*choice
+	#Break off another piece.
+		*goto anotherpiece
+	#One is enough.
+		*goto oneonly
+
+*label anotherpiece
+You reach back into the hole in the hive, but this time you accidentally squash a bee. It stings you, 
+*goto fall
+
+*label oneonly
+*set has_honey true
+*achieve honey 
+Best not to take too many chances however tempting it may be to have two sessions of honey-licking with Tamara. You climb down the tree, and return to find Tamara waiting for you.
+
+"You take too long," she says and resumes the journey.
+*choice
+	#Slap the honey on her chest.
+		*goto smear
+	#Save it for later.
+		*return
+
+*label knock
+You hit the hive with a big stick, but it doesn't fall. Bees swarm out and attack you! Several sting you, and you try to ignore the pain while climbing down, being careful not to slip. 
+*goto fall2
+
+*label empty
+Really? Isn't it worth braving a few stings for the prospect of licking honey off Tamara's luscious flesh? The bees don't seem to be defending their hive, and the honeycomb inside is easy to see through a gap you can easily reach into.
+*choice
+	#Nope, too risky, even if honey is Tamara's fetish.
+		You climb back down and return to find Tamara waiting.
+		
+		"You take too long," she says. 
+		
+		The two of you resume your journey.
+		*page_break
+		*return
+	#Change your mind. Get some honey!
+		*goto reach
+
+*label throw
+You find a nice hefty rock and launch it at the hive. Direct hit! However, the hive doesn't fall, but now the bees are angry.
+*choice
+	#Throw another.
+		You throw an even bigger rock this time, but still, the hive doesn't fall. Bees are beginning to fly fast in your direction, and you run to escape them.
+		
+		You get stung once or twice on the arms, but once you're far enough away, the bees stop chasing you. You return to where Tamara's waiting for you, and she glances at the welt on your arm.
+		
+		"Good thing they didn't get you on the 'lilypad,'" she says and resumes walking.
+		*page_break
+		*return
+	#Go back to Tamara.
+		You return to find Tamara waiting.
+		
+		"You take too long," she says. 
+		
+		The two of you resume your journey.
+		*page_break
+		*return
+
+*label focus
+*return
+

@@ -1,0 +1,287 @@
+You hike another fifteen minutes, Tamara a few feet in front of you.
+
+*choice
+	#Look at her ass.
+		*set looked_ass true
+		*goto ass
+	#Refrain.
+		*goto noass
+	
+*label ass
+You enjoy watching Tamara's ass muscles working as she climbs the foothill, and it makes your climb easier. If she notices, she doesn't let on.
+
+*goto honeypot
+
+*label noass
+It's hard, but you keep your eyes averted. Are you being polite or...
+
+*fake_choice 
+	#Yes, it's out of politeness.
+		*set was_polite true
+		What a gentleman! Where's your armor? You could be a knight yourself.
+		
+	#Maybe some politeness, but mostly to avoid her wrath.
+		That's probably a good policy.
+		
+*label honeypot
+*if with_tamara
+	*gosub_scene honeypot
+
+You walk for perhaps another two miles, steadily hiking up the steep slope of the foothill.
+
+*label oldman
+*if with_tamara
+	Tamara raises her fist, the universal hand signal for, "Stop."
+	
+	"I see the old man ahead," she whispers.
+	
+	She motions you forward to see for yourself, and to do so, you have to move quite close to her. Do you...
+	
+	*choice
+		#Take the opportunity to put an arm around her, just to steady yourself on the rocky slope, of course.
+			*goto hug
+		*selectable_if (was_polite = false) #Take the opportunity to slide in and try to cop a surrepetitious boob graze.
+			*goto boobgraze
+		#Just move in close but do nothing sleazy.
+			*goto lookoldman
+		#Decide the old man isn't a threat. Boldly show yourself and say hello.
+			*goto hello
+*else
+	*comment not with tamara
+	Since Tamara's able to climb faster than you, the distance between you increases until she's quite a bit ahead of you. 
+	*if looked_ass
+		Now that your "motivation" is gone, the climb begins to tire you again, but you trudge on. 
+		
+	*goto losesight
+		
+*label losesight
+You eventually lose sight of her, but in a few moments, you hear her (all too familiar) voice from somewhere up ahead. It seems she's talking to someone, and it's not you for a change.
+	
+Climbing for a few more minutes, you see Tamara again, and she's talking with the manservant of the female knight. He introduces himself as Banes, and you learn that the knight, named Juliette, has left him here because he was too frail to continue the journey. He's obviously distraught at this, and they loved each other very much.
+	
+*goto catchup
+
+		
+*label hug
+*set tamara_respect %-10
+Tamara looks at you askance but doesn't say anything.
+
+*goto lookoldman
+
+*label boobgraze
+*set tamara_respect %-15
+You manage to nudge one of her boobs with your shoulder and sliiide across it. It feels great! Tamara seems nonplussed, but in the current situation, she's unable to give you her normal tongue-lashing.
+
+*goto lookoldman
+
+*label hello
+Tamara frowns at your usurpation of her command.
+
+*gosub_scene adj_respect -10
+
+"Hail to thee!" you call. "May we approach?"
+
+The old man's head jerks up, and he struggles to his feet as fast as he can, needing to brace one hand against the rock he was sitting on.
+
+"Yes, yes, of course, stranger!" he calls back. "Welcome!"
+
+Shaking her head, Tamara begins the hike toward the old man ahead of you, and as it's some distance, she makes the introductions along the way, announcing your quest to assault the dragon's lair.
+
+You see the old man wipe his eyes, and he forces an overly friendly demeanor to hide his grief. "My name is Banes," he says. "Manservant to the knight-errant, Juliette, who has continued on..." 
+
+It's pitifully obvious what happened. When the slope of the foothills increased, the old man simply could not go on. In fact, it's a wonder he's made it as far as he has.
+
+*goto catchup
+
+*label lookoldman
+From your new vantage point, you're able to see the old man, as well as enjoy being so close to Tamara's hot body. Literally. You can feel the heat emanating from it in waves of hot, moist air, and you can even smell her sweat. You sense her breathing, still a bit heavily from the climb, her breasts rising and falling so near to you.
+
+Tearing your attention away from Tamara, you focus on the old man. He's sitting on a boulder, eyes cast downward, apparently doing nothing. The knight is nowhere to be seen, and nothing seems amiss.
+
+*choice
+	#Whisper to Tamara, "Should we hail him?"
+		"It seems safe," Tamara replies. "Yes, let's hail him."
+		
+		*goto hail
+	#Ask Tamara what to do.
+		*set tamara_respect %-5
+		Tamara seems irritated by your indecisiveness. "I'll handle it," she says.
+		
+		*goto hail
+	#"Let's rob him!"
+		*if missed_alliance_plan
+			"Are you sure you're not a thief in disguise?" Tamara laughs, still keeping her voice low. "No, I don't rob old people, and besides, we need to ally with these people. It's in 'The Plan.'" 
+			*page_break 
+			*goto hail
+		*else
+			*set tamara_respect %-20
+			"Oh my gods," Tamara hisses fiercely, keeping her voice down. "Don't you remember my plan?!? We need to ally with these people."
+
+			*goto hail
+	
+*label hail
+Tamara stands. "Hail to thee!" she calls. "May we approach?"
+
+Wow. Tamara being polite. That's a first.
+
+The old man's head jerks up, and he struggles to his feet as fast as he can, needing to brace one hand against the rock he was sitting on.
+
+"Yes, yes, of course, stranger!" he calls back. "Welcome!"
+
+Tamara begins the hike toward the old man, and as it's some distance, she makes the introductions along the way, announcing your quest to assault the dragon's lair.
+
+You see the old man wipe his eyes, and he forces an overly friendly demeanor to hide his grief. "My name is Banes," he says. "Manservant to the knight-errant, Juliette, who has continued on..." 
+
+It's pitifully obvious what happened. When the slope of the foothills increased, the old man simply could not go on. In fact, it's a wonder he's made it as far as he has.
+
+*label catchup
+Banes can no longer control his tears, and his voice breaks. "Her... quest... is similar... to yours..." he manages through his sobs. "I'm sorry," he says. "It's just that I've known her since she was born, and I so wanted to be with her in her moment of glory."
+
+"Or death," Tamara says, and Banes' tear-filled eyes widen in astonishment.
+
+"How can you say such a thing?" Banes says.
+
+*if with_tamara
+	Apparently now that Tamara knows that Juliette has abandoned Banes, she has returned to her ordinary demeanor.
+	*goto catchupchoice
+*else
+	Banes sees you approaching and looks quizzically at Tamara.
+	
+	"Oh him," Tamara says. "Just ignore him. He's not important."
+
+*label catchupchoice
+*choice
+	*if (not (with_tamara)) #Introduce yourself to Banes.
+		*goto intro
+	#Apologize to Banes for Tamara's insult.
+		*goto apologize
+	#Let her speak for herself.
+		*goto death
+	
+*label apologize
+"I apologize for her," you say and try to step in front of Tamara, but she doesn't let you.
+
+*goto death
+
+*label intro
+You introduce yourself to Banes and tell him of your quest.
+
+*goto death
+
+*label death
+*if with_tamara
+	"In matters like these, ignoring the truth is a liability," Tamara says matter-of-factly, completely ignoring Banes' pain. "Alone as she is, it's a fool's errand, and you are wise to leave her. Though you are in your last days, you will likely outlive her, that is, unless she accepts my help, which we are endeavoring to offer."
+	
+	*goto next
+*else
+	Tamara ignores you and just keeps speaking. "In matters like these, ignoring the truth is a liability," she says matter-of-factly, completely ignoring Banes' pain. "Alone as she is, it's a fool's errand, and you are wise to leave her. Though you are in your last days, you will likely outlive her, that is, unless she accepts my help, which we are endeavoring to offer."
+
+*label next
+"You would do that?" Banes says, hope returning to his features.
+
+"Yes," Tamara says, "If she will accept it. Knights are very proud, aren't they?"
+
+"That is true," Banes says, easing himself back down onto the rock, a pensive look on his face.
+
+"Well, we are off," Tamara says. "Good luck, old man."
+
+Is there anything you wish to ask the old man?
+*label deathchoice
+*choice
+	*disable_reuse #"What made Juliette undertake a quest like this?"
+		*goto why
+	*disable_reuse #"Do you know anything about Juliette that might help us convince her to ally with us?"
+		*goto ally
+	*disable_reuse #"Are you going to be all right?"
+		*goto allright
+	#Continue on.
+		*goto resume
+	
+*label why
+"Oh, I tried to talk her out of it," Banes says. "But she would hear none of it. When she gets an idea in her head, there's no stopping her, and her skill in arms has always been enough to carry her through, despite her stubbornness. I think she's doing it because of her brother. She's one of the best knights in the kingdom, but she was unfortunate enough to have been born the little sister of a truly gifted warrior. She's lived in his shadow her whole life, and I believe she became a knight-errant to try and get out from under it, traveling the countryside, engaged in noble deeds, rather than the stuffy affairs of court. Still, it gnawed at her, and when she heard the dragon assaulted the castle, she vowed to kill it. 'To fight the unbeatable foe,' was how she put it, 'for honor in either glory or death.'"
+*goto deathchoice
+
+*label allright
+"Oh, I'll be fine," Banes says. "I have enough food, and I'll wind my way down, back to Chardell. I'll wait there for you."
+
+"Don't wait too long," Tamara says, several yards up the slope already, tapping her foot impatiently.
+*goto deathchoice
+
+*label ally
+*set banes_love_talk true
+"Make friends with her," Banes offers. "She seems strong and aloof on the surface, but don't let that put you off. Underneath..."
+
+He bursts into tears again and speaks through the sobs wracking his body. "She..." he manages. "has a heart... of gold!"
+
+Tamara, who was already walking ahead, turns around. "Are there any other body parts of hers that might help us reach that heart of gold, old man?" she asks suggestively.
+
+Once again, Banes' eyes open wide in shock.
+
+"Like I said before, this is not the time for modesty," Tamara says. "Do you know something or not?"
+
+Banes seems reluctant to engage in such a lewd subject, so Tamara continues. "Look," she says. "I'm a master tracker. I've seen all your sign and your tracks, and I know what goes on every morning. You had rabbit last night, and for two days, you've rationed your water. Juliette has an old injury just above the left knee. You love each other deeply and never argue."
+
+"How in the world could you know all that?" Banes cries, his face reddening.
+
+"Easy," Tamara says. "You walk side by side a bit too close together for full freedom of movement. Only people who love each other do that for a whole journey, and it never wavered once. On a hard journey, especially with you slowing her down like you have, your spacing would have increased during testy times, but even that never happened. So anyway, with privacy already lost, you can tell us anything. It might save her life. Probably not, but if you really love her that much, I'm sure the small impropriety is worth it, no?"
+
+*choice
+	#Save the old man from Tamara's torture.
+		*set tamara_respect %+15
+		*goto save
+	#Stay silent.
+		*goto silenttorture
+
+*label save
+*if with_tamara
+	"Tamara!" you cry. "This is going too far. We'll make friends with Juliette, not seduce her."
+	
+	*goto save2
+*else
+	"Tamara!" you cry. "You go too far. You've been insulting me all day, but I will not have you insult an old man by asking him for advice on seduction!"
+
+*label save2
+"No, no, I'll tell you!" Banes quickly protests. "It might be important, and... 'seduction...'" The word is hard for him to say. "The... animal... passions are powerful in all of us, but they run especially powerful in Juliette. 
+*goto revelation
+	
+*label silenttorture
+Banes is silent a long time. "Yes, we did love each other..." he says quietly at last.
+
+"Yes, yes, we know that," Tamara spats, getting impatient. "Now out with the juicy details or we can just move on with out them. Your choice."
+
+"No, no, please don't leave," Banes quickly protests. "I'll tell you."
+
+He inhales deeply, face very red, but with reluctance he finally speaks. "The... animal... passions..." he begins. The words are hard for him to say. "They're powerful in all of us but are especially so in Juliette. 
+*goto revelation
+
+*label revelation
+*set banes_sex_talk true
+Why else would she stoop to be with a tired old man like myself? I think of her as my own daughter, so it gave me no pleasure to do what we did. Her love for me was no more than as for a father figure either."
+
+"Well, that explains why she never gave full rein to her passions then," Tamara says. "But it wasn't her who did the stooping." She laughs.
+
+Banes turns red again but is mostly astonished once again at how much Tamara is able to discern merely from the nearly imperceptible signs they left behind.
+
+"Well, so now we know. We'll sex her up. Thanks, old man," Tamara says and turns to go.
+
+"Wait," Banes says. "There's one more thing, a little embarrassing detail..."
+
+"Oh, I think I already know," Tamara says without turning around, her interest fading fast. "Is it THIS?" She spins around, forms the fingers of one hand into a "V" and lewdly darts her tongue between.
+
+"Why yes!" Banes cries. "You can see THAT too, just from our sign?"
+
+"Yah," Tamara says and is already walking off.
+
+*label resume
+"Goodbye, Banes," you say. "Until we meet again."
+
+He smiles kindly and nods. "Take care of your firecracker of a girlfriend," he says. 
+
+You look back just before he fades from view, and he's still sitting on the rock. He waves goodbye, and you return it, then turn to go.
+
+"How touching," Tamara snorts. "Now, come on, save that mushy stuff for the girl-knight you have to seduce."
+
+A few steps later, she turns and says, "And I'm not your girlfriend."
+*page_break
+*goto_scene lilypad2
+

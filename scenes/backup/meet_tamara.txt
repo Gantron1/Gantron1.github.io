@@ -1,0 +1,287 @@
+"Are you here to slay the dragon?" says a voice, making you whirl around in surprise.
+
+Before you, you see yet another woman, and how she managed to get so close to you without your hearing is a mystery. 
+
+*label startchoice
+*choice
+	*disable_reuse #Look her over.
+		*goto look
+	#Put a hand on your weapon and demand her name.
+		*goto handweapon
+	#Guardedly ask what she wants.
+		*goto guarded
+	#Be friendly.
+		*goto friendly
+	
+*label look
+This woman is very different from the knight, for the knight was tall, perhaps close to six feet, and everything about her positively glittered. This woman stands perhaps five feet six inches, slender but muscular, and dressed in earth-tones, she looks as if she could easily fade into the underbrush and disappear. 
+
+She's wearing tan, skin-tight leather breeches that do well to show off her figure. Her boots are knee-high, fashioned from expensive leather, and she seems to have a custom-made leather vest inlaid with an intricate pattern in silver and a beautiful deep red color. It must've cost a fortune, but it's also practical, affording more than a small amount of protection in battle.
+
+Her breasts are a small, shapely pair, showing just a hint of cleavage in the vest's neckline. Her arms are bare, but she's wearing doe-skin gloves that go up to her elbows.
+
+She has a backpack and belt pouch, and by her side is a slender, wicked-looking sword. A crossbow is draped over her back with quarrels at the ready.
+
+Her hair's a deep reddish-brown and falls to her shoulders. Her eyes are a piercing green, and when she looks at you, her intensity makes you nervous. You don't know if she's going to snap at you or simply turn away in disdain.
+*goto startchoice
+
+*label handweapon
+[This option is yet to be written.]
+
+*label guarded
+[This option is yet to be written.]
+
+*label friendly
+"Oh, hello," you say. "Fancy meeting you out here in the middle of nowhere. May I ask what you are doing so far from civilization and so near to the dragon's lair?"
+
+"You can ask," the woman responds, not returning your friendliness but not hostile either. "The dragon's lair is exactly why I'm here. What of yourself?"
+
+*choice
+	#"I'm here to rescue the princess."
+		*goto tellrescue
+	#"The dragon is why I'm here too."
+		*goto telldragon
+	#"My reasons are my own."
+		*goto ownreasons
+	
+*label tellrescue
+*set learned_dragon_sense true
+"How noble of you," the woman says. "Do you expect me to be impressed?"
+
+She looks you up and down disdainfully.
+
+"Well, at least you have a rope, so you must know the climb is difficult. However, do you know that the dragon can hear each stroke of your hammer when you're pounding in your mountain-climbing stakes? Do you know how it's watching all the time, and even now, from so far away, through tons of rock, it can probably sense us to at least some extent?"
+
+*goto reverie
+
+*label telldragon
+[This option is yet to be written.]
+
+*label ownreasons
+[This option is yet to be written.]
+
+*label reverie
+In the days following the dragon sighting, you attempted to garner aid, both in the form of companions and information, to help you on your quest, but very little was forthcoming. Everyone with whom you spoke told you were crazy, and almost none had any helpful information. A ranger told you about the mountain and the need for ropes to climb it, and though he taught you the rudiments of mountain climbing, he too attempted to dissuade you from your quest. So far, even the most skilled knights have not been able to best this particular dragon.
+
+You heard it's a very old one, has roosted in DragonKeep for as long as anyone can remember, and over time, the kings learned that they could appease the dragon by offering it maidens, gold, and jewels. Each spring, a maiden and a large chest of treasure is brought to a special place for the dragon to collect, and this has reduced but not eliminated its depredations of the countryside.
+
+Continue your reverie?
+*choice
+	#Yes.
+		*goto continuereverie
+	#No.
+		*goto ceasereverie
+
+*label continuereverie
+Because of this evil pact, the royal court felt secure, so it was a great horror when the dragon attacked the capital city itself, for that had not happened since the very first offering, 150 years ago.
+
+It was surmised (by the sages who studied dragonlore) that the dragon was incensed by the audacity of the princess's high tower, a magnificent structure twice as tall as any ever built before. 
+
+A tradition had developed in Zhan where the higher a lady's bower, the more desired she was purported to be, and thus all ladies, when the became of age, lived in the highest one their family could afford to build. The princesses had the highest of all, and the king, who loved this particular daughter to an unusually great extent, undertook the task of building an impossibly tall tower to match her peerless beauty--and in so doing, unintentionally brought about the greatest tragedy the kingdom had ever known.
+
+Such is the price of arrogance... a warning that you too, it could be said, have not heeded.
+
+*goto ceasereverie
+
+*label ceasereverie
+So... did you know that dragons can sense things around their lair?
+*choice
+	#"No," you admit.
+		*goto honestignorance
+	#"Of course, I do," you lie.
+		*goto lieignorance
+	
+*label honestignorance
+"Well, you may be a fool, but at least you're an honest fool," the woman says. "Then can. Sounds. Smells. Their senses are extraordinarily powerful, but they also extend into the psychic realm. They can sense the negative emotions of all who approach from miles away. Greed. Anger. Jealousy."
+
+She pauses as if mulling something over.
+
+*label ignorance2
+"My name's Tamara," she says finally, "And unlike you, I have no silly notions about rescuing the princess. I'm here for the treasure plain and simple. I'm a thief, master-class, my quest under sanction by the thieves guild, for imagine the glory--the thief who robbed a dragon!"
+
+Speaking thusly, she raises a clenched fist mightly before her and gazes purposefully off into the distance in imitation of a knight in victory. She smiles sheepishly at her own overenthusiasm and then continues, "I, in the noble tradition of thieves everywhere, plan to sneak in, and I know the location of the hidden entrance. I can't have you alerting the dragon to our presence, so I propose we work together. I will get you in without the dragon knowing, but after that, you're on your own. I steal the treasure, and you, if you're truly serious about your silly quest, can go rescue the princess, if she's even still alive. Is it a deal?"
+
+*choice
+	#"Okay, deal."
+		*goto agree
+	#"Okay, but do you think you could stop insulting me all the time?"
+		*goto caveats
+	#"No deal."
+		*goto nodeal
+	
+*label agree
+"Good," Tamara says. "Oh, but now that I'm supposed to help you, I'll need you to agree to do everything I say, no questions asked, got it? If I say to step where I step, you do it. If I say to be quiet, even if you don't know why, you do it without a word. Understand? This is very important."
+
+*fake_choice
+	#Agree.
+		
+"Good," Tamara says and holds out her hand for you to shake.
+
+*fake_choice
+	#Shake it.
+		
+"There, now the deal is sealed," Tamara says, trying to hide a smirk. "There's no going back on your word once you've shaken on it, right?"
+
+*fake_choice
+	#Right.
+		
+"Good," Tamara says. "Well, let's be off then. Time is not of the essence to me, but it is to you. I'd hate for us to get there one minute after the dragon tires of Elsbeth and eats her, wouldn't you?"
+
+*fake_choice
+	#Agree.
+		
+"See," Tamara says. "I look out for you. We're a team now, and that means IMPLICIT TRUST."
+
+She turns and hurries down the path, seeming unusually happy. In fact, she's almost skipping along like a little girl.
+
+*fake_choice
+	#Follow.
+		
+*set with_tamara true
+By the time you catch up to her, she's back to her sullen self.
+
+"You walk too loud, you know that?" she says, barely glancing at you in acknowledgement. "I could track you blindfolded, and that's the first thing we need to change. Walk softly. 
+*if learned_dragon_sense
+	Remember, the dragon senses things."
+	
+	*goto thepath
+*else
+	The dragon is watching all the time, and even now, from perhaps a mile away, through tons of rock, it can probably sense us to at least some extent. Did you know that? Sounds. Smells. Their senses are extraordinarily powerful, but they also extend into the psychic realm. They can sense the negative emotions of all who approach from miles away. Greed. Anger. Jealousy. This is only one of the many things I know about dragons, and I know many secrets about this one in particular."
+	
+	*choice
+		#Ask her what else she knows.
+			"You're supposed to be working on your silent walking," Tamara says. "Be silent. Talking is not silence."
+			
+			*goto thepath
+		#Just walk silently.
+			*goto thepath
+	
+*label thepath
+The two of you continue to walk down the path together in silence for a good bit. 
+
+*goto_scene chardell
+
+*label caveats
+[This option is yet to be written.]
+
+*label nodeal
+Tamara exhales loudly in frustration. "Look," she says, "You're going to get yourself killed, and while I normally laugh at fools getting their comeupance, in this case, your blunder will interfere with my plans. Only the gods know why, but I'm offering to help you. If you refuse, you will have to wait until I'm finished before making your own approach, but I don't trust you enough for that. You might race ahead or do some other stupid thing to get me killed. Unless we work together, I'll have to kill you, but that would alert the dragon. There's no choice. We MUST agree to work together. Now, IS IT A DEAL?"
+
+*choice
+	#"Okay, deal."
+		*goto agree
+	#Propose that you go first. That'll distract the dragon and make it easier for Tamara to steal the treasure.
+		*goto proposal
+	#"No deal." You're tired of Tamara's nonsense and walk off.
+		*goto walkoff
+	
+*label proposal
+"Okay, fine," Tamara says. "You can go first if you want. That also works if that's what you really want to do."
+
+She looks at you and waits.
+
+"Well? Go on then. Go rescue your princess."
+
+*choice
+	#Continue your quest.
+		*goto continuequest
+	#Change your mind and agree to work together.
+		*goto agree
+	
+*label continuequest
+Tamara shrugs. "Fool," you hear her say just before losing sight of her among the trees.
+
+*label walk
+You walk for awhile, always wondering if Tamara's not trailing you just out of sight. You turn around from time to time but see nothing.
+
+*goto_scene chardell_alone
+
+*label walkoff
+Surprisingly, Tamara doesn't protest, and the last you see of her is her shaking her head at your foolishness.
+
+*goto walk
+
+*label lieignorance
+"Yeah?" the woman says, her eyes narrowing suspiciously. "Well, then, do you know that it can smell you from a hundred yards off?"
+*choice
+	#Admit you didn't know that.
+		*goto ignorance
+	#Lie and say you knew that too.
+		*goto lie2
+	
+*label ignorance
+"As you can see," the woman says, "I have done my preparations. There are other things I know too, secrets greater even than these." 
+
+*label pause
+She pauses for a moment, and you wonder if she's going to tell you more. Instead, she looks at you a moment as if coming to a decision.
+
+*goto ignorance2
+
+*label lie2
+"Then I hope you've brought something to mask your scent," the woman says, and you frantically start to think what you have that might work.
+
+If she's noticed the consernation she's caused, she shows no sign.
+
+"Do you know that they can sense our very emotions, but only bad ones?" she asks, continuing her grilling of you.
+
+*choice
+	#Admit you didn't know that either.
+		*goto ignorance
+	#Lie and say you knew that too.
+		*goto lie3
+	#Ask how she knows all this stuff.
+		*goto howknows
+
+*label lie3
+"I'm sure you do," the woman says, but it's obvious she doesn't believe you. 
+
+"Do you know this dragon's name?"
+
+*choice
+	#Claim you do.
+		*goto dragonname
+	#Admit you don't know it.
+		*achieve dragonname
+		"It's Myrristicor," the woman says dramatically. "I might be the only one who's not a sage who knows that."
+		
+		She smiles proudly but then feels vulnerable and shrugs instead.
+		
+		*goto ignorance
+
+*label howknows
+"How did YOU learn all this stuff?" she asks, turning the tables.
+
+You hesitate, trying to think of how to answer, and she laughs. 
+
+"I know you don't really know all this stuff," she smiles. "Suffice it to say, I've done my preparations."
+
+*goto pause
+
+*label dragonname
+"What is it, then?" the woman asks.
+
+*choice
+	#"I can't say. It's a secret."
+		*goto secretname
+	#Admit you don't know.
+		*goto ignorance
+	
+*label secretname
+"Of course it is," the woman says. "I can't tell you what it is either. Well, since you know that secret, do you know the dragon's secret weakness?"
+
+*choice
+	#Claim you do.
+		*goto weakness
+	#Admit you don't know.
+		*goto noweakness
+	
+*label weakness
+"Then I don't have to tell you what it is, do I?" the woman says and winks. "Look, I can tell when someone's lying. I know a lot more secrets than these."
+
+*goto pause
+
+*label noweakness
+*achieve weakness
+"I don't know its secret weakness either. Was hoping you could tell me," the woman laughs.
+
+*goto pause

@@ -1,0 +1,666 @@
+*temp bandit_alive true
+*set met_el true
+
+*choice
+	#Walk forward on the path
+		*goto walkforward
+	#Look around first
+		*goto lookaround
+	
+*label walkforward
+It's a pleasant day, and you fill your lungs with air, enjoying the sensations of having a body again. You assume that since you materialized on a path facing a certain direction, walking forward on the path is what you're supposed to do. You congratulate yourself on your brilliant deduction.
+
+After a few minutes, you round a bend, and...
+*page_break
+You see a faerie. Just standing in the middle of the road, facing you, hands on her hips, legs splayed, looking as if she were waiting for you.
+
+"Hi!" she says and flits up to eye-level, a few feet in front of your face. "My name's Ella."
+
+*label shakechoice
+She holds out her tiny little hand for you to shake.
+
+*choice
+	#Shake Ella's hand
+		*goto shake
+	#Look at her first
+		*goto studyella
+	
+*label studyella
+*temp studyella_reason
+Are you looking her over because...
+
+*fake_choice
+	#To ascertain whether you trust her enough to shake her hand
+		*set studyella_reason 1
+		Of course, of course. You're a good boy, aren't you! 
+		
+		Well, judging by her size, you figure you've swatted flies more menacing than she is. Plus, she seems really friendly! She seems too innocent to fake that, but on the other hand, don't people warn you to stay away from faeries, to stay on the path, and never, ever accept invitations to Faerie Feasts? Maybe they really are dangerous even if they seem so harmless, not to mention HOT!
+	#See if she's the same faerie as in your dream
+		*set studyella_reason 2
+		Are all geeks as scientifically-minded as you are?
+		
+		Already the dream is fading from your mind, but this faerie does look very similar. You suppose she COULD be the same, but then, that's confusing. Does this mean you're dreaming now too? Did you "manifest" her by force of will? Did you see the future?
+	#She's frickin' hot!
+		*set studyella_reason 3
+		Oh yeah! I knew that was the real reason. Indeed, she is.
+	#A little of column A, and a little of column B...
+		*set studyella_reason 4
+		I figured as much. 
+		
+		Well, judging by her size, you figure you've swatted flies more menacing than she is. Plus, she seems really friendly! She seems too innocent to fake that, but on the other hand, don't people warn you to stay away from faeries, to stay on the path, and never, ever accept invitations to Faerie Feasts? Maybe they really are dangerous even if they seem so harmless, not to mention HOT!
+		
+		Already the dream is fading from your mind, but this faerie does look very similar. You suppose she COULD be the same, but then, that's confusing. Does this mean you're dreaming now too? Did you "manifest" her by force of will? Did you see the future?
+		
+Ella's less than a foot tall, glowing green, wearing a green dress, and flitting about on a pair of what look like dragonfly wings.
+
+Now do you shake her hand?
+
+*choice
+	#Shake Ella's hand
+		*goto shake
+	#No, too dangerous
+		*goto refuseshake
+
+*label lookaround
+The woods and path look harmless enough, but you take a moment to look around, for after all, you have no idea where you are. For all you know, there could be a pit trap right in front of you or the forest infested by snares.
+
+Well, there is no pit trap. No snares either. No one is hiding nearby in ambush, at least not one who has not yet sprung out at you...
+
+...and then something DOES spring out at you!
+*page_break
+It's a faerie, a little green faerie, and she goes whizzing by you at near super-sonic speed. She then screeches to a halt a few feet in front of your face.
+
+"What?" she asks, trying to appear nonchalant. "Were you expecting a pit trap instead?"
+
+*choice
+	#Ask how she made a screeching sound without tires or even anything under her feet.
+		*goto screech
+	#"Maybe you ARE a pit trap." Wink, wink.
+		*goto pittrap
+	#"Um, hi?"
+		*goto hi
+	
+*label screech
+"Oh, that..." the faerie says, wrinkling her brow. "I don't know; it just happened. Anyway, I was just looking for you! I knew you where here, and now I found you. My name's Ella!"
+
+*goto shakechoice
+
+*label pittrap
+"How is that possible???" the faerie exclaims, and her eyes widen as she takes in your comparatively enormous size. "Anyway," she says, shaking her head as if to throw your outrageous suggestion out of it, "I was just looking for you! I knew you where here, and now I found you. My name's Ella!"
+
+*goto shakechoice
+
+*label hi
+"Hi!" she replies. "My name's Ella, and I was just looking for you."
+
+*goto shakechoice
+
+*label refuseshake
+*set rel_el %- 5
+[This option is yet to be written.]
+
+*label shake
+You reach out and shake Ella's tiny little hand, careful not to break it. 
+
+"Now that we are properly introduced," she says, "I have a proposition for you!"
+
+Her voice is like little bells tinkling.
+
+Strange. That should remind you of something. Tinkling... bells... TinkleBell... Tinkerbell?
+
+In this world, there is no Disney, and your memory of Tinkerbell and all things of your old world gradually fade from your mind. Soon you are 100% a denizen of this new world. You are carrying a sword and wearing a breastplate made from reinforced leather. You're a traveling warrior, and you even remember the village where you're from, that you left home to seek your fortune.
+
+"Well?" Ella says. "Do you want to hear my proposition?"
+
+"Oh, um, yeah..." you say, startled out of your reverie.
+
+The faerie's face breaks into an overjoyed grin. "I am so happy!" she cries. "I will tell you something that you now do not know but that I know you will be happy to know, and all I ask in return is that you give me... satisfaction."
+
+*choice
+	#"What kind of 'satisfaction'?"
+		*goto whatkind
+	#"If it's what I'm thinking, yes!"
+		*goto yessatisfaction
+	#"Why don't you get it from someone more your size?"
+		*goto moresize
+	#"Satisfaction? Do you mean gold pieces?"
+		*goto howmuch
+
+*label howmuch
+"Gold?!?" Ella cries so loudly it startles you. "Don't you know anything about faeries? What use do we have for that? We're not leprechauns or dragons, Silly! No, faeries just want to have fun, and though frolicking and feasts are great fun, sometimes, like you humans, we just want to have sex."
+
+*goto stammersmall
+
+*label whatkind
+"Oh, how can you really not know?" Ella says, her eyes narrowing mischievously. "I think you know!"
+
+"Could it be... sex?" you ask.
+
+"Of course, sex!" Ella laughs.
+
+*label stammersmall
+"But..." you stammer, "How? I mean... you're so small, and I'm... well, not hung like a horse, but you know, pretty big as far as things go, I think, and anyway, much too big for someone your size..."
+
+"Oh, I'm sure it is," Ella says, staring for a moment at your crotch as if undressing you with her eyes. "That is too bad... but what I was thinking was... well, you see, I have always dreamt of riding a giant, slippery, red, quivering..."
+
+*goto yourtongue
+
+*label yessatisfaction
+"Yay!" Ella rejoices, turning loop-de-loops in the air.
+
+Red-faced and breathing hard from the exertion, she stops and hovers again a few feet in front of you. 
+
+"I have always dreamt of riding a giant, slippery, red, quivering..."
+
+*goto yourtongue
+	
+*label moresize
+"You are my size," the faerie says, her face deadpan. Only after a pause that's a little too long does she burst into laughter. "You, Silly!" she giggles. "Faerie males are all right, but I've always dreamt of riding a giant, slippery, red, quivering..."
+
+*label yourtongue
+She stops speaking and just stares at you, one hand pressing between her strongly clenched legs.
+
+Finally, she's able to go on, "Oh, you know what I mean. Your tongue! Your tongue! Will you? Please? Please?"
+
+*label tonguechoice
+*choice
+	#Tell her to fly over as you tilt your head back
+		*goto flytilt
+	*disable_reuse #Offer money instead
+		*goto offermoney
+	#Approach slowly
+		*goto approach
+
+*label flytilt
+Ella's face breaks into a giant grin. 
+*label flytilt2
+You tilt your head back, open your mouth, and stick your tongue straight up as far as it will go, and she begins to float over to it, her legs spread so wide that the skirt of her little green dress rides up and shows all. Gently she descends onto your tongue, mashing her crotch into it. Her eyes close, and she exhales, her dream coming true.
+
+Sometimes she bounces up and down, and other times she gyrates her hips, but all the while she seems to be fully enjoying herself, moaning with pleasure, eyes closed.
+
+Gradually, her motions become faster and more frantic, her cries becoming more intense. 
+
+*page_break
+
+*goto givewants2
+
+*label offermoney
+"Oh, what is so good about money that you humans cover it so?" Ella pouts. "Is it because it's shiny and pretty? I suppose gold does have a nice shine, but we faeries already glow, don't we? I don't want money!"
+*goto tonguechoice
+	
+*label approach
+"Oh yes! Oh yes!" the faerie screams, so happy her wish is about to be fulfilled. Hovering in midair, she leans back until she's horizontal and spreads her legs, giving you full view of her tiny vulva which, despite its tiny size, looks exactly like a human girl's. She waits like this, eyes already closed.
+
+*choice
+	#Give her what she wants
+		*goto givewants
+	#Catch her and put her in a bag
+		*goto catchher
+		
+*label givewants
+The faerie is wearing tiny little olive green slippers, but otherwise, her legs are completely bare under her dress. Daintily you grasp each of her tiny ankles between your thumb and forefinger to pull her hovering, supine body toward your salivating mouth. 
+
+Ella inhales in anticipation and exhales, "Ahhhh..." when your tongue slides between her thin little legs. Compared to her body, your tongue is so large, it covers her entire pube and half her thighs if you push it forward. 
+
+*label givewants2
+She begins undulating her body in a mesmerizing wave motion human women are incapable of performing with anything approaching the same level of grace. It's as if a current from deep beneath the sea were made manifest right there in front of your nose.
+
+"Yessss... Just like that..." she murmurs approvingly as you begin darting your tongue forward and back, dabbing at her sex again and again. "Oh... Ohh... Ohhhhh...." Soon Ella begins to emit long slow moans that echo into the surrounding forest, and you can tell the pleasure is building in her body to unbearable levels. 
+
+"Harder... harder..." Ella begs, and though at first you worry about hurting her, her cries of pleasure urge you on. You begin to dab at her harder and faster until your tongue is moving at a furious pace. You alternate the dabbing with stronger pushes, really mashing it against her entire crotch as if trying to force your tongue inside her though, of course, it's far too big.
+
+Finally, Ella explodes into a little crescendo of ecstasy right in front of your face.
+
+*page_break
+Ella lies on top of your face for a long while, and you feel her little body breathing heavily. Finally, she sits up and opens her eyes, slowly lifts off and hovers in front of you again. She smooths the skirt of her dress and makes herself look like a proper faerie again.
+
+"Thank you," she says. "Oh, thank you so much!"
+
+You worry that she might fly away and forget about her part of the deal, but after grinning at you gratefully for a bit longer, she speaks again.
+
+"The information I promised," she begins, her face still rosy, her voice still a bit breathless, "Is that further ahead, on this very path, is a chance for a strong warrior to rescue a damsel in distress, and for which she will be very grateful. However, if not a strong warrior ye be, this encounter ye best avoid."
+
+After speaking, Ella arranges her hair a bit, as it had become slightly disheveled in your recent merry-making, but now she's all sparkly again. 
+
+"Good luck, friend human," she says, rising up into the canopy of leaves. "Know that you are now... friend of the fae." And with that, she's gone, disappeared into the forest, leaving only the gentle rustling of the leaves, almost as if your tryst had never been.
+
+*set rel_el %+20
+*set rel_fae %+20
+
+*choice
+	#Move ahead quickly
+		*goto quickly
+	#Move ahead cautiously
+		*goto cautiously
+
+*label catchher
+*set rel_el %-10
+*set rel_fae %-10
+You tricked her! While Ella's eyes are closed, you quickly catch her in a bag. 
+
+"What? Hey!" you hear her little muffled faerie voice cry.
+
+You feel her thrashing about in the bag but hold it tightly closed. Somehow, however, she manages to get out.
+
+"Don't you know you need a magic bag to catch faeries?" she says. "You are a bad human!"
+
+She flies away, and you are alone again, only the twittering of birds to keep you company.
+
+*label catchherchoice
+*choice
+	#Call out to Ella saying you're sorry.
+		*goto calloutsorry
+	*disable_reuse #Continue along the forest road.
+		*goto continuealongroad
+
+*label calloutsorry
+*set rel_el %+10
+Zoom! Ella's back, but she does not seem happy. In fact, she seems suspicious.
+
+"Are you going to let me ride your tongue for real this time?" she asks, eyes narrowed.
+
+You assure her you will, that catching her in the bag was just a joke.
+
+"I knew I needed a magic bag," you add, hoping she believes it.
+
+She seems to, for her face brightens. "I knew you weren't a bad human," she says.
+
+*goto flytilt2
+
+*label continuealongroad
+Really? You're going to let her go just like that? It just isn't possible. I mean, you JUST dreamed about faerie sex, and then a faerie shows up offering it!
+
+*goto catchherchoice
+	
+*label quickly
+Never one to tarry when a damsel in distress is waiting, you throw caution to the wind, and in only a few minutes or so, you hear the sound of men's voices mixed with the shrieks of a young woman coming from somewhere off the path. 
+
+While it appears that Ella spoke true, you do wonder if this could be a bit of fae mischief.
+
+*choice
+	#Chivalrously charge
+		*goto charge
+	#Sneak up
+		*goto sneakup
+	#Avoid the encounter
+		*goto avoidencounter
+
+*label sneakup	
+[This option is yet to be written.]
+	
+*label avoidencounter
+[This option is yet to be written.]
+
+*label charge
+You break into a trot, heading into the thicket, the sounds of distress growing louder with each step.
+
+"We got a real beauty this time, eh, Harod?" you hear a man laugh.
+
+"I'll say," you hear someone, perhaps Harod, retort.
+
+"Me first!" you hear a third man exclaim.
+
+Your pace quickens, despite the rough terrain, and soon you burst into a small clearing several dozen yards into the woods away from the road. There are three slovenly-looking men kneeling, surrounding a young peasant girl on the ground, struggling to escape. Her dress is torn in several places, one breast already exposed, and the men are rapidly ripping the rest from her body.
+
+"Oh, please, kind sirs," she begs, "Let me go. Let me go, please!"
+
+You are upon them before they know it and quickly behead the nearest man. The other two scramble away in a comical display of gasps of horror and the pulling up of breaches. One is grabbing for his belt which has his short sword (really just a long knife), while the other manages to get to his feet and run. You believe you can easily kill one or the other but not both.
+
+*choice
+	#Slay the man going for his sword
+		*goto slay
+	#Chase the one who's running away
+		*goto chasebandit
+
+*label slay
+You hack the man down just as the knife is halfway out of the shealth.
+
+The other man is getting away, but you believe you have a chance of catching him.
+*choice
+	#Chase the other man
+		*set rel_d1 %+ 20
+		*goto chase2
+	#See if the girl is all right
+		*set rel_d1 %+ 30
+		*goto see_allright
+
+*label chasebandit
+[This option is yet to be written.]
+
+*label chase2
+[This option is yet to be written.]
+	
+*label see_allright
+The girl is already scrambling away herself but trips on the dress already half off her body. She falls and gashes her shin badly on a sharp rock, screams in pain and then subsides into sobbing.
+
+"Are you all right, miss?" you say in your most chivalrous voice.
+
+"Yes, oh yes, thank you, kind sir," the girl says through her sobs which quickly turn from those of terror to relief.
+
+It seems like she needs a hug.
+*set met_d1 true
+*choice
+	#Hug her
+		*set rel_d1 +5
+		*goto hug
+	#Comfort her another way
+		*goto anothercomfort
+	#Don't comfort her at all
+		*goto nocomfort
+	
+*label hug
+[This option is yet to be written.]	
+	
+*label nocomfort
+[This option is yet to be written.]
+	
+*label anothercomfort
+What kind of other kind of comfort do you offer?
+
+*choice
+	#Sex, of course. Isn't that the most comfort possible?
+		*goto comfortsex
+	#Use words and only words. Women like words.
+		*goto comfortwords
+	
+*label comfortsex
+[This option is yet to be written.]
+	
+*label comfortwords
+You're not too good at mushy stuff. If she were a boy, you'd know what to say, stuff about being brave and acting like a man. There's nothing a hearty slap on the back or a pub crawl can't fix, right? But somehow you don't think that'd go over too well in this situation.
+
+You try to come up with things to say and even say a few of them. It seems to work. Sort of. She stops crying, but you wonder if she doesn't seem a bit disappointed at the same time. 
+
+"Sir," she says, "Thank you again for rescuing me. My name is Jennifer, and I live on my family's farm a few miles from here. I'm injured and cannot walk, so I was wondering if you could help me back to my wagon?"
+
+*choice
+	#Help her to her wagon
+		*goto wagon
+	*if (bandit_alive) #Tell her you must deal with the other bandit first
+		*goto findbandit
+	#Comfort her some more first
+		*goto morecomfort
+	
+*label wagon
+[This option is yet to be written.]
+
+*label findbandit
+[This option is yet to be written.]
+	
+*label morecomfort
+She was disappointed by your fumbling words, and you can't leave it like that. You just can't, not when she's so pretty and so vulnerable right now. Play your cards right, and you might get some!
+
+*choice
+	#Try the word approach again
+		*goto wordsagain
+	#Now the hug
+		*goto nowhug
+	#She seems ready for sex
+		*goto seemsready
+	
+*label nowhug
+[This option is yet to be written.]
+
+*label seemsready
+[This option is yet to be written.]
+
+*label wordsagain
+*temp bandit_alive_temp "."
+*if bandit_alive 
+	*set bandit_alive_temp ", or the bandit you let escape stole it."
+
+You come up with something fantastic to say! It's VERY comforting AND makes you look fantastically suave WITHOUT making you look too lecherous. It's perfect, but you're not even a quarter of the way throught it before the she says, "Excuse me, sir, but I'm worried the other man may return. Can we go to my wagon now?"
+
+Dang it, women always muddle your thinking like this. As gently as you can, you help Jennifer to her feet and carry her to the wagon, which is just a little ways further up the road.
+
+"Oh no..." Jennifer says. "The horse is missing."
+
+You surmise it must've run off when Jennifer was first accosted${bandit_alive_temp}
+
+*choice
+	#Offer to carry her all the way back to her farm several miles away
+		*goto carryher
+	#Wait with her for someone to pass by
+		*goto wait
+	
+*label wait
+[This option is yet to be written.]
+	
+*label carryher
+You offer to carry her home.
+
+"Are you sure?" Jennifer asks, her eyes widening. "Are you strong enough?"
+
+"Come, I will show you," you say, easily lifting her from the ground.
+
+"Oh my!" Jennifer laughs. "You are strong!"
+
+With a spring in your step, you begin to saunter down the road, whistling a merry tune as if you had not a care in the world. This makes Jennifer giggle. You're scoring points!
+
+*choice
+	#Sneak a peek at her boobs
+		*goto peek
+	#Be a gentleman
+		*goto nopeek
+	
+*label nopeek
+[This option is yet to be written.]
+	
+*label peek
+How could you not sneak a peek at Jennifer's boobs? Carrying her in your arms, they are just RIGHT there. Even if you're looking straight ahead, you're seeing them, so she won't notice if you happen to glance a tiny bit downward now and again, would she? In fact, SHOULDN'T you be glancing downward anyway for stray roots or stones in the road? A true gentleman is careful and would do nothing to trip and fall in this situation, wouldn't he?
+
+Plus, with her dress torn, it's become rather revealing, and it would take a man of iron will to keep his eyes up for all this time. If you had to summon up so much willpower, you might get too tired, have to put her down, or God forbid, not be at your best if a confrontation with another traveler occurs.
+
+Yes, not only can you not avoid looking at her boobs, you in fact MUST look at her boobs for the safety of everyone involved.
+*page_break Boobs
+You find them to be very fine boobs indeed, large for such a thin, even waifish girl, but not too large. Juuuust right. And perky! Very perky.
+
+You are so absorbed with Jennifer's boobs that you trip on a small rock.
+
+"It's okay," Jennifer says. "You can look. We all have animal natures, after all."
+
+*choice
+	#Compliment her boobs
+		*goto complimentboobs
+	#Get embarrassed
+		*goto embarrassed
+	#Deny it
+		"Thank you," you say. "As we are walking, I have indeed been looking, looking around, at all the nature... and animals. You are indeed correct, for there are many animals and nature around us, and it is indeed beautiful."
+		*goto tired
+
+*label complimentboobs
+[This option is yet to be written.]
+
+*label embarrassed
+[This option is yet to be written.]
+	
+*label tired
+*page_break Continue walking
+After a time, you begin to tire.
+
+*choice
+	#Suck it up, hide it, and impress Jennifer with your manly strength
+		*goto hidefatigue
+	#Take a break, with the excuse of giving her a rest
+		*goto rest
+	
+*label rest
+[This option is yet to be written.]
+	
+*label hidefatigue
+You continue walking, doing your best to show no sign of fatigue. Jennifer's family's farm is only a mile further, and you think you can make it.
+
+"You seem to be struggling, sir," Jennifer says. "Are you sure you wouldn't benefit from a rest?"
+
+*choice
+	#It's a trap. She wants to see if you're weak or not. Keep going!
+		*goto keepgoing
+	#Take a rest
+		*goto rest2
+	
+*label keepgoing
+[This option is yet to be written.]	
+	
+*label rest2
+"Perhaps a short rest would be good," you say as you put her down, "Though it's not really necessary. However, perhaps the lady might like a brief respite?"
+		
+Jennifer smiles, perhaps amused at your machismo.
+
+The two of you sit down by the side of the road, and you enjoy a cool breeze that dries the sweat on your brow and under your heavy leather breastplate.
+
+"Would you..." Jennifer begins and then pauses shyly before mustering the courage to continue, "Would you perhaps like me to massage the muscles in your arms? It's the least I could do after you've gone to such great expense to help me."
+
+*choice
+	#Tell her your arms aren't tired. 
+		*goto nomassage
+	#Politely decline. It would be unseemly for a woman to massage a man she hardly knows by the side of the road.
+		*goto nomassage
+	#Accept the offer
+		*goto massage
+	
+*label nomassage
+[This option is yet to be written.]	
+	
+*label massage
+"Well," you say, "Since you did notice I was 'struggling,' despite my attempts to hide it. I might as well admit that, yes, my arms could use a bit of massaging, but the word 'struggling'... I don't believe it was THAT toilsome, more like just a slight..."
+
+"Oh, shush," Jennifer says. "You have already impressed me enough today."
+
+You do not use greaves, so your arms are already bare. Jennifer takes first your right and then your left, kneading them with hands surprisingly strong for such a small woman.
+
+"From all those loaves of bread I baked with Mum," she laughs and gives your bicep an impressively powerful squeeze.
+
+*choice
+	#Offer her a massage in return
+		*goto reciprocate
+	#Kiss her
+		*goto kiss
+	
+*label reciprocate
+You offer Jennifer a massage in return.
+
+"Oh, no, I couldn't!" she says blushing, then looks at you like you're crazy, a goofy grin on her face. She stares at you a moment as if thinking about it but then says, "Oh, you are so silly!" Quickly she rises, using only her good foot, and urges you to resume the journey.
+
+You go to carry her again, but she protests saying she believes she can walk now if you lend her your shoulder to lean on.
+
+*choice
+	#Insist on carrying her
+		*goto insistcarry
+	#Lend her your shoulder
+		*goto lendshoulder
+	
+*label kiss
+You take the opportunity to move in for a kiss, but Jennifer pulls away.
+
+"I'm sorry, sir," she protests. "I did not intend... I really was only thinking of your tired arms. Come, let us return to our journey. I think I can walk if you give me your shoulder to lean on."
+
+*choice
+	#Kiss her
+		*goto tryagain
+	#Give her your shoulder to lean on
+		*goto shoulder
+	#Offer to carry her again
+		*goto carry
+	
+*label lendshoulder
+[This option is yet to be written.]
+
+*label shoulder
+[This option is yet to be written.]
+
+*label carry
+[This option is yet to be written.]
+
+*label insistcarry
+*set rel_d1 %+15
+"Oh, but I insist," you say. "It will heal faster the less strain you place upon it."
+
+"Are you sure?" Jennifer asks, but you are already hoisting her into your arms, making her giggle again.
+
+"Very well, as you wish," she says smiling, nestling against your chest. "We both know the real reason why you like carrying me so much," she jokes.
+
+It's not much further to her family's farm, and you manage it without undue strain.
+
+*goto_scene farm
+	
+*label tryagain
+No woman massages a man's arms if she's not interested in him; she must be playing hard to get. Firmly but still gently, you hold her so that she cannot pull away very far. Looking in her eyes, you move forward to kiss her again.
+
+"No..." she says, pulling away again.
+
+*choice
+	#Keeping going
+		*goto kiss3
+	#Let her go
+		*goto nokiss
+	
+*label nokiss
+It doesn't feel right, so you let her go. It's strange that Jennifer would make suggestive jokes, then even go so far as to give you a massage, but then not want to kiss you. Could she really be that innocent?
+
+She moves a bit away from you and narrows the collar of her dress as much as she can, suddenly becoming modest. Her face is red.
+
+"I like you," she says finally, "But... but not out here where anybody could see us. Will you take me back to my farm now?"
+
+She struggles to her feet.
+
+"I can walk the rest of the way," she says.
+
+*choice
+	#Give her your shoulder to lean on
+		*goto shoulder
+	#Offer to carry her again
+		*goto carry
+	
+*label kiss3
+You wrap your arms around her to prevent her from getting away when suddenly she screams, "NO!!!!" and shoves you hard.
+
+Stunned, you let her go, and she scrambles away from you.
+
+"You're just like the men from before!" she cries. "Begone. I can find my own way home from here."
+
+*label kiss3choice
+*choice
+	#Apologize profusely
+		*goto apologize
+	#Leave insulted
+		*goto insulted
+	*disable_reuse #Get your kiss no matter what
+		*goto kiss4
+	
+*label apologize
+"Oh my goodness!" you say, astonished at her sudden violence. "I in no way intended to force myself upon you!"
+
+Jennifer has managed to scramble away several feet and is now sitting with her back to you, adjusting the torn collar of her dress the best she can to cover as much of herself as possible. Her shoulders are tense, and she neither speaks nor looks at you for a long time.
+
+Finally, she repeats, "I can find my own way home from here."
+
+*choice
+	#Leave
+		*goto kiss3leave
+	#Wait
+		*goto kiss3wait
+	#Apologize again
+		*goto kiss3apologize
+	
+*label kiss3leave
+[This option is yet to be written.]
+
+*label kiss3wait
+[This option is yet to be written.]
+
+*label kiss3apologize
+[This option is yet to be written.]
+
+*label insulted
+[This option is yet to be written.]
+*goto nokiss
+	
+*label kiss4
+What! Forcing yourself on a woman who has clearly said no? This is not allowed, not in this game and not in real life either. Try again.
+
+*goto kiss3choice
+
+*label cautiously
+[This option is not yet written.]
+
+*goto quickly

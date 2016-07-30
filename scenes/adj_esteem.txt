@@ -1,0 +1,97 @@
+*bug adj_esteem subroutine called without parameter.
+*return
+
+*label 5
+*set esteem %+5
+Self-Esteem rises very slightly:
+*stat_chart
+	percent esteem Self-Esteem
+*line_break
+*goto checkesteem
+
+*label 10
+*set esteem %+10
+Self-Esteem rises slightly:
+*stat_chart
+	percent esteem Self-Esteem
+*line_break
+*goto checkesteem
+
+*label 20
+*set esteem %+20
+Self-Esteem rises.
+*stat_chart
+	percent esteem Self-Esteem
+*line_break
+*goto checkesteem
+
+*label 30
+*set esteem %+30
+Self-Esteem rises significantly.
+*stat_chart
+	percent esteem Self-Esteem
+*line_break
+*goto checkesteem
+
+*label 40
+*set esteem %+40
+Self-Esteem rises greatly!
+*stat_chart
+	percent esteem Self-Esteem
+*line_break
+*goto checkesteem
+
+*label -5
+*set esteem %-5
+Self-Esteem falls very slightly:
+*stat_chart
+	percent esteem Self-Esteem
+*line_break
+*goto checkesteem
+
+*label -10
+*set esteem %-10
+Self-Esteem falls slightly:
+*stat_chart
+	percent esteem Self-Esteem
+*line_break
+*goto checkesteem
+
+*label -20
+*set esteem %-20
+Self-Esteem falls.
+*stat_chart
+	percent esteem Self-Esteem
+*line_break
+*goto checkesteem
+
+*label -30
+*set esteem %-30
+Self-Esteem falls significantly.
+*stat_chart
+	percent esteem Self-Esteem
+*line_break
+*goto checkesteem
+
+*label -40
+*set esteem %-40
+Self-Esteem falls greatly.
+*stat_chart
+	percent esteem Self-Esteem
+*line_break
+*goto checkesteem
+
+*label checkesteem
+*script updateStatBar();
+*if esteem > 39
+	*return
+
+Your self-esteem has fallen too low, and you must give up your quest.
+
+THE END.
+
+You have reached Ending #7: Not Confident Enough.
+*page_break
+*achieve ending7
+*ending
+	

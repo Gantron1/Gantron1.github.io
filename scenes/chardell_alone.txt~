@@ -1,0 +1,72 @@
+In a little while, the path descends into a small wooded valley, and at the bottom, you find a small clearing with a large stake in the center. You realize that this must be Chardell, the place where the annual sacrifice was made, and you realize with horror that over a hundred maidens were in turn chained to that stake to await the dragon. Some of the surrounding trees are charred, obviously from dragonfire, but why? 
+
+"Sad isn't it?" says a familiar voice behind you. You whirl again, and it's Tamara again.
+
+"I thought you were following me," you say.
+
+"Oh, not following," she says. "Just that we're both going the same way."
+
+You shrug.
+
+"Yes, it is sad," you say, thinking again of all the maidens. It seems such a cruel tradition.
+
+"Yeah," Tamara says. "A hundred and fifty chests of treasure, now just sitting up in DragonKeep doing nobody any good."
+
+*choice
+	#"By the gods, woman! Don't you think at all of the poor maidens?"
+		*goto aghast
+	#"What do you think charred the trees like this?"
+		*goto speculation
+	#"I'm leaving now. Don't follow me."
+		*goto leavechardell
+	#"Since we're going the same direction anyway, why not travel together?"
+		*goto proposal
+	
+*label aghast
+"You sentimental fool," Tamara snaps. "It could easily have been me being sacrificed, so yeah, I have thought about it. A lot, but you know what? In the end we all have to die sometime, some just sooner rather than later. These girls at least lived long enough to see the flowering of their womanhood, something not everyone does."
+
+She walks up to the stake and spits.
+
+"To hell with you, dragon!" she says. "And to hell with all the kings who fed you our daughters."
+
+*choice
+	#"You don't think the dragon eats the girls, do you?"
+		*goto eats
+	#"What do you think charred the trees like this?"
+		*goto speculation
+	#"I'm leaving now. Don't follow me."
+		*goto leavechardell
+	#"Since we're going the same direction anyway, why not travel together?"
+		*goto proposal
+	
+*label speculation
+Tamara inspects one of the charred trees.
+
+"This is old," she says. "It must've happened a hundred years ago. I guess people wised up after that."
+
+"But what happened to cause it?" you ask. "Was the dragon displeased for some reason? Or perhaps it was from a battle as some would-be hero attempted to rescue that year's sacrifice?"
+
+Tamara laughs. "More likely the battle was with a band of thieves after the treasure... and the girl too, I suppose."
+
+*choice
+	#"I'm leaving now. Don't follow me."
+		*goto leavechardell
+	#"Since we're going the same direction anyway, why not travel together?"
+		*goto proposal
+	
+*label leavechardell
+"Not my fault I happen to catch up to you when you decide to waste time," you hear Tamara say as you're leaving the clearing.
+
+Shaking your head, you go on, and though the path ended at Chardell, you know which direction to go even when the mountain range is hidden from view, for the only way forward is up. You know that climbing the foothills will eventually lead you to the base of the mountain, and from there, well, you'll figure it out.
+
+*label proposal
+[This option is yet to be written.]
+
+*label eats
+"No, he feeds them tenderly, and DragonKeep is full of white-haired old ladies," Tamara spats sarcastically. "Regardless of what it does with them, I'm sure it's not fun, so don't you think you should be hurrying along now? For every second you waste here, that's another second she spends in the beast's clutches."
+
+*choice
+	#She's right. Resume your journey.
+		*goto leavechardell
+	#Propose you travel together since you're going the same way anyway.
+		*goto proposal

@@ -1,0 +1,259 @@
+*temp stoodupforself false
+*temp smallfire false
+*temp booboffer false
+*temp was_eager false
+*temp gabriella_mad false
+
+*if with_tamara
+	*goto lilypad
+*else
+	Tamara is climbing ahead of you again, but she seems slower than before, distracted.
+	*if looked_ass
+		It's easier to keep up with her now, and this makes it even easier to enjoy the view.
+	*else
+		She's moving at your speed now, and you follow her for no real reason other than that you're both going in the same direction. After all, she's able to track Juliette, while you cannot.
+		
+		*goto lilypad_alone
+	
+*label lilypad_alone
+"You've been trying to lose me all day," Tamara suddenly turns and shouts. "Why are you following me now? I'm going to pee again, and I don't want to see you when I get back!"
+	
+Something is very odd. There's no way she should need to pee again so soon. Either the first time was a ruse, this time's a ruse, or both times were ruses for some reason.
+
+*choice
+	#Stealthily follow her.
+		*goto stealth
+	#Wait.
+		*goto waitpee
+	#Continue on.
+		*goto continue
+		
+*label lunch
+
+You climb for about an hour, 
+*if looked_ass
+	but for you it flies by because of the good "view."
+	
+	"You're in better shape than I thought," Tamara says.
+	
+	"You too," you say, wondering if she catches the innuendo. She doesn't seem to, just nods confusedly.
+	
+	Something's odd. Tamara seems distracted and isn't her usual sharp, abrasive self.
+	
+	*goto speculation
+*else 
+	Tamara leading the way, but you dutifully avoid gawking at her. She seems distracted, steps carelessly, making more noise than usual, and sometimes she climbs slow enough that you actually overtake her for a short while.
+	
+*label speculation
+Tamara stops and thinks a moment. 
+
+"Wait here," she says. "I need to shake the dew from my lily pad again."
+
+"Already?" you ask, not remembering her drinking a lot of water recently. 
+
+"Yeah..." she says distractedly and hurries off into the forest by herself.
+
+*choice
+	#Stealthily follow her.
+		*goto stealth
+	#Wait
+		*goto waitpee
+	
+*label stealth
+
+
+*label waitpee
+*if not(with_tamara)
+	Even though she told you she didn't want to see you again, she's acting so strangely, you decide to stick around. Besides, if she really wanted to avoid you, she could just sneak off.
+	
+You find a place to sit and wait. In a little while, you hear what sounds like Tamara crying.
+*choice
+	#Go see what's wrong.
+		*goto stealth
+	#Keep waiting.
+		*goto keepwaiting
+
+*label continue
+You resume the climb up the foothill, but before you get very far, you hear what sounds like Tamara crying.
+*choice
+	#Go see what's wrong.
+		*goto stealth
+	#Keep going.
+		*goto_scene camp1
+
+*label keepwaiting
+After a long time, Tamara returns, and she's different yet again. While before, she was distracted and perhaps a bit distressed, now she's focused and calm. Her eyes are wet with tears, but she's no longer crying.
+
+"I'm going to save Juliette," she announces solemnly, standing before you, conviction burning in her eyes. "You too, if you'll let me. Let's take this beast down together!"
+
+*choice
+	#"Whoa! Why the change of heart?"
+		*goto changeofheart
+	#"Yes, let's do it."
+		*goto doit
+	
+*label changeofheart
+"It was the old man," Tamara says, moving to sit next to you. "I see now what he and Juliette have, and I won't stand idle and watch it die, not for all the treasure in the world."
+
+She gazes at the peak of DragonKeep in the distance a moment, then locks eyes with you. "I've grown fond of you as well. If you'll let me, I'll teach you all I know of dragonlore, and when we join forces with Juliette, nothing can stop us. Are you with me?"
+
+*choice
+	#You are inspired by her change of heart. Agree.
+		*goto agree
+	#You don't trust her. Disagree.
+		*goto disagree
+	
+*label agree
+*set with_tamara true
+[This option is yet to be written.]
+
+*label disagree
+*if with_tamara
+	"No, Tamara," you say. "Let's stick to our original agreement, which, I must say, you somewhat forced me into. I'm not ready for more than that right now."
+	
+	*goto disagree2
+*else
+	"No, Tamara," you say. "All this time, you've done nothing to earn my trust. I'm safer on my own."
+	
+	*goto disagree2
+
+*label doit
+*set with_tamara true
+[This option is yet to be written.]
+
+*label disagree2
+"What if I apologize?" Tamara says, and she seems genuinely humble.
+
+*choice
+	#"Not good enough."
+		*goto notgoodenough
+	#"Let's hear it."
+		*goto letshearit
+	
+*label notgoodenough
+"What if I apologize and say please?" Tamara says, and there's almost a pleading tone in her voice. If this is acting, she's a brilliant actress.
+*choice
+	#"Not good enough."
+		*goto notgoodenough2
+	#"Let's hear it."
+		*goto letshearit2
+
+*label notgoodenough2
+"What if I get on my knees, apologize, and say please?" Tamara says, tears welling up in her eyes.
+*choice
+	#"Still not good enough. It could all be faked."
+		*goto stillnotgoodenough
+	#"Gosh, Tamara, really? Okay..."
+		*goto really
+	
+*label stillnotgoodenough
+*achieve beg
+Tamara shifts from the stone you're sitting on to the rocky ground beneath onto her knees, and she puts her hands supplicatingly on your thighs. "I beg you, sir," she says, her voice cracking, tears streaming down her face. "I can't do it without you. My plan is in ruins. Juliette will likely refuse me because I'm a thief, and because of it, I think I will die tomorrow. I need you. Please! I'm on my knees. I've said please. Now all that's left is to apologize, and when I do, I will show you how much I mean it."
+
+She glances at your belt buckle and then reaches forward tenderly to touch it with her fingertips, looking up at you with wide, vulnerable eyes. 
+*label begchoice
+*choice
+	*disable_reuse #"No good. This could all still be a ruse!"
+		*goto ruse
+	#"You've convinced me. You don't have to do anything more to prove it to me."
+		*goto noproof
+	#Undo your belt.
+		*goto belt
+	
+*label ruse
+Really? You'd turn down oral sex?
+*choice
+	#Yup
+		*goto nooral
+	#On second thought...
+		*goto begchoice
+	
+*label nooral
+You are a man of iron will.
+
+Tamara rises silently to her feet and walks away. Without a word, she resumes climbing the foothill.
+*goto_scene camp1
+
+*label noproof
+*set tamara_respect %+30
+Tamara smiles, making a tear fall from each eye, and she hugs you.
+*choice
+	#On second thought... 
+		*goto secondthought
+	#Be a gentleman... with blue balls.
+		*goto blueballs
+	
+*label secondthought
+*set tamara_respect %-10
+You can't stand it. Now that Tamara's offered you oral sex, your hormones are raging. "Tamara..." you say, weakly, "I know what I just said, but now..."
+
+"I know, I know," Tamara says. "You men are all alike. Take off your pants."
+
+"Really?"
+
+"Yes, I want to," she says.
+
+You slip your pants down to your ankles, and the stone is cold on your naked buttocks.
+
+Tamara kneels between your legs. 
+
+"This doesn't make me your girlfriend," she says. "You're still my apprentice and have to do everything I say."
+
+Then her mouth is upon you, moving up and down your rock-hard shaft. She makes long strokes in a slow, languid rhythm for a long, long time, her hands resting gently on each of your thighs. Slowly the pleasure builds in you, reaches a plateau, and just can't quite cross it. She keeps you in this maddening place for almost too long, but then...
+
+*label deepthroat
+She slides her hands to your waist and pulls your hips toward her, pressing her face deep into your crotch. You feel your member push down and into her throat, and she holds it there a long time, her body making her try to swallow, causing her tongue and all the muscles to move in involuntary convusions. Her body stiffens as she strains to maintain this position as long as she can. Her fingernails dig into your flesh, but you hardly feel it for the incredible pleasure the convulsions of her throat are giving you. She pulls you into her even deeper, and you nearly explode but hold back. She starts rocking gently, her larynx moving over your glans again and again, your cock never leaving her throat. Her hands grasp wildly at you now as she reaches the limit of endurance, roving over both legs and back. 
+
+"Nnnnggghhhh!" she cries out, choking, but still she keeps you inside her.
+
+You explode at the same moment she can take no more, and as your seed shoots down her throat, her tongue thrashes wildly on your frenelum, taking you to even greater heights. Seed drips from her lips, and you continue to shoot it in her mouth as she moves her tongue up and down and all around your shaft.
+
+Finally the spasms subside, but Tamara keeps her mouth glued to the side of your shaft, for there's still pleasure flowing in your body. Slowly, this subsides into a great relaxation, and Tamara's grip on your body relaxes too, her body sliding to the ground. She lays her head against your thigh and looks up at you for a tender moment. She kisses your inner thigh, licks your scrotum, and her tongue lingers upon it for a moment like she doesn't want the moment to end.
+
+At long last, she pulls away, smiles up at you, and rises to her feet. She wipes some seed from her lips and licks her hand clean.
+
+If there was any doubt of her sincerity before, it's all gone now.
+*page_break
+*goto_scene camp1
+
+*label blueballs
+You stand as best you can, your member rock-hard in your pants and getting in the way. Tamara smiles mischievously as she urges you along, pushing on your shoulder, laughing as you can hardly walk.
+
+"Come on, come on," she says and prances a little prance beside you to show you how easy it is.
+
+She puts an arm around your shoulder and walks with you to make sure you don't stop, so you have no choice but to lurch along beside her, each step stimulating you greatly, though not in a good way.
+
+The two of you walk a little ways like this before she shifts her arm from your shoulder to holding onto your belt to pull you along. You take a couple difficult steps. Her hand moves a little closer to your buckle as she continues to pull you along. You take a few more steps. She pushes her fingers a little way into your pants, but at the same time continues to pull you along. Your heart thrills at the thought that she might actually give you relief, and you hope it's not all just a big tease. She slips her thumb into your pants too, and pushes her hand down. You feel it slide next to your raging member, and you almost explode right then. She, however, just continues to pull you along.
+
+"Undo your belt," she says nonchalantly, not even looking at you, still just gazing ahead in the direction she's pulling you. You feel her hand wrap around your member and have to clench your muscles hard to keep from exploding. 
+
+You do as you're told, undoing your belt without a word. She lets you stop walking now and turns toward you. With her one free hand, she pulls your body against hers into a tight embrace and looks firmly into your eyes. 
+
+"I'm going to move down your body now," she says breathily, slowly, enunciating each word. "Then..." She pauses. "Then I'm going to take you into my mouth." She pauses again, still looking deep into your eyes. You can hardly breathe for the anticipation. "I'm going to swallow you..."
+
+Still looking in your eyes, removing her hand from your pants, she slowly moves down your body just like she said she would until she's squatting before you, her knees spread wide. She pulls down your pants, and your member spills forth into the warm sunlight. 
+
+"This doesn't make me your girlfriend," she says, looking up at you. "You're still my apprentice and have to do everything I say." 
+
+She'd spoken these words slowly, and she moved slowly after, her open mouth moving toward the head of your rock-hard member. Finally, it makes contact, sending a wave of warm bliss through your body. You relax and put a hand on the back of her head. She closes her eyes as she takes you in and out again and again, and as she does so, you feel her tongue roving about, up and down the full length of your shaft. 
+
+*goto deepthroat
+
+*label belt
+[This option is yet to be written.]
+
+*label really
+[This option is yet to be written.]
+
+*label letshearit2
+[This option is yet to be written.]
+
+*label letshearit
+[This option is yet to be written.]
+
+
+
+*if with_tamara
+	No sign of tears. Option to ask or not. Lunch. Talk about apprenticeship.
+*else 
+	Vulnerable. Asks to join again. If no: Begs. Reveals she's scared of dying. "Do you want me to be the Banes to your Juliette?"

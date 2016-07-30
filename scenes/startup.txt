@@ -1,0 +1,939 @@
+*comment *********************
+*comment **     HEADER      **
+*comment *********************
+
+*title SeductQuest: The Dragon and the Princess
+*author Frankie Lee
+
+*scene_list
+	startup
+	check_achievements
+	adj_respect
+	adj_esteem
+	piglist
+	meet_tamara
+	intro
+	agreement
+	chardell
+	chardell_alone
+	lilypad
+	honeypot
+	oldman
+	lilypad2
+	hill_duel
+	camp1
+	sugar
+	morning_alone
+	juliette
+	werewolf_milk
+	werewolf_homecoming
+	dryad
+
+*create debug true
+*create jumplabel ""
+
+*comment *********************
+*comment **  ACHIEVEMENTS   **
+*comment *********************
+
+*achievement dragonname visible 2 Name of the Dragon
+	Learn the dragon's name.
+	You learn the dragon's name is Myrristicor.
+	
+*achievement weakness visible 2 Secret Weakness
+	Learn the dragon's secret weakness.
+	The dragon has no secret weakness.
+	
+*achievement holygrail visible 5 Holy Grail	
+	Find the Holy Grail.
+	You found the Holy Grail... inside Tamara.
+*achievement contest hidden 1 Sit-in
+	hidden
+	You engaged in a stupid sitting contest.
+	
+*achievement woncontest hidden 1 Win Sit-in Contest
+	hidden
+	You actually "won" the stupid sitting contest.
+	
+*achievement angrykiss visible 3 Angry Kiss
+	Share an angry kiss with Tamara.
+	You shared an angry kiss with Tamara.
+	
+*achievement soulkiss visible 6 Soul Kiss
+	Kiss Tamara long and passionately.
+	You kissed Tamara long and passionately.
+
+*achievement kisstopbot visible 7 Kiss of Extremis
+	Kiss Tamara's top and bottom at the same time.
+	You kissed Tamara's lips and toes at the same time.
+
+*achievement dragoneye visible 4 DragonEye
+	Use the DragonEye.
+	You peered into the DragonEye.
+	
+*achievement honey visible 3 Honey
+	Harvest some honey.
+	You harvested honey.
+
+*achievement honeypot visible 7 Honeypot
+	Drink from Tamara's honeypot.
+	You drank from Tamara's honeypot.
+	
+*achievement sugarhoney hidden 7 Second Honeypot
+	hidden
+	You drank from Tamara's honeypot. (Second time.)
+	
+*achievement sugar hidden 7 Sugar
+	hidden
+	You gave Tamara some sugar.
+
+*achievement autocunn visible 7 Auto-cunnilingus
+	Yes, Tamara is THAT flexible.
+	Tamara gave herself sugar.
+	
+*achievement beg visible 5 Begging
+	Make Tamara beg.
+	Tamara begged on her knees.
+	
+*achievement quid hidden 1 Begging #2
+	hidden
+	Tamara made you beg.
+
+*achievement marriage visible 5 Marriage Proposal
+	Make Tamara propose marriage.
+	Tamara proposed marriage.
+
+*achievement blow visible 10 The Dive
+	Make Tamara take the dive.
+	Tamara gave you a blowjob to show her sincerity.
+	
+*achievement strcontest visible 10 Test of Strength
+	Beat Tamara in a test of strength.
+	You defeated Tamara in a test of strength.
+
+*achievement height visible 5 Height Advantage
+	Gain the height advantage in a duel with Tamara.
+	You gained the height advantage... briefly.
+	
+*achievement duelsex visible 10 Duel Sex
+	No, Tamara is not a hermaphrodite.
+	You had sex with Tamara during a duel.
+	
+*achievement backrub visible 4 Backrub
+	Give Tamara a long backrub.
+	You gave Tamara a backrub with more than just your hands.
+
+*achievement backrub2 visible 3 Backrub #2
+	Get Tamara to agree to another backrub.
+	You got Tamara to agree to another backrub.
+
+*achievement tmassage visible 5 Massage From Tamara
+	Get a backrub from Tamara.
+	Tamara gave you a massage.
+
+*achievement thirdmassage visible 6 Second Massage From Tamara
+	Somehow get Tamara to give you yet another massage.
+	Tamara gave you another massage.
+	
+*achievement butthole visible 4 Nearest the Butt-hole
+	Massage Tamara's crack without touching her butt-hole.
+	You massaged Tamara's crack without touching her butt-hole.
+
+*achievement happyending visible 10 Happy Ending
+	Get a massage to end very happily.
+	Tamara let your massage end with sex.
+
+*achievement oraldeal1 visible 10 Oral Deal #1
+	Swap oral sex with Tamara.
+	Trading oral sex ended with regular sex.
+
+*achievement oraldeal2 visible 10 Oral Deal #2
+	Swap oral sex with Tamara. (Leading to a different result.)
+	Best 69 blowjob ever.
+
+*achievement immobile visible 10 Ultimate Stillness
+	Come without moving at all.
+	You came without moving at all.
+
+*achievement superorg visible 10 Super Orgasm
+	Achieve more pleasure than normal.
+	You had an orgasm more pleasurable than normally possible.
+
+*achievement slowdescent visible 10 Slow Descent Into Madness
+	Let Tamara tease you to madness.
+	Tamara drove you crazy with desire, but you survived.
+
+*achievement ttoes visible 7 Tamara's Toes
+	Lick Tamara's toes.
+	You licked Tamara's toes.
+
+*achievement toes visible 9 Your Toes
+	Get Tamara to lick your toes.
+	Tamara sucked your toes.
+
+*achievement deepthroat visible 10 Deepthroat
+	Deepthroat Tamara.
+	You deepthroated Tamara.
+	
+*achievement doggie visible 10 Doggie Style
+	Do Tamara doggie style.
+	You did Tamara doggie style.
+	
+*achievement sidepound visible 10 Sideways
+	Fuck Tamara sideways.
+	You fucked Tamara when she was sideways.
+
+*achievement twotimes visible 10 Multiple Orgasms
+	Give Tamara multiple orgasms.
+	You gave Tamara two orgasms in a row.
+	
+*achievement twotimes2 visible 10 Multiple Orgasms #2
+	Love me two times.
+	You loved Tamara twice today.
+
+*achievement threetimes visible 10 Multiple Orgasms #3
+	Give Tamara three orgasms in a row.
+	Tamara had three orgasms in a row.
+	
+*achievement 4gasm visible 10 Multiple Orgasms #4
+	Give Tamara four orgasms in a row.
+	Tamara had four orgasms in a row.
+
+*achievement 11orgasms visible 11 Multiple Orgasms #5
+	Give Tamara eleven orgasms in a row.
+	Tamara had eleven orgasms in a row.
+
+*achievement 3times visible 12 Multi-orgasmic Impossibility
+	Have three orgasms in a row.
+	You had three orgasms in a row.
+
+*achievement straingasm visible 10 Squat-gasm
+	Tensing her leg muscles can give Tamara an orgasm.
+	Tamara brought herself to orgasm doing squats.
+
+*achievement lickgasm visible 6 Lick-gasm
+	Tamara can achieve orgasm just from being kissed on the neck.
+	You made Tamara come by kissing her neck.
+
+*achievement dreamgasm visible 6 Dream-gasm
+	Give Tamara a dream-gasm.
+	You gave Tamara a dream-gasm.
+
+*achievement eyegasm visible 5 Eye-gasm
+	Achieve orgasm from eye stimulation only.
+	You came just by watching Tamara.
+
+*achievement shrine visible 10 Shrine to Hotness
+	Worship at the Shrine to Hotness.
+	You worshipped Tamara's shrine to hotness.
+
+*achievement deadrise visible 5 Rise From the Dead
+	Let Tamara reawaken your spark.
+	Tamara helped your cock rise again.
+	
+*achievement treespring visible 10 Tree Spring
+	Turn Tamara's body into a spring.
+	You turned Tamara's body into a spring.
+
+*achievement rtreespring visible 10 Reverse Tree Spring
+	Bend Tamara over backwards against a tree.
+	You turned Tamara's body into a spring, upside-down and backwards.
+	
+*achievement horseplay visible 10 Horseplay
+	Let Tamara ride you like a horse.
+	Tamara rode you like a horse.
+	
+*achievement horserider visible 10 Riders on the Storm
+	Ride Tamara like a horse.
+	You rode Tamara like a horse.
+	
+*achievement horsebreaker visible 5 Horsebreaker
+	Win the horse-breaking game.
+	Sometimes when you win, you lose.
+
+*achievement comeface visible 10 Facial
+	Come on Tamara's face.
+	You came on Tamara's face.
+	
+*achievement comeface2 visible 10 Reverse Facial
+	Come on Tamara's face.
+	You gave Tamara a cum facial.
+	
+*achievement comeface3 visible 10 Another Facial
+	Come on Tamara's face.
+	You covered Tamara's face with hot cum.
+	
+*achievement cumriver visible 10 Come Me a River
+	Come a river down Tamara's body.
+	Your cum was like a river on Tamara's body.
+
+*achievement cumrain visible 10 Rain of Cum
+	Rain cum down on Tamara.
+	You rained cum down on Tamara.
+	
+*achievement masturtoo visible 8 Double-handed
+	Masturbate Tamara while she masturbates you.
+	You and Tamara masturbated each other to orgasm.
+	
+*achievement assist visible 8 Assistant
+	Be Tamara's assistant while she masturbates.
+	You helped Tamara masturbate... with your cock.
+	
+*achievement sixtynine visible 10 69
+	Get Tamara in a 69.
+	You and Tamara did a 69 with you on top.
+	
+*achievement ttop69 visible 10 69 #2
+	Let Tamara get you in a 69.
+	You and Tamara did a 69 with her on top.
+	
+*achievement bb69dt visible 10 Back-bend 69
+	Get Tamara to show you her contortionist skills.
+	Tamara deepthroated you in a back-bend 69.
+
+*achievement asscome visible 10 Anal Sex
+	Come in Tamara's ass.
+	You came in Tamara's ass while riding a log.
+	
+*achievement asscome2 visible 10 Anal Sex #2
+	Come in Tamara's ass.
+	You came in Tamara's ass while lying under her.
+
+*achievement jumpbones visible 10 Jump Tamara's Bones
+	Throw Tamara down and jump her bones.
+	You threw Tamara down and jumped her bones.
+	
+*achievement fingertrap visible 10 Chinese Fingertrap
+	Penetrate Tamara from both ends.
+	You filled Tamara both front and back.
+	
+*achievement fingertrap2 visible 10 Fingertrap #2
+	Penetrate Tamara from both ends.
+	Tamara got fucked on both ends simultaneously.
+	
+*achievement fingertrap3 visible 10 Fingertrap 69
+	Penetrate Tamara from both ends in a 69 position.
+	You fucked Tamara on both ends simultaneously and licked her too.
+	
+*achievement doublepene visible 10 Double Penetration
+	Fill both of Tamara's holes at once.
+	You filled both of Tamara's holes, with help from her sword.
+
+*achievement finger visible 5 Finger Tamara
+	Make Tamara come using only your fingers.
+	You fingered Tamara to orgasm.
+
+*achievement vortex visible 6 Pulsating Vortex of Indescribable Sensations
+	Learn what the "Pulsating Vortex of Indescribable Sensations" is.
+	You learned about (and experienced!) the Pulsating Vortex of Indescribable Sensations.
+	
+*achievement instanto visible 10 One-Thrust Orgasm
+	Make Tamara come with a single powerful thrust.
+	You made Tamara come with a single powerful thrust.
+	
+*achievement instanto2 visible 10 One-Thrust Orgasm #2
+	Make Tamara come with a single thrust after teasing her relentlessly.
+	You made Tamara come with a single thrust after teasing her relentlessly.
+	
+*achievement volcano visible 10 Volcano Sex
+	Erupt like a volcano inside Tamara.
+	You erupted like a volcano inside Tamara.
+
+*achievement potionvictim visible 5 Up Against a Tree
+	Fuck Tamara up against a tree.
+	You fucked Tamara up against a tree... or was it the other way around?
+
+*achievement slammed visible 7 Slammed
+	Get Tamara to demonstrate the consequences of disrespect.
+	Tamara slammed you again and again.
+
+*achievement curtains visible 8 Curtains
+	Open and close Tamara like a curtain.
+	You opened and closed Tamara like a curtain.
+	
+*achievement strip visible 3 Striptease
+	Watch Tamara do a striptease for you.
+	Tamara danced just for you!
+	
+*achievement slave visible 1 Slavery
+	Become Tamara's slave.
+	You are now Tamara's slave.
+	
+*achievement cumbath visible 10 Cumbath
+	Make Tamara take a cumbath.
+	Tamara rolled in puddles of cum.
+
+*achievement fulltamara visible 50 Full Carnal Knowledge of Tamara
+	It will take several playthroughs.
+	You possess full carnal knowledge of Tamara.
+
+*achievement jultie visible 8 Bound Juliette
+	Tie Juliette up.
+	You tied Juliette up and made her come.
+
+*achievement juleat visible 9 Lapping Juliette
+	Perform oral sex on Juliette.
+	You tongued Juliette to orgasm.
+
+*achievement nosex hidden 1 No Sex
+	hidden
+	You somehow managed to get no sex from Tamara despite all her hints.
+	
+*achievement money hidden 10 "Show me the money!"
+	hidden
+	From "Jerry Mcguire."
+	
+*achievement mango hidden 10 "I'm going to lick your cock like the inside of a ripe mango."
+	hidden
+	From "The Opening of Misty Beethoven."
+
+*achievement eddiemurphy hidden 10 "That's not iiiiiit."
+	hidden
+	Eddie Murphy, Delirious.
+	
+*achievement changesame hidden 10 "The more things change, the more they stay the same."
+	hidden
+	From "Escape From L.A."
+	
+*achievement mash hidden 10 "...it brings on many changes, and I can take or leave it if you please."
+	hidden
+	From "M.A.S.H."
+	
+*achievement ampie hidden 10 "I have reserves!"
+	hidden
+	From "American Pie."
+
+*achievement heavenandhell hidden 10 "The moon is just a sun at night."
+	hidden
+	From "Heaven and Hell" by Black Sabbath.
+
+*achievement waterboy hidden 10 "You can DO it!"
+	hidden
+	From "Water Boy."
+	
+*achievement starwars hidden 10 "Alllmost there..."
+	hidden
+	From "Star Wars."
+
+*achievement ending5 hidden 1 Ending #5: Meaningless Duel
+	hidden
+	You died in a meaningless duel.
+
+*achievement ending6 hidden 1 Ending #6: Over-Confident
+	hidden
+	You gave up on your quest after a particular embarrassing incident.
+	
+*achievement ending7 hidden 1 Ending #7: Utter Exhaustion
+	hidden
+	You died from way, way too much masturbation.
+
+*achievement ending8 hidden 1 Ending #8: Slaughtered by a Berserker
+	hidden
+	You unleashed Juliette's fury.
+
+*achievement ending666 hidden 1 Ending #666: Hell Freezes Over
+	hidden
+	The ultimate impossibility occurs, and the universe implodes, unable to reconcile the logical inconsistency.
+
+*comment *********************
+*comment **      STATS      **
+*comment *********************
+	
+*create fname "Warrior"
+*create lname ""
+*create title ""
+*create esteem 80
+*create cur_health 40
+*create max_health 40
+*create food 6
+*create water 16
+
+*comment *****************
+*comment **  INVENTORY  **
+*comment *****************
+
+*create sword true
+*create armor true
+*create rope true
+*create climb_equip true
+*create bedroll true
+*create messkit true
+*create flint_tinder true
+*create backpack true
+*create honey true
+*create water_skin true
+
+*create twelve_inch_penis false
+*create love_potion false
+
+*comment *********************
+*comment **  RELATIONSHIPS  **
+*comment *********************
+
+*comment REL: 0 to 100, 50 being neutral
+*comment tamara_respect: Starts at 0. Above X, and she starts to actually like him.
+
+*create met_tamara false
+*create rel_tamara 50
+*create tamara_respect 0
+
+*create tamara_abil_flex false
+*create tamara_abil_throat false
+*create tamara_abil_ass false
+*create tamara_abil_ground false
+*create tamara_abil_tracking false
+
+*create tamara_likes_honey false
+*create tamara_likes_horses false
+
+*comment *********************
+*comment **  SITUATIONALS   **
+*comment *********************
+
+*create learned_dragon_sense false
+*create had_pro_talk false
+*create has_honey true
+*create has_squirrel false
+*create found_mushrooms false
+*create honest_ignorance false
+*create know_tamaras_name false
+*create tamara_spat false
+*create with_tamara false
+*create missed_alliance_plan false
+*create tamara_laughed false
+*create lilypad1_followed false
+*create looked_in_dragoneye false
+*create looked_ass false
+*create was_polite false
+*create past_path false
+*create tracking_speech false
+*create slapped_honey false
+*create honey_breeches false
+*create climbed_tree false
+*create fell_from_tree false
+*create bee_sex false
+*create banes_love_talk false
+*create banes_sex_talk false
+*create tamara_enemy false
+*create hill_duel_outcome "nothing"
+*create pommelpummeled false
+*create tamara_begged false
+*create nomassage true
+*create revealed_foot_fetish false
+*create has_foot_fetish false
+*create kinkymassage false
+*create goodmassage true
+*create goodtoemassage false
+*create deepthroat false
+*create secondmassage false
+*create had_hair_sex false
+*create anal false
+*create knows_women_like_anal false 
+*create will_try_anal false
+*create butterfly false
+*create butterfly2 false
+*create sleep_sex false
+*create rise_vortex false
+*create left_crying false
+*create camp1_no_sex false
+*create slave_deal false
+*create tamaras_slave false
+*create thousandmilestare false
+*create motionkarezza false
+*create twobuckets false
+*create logictrap false
+*create slept_alone false
+*create pussycat false
+*create pussycattalk false
+*create nostril_ear false
+*create perfect_trust false
+*create monosexual_asterisk "*"
+*create jul_alliance false
+
+*comment *************************
+*comment *************************
+*comment ****    TEST GOTO    ****
+*comment *************************
+*comment *************************
+
+Testing Notes:
+
+* "massagepussy already defined" error fixed. (But unfortunately that option isn't written yet and goes somewhere else.)
+
+*if debug
+	*sm_init dragonprincess | 11
+	*set with_tamara true
+	*set deepthroat true
+	*label sm_top
+	*choice
+		#Play from the beginning.
+			*goto sm_done
+		#Load
+			*label load
+			*choice
+				#${savemod_slot_0}
+					*sm_load 0 | false
+					*goto sm_done
+				#${savemod_slot_1}
+					*sm_load 1 | false
+					*goto sm_done
+				#${savemod_slot_2}
+					*sm_load 2 | false
+					*goto sm_done
+				#${savemod_slot_3}
+					*sm_load 3 | false
+					*goto sm_done
+				#${savemod_slot_4}
+					*sm_load 4 | false
+					*goto sm_done
+				#${savemod_slot_5}
+					*sm_load 5 | false
+					*goto sm_done
+				#${savemod_slot_6}
+					*sm_load 6 | false
+					*goto sm_done
+				#${savemod_slot_7}
+					*sm_load 7 | false
+					*goto sm_done
+				#${savemod_slot_8}
+					*sm_load 8 | false
+					*goto sm_done
+				#${savemod_slot_9} 
+					*sm_load 9 | false
+					*goto sm_done
+				#${savemod_slot_10}
+					*sm_load 10 | false
+					*goto sm_done
+				#${savemod_slot_11}
+					*sm_load 11 | false
+					*goto sm_done
+				#Return
+					*goto sm_top
+		#Delete
+			*label delete
+			*choice
+				#${savemod_slot_0}
+					*sm_delete 0
+					*goto delete
+				#${savemod_slot_1}
+					*sm_delete 1
+					*goto delete
+				#${savemod_slot_2}
+					*sm_delete 2
+					*goto delete
+				#${savemod_slot_3}
+					*sm_delete 3
+					*goto delete
+				#${savemod_slot_4}
+					*sm_delete 4
+					*goto delete
+				#${savemod_slot_5}
+					*sm_delete 5
+					*goto delete
+				#${savemod_slot_6}
+					*sm_delete 6
+					*goto delete
+				#${savemod_slot_7}
+					*sm_delete 7
+					*goto delete
+				#${savemod_slot_8}
+					*sm_delete 8
+					*goto delete
+				#${savemod_slot_9}
+					*sm_delete 9
+					*goto delete
+				#${savemod_slot_10}
+					*sm_delete 10
+					*goto delete
+				#${savemod_slot_11}
+					*sm_delete 11
+					*goto delete
+				#Return
+					*goto sm_top
+		#Toggle Situational Conditions
+			*label tschoice
+			*choice
+				#Has honey: ${has_honey}
+					*if has_honey 
+						*set has_honey false
+						*goto tschoice
+					*else
+						*set has_honey true
+					*goto tschoice
+				#Climbed a tree: ${climbed_tree}
+					*if climbed_tree
+						*set climbed_tree false
+						*goto tschoice
+					*else
+						*set climbed_tree true
+					*goto tschoice
+				#Fell from the tree: ${fell_from_tree}
+					*if fell_from_tree
+						*set fell_from_tree false
+						*goto tschoice
+					*else
+						*set fell_from_tree true
+					*goto tschoice
+				#Traveling with Tamara: ${with_tamara}
+					*if with_tamara
+						*set with_tamara false
+						*goto tschoice
+					*else
+						*set with_tamara true
+					*goto tschoice
+				#Made Tamara beg: ${tamara_begged}
+					*if tamara_begged
+						*set tamara_begged false
+						*goto tschoice
+					*else
+						*set tamara_begged true
+					*goto tschoice
+				#Refused to give Tamara a massage: ${nomassage}
+					*if nomassage
+						*set nomassage false
+						*goto tschoice
+					*else
+						*set nomassage true
+					*goto tschoice
+				#Revealed foot fetish: ${revealed_foot_fetish}
+					*if revealed_foot_fetish
+						*set nomassage false
+						*set revealed_foot_fetish false
+						*goto tschoice
+					*else
+						*set revealed_foot_fetish true
+						*set nomassage false
+					*goto tschoice
+				#Has foot fetish: ${has_foot_fetish}
+					*if has_foot_fetish 
+						*set nomassage false
+						*set has_foot_fetish false
+						*goto tschoice
+					*else
+						*set has_foot_fetish true
+						*set nomassage false
+					*goto tschoice
+				#Gave Tamara a kinky massage: ${kinkymassage}
+					*set nomassage false
+					*if kinkymassage
+						*set kinkymassage false
+						*goto tschoice
+					*else
+						*set kinkymassage true
+					*goto tschoice
+				#Gave Tamara a good massage: ${goodmassage}
+					*set nomassage false
+					*if goodmassage
+						*set goodmassage false
+						*goto tschoice
+					*else
+						*set goodmassage true
+					*goto tschoice
+				#Tamara really liked what you did with her toes: ${goodtoemassage}
+					*set nomassage false
+					*if goodtoemassage
+						*set goodtoemassage false
+						*goto tschoice
+					*else
+						*set goodtoemassage true
+					*goto tschoice
+				
+				#Know that Tamara can deepthroat: ${deepthroat}
+					*if deepthroat
+						*set deepthroat false
+						*goto tschoice
+					*else
+						*set deepthroat true
+					*goto tschoice
+				#Return to Main Menu
+					*goto sm_top
+		#Recent Changes
+			*choice
+				#Dryad
+					*goto_scene dryad
+				#Werewolf Milk
+					*goto_scene werewolf_milk
+				#Werewolf Homecoming
+					*goto_scene werewolf_homecoming
+				#Tree slow
+					*set jumplabel "climbslow"
+					*goto_scene camp1
+				#[b]7/23/15:[/b] Hair sex. (Must ask if secret funny business is allowed.) Ass massage. (Two different branches, and there IS a way to complete butt-hole circumnavigation successfully!) [i]Complete. Rough draft.[/i]
+					*set jumplabel "accidentalfunnybusiness"
+					*goto_scene camp1
+				#[b]7/22/15:[/b] Tamara comes but you don't. Added new third option. [b]New Achievements:[/b] Second Massage From Tamara, Your Toes: Get Tamara to lick your toes, Multi-orgasmic Impossibility: Have three orgasms in a row.  (Two of these might be hard to find. Hint: Massages give people ideas.) [i]Complete. Rough draft.[/i]
+					*set jumplabel "bearthrow"
+					*goto_scene camp1
+				#[b]7/21/15:[/b] Storm Tamara's "castle." (To get to it: Take her to the movies (the long show), and make her beg. It's slightly different depending on if you climbed the tree earlier in the day.) [i]Very incomplete. Rough draft.[/i] 
+					*set jumplabel "whichhole"
+					*goto_scene camp1
+				#[b]7/20/15:[/b] MC gets massage from Tamara to show him how. [i]Complete. Rough draft.[/i]
+					*set jumplabel "learnmassage"
+					*goto_scene camp1
+				#Oral Trade. (To get to it: Admit you've gone too far, slink away, then insist on the master-apprentice no sex rule.) [i]Incomplete. Rough draft.[/i]  
+					*set jumplabel "legpass"
+					*goto_scene camp1
+				#Frontal Massage. [i]Incomplete. Rough draft.[/i]
+					*set jumplabel "frontalmassage"
+					*goto_scene camp1
+				#Winding down for bed.
+					*set jumplabel "sleep"
+					*goto_scene camp1
+				#Making camp.
+					*set jumplabel ""
+					*goto_scene camp1
+				#Meet Banes.
+					*goto_scene oldman
+				#Return to Main Menu
+					*goto sm_top
+
+*label sm_done
+
+*comment *********************
+*comment **    THE GAME!    **
+*comment *********************
+
+*script updateStatBar();
+
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=40&text=SeductQuest:&color=000000&matte=F0D6AD&shadow=inv
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=30&text=The%20Dragon%20and%20the%20Princess&color=000000&matte=F0D6AD&shadow=inv
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=25&text=by&color=000000&matte=F0D6AD&shadow=inv
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=25&text=Frankie%20Lee&color=000000&matte=F0D6AD&shadow=inv
+
+[b]WARNING: [/b]This game is a work of erotica and contains explicit sexual content. Reader discretion is advised. 
+
+Do not play this game if you are a minor.
+
+[b]Features: [/b]
+
+[b]*[/b] Hot sex scenes!
+
+[b]*[/b] Realistic female characters with different personalities.
+
+[b]*[/b] An interesting plot that could stand on its own. (Because of this, the really juicy sex scenes might come later on. I guarantee the wait will be worth it!)
+
+[b]*[/b] Target Audience: Male, Straight.
+
+[b]*[/b] Fetish Level: Very light. Minor amounts of discipline (both ways), pranking, mentions of rape, and foot fetish play.
+
+*page_break
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=30&text=Prologue&color=000000&matte=F0D6AD&shadow=inv
+
+You remember well the moment your life changed forever. You were crossing the Corkish Mountains and just cresting the summit of Mt. Everhorn when the entire valley below became visible. You could see the walled capital city of the Kingdom of Zhan sitting in the middle of the plain, its magnificent spires thrusting skyward.
+
+Then, from the northeast, the dragon came. 
+*page_break
+Even from afar, its terrible magnificence was dreadfully clear, and you saw its fiery breath, bright in your eyes, even in broad daylight. The knights who rode out to meet it looked like tiny ants from your vantage point, and they were just as feeble against the dragon's might.
+
+The dragon then rose to the highest tower, the one you knew housed the chambers of the princess Elsbeth, and with a sweep of its tail sundered with ease the stone wall capable of withstanding one hundred sieges. You watched in horror as it reached in with its claw and extracted the princess, dressed in all her finery, and then the dragon was gone, returning to its eyrie atop the far mountain range, DragonKeep.
+*page_break
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=30&text=Chapter%20One:&color=000000&matte=F0D6AD&shadow=inv
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=25&text=Chance%20Encounters&color=000000&matte=F0D6AD&shadow=inv
+Since that day, you made it your sole mission in life to rescue Princess Elsbeth, to succeed where so many have failed, and you now find yourself in the wooded foothills below the great DragonKeep itself, having already braved much hardship and difficulty, though the final test lies ahead. 
+
+It's sunrise, and you've left last night's campsite to scout ahead a bit as your breakfast cooks. You've been following the known path leading toward the dragon's lair, but your habit has been to camp a little ways off the path. Now that you're quite close to the lair (perhaps fifteen miles, as the crow flies), you feel it prudent to look around a bit before returning to the path.
+*page_break
+You stroll for approximately ten minutes, enjoying the cool morning air, not really expecting to find anything. The ground is rocky and uneven, and there are many trees, boulders, and outcroppings. You find nothing of note and are about to head back when you hear a faint female voice from somewhere up ahead, perhaps just over a fairly steep ridge fifty feet ahead.
+*label startchoice
+*choice
+	*disable_reuse #Stop and listen.
+		*goto listen
+	#Quietly move forward to investigate.
+		You move forward as quickly as you can while remaining quiet, and you carefully climb to the top of the ridge until just your head is peeking over the top.
+		
+		*goto investigate
+	#Quickly move forward to investigate.
+		You move forward as quickly as you can, not worrying about stepping on any twigs or rustling any leaves. Most likely, whoever or whatever is on the other side of the ridge wouldn't hear such noises anyway, but it's still definitely possible that they could. You reach the ridge and climb to the top until just your head is peeking over.
+		
+		*goto investigate
+	
+*label listen
+You pause for a moment but hear nothing more. The voice didn't seem distressed, but from the inflection, it sounded like perhaps it was making a request to another person. However, it was too faint to be sure even of that.
+
+You wonder if it could be a trap. Perhaps a faerie's prank? It's odd for a woman to be found this close to the dragon's lair, lest it kidnap her too.
+
+Despite these concerns, you decide you must investigate, for isn't it better to know what you're dealing with? Besides, you're confident you could handle whatever comes your way. Afterall, compared to a dragon's might, how bad could it really be? Also, it's a woman--maybe you could get lucky!
+*goto startchoice
+
+*label investigate
+On the other side of the ridge is a small ravine with a gentle wooded slope leading down to a dry creekbed. There are small trees here that provide you with some cover, but you can still see the ravine bottom perhaps fifty feet ahead.
+
+The other side of the dry creekbed is the base of a small cliff, and there are many jagged boulders of various size littering the area. Someone seems to have camped here last night, and you can see the still smoking remains of a campfire, two bedrolls, and other equipment.
+
+A woman is leaning against a three-foot tall, square-ish boulder, and her plate armor dazzles you in the early morning sunlight. It's incredibly finely wrought and probably covered with silver veneer to make it glitter as it does, and you marvel at how it conforms to her body's curves, maintaining her femininity while sacrificing nothing in the way of protection in combat. Her helm is silver too, with little golden wings on each side. She has a royal blue cape, and next to her, leaning against the boulder is a fine broadsword in an embroidered leather scabbard and a metal shield bearing the crest of a noble family.
+
+Next to her is an elderly man in old gray robes who looks like he must be her manservant.
+
+The woman is working at something just below waist-level and then removes the part of her armor covering the crotch area, revealing her naked sex. She spreads her legs to shoulder width, and the man kneels, placing his head between her legs. You see her body stiffen just then, and she puts her mailed but still dainty hand on the back of his head, closes her eyes.
+
+*choice
+	#It's probably a good idea not to disturb them, and your breakfast is definitely overcooked by now. Go back to your camp.
+		*goto camp
+	#You can't help yourself and watch a bit longer, even if it risks being discovered and burning your breakfast.
+		*goto watch
+	#Step out and say hello. (WARNING: Great self-esteem risk if this goes badly.)
+		*goto stepout
+
+*label camp
+*set has_honey false
+*set food -1
+*script updateStatBar();
+You ease yourself up, preparing to go back down the ridge, and though doing so causes a small avalanche of dirt and stones, the couple below is so absorbed in what they're doing that they don't notice.
+
+You carefully climb down the ridge, and in perhaps ten minutes, you are back in your camp. The oatmeal you left cooking is burned on the bottom but otherwise edible, and you use the last of your honey to sweeten it.
+
+*label eat
+You eat quickly, hoping to catch up with the two strangers, and are packing your supplies when...
+*page_break
+*goto_scene meet_tamara
+
+*label watch
+You see the man's head undulate rhythmically between the female knight's legs while she remains stock still as if resisting the impulse to show any sign of the pleasure so obviously coursing through her body. She doesn't even move to spread her legs further apart.
+
+In a few moments, however, her back arches slightly, and she emits a tiny, half-stifled gasp. The hand on the back of the man's head pulls him closer, and her other hand is grasping frantically at the edge of the boulder she's leaning/half-sitting against.
+
+"Faster..." she gasps. "I'm close!"
+
+The man grabs the knight by the hips and redoubles his efforts, and she begins to emit a few more moans and soft cries despite her attempts to suppress them. She's close, but it's not orgasm yet.
+
+You tear yourself away, knowing that this is the best time to leave. If you wait any longer, the act will be finished, and, resting in the aftermath, they'd likely hear any sound you make.
+
+As you climb down the ridge, you cause a small avalanche of dirt and small stones, but the woman's cries of mounting orgasm tell you they have remained oblivious to your presence.
+
+Having descended the ridge, you begin to return to your camp, listening as the woman's ecstasy finally spills over into orgasm. You've been traveling by yourself a long time, and this makes you long desperately for the company of a woman. Oh well. You think of how wonderful it will be after you rescue the princess and how grateful she will be.
+
+Back in camp, you find the oatmeal mostly burned, and you scrape the small amount that's still edible from the top. It's not a full breakfast, but it'll have to do.
+
+*set cur_health -1
+*set food -1
+*script updateStatBar();
+[boldred]Your health goes down by 1.[/boldred]
+
+*goto eat
+
+*label stepout
+You climb over the ridge and emerge from the trees.
+
+"Hello," you say, hoping maybe the female knight will find you more attractive than her elderly companion.
+
+The man tries to spring to his feet, but his weak legs cause him to fall to his hands and knees.
+
+The knight grabs for her sword and cries, "Begone, you lecher! I'll teach you to interrupt private moments."
+
+She advances upon you, her sex still exposed, but as beautiful as it may be, all you can see is the hatred in her eyes and the point of her broadsword.
+
+*set esteem 20
+*script updateStatBar();
+Your self-esteem crumbles:
+*stat_chart
+	percent esteem Self-Esteem
+	
+*line_break
+Your self-esteem is now too low to fight or even to remain where you are, for that matter. You flee and now must give up your quest, lacking the self-confidence to continue.
+
+THE END.
+
+You have reached Ending #6: Over-confident.
+*page_break
+*achieve ending6
+*ending

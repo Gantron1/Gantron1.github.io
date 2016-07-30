@@ -1,0 +1,5 @@
+*check_achievements
+*if (((((choice_achieved_angrykiss and choice_achieved_honeypot) and choice_achieved_sugarhoney) and choice_achieved_sugar) and choice_achieved_blow) and choice_achieved_duelsex)
+	*achieve fulltamara
+	
+*return

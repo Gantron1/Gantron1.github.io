@@ -1,0 +1,107 @@
+*label top
+*temp dragon ""
+*temp numlikes 0
+*temp numabils 0
+*check_achievements
+*if choice_achieved_dragonname
+	*set dragon "Myrristicor,"
+
+*if not((fname = "Warrior") and (lname = ""))
+	[b]Name:[/b] $!{fname} $!{lname} ${title}
+
+You are on a quest to rescue Princess Elsbeth from ${dragon} the ancient dragon who lives atop Mt. DragonKeep.
+
+[b]Health:[/b] ${cur_health}/${max_health}
+*line_break
+[b]Rations Left:[/b] ${food} meals
+*if water_skin
+	*line_break
+	[b]Water Left:[/b] ${water} cups
+
+[b]Self-Esteem[/b]
+*stat_chart
+	percent esteem Self-Esteem
+
+*if esteem > 79
+	Your high self-esteem gives you the confidence you need to undertake your nearly impossible quest.
+	*goto afteresteem 
+*elseif (esteem < 80) and (esteem > 39)
+	You still have enough self-esteem to continue your quest, but if it ever falls below 40, you cannot continue and lose the game.
+	*goto afteresteem 
+*else
+	You lack the self-confidence to continue your quest.
+	*goto afteresteem
+
+*label afteresteem
+
+*gosub_scene inventory
+	
+*label tamara
+*comment Possible other descs: height, hair, eyes, figure, cup size, 3 measurements, 10 rating, things she likes (honey, horses), abilities (groundfighting, deepthroat, contortionism), mood, temperment, sexual preference, age, 
+*temp tamara_desc ""
+*set tamara_desc tamara_desc & "a master thief"
+*if tracking_speech
+	*set tamara_desc tamara_desc & " and tracker"
+*set tamara_desc tamara_desc & ", expert on dragonlore."
+
+*if met_tamara
+	[b]Tamara[/b]
+	*line_break 
+	You have met Tamara, ${tamara_desc}
+	
+	Age: Mid-twenties.
+	*line_break
+	Height: 5'6"
+	*line_break
+	Hair: Deep reddish brown, shoulder length.
+	*line_break
+	Eyes: Piercing green.
+
+	Things she likes: 
+	*if tamara_likes_honey
+		Honey - 
+		*set numlikes +1
+	*if tamara_likes_horses
+		Horses - 
+		*set numlikes +1
+	*if numlikes = 0 
+		<Unknown>
+	*line_break
+	*line_break
+	Special abilities: 
+	*if tamara_abil_tracking
+		*set numabils +1
+		Tracking - 
+	*if tamara_abil_ground
+		*set numabils +1
+		Ground-fighting - 
+	*if tamara_abil_flex
+		*set numabils +1
+		Contortionism - 
+	*if tamara_abil_throat
+		*set numabils +1
+		Deep-throat - 
+	*if tamara_abil_ass
+		*set numabils +1
+		Anal - 
+	*if numabils = 0 
+		<Unknown>
+	*line_break
+	*line_break
+	*if with_tamara
+		You are currently traveling together.
+		*goto tamararespect
+	*elseif tamara_enemy
+		You are currently enemies.
+		*goto tamararespect
+	*else
+		She seems to be following you.
+		*goto tamararespect
+
+	*label tamararespect
+	*stat_chart
+		percent tamara_respect Tamara's Respect
+	
+
+
+	

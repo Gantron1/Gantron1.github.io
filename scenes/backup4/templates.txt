@@ -1,0 +1,19 @@
+*if (debug) or (xrated)
+	*if debug
+		[b]X-rated version:[/b]
+		
+	xtexthere
+
+*if (debug) or not (xrated)
+	*if debug
+		[b]Tame version:[/b]
+		
+	tametexthere [Skipped ??? paragraphs of X-rated material.]
+
+
+-----------------------------
+
+*label 
+[This option is yet to be written.]
+
+

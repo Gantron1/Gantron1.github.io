@@ -1,0 +1,454 @@
+*temp rebekah_cold false
+
+*if debug 
+	*comment *set rel_fae 60
+	*comment *set rel_el 60
+	*comment	*goto askabout
+
+*page_break Arrival at the farm
+
+Jennifer's family's farm is small but tidily kept, and you see several of what must be her brothers and sisters milling about engaged in various chores. One woman, perhaps a few years older than Jennifer, is milking a cow, and she sees you first, rises to greet you, a concerned look on her face.
+
+"What happened?" she gasps, rushing over.
+
+"I am well," Jennifer quickly reassures her, for already her sister's eyes had moved to her torn dress. "This man saved me from three assailants, but the horse is missing. The wagon and goods are still on the road."
+
+You introduce yourself, and Jennifer's sister nods sagely, introducing herself as Rebekah. Her eyes flash, and her smile's inviting, making Jennifer possessively clutch you a bit more strongly.
+
+Before you know it, Jennifer's two grown up brothers, along with a horde of children, surround you, all full of questions. Eventually, you are taken inside where you meet their father and mother too. Briefly, Jennifer goes with her mother to tend her wound while you sit around the dining room table with her father, Rebekah, and her two grown brothers. All the children are there too, quietly observing the spectacle from various corners of the room. 
+
+After thanking you profusely for your help (as well as being a gentleman towards Jennifer in her moment of vulnerability) and hearing your retelling of the day's events, the men's talk turns to the wagon. It's agreed that the two brothers will immediately be dispatched to borrow the neighbor's horse and fetch it, one of them leaving immediately for the neighbor's. Rebekah is going with them to fetch a healing poutice from an old crone on the way back.
+
+They ask you to go with them to show them the way, but Jennifer, who now joins the meeting, pulls you aside and says it's easy enough to find. She wants you to stay with her and offers to tell everyone she's still frightened and needs "her savior's presence" to feel safe.
+
+Soon the one brother returns with the horse, and everyone's ready to go.
+*set met_d2 true
+*choice
+	#Go with Rebekah and her brothers
+		*set rel_d1 %-10
+		*goto wagon
+	#Stay with Jennifer
+		*goto_scene jennifer
+		
+*label wagon
+*temp insatiablefrigid false
+*temp vixen false
+Rebekah grins shamelessly when she hears that you're coming with her instead of staying behind with Jennifer. 
+
+"Be careful with my sister," Jennifer whispers to you as you're leaving. "She's not like the rest of us."
+
+You want to ask what she means, but she seems loathe to say. Coupled with her brothers' and Rebekah's urging, you're back on the road before you get a chance to press her.
+*page_break On the road
+The oldest brother's name is John, and the next oldest is Gerald. Both are grown men but still on the family farm. They seem friendly, mostly just grateful for helping their sister, though they do jokingly hint about the "torn dress," "carrying her all that way," and "your intentions." You learn that Jennifer is actually pursued by several young men from the farms outside Zagos and is even known in Zagos itself for her attractiveness. So far, however, she has not made her decision.
+
+"You must be quite pursued as well?" you ask Rebekah, for though they are of entirely different character, she is quite comely as well.
+
+"No," Rebekah says, perhaps a bit haughtily. "I have known them all at one time or another, but as none can satisfy me, none pursue me."
+
+While Jennifer is pretty in the classical farm-girl way, playful yet coy, Rebekah has an intensity about her. It reminds you of your own ambition... and also, somehow, of the fae.
+
+*choice
+	#Ask her to explain what she means
+		*goto explain
+	#Ask if Jennifer has also "known" many boys
+		*goto jealousy
+	#Talk to John and Gerald instead
+		*goto boytalk
+
+*label jealousy
+*set rel_d2 %-5
+"That's a forward question, isn't it?" Rebekah quips, turns, and walks off, apparently tired of the conversation. 
+
+Diplomatically, Gerald turns to you and says, "Jennifer is more particular, probably because she can be. If you stay with us longer than a few days (and you are certainly welcome to, having saved her and all), you'd likely get to meet a suitor when he comes to call. She has many, but Rebekah... well, she's..."
+
+"I can hear you, Gerald," Rebekah calls out while walking, not even bothering to turn around.
+
+Gerald quickly shuts up and smiles sheepishly, caught in a difficult spot.
+
+Rebekah stops and turns around. "He'll learn soon enough about me; don't worry," she says and a mischievous smile spreads over her face as her gaze shifts to you.
+
+*goto wantschase
+	
+*label boytalk
+*set vixen true
+"You make yourself sound like a true vixen," Gerald laughs.
+
+"That's because I am," Rebekah replies, neither insulted nor flattered.
+
+You decide to just shoot the breeze with Gerald and John, talking about their farm and the surrounding countryside. Rebekah follows along behind you for awhile, then skips ahead, seemingly uninterested in the conversation, amusing herself by kicking a few stones.
+
+You learn that the family name is Wren, and the farm's been in the Wren family for as long as anyone can remember. The raise chickens, pigs, and a few cows, as well as growing a variety of vegetables, the surplus of which they sell in the nearby city, which was what Jennifer was doing when she got accosted.
+
+Rebekah turns around and grins. "Are you really interested in all that?" she asks, "Or would you rather see if you can catch me!"
+
+She runs off into the woods, tapping you on the shoulder playfully.
+
+John laughs, "You know what the word 'vixen' really means, right?"
+
+"A female fox," Gerald says, "And there she is being one."
+
+*choice
+	#Give chase
+		*goto chase
+	#Ask John and Gerald about Rebekah
+		*goto askabout
+
+*label explain
+*set insatiablefrigid true
+"None can satisfy you? Has no one even come close?" you ask.
+
+Rebekah laughs. "It's not what you're thinking," she says. "The animal energies flow in me as in any other, explode like in any other. I am not frigid, nor am I insatiable. These are the things you were thinking, yes?"
+
+"Sis! Stop harassing the poor man," John cries.
+
+Rebekah glances in his direction, but her eyes immediately return to yours. "We can speak of these things more later... if you wish. I am not like other women."
+
+When she spoke her voice was low and full of a strange kind of power, but then she smiled, seemed to transform, as if a dark heaviness suddenly changes into light. She laughs and suddenly seems like a little girl.
+
+*label wantschase
+"Chase me!" she cries and runs off into the woods, tapping you on the shoulder playfully.
+
+John and Gerald look at each other and shake their heads.
+
+*choice
+	#Give chase
+		*goto chase
+	#Ask John and Gerald about Rebekah
+		*goto askabout
+	
+*label askabout
+*if insatiablefrigid
+	You're about to ask about Rebekah, but Gerald laughs, "She's like a rabbit in those woods, man! If you want to have any hope of catching her, you best not tary."
+
+	"And she's right about not being frigid," John adds.
+
+	*choice
+		#Ask about the "insatiable" part
+			*goto askinsatiable
+		#Ask how she's different
+			*goto askdifferent
+		#Give chase
+			*goto chase
+*elseif vixen
+	"That vixen will disappear in there if you don't hurry, man!" Gerald laughs.
+	
+	*choice
+		#Give chase
+			*goto chase
+		#Decide to talk with Gerald and John about Rebekah
+			*goto askbrothersaboutrebekah
+*else
+	You're about to ask about Rebekah, but Gerald laughs, "She's like a rabbit in those woods, man! If you want to have any hope of catching her, you best not tary."
+	
+	*choice
+		#Ask how she's different
+			*goto askdifferent
+		#Give chase
+			*goto chase
+	
+*label askinsatiable
+[This option is not yet written.]
+
+*label askdifferent
+"I think she's about to show you!" John cries, egging you on.
+
+"Yes," Gerald agrees, then adds, "She's our sister, and we love her. Everyone is entitled to their own beliefs, but be careful if you decide to get involved. Our family doesn't approve of her choices, but we will not condemn you. Now, you better go if you're to have any chance of catching her!"
+
+*choice
+	#Give chase
+		*goto chase
+	#Decide you need to know just what everyone is talking about
+		*goto askbrothersaboutrebekah
+	
+*label askbrothersaboutrebekah
+*set rel_d2 %-5
+"Why ask us when she's probably about to tell you?" Gerald asks.
+
+"Why not just tell him, though?" John says. "It's not really a secret or anything."
+
+"Well, it's not the subject of idle conversation either..." Gerald muses pensively.
+
+Suddenly Rebekah's voice is heard from the treeline: "Are you talking about me again?"
+
+"No!" Gerald says sheepishly.
+
+"Yes," John laughs.
+
+"Oh, you boys are so silly," Rebekah says walking over and joining you. "We ought to get to the wagon before someone ransacks it anyway."
+
+"Good idea," Gerald says, and the four of you resume your journey.
+
+Rebekah smiles sidelongly at you and says, "I bet you're really curious about me now, huh?"
+
+Before you can answer, she says, "Too bad you didn't follow me!" and shrugs playfully.
+	
+*label chase
+You charge into the woods, and once off the path, though it's still afternoon, everything is suddenly dark and ominous. If you weren't so focused on the chase, the preternatural nature of this phenomenon would probably be of no small concern to you, but currently you're distracted, eager to find Rebekah.
+
+Looking about you, she is nowhere to be seen, and you're amazed she's managed to disappear so quickly.
+
+*choice
+	#Rush forward in the most likely direction she's gone
+		*goto likelydirection
+	#Use your wits
+		*goto wits
+	#Head back
+		*goto nochase
+	
+*label wits
+You look for tracks, overturned stones, faint sounds, the calls of birds and other animals, anything that might give you a clue to the direction Rebekah has gone. Woodsman skills, however, are not your forte, and no clues are forthcoming.
+
+*temp ella_hint ((rel_fae >= 50) and (rel_el >= 50))
+*if ella_hint
+	You're about the move forward when the darkness of the woods changes subtly to a barely perceptible green glow. You hear Ella, the fae's, voice in your head say, "Listen with your heart and body, not merely your ears."
+	
+*choice
+	*if (ella_hint) #Listen with your heart
+		*goto listenheart
+	*if (ella_hint) #Listen with your body
+		*goto listenbody
+	#Rush forward in the most likely direction she's gone
+		*set rel_fae %-10
+		*goto likelydirection
+	#Head back
+		*set rel_fae %-10
+		*goto nochase
+	
+*label likelydirection
+[This option is not yet written.]
+
+*label nochase
+[This option is not yet written.]
+	
+*label listenheart
+Having never listened with anything other than your ears before, you're not sure what Ella is really asking you to do, but your fond memory of her somehow helps you let go, trust, and feel your way into it. You begin to feel that you ARE your heart, that it has its own thoughts and feelings into which you can tap if you let yourself "become" it. 
+
+It's a strange feeling, though, and you find yourself remembering all the warnings about dabbling with fae magic. When these fears enter your mind, the glow dims slightly. 
+
+*choice
+	#Stop messing with fae magic
+		*goto nomagic
+	#Keep listening
+		*goto listenheart2
+	
+*label nomagic
+[This option is yet to be written.]
+	
+*label listenheart2
+*set rel_fae %+10
+You shut your fear from your mind and focus on listening from, or even "as," your heart, and suddenly, within the green glow that pervades your entire surroundings, a faint redness appears. You feel into it, and you realize it's Rebekah, or rather her feelings. From it, you know she's hiding, willing herself invisible. You sense an undertone of playfulness, and it's without ulterior motive. (Unless that's a trick!) There's also a sense of the sacred, the same power you felt in her voice earlier, and finally you sense that she wants you. Her body is, in fact, filled with lust.
+
+When you make this realization, it's as if the diffuse red glow coalesces, gains directionality and distance, and you know exactly where Rebekah is. You're certain of it and stride with utmost confidence to the exact hedge behind which she's hiding.
+
+"I thought you might be one of us," she says, standing up, her eyes shining in the darkness.
+
+*choice
+	#Ask what she means
+		*goto oneofus
+	#Kiss her
+		*goto faekiss
+	#Say, "Gotcha!" and head back
+		*goto gotcha
+
+*label listenbody
+Having never listened with anything other than your ears before, you're not sure what Ella is really asking you to do, but your fond memory of her somehow helps you let go, trust, and feel your way into it. What does it mean to listen with your whole body, though? You try to do it, whatever it may mean, and in just a little while, you find that it feels like your senses, especially your hearing is somehow expanding. Suddenly you can hear the voices of all the plants and trees around you, and they're all speaking at once. You realize that they're ALWAYS speaking, that anyone can hear them if only they'd pause to listen.
+
+It's a strange feeling, though, and you find yourself remembering all the warnings about dabbling with fae magic. When these fears enter your mind, the voices get softer, and you can no longer hear them so clearly. 
+
+*choice
+	#Stop messing with fae magic
+		*goto nomagic
+	#Keep listening
+		*goto listenbody2
+	
+*label listenbody2
+*set rel_fae %+10
+You shut your fear from your mind and focus on listening from, or even "as," your body, and slowly the voices become clearer. They're not speaking with words, but what they say has meaning that can be translated into words. They seem to be saying, "Over there! Over there! She's hiding there. Oh what fun!"
+
+The branches and leaves of all the plants and trees move with the occasional breeze. They glitter, and they seem to breathe. Somehow, from all this, you know, just know, exactly where Rebekah is hiding. You stride forward with utmost confidence, and it feels as though your movement is one with the movement of all the plants, your thoughts just another voice in all the voices.
+
+Rebekah emerges from behind a hedge in front of you.
+
+"I thought you might be one of us," she says, standing up, her eyes shining in the darkness.
+
+*choice
+	#Ask what she means
+		*goto oneofus
+	#Kiss her
+		*goto faekiss
+	#Say, "Gotcha!" and head back
+		*goto gotcha
+	
+*label oneofus
+*set rel_d2 %+10
+"There's a magic all around us, the same wellspring the wizards tap, just that we go through our bodies and hearts, not with rituals and reagents. I know you felt it."
+
+*choice
+	#"Yes, I did! I have never felt such things before."
+		*goto feltmagic
+	#"I think I felt something, but is it fae magic? Isn't that dangerous?"
+		*goto magicdanger
+	#Kiss her
+		*goto faekiss
+	#Decide to head back
+		*goto headback
+	
+*label gotcha
+*set rel_d2 %-5
+[This option is not yet written.]
+
+*label feltmagic
+"Then I was right about you," Rebekah says. "At least I hope I am."
+
+You want to ask her more, but she says, "My brothers are waiting. We must go back."
+*page_break Head back
+*goto headback
+
+*label magicdanger
+*set rel_d2 %-5
+*set rel_fae %- 5
+*set rebekah_cold true
+"Yes," Rebekah says, her voice low, ominous. "It's dangerous like the wind is dangerous, the water. It can destroy villages and drown you, but it is not dangerous like men are dangerous. It will never betray you. Come, we have a wagon to fetch."
+
+Rebekah seems a bit cold as you walk back, sharp contrast to her playfulness of before, and the strange perceptions you had earlier are gone. You feel relieved to be back in the normal world.
+*page_break
+*goto headback
+	
+*label faekiss
+You move forward to kiss Rebekah.
+
+"What about my sister?" she asks. 
+
+*choice
+	#Still kiss her
+		*goto stillkiss
+	#Decide you need to know them better before you can decide who you like
+		*goto nokiss
+	
+*label nokiss
+[This option is yet to be written.]
+	
+*label stillkiss
+*set rel_d2 %+ 15
+You kiss Rebekah, and a strange energy seems to pass between your bodies.
+
+*choice
+	#Ask what the strange energy is
+		*goto strange_energy
+	#Take it to the next level
+		*goto nextlevel
+	#Better head back now
+		*goto headback
+	
+*label nextlevel
+*set rel_d2 %-5
+The strange energy seems to intensify, and you realize that this is what gives life to all things in the world. It's what makes the sun rise, flowers bloom. It drives the cycle of creation of which you are only a part, and now, in this moment, it's about you and Rebekah and the love you are about to make.
+
+"No..." Rebekah says, pulling away. "My brothers are waiting."
+
+The energy winks out like a light as the bond between you breaks, and you notice that the woods now appear normal again, the numinous darkness gone.
+*page_break Head back
+*goto headback
+	
+*label strange_energy
+"What is this strange energy I feel passing between us?" you ask, but it stops as soon as you break your connection with Rebekah.
+
+Rebekah sighs, and you know she felt the connection break too.
+
+"Don't ask so many questions," she mutters, making you feel like you ruined the moment. "Come, let's go back."
+*set rel_d2 %-5
+*page_break Head back
+*goto headback
+
+*label headback
+You and Rebekah emerge from the woods.
+
+"Come on, lovebirds!" Gerald laughs.
+
+*if rebekah_cold
+	*goto rebekah_cold2
+*label headback2
+It's not long before you arrive at the wagon and hitch the neighbor's horse to it. The goods appear undisturbed.
+
+"I am continuing on," Rebekah says. "You are welcome to come with me and meet the Crone."
+
+"Be careful with that old hag," John cautions. "She boils human fetuses and the like to work her magic."
+
+"She does not!" Rebekah cries.
+
+"Still, there must be a reason why she's so feared. You know we don't like you visiting her, Rebekah, even if her medicine is strong."
+
+"Come with us!" Gerald calls. "We'll ride fast and get you home to your other lovebird, Jennifer!"
+
+Rebekah goes to help her brothers to give you time to think things over.
+
+The wagon is made ready in short order, and John says, "So, Hero, are you coming back with us or venturing onward into... the Mysteries!" His tone of voice is playfully mocking, and Rebekah punches him on the shoulder.
+
+"Ow!" he says but is still smiling. "Well, what is your decision?"
+
+*label headback3
+*choice
+	#Go with Rebekah
+		*goto_scene crone
+	#Return with the wagon
+		*goto return
+
+*label rebekah_cold2
+"Stuff it, Gerald," Rebekah says, and his face becomes puzzled.
+
+"What happened in there?" he asks.
+
+"Nothing," Rebekah says.
+
+"He'll get the courage soon, don't you worry!" John laughs.
+
+"I'm sure he will," Rebekah retorts, "But there are many kinds of courage, John."
+
+Gerald leans in towards you and whispers, "Just ignore her when she gets this way."
+*page_break Continue on to the wagon
+It's not long before you arrive at the wagon and hitch the neighbor's horse to it. The goods appear undisturbed.
+
+Rebekah pulls you a bit to the side while her brothers prepare the wagon.
+
+"From here I am going further into the forest to visit the crone. I want you to come with me, but if you do, you must be prepared. I see you are ambivalent toward the things we showed you, so if you come, do so with an open mind."
+
+"Be careful with that old hag," John cautions. "She boils human fetuses and the like to work her magic."
+
+"She does not!" Rebekah cries.
+
+"Still, there must be a reason why she's so feared. You know we don't like you visiting her, Rebekah, even if her medicine is strong."
+
+"Come with us!" Gerald calls. "We'll ride fast and get you home to your other lovebird, Jennifer!"
+
+Rebekah goes to help her brothers to give you time to think things over.
+
+The wagon is made ready in short order, and John says, "So, Hero, are you coming back with us or venturing onward into... the Mysteries!" His tone of voice is playfully mocking, and Rebekah punches him on the shoulder.
+
+"Ow!" he says but is still smiling. "Well, what is your decision?"
+*goto headback3
+	
+*label arriveatwagon
+It's not long before you arrive at the wagon and hitch the neighbor's horse to it. The goods appear undisturbed.
+
+Rebekah pulls you a bit to the side while her brothers prepare the wagon.
+
+"From here I am going further into the forest to visit the crone. If you want answers to your questions, you may come with me... if you have an open mind."
+
+"Be careful with that old hag," John cautions. "She boils human fetuses and the like to work her magic."
+
+"She does not!" Rebekah cries.
+
+"Still, there must be a reason why she's so feared. You know we don't like you visiting her, Rebekah, even if her medicine is strong."
+
+"Come with us!" Gerald calls. "We'll ride fast and get you home to your other lovebird, Jennifer!"
+
+Rebekah goes to help her brothers to give you time to think things over.
+
+The wagon is made ready in short order, and John says, "So, Hero, are you coming back with us or venturing onward into... the Mysteries!" His tone of voice is playfully mocking, and Rebekah punches him on the shoulder.
+
+"Ow!" he says but is still smiling. "Well, what is your decision?"
+*goto headback3
+	
+*label return
+[This option is not yet written. For now, during testing, go to the other branch.]
+

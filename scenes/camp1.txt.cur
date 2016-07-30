@@ -1,0 +1,1843 @@
+*temp planned_fire_size ""
+*temp stoodupforself false
+*temp smallfire false
+*temp booboffer false
+*temp was_eager false
+
+*if with_tamara
+	*goto camp
+*else 
+	*goto camp_alone
+
+*label camp_alone
+*comment Bed down. Water laced with love potion!
+*if left_crying
+	*goto headtolair
+*else
+	You sit and think for a moment, watching Tamara walking away. Even if you don't want to join with her and become her apprentice, without a path to follow, it might be hard for you to find the knight.
+	*choice
+		#Follow Tamara.
+			*goto followtamara
+		#Decide to just head toward the dragon's lair. If you meet Juliette, fine, but if not, that's fine too.
+			*goto headtolair
+	
+*label followtamara
+Tamara never even turns around, and soon she disappears into the forest foliage.
+
+*label headtolair
+Unable to track Juliette yourself, you head toward DragonKeep itself, keeping a good pace despite the upward slope, and by nightfall, you've greatly closed the distance. The mighty peaks that you gazed upon from afar now look almost close enough to touch, and there was no sign of Tamara all day, which you find quite uncharacteristic. Could she have finally given up on getting you to join her?
+	
+You find a good place to camp and pass an uneventful evening alone.
+
+*goto_scene morning_alone
+
+*label camp
+Tamara starts walking again, and you see her studying the ground more intensely than usual. "It's odd," she says finally. "Now that Juliette is away from Banes, her pace has picked up to a degree impossible for one so heavily-laden with armor. It will be difficult, but we can still catch her, probably early tomorrow."
+
+You groan inwardly, knowing this means a long day of hard trekking.
+
+"That's not the worst part, though," Tamara goes on. "I suspect it means she's magically-aided, perhaps with Boots of Haste. The dragon senses magic, not to the same degree as negative emotions, but it will be able to locate her when she's probably still a mile out. We'll catch up to her before that, but convincing her to leave all her magic items behind might prove difficult. I hope your seduction skills are up to the task."
+*page_break
+After a few hours of forced march, as the sun begins to get lower in the sky, Tamara says, "Well, we made good time. Juliette is very close, and this looks like a good place to make camp."
+
+Relieved that the day of heavy exertion is finally coming to a close, you look forward to a nice hot meal and well-earned sleep.
+
+"You're my apprentice, so go gather a bunch of firewood," Tamara calls as she builds a little circle of stones for a firepit. "Then come back and rub my feet and shoulders."
+*choice
+	#Protest.
+		*goto protestwood
+	#Do as you're told.
+		*goto dotold
+	
+*label protestwood
+Rub her feet and shoulders?!? You understand that this is standard duty for apprentices, but in the current circumstances it seems like asking too much. Not only has it been a day of hard travel, your apprenticeship relationship with Tamara is hardly standard. In exchange for their complete servitude, apprentices can expect food, lodging, and years of training, culminating in the creation of a masterpiece and lucrative career. Will Tamara give you all this? You think not and tell her so.
+
+"Are you sure you'll mind rubbing my feet and shoulders so much?" is all she says in reply, a slight smile on her face as, firepit completed, she spreads her bedroll.
+
+Perhaps you might not want to protest so much?
+*choice
+	#Yeah, you might get lucky. Obey.
+		*goto dotold
+	#Continue to protest.
+		*goto continueprotest
+	
+*label continueprotest
+It's always nice to get lucky, but unless it's guaranteed, it's not worth being somebody's slave. "Look, Tamara," you say. "Can we ease up on the whole master-apprentice thing? We're on a hard journey, so shouldn't we help each other instead of me being your slave?"
+
+"How about I help you gather firewood, but you still rub my feet and shoulders?" Tamara asks. Wow, how uncharacteristically reasonable. Maybe Banes really did make her see the light?
+*gosub_scene adj_respect 10
+*choice
+	#Agree.
+		*goto firewoodtogether
+	#Push it: Ask for a foot and shoulder rub for yourself too.
+		*goto pushit
+	
+*label firewoodtogether
+You and Tamara gather firewood and quickly amass a pile of wood to last all night.
+
+Back at camp, the two of you stoke the fire until it's nice and stable. You like watching her poking a stick in and out, but when she sees you watching, she throws the stick into the fire. You like watching the stick burn and shrivel up a lot less.
+
+*goto backandfoot
+
+*label pushit
+"What do we look like, a lovey-dovey couple?" Tamara says. "Come on."
+
+She heads into the forest, picking up twigs for kindling.
+
+Well, I guess that's that.
+
+*goto firewoodtogether
+
+*label dotold
+You start gathering firewood, making a big pile that you have to keep coming back to, grumbling that it'd be much easier with two people because that way, one person can hold their arms out while the other loads it with sticks. It's much more efficient, but it seems like Tamara wants to treat you like a slave. She's probably back there doing her nails or something, but still, you know how master and apprentices work. The apprentice is expected to do whatever the master wants, keyword: whatever. To pass the time, you fantasize about what it'd be like if you had an apprentice, and you hope it's a hot girl like Tamara. You wonder what she was like when she was younger and just starting out, imagining all the ways she had to serve her master.
+
+Finally, you have a pile that seems enough to last all night and bring it back to the campsite in only three trips. You wonder if Tamara will be impressed by how much you manage to carry each time, but nope, she doesn't even seem to look up, just points at the circle of stones she's made.
+
+*choice
+	#Make a big fire
+		*set planned_fire_size "big"
+		*goto bigfire
+	#Make a small fire
+		*set planned_fire_size "small"
+		*goto smallfire
+	
+*label bigfire
+You start to make a big fire, knowing that a small fire won't last all night, but Tamara says, "You're wasting wood. Plus, let's try not to broadcast our presence to all dragons everywhere in the whole world."
+*choice
+	#Do as she says and make a small fire, even though it means you'll have to wake up to add more logs in the middle of the night.
+		*goto obeybig
+	#Explain that you want to make a bigger fire and why.
+		*goto explainbig
+
+*label smallfire
+You start to make a small fire, knowing that it'll make less smoke and use less wood, but Tamara says, "That fire has to last all night, you know."
+
+*choice
+	#Make a big fire, even though it means you have to go back out and find a few more logs if it's to last all night.
+		*goto obeysmall
+	#Explain that you want to make a small fire and why.
+		*goto explainsmall
+	
+*label obeysmall
+You and your tired feet go back out into the forest YET AGAIN with no help YET AGAIN and bring back more wood, receiving no thanks YET AGAIN.
+
+*goto backandfoot
+
+*label obeybig
+You take some of the bigger logs out of the firepit and place them next to your bedroll, which you ruefully notice is on the opposite side of the fire than Tamara's. Looks like she plans to maintain proper professional distance.
+
+*goto backandfoot
+
+*label explainbig
+"How about *I* wake up in the middle of the night and add YOUR log to the fire?" Tamara spats and glances at your crotch. "Oh, because it's so small it won't last more than a minute."
+*label explainbigchoice
+*choice
+	*hide_reuse #Explain how sometimes logs only seem small when they're thrown down grand castle hallways.
+		"Then I really will put it in the fire," Tamara says.
+		*goto explainbigchoice
+	*hide_reuse #Ask if she'll keep you warm if it gets too cold tonight.
+		"Sure," Tamara says. "Do you like yourself roasted or totally charred?"
+		*goto explainbigchoice
+	#Be a good apprentice and make a small fire like she asked.
+		*goto obeybig
+	#Tell her if she wants a small fire, she can do it herself. You're making the fire the way you like it.
+		*goto insistbig
+	#Try to reason with her, saying why you want a big fire.
+		*goto reasonbig
+
+*label explainsmall
+"Oh pooh," Tamara spats. "The size of the fire won't matter to the dragon, and I like big fires. Keeps me warm."
+*label explainchoice
+*choice
+	*hide_reuse #"How big do you want it?" Wink, wink.
+		*goto bigwink
+	*hide_reuse #Ask her if she made big fires when she was on her own.
+		*goto askbig
+	*hide_reuse #Tell her you'll keep her warm.
+		*goto keepherwarm
+	#Be a good apprentice and go get more logs.
+		*goto obeysmall
+	#Tell her if she wants a big fire, she can do it herself. You're making a fire the way you like it.
+		*goto insistsmall
+	#Try to reason with her, saying why you want a small fire.
+		*goto reasonsmall
+	
+*label bigwink
+"Way bigger than you even on your best day," Tamara says, her face deadpan. She can't be... But she hasn't even seen your... She can't mean... She does! You make a mental note to yourself not to ever challenge Tamara to a battle of sexual innuendos.
+*goto explainchoice
+	
+*label askbig
+"Nope," Tamara says. "I'm too lazy, but now I have you!"
+*goto explainchoice
+
+*label keepherwarm
+"You could..." Tamara says, "IF I let you in my bedroll. Who says I am?"
+*goto explainchoice
+
+*label insistsmall
+"That's not the way this works," Tamara says, her voice growing severe. "I'm teaching you dragonlore and showing you the secret entrance. A few extra logs is not a big deal."
+
+*choice
+	#Go get more logs.
+		*goto obeysmall
+	#No. You need to nip this in the bud or else she might abuse her position.
+		*goto nipbud
+	#Get angry.
+		*goto angry
+
+*label insistbig
+"That's not the way this works," Tamara says, her voice growing severe. "I'm teaching you dragonlore and showing you the secret entrance. Is it really such a big deal to make the fire how I want?"
+
+*choice
+	#Make the fire how she wants.
+		*goto obeybig
+	#No. You need to nip this in the bud or else she might abuse her position.
+		*goto nipbud
+	#Get angry.
+		*goto angry
+	
+*label nipbud
+*set stoodupforself true
+You drop the piece of wood you're holding and stand up, inhale deeply, and pause to collect your thoughts.
+
+"Look, Tamara," you say. "I appreciate your teaching me dragonlore, but I don't like being bossed around. If you really wanted the fire a certain way, you could've asked me nicely."
+
+*goto givesin
+
+*label angry
+*set stoodupforself true
+You drop the piece of wood you're holding and stand up.
+
+"Dammit, woman!" you retort. "I'm an apprentice not a slave. I got the wood, and now I'm building the fire. If that's not good enough, too bad!"
+
+*goto challenge
+
+*label givesin
+"Fair enough," Tamara grumbles. 	
+*gosub_scene adj_respect 10
+*if planned_fire_size = "small"
+	
+	She gets up and gets more logs herself, comes back, and adds them to your fire, making it bigger.
+	
+	"See, now, was that so hard?" she says. "Don't be lazy."
+	
+	*goto nextgivesin
+*else
+	"I'll add the logs to the fire, okay? Try not to be so lazy in the future."
+	
+*label nextgivesin
+The two of you stoke the fire until it's nice and stable. You like watching her poking a stick in and out, but when she sees you watching, she throws the stick into the fire. You like watching the stick burn and shrivel up a lot less.
+
+*goto backandfoot
+
+*label challenge
+Tamara stands up too.
+
+*if planned_fire_size = "small"
+	"Yeah, I saw you grumbling the whole time gathering the wood, and it took you forever too. Either you make that fire bigger or I'll slice you open and make YOU bigger."
+	
+	*goto nextchallenge
+*else
+	"Yeah, I saw you grumbling the whole time gathering the wood, and it took you forever too. If you don't make that fire smaller, I'll cut you in half and make YOU smaller."
+
+*label nextchallenge
+*if hill_duel_outcome = "nothing"
+	*goto readytodraw
+*else
+	*goto nofight
+
+*label nofight
+She looks you squarely in the eyes, a fierce look on her face, sword arm poised to draw on you. "Are you really going to bring the dragon down on us again for yet another stupid reason?"
+*choice
+	#"It was YOUR stupid reason that brought the dragon down on us!"
+		*goto yourstupid
+	#"Okay, okay, if it means that much to you, I'll make the fire the way you want. Geez."
+		*goto geez
+	
+*label yourstupid
+"Say that again, I dare you," Tamara says quietly.
+*choice
+	#Say it again.
+		*goto sayagain
+	#Realize you're being insensitive.
+		*goto insensitive
+	
+*label sayagain
+Oh, man, you really like prodding dragons with a stick, don't you? ...And in this case, it's almost literal.
+
+*goto bringit
+
+*label insensitive
+"Okay, okay, I'm sorry," you say. "We both were pretty stupid, can we agree on that?"
+
+"I guess," Tamara says, "But why did you laugh at me?"
+
+Oh, no, not this conversation again.
+*choice
+	#Aplogize for laughing at her AGAIN. 
+		*goto apolagain
+	#Tell her you already answered that question.
+		*goto alreadyanswered
+	
+*label apolagain
+"Like I said before," you say, "You always come on so strong that it was nice to see a softer side. I didn't mean to laugh AT you. Really, I didn't."
+
+"So you say," Tamara says and goes about the business of setting up camp, ignoring you.
+*choice
+	#Make the fire how she wanted it.
+		If Tamara notices you finally made the fire how she wanted it, she doesn't say anything.
+		
+		*goto backandfoot
+
+*label alreadyanswered
+"Yeah, but it's still bothering me," Tamara says. 
+*choice
+	#Tell her people aren't allowed to "act like a chick" and carry a sword at the same time. It's against the rules of the Swordsman's Guild.
+		*goto chick
+
+*label geez
+Instead of a ${planned_fire_size} fire, you make it how "Master Tamara" wants.
+
+*goto backandfoot
+
+*label readytodraw
+She looks you squarely in the eyes, a fierce look on her face, sword arm poised to draw on you.
+
+*choice
+	#"Bring it."
+		*goto bringit
+	#Back down
+		*goto backdown
+	
+*label bringit
+Tamara starts to reach for her sword but then stops. With great force of will, she pulls her arm back to her side.
+
+"No," she says through gritted teeth. "As much as I'd like to, we can't fight. This close to the dragon's lair, it would summon it for sure. You're a big baby, bickering with me over something as stupid as the size of a fire. Make it however you want."
+
+She turns and resumes setting up camp.
+*label bringitchoice
+*choice
+	#Make the fire your way.
+		Tamara glances over and sees you making a ${planned_fire_size) fire and shakes her head. "No foot and backrub for you and your stubborn self. Too bad. So sad. You gonna do me or what?"
+		*goto backandfootchoice
+	#Make the fire her way.
+		Tamara glances at the fire you're making and doesn't say anything.
+		
+		*goto backandfoot
+
+*label backdown
+"Whoa, whoa!" you say taking a step back. "No need to get violent." 
+
+For a long minute, Tamara's body remains tense, ready to spring, but when you don't instigate, she finally she relaxes. She sits back down.
+
+"Sorry about that," she says. "I've just got a temper on me."
+*goto bringitchoice
+	
+*label reasonsmall
+You start to reason with Tamara, but you get no more than a few words out of your mouth before she cuts you off. "Don't make me repeat myself," she says coldly.
+
+*choice
+	#Better go get that wood.
+		*goto obeysmall
+	#Get angry.
+		*goto angry
+
+*label reasonbig
+You start to reason with Tamara, but you get no more than a few words out of your mouth before she cuts you off. "Don't make me repeat myself," she says coldly.
+
+*choice
+	#Just make the fire smaller.
+		*goto obeybig
+	#Get angry.
+		*goto angry
+
+*label backandfoot
+"Okay, how about that back rub and foot rub?" Tamara says once the fire's going well.
+
+She takes off both her boots and presents her feet to you. She wiggles her toes at you, and you notice they're painted sapphire blue, same as her fingernails.
+*label backandfootchoice
+*choice
+	#Refuse politely
+		*goto refusepolitely
+	#Refuse gruffly
+		*goto refusegruffly
+	#Get on your knees and get rubbing
+		*goto footrub
+		
+*label refusepolitely
+"But you're my apprentice," Tamara says.
+*choice
+	#Well, in THAT case...
+		*goto footrub
+	#"I may be your apprentice, but there are limits."
+		"Come on," Tamara says. "You might like it too."
+		*choice
+			#Well, in THAT case...
+				*goto footrub
+			#"Yeah, I might like it too much is what I'm thinking."
+				"Fine, fine," Tamara says, putting her boots back on. "But this does not bode well for our master-apprentice relationship."
+				
+				You and Tamara cook a few things over the fire and eat in silence.
+				
+				*goto sleep
+
+*label refusegruffly
+"Hey!" Tamara snaps. "Apprentices aren't allowed to talk back to their master. Are you going to massage me or not?"
+*choice
+	#Not.
+		"Not?!?" Tamara says incredulously. "Fine. I was going to teach you some things in my bedroll later, but now that lesson is canceled. Too bad for you!"
+		*goto teachthings
+	#Ask if you get a turn.
+		"No, sorry," Tamara says. "That'd be against the traditions of apprenticeship, but come on, please, please, please?"
+		*choice
+			#"Well, okaaay, since you said please."
+				*goto footrub
+			#"Nope. Sorry, it's not fair."
+				"Too bad for you then," Tamara says. "I was going to teach you some things in my bedroll later, but now that lesson is canceled."
+				*goto teachthings
+			
+*label teachthings
+*choice
+	#Change your mind.
+		"Too late," Tamara says, turning away and continuing to set up her side of the camp.
+			
+		You and Tamara cook a few things over the fire and eat in silence.
+				
+		*goto sleep
+	#Offer to teach HER some things.
+		"Like how to be a bumbling idiot?" Tamara says. "No thanks, and I'm not interested in your lessons on how to not be a good apprentice either."
+				
+		You and Tamara cook a few things over the fire and eat in silence.
+				
+		*goto sleep
+
+*label footrub
+You wash her feet first, and Tamara says, "That cool water feels nice." This makes you start imagining all the other things you could be doing that would feel nice.
+
+"Why you being so gentle?" Tamara asks, breaking you out of your lustful reverie. "You're not a foot fetishist, are you?"
+
+*choice
+	#Yes
+		Tamara yanks her foot away from your hands. 
+		
+		"Okay, my feet feel much better now. Thanks. Now how about that shoulder rub?"
+		*goto shoulderrub
+	#No
+		*goto nofetish
+	
+*label nofetish
+"Good," Tamara says. "I never understood why guys would be into that, but then why are you getting turned on? It seems like you're getting turned on."
+
+*choice
+	#Deny it.
+		*goto denyit
+	#Tell her it's been a long time.
+		*goto longtime
+	
+*label denyit
+"No, why would I be getting turned on?" you say, acting innocent. You start squeezing her feet a little harder and press your thumbs into her tendons.
+
+"Good," Tamara says. "We need to keep our relationship strictly professional. Now, how about that shoulder rub?"
+
+*goto shoulderrub
+
+*label longtime
+"It's been a long time for me too," Tamara says, "But you don't see me turning ent-like, do you? Why do guys have such one track minds?"
+
+"Don't answer that," she says quickly before you can say anything. "How about that shoulder rub?"
+
+*label shoulderrub
+She takes off her top and turns around, presenting her back and shoulders to you. It was so fast that you hardly saw it, but for a brief moment, you got to see her breasts. You can't believe it! Has she no shame?
+
+*choice
+	#Ask her if she has no shame.
+		*goto noshame
+	#Just give her the shoulder rub.
+		*goto rubshoulders
+	
+*label noshame
+"Not out here," Tamara says, looking at you as if you're crazy. "Don't be a silly-willy."
+
+You wonder if she really doesn't know how much all this is turning you on.
+
+*label rubshoulders
+You start to knead her shoulders, and they're like steel springs, large for such a small-framed woman. You've got a good grip, but even so, you can barely squeeze them. It must be from all her training with the sword.
+
+Tamara laughs. "Tight, huh? That's what I get for carrying a heavy backpack around all day."
+
+*choice
+	#Ask if that's the only thing that's tight.
+		*goto tight
+	#Reach around and cup her breasts
+		*goto cupbreasts
+	#Just keep working them
+		*goto massage
+	
+*label tight
+"My abs are pretty tight too," Tamara replies, and it somehow seems she totally missed your double entendre. Either that or she's teasing you. 
+
+"And my thighs." She MUST be teasing you!
+
+*choice
+	#Ask to feel her abs
+		*goto abs
+	#Ask to feel her thighs
+		*goto thighs
+	#Reach around and cup her breasts
+		*goto cupbreasts
+	#Just keep working her shoulder muscles
+		*goto massage
+	
+*label abs
+"Only my boyfriend gets to feel those," Tamara says, and once again, she seems totally oblivious to both your hints and current state of extreme arousal. She's a big tease!
+
+*choice
+	#Reach around and cup her breasts
+		*goto cupbreasts
+	#Just keep working her shoulder muscles
+		*goto massage
+
+*label thighs
+"Sure," she says, "But then you gotta massage them too. And my calfs. Don't forget the calfs."
+
+She lies down and squeezes the big, bunched up muscles near her knees. "These," she says. "Especially these."
+
+Her boobs are now in plain view, the sunlight beating right down on them!
+
+*temp peeked false
+*label thighschoice
+*choice
+	*if (peeked = false)
+		*disable_reuse #Stare.
+			*goto stare
+	*disable_reuse #Sneak a peek while massaging her thighs.
+		*goto peek
+	#Force yourself not to look at her boobs.
+		*goto noboobs
+	
+*label stare
+You stare at the sun, burning your retinas. Now you're blind. JUST KIDDING! But you're not very much better off staring at Tamara's boobs, to tell the truth. It's turning you on so much, you're about to explode.
+
+"Yeah, right there..." Tamara says as you start to knead her tight thigh muscles. "Hey!"
+
+She notices you looking at her boobs. 
+
+"You can look at those later. Right now, concentrate on your work."
+
+Oh man, did she just give you permission to look at her boobs later? Maybe this means you're gonna get lucky tonight!
+
+*set booboffer true
+*page_break
+*goto massage
+
+*label peek
+*set peeked true
+"Hey, no peeking!" Tamara says.
+*page_break
+*goto massage
+
+*label noboobs
+It takes great willpower, but you manage to finish massaging her thighs while not looking at her boobs.
+
+Ok, no. I lied. It didn't take any willpower. No man has that much willpower. You managed to not look at her boobs by staring at her crotch. You undressed it with your eyes. You imagined what it looks like, what it feels like, what it feels like to push inside it! 
+
+It got so intense that you squeezed her thigh muscles really hard.
+
+"Yeah!" Tamara exclaims. "Now you're putting your weight into it."
+
+That's not all you want to put your weight into.
+
+*label massagedone
+"Okay, that's good enough. Thanks," Tamara says, sits up, and puts her top back on.
+
+*label massagedone2
+"Hey, I got some smoked pork. You wanna share?" she asks.
+
+ARE YOU KIDDING ME???
+
+*choice
+	#Tell her to smoke YOUR pork.
+		*goto professional
+	#Tell her yes, you want to share. Now. Badly.
+		*goto professional
+	#Help her cook dinner
+		*goto dinner
+	
+*label professional
+"That sounds fun and all," Tamara says, "But don't you think we need to keep a professional relationship? Things get messed up if you're hot for teacher."
+*label professionalchoice
+*choice
+	#Grudgingly agree
+		*goto grudgeagree
+	#Complain that she teased you shamelessly!
+		*goto complaintease
+	*if (booboffer)
+		#"But didn't you say I could look at your boobs later?"
+			*goto boobslater
+		
+*label grudgeagree
+"Good," Tamara says. "I can see you're going to learn a lot of things."
+
+Too bad dragonlore is so much more boring than the other things you want to learn from her.
+
+*goto dinner
+
+*label complaintease
+"I did not!" Tamara cries, turns around, and bends over her pack to get her cooking utensils out. You suppose this also does not qualify as shameless teasing.
+
+*goto dinner
+
+*label boobslater
+"I did," Tamara admits, forehead creasing. She's silent and tense for a minute but then she brightens up and says, "After this quest, when you're no longer my apprentice, I'll show them to you then."
+
+Nice save.
+
+*label dinner
+You can hardly move, your dick is so hard in your pants, and your blue balls are terrible too. However, you force yourself to help cook dinner, even offering up some of your beef jerky.
+
+"Oh yeah! I love beef jerky," Tamara says, taking it from you. 
+
+You hand it over, wondering how you're going to beef jerky yourself later.
+*page_break
+Tamara tosses your jerky in a small pot with water placed next to the fire. To this she adds some of her parched corn, sun-dried tomatoes, and a powdery spice mix from a small leather bag, to turn into a stew.
+
+"Ok, you were a marginally okay apprentice today, so while this cooks, I'll do my part and teach you things," Tamara says.
+
+She opens her belt pouch and takes out 
+*if looked_in_dragoneye
+	the dragoneye. "You were naughty earlier and looked in this already, but I'll overlook that and let you look in it again, for practice. What I didn't tell you then was that after using it for awhile, you start to retain a connection with the dragon. Even when not looking in the eye, you can sense how closely it's watching if you pay attention. 
+	*goto dragonlesson
+*else
+	what looks like a small crystal sphere about the size of her palm. "This is the DragonEye," she says, "Created by the arch-mage, Maldoon, in the Age of Tor."
+	
+	You see that it contains what appears to be an actual dragon's eye.
+	
+	"Remember earlier, the first time I said I needed to shake the dew off my lilypad? Well, it was really to peer into the dragoneye. I go into a trance and am vulnerable, so I didn't want to do it in front of you yet. Now, I want you to look into it, for the more you do, the greater a connection you gain with the dragon. While looking into the eye, you're able to sense the degree to which the dragon is watching, and with time, you'll be able to maintain this awareness at other times if you pay attention. 
+*label dragonlesson
+The main lesson I've already been teaching you is to stay focused all the time and not be scatterbrained. Making a ${planned_fire_size} fire, for example. That was part of your lessons. It's about paying attention to what's appropriate in each moment. Same with walking silently. Tracking is also a powerful tool for training focus, but it's a high art we don't have time for right now. All these things are ways to concentrate the mind which help in all spheres of life, including the use of the dragoneye."
+
+She hands you the dragoneye.
+
+"Open your mind and connect with the dragon," she says. "It's one-way; you will sense its consciousness, but not the other way around. 
+*if looked_in_dragoneye
+	When Gormag and Zyrxus slew the ancient dragon, Fluxinestral, they used this dragoneye, created by the arch-mage, Maldoon, in the Age of Tor, now passed down to me."
+	*goto dragonlessonchoice
+*else
+	When Gormag and Zyrxus slew the ancient dragon, Fluxinestral, they used this dragoneye, now passed down to me."
+*label dragonlessonchoice
+*choice
+	#Peer into the dragoneye.
+		*goto dragoneye
+	#Decline.
+		*goto declineeye
+	#Ask if by "passed down to" Tamara really means "stolen by."
+		*goto askstolen
+
+*label dragoneye
+[This option is yet to be written.]
+
+*label declineeye
+[This option is yet to be written.]
+
+*label askstolen
+Tamara snatches the dragoneye back. "Bad form asking a thief questions like that," she says. "We will resume your lessons when you have proper respect."
+
+*goto sleep
+
+*label nextlesson
+"Next, I will teach you about the crossbow," Tamara says, taking it off her back as well as her quiver of crossbow bolts.
+
+"These are specially-made quarrels for use against dragons," she says. "See how they are like other armor-piercing bolts in that they don't have blades? These are made of iron alloyed with adamantine, allowing them to be narrower yet still strong, penetrating deeply."
+*choice
+	#Ask if she would like to be penetrated deeply as well.
+		*goto insulted
+
+	#Nod respectfully.
+		*goto lesson3
+
+*label lesson3
+Tamara shows you a tiny rune etched into the metal quarrel near the tip. "This is a magic glyph composed of two runes," she says. "It means dragon-separation in the First Language, forbidden to be spoken except in spell-casting, and when stimulated by inner dragon flesh, it explodes."
+*choice
+	#Tell her you like separating things and exploding when stimulated by inner flesh.
+		*goto insulted
+	#Nod respectfully.
+		*goto lesson4
+
+*label lesson4
+"The weight of these quarrels are slightly different than normal ones," Tamara goes on. "They're designed to fly further, so it takes some practice."
+
+The two of you take turns shooting at distant trees.
+
+"I plan not to need to use this," Tamara says, "But if it comes to that, and it falls to you to fire upon the dragon, use the heightened dragonsense you gained by working with the dragoneye. It will guide your aim."
+*choice
+	#Ask if, when you're between her legs, will she guide your aim?
+		*goto insulted
+	#Listen respectfully.
+		*goto lesson5
+
+*label lesson5
+"Again, I plan to avoid direct combat with the dragon, but if it should come down to the sword, the technique is to stab diagonally, aiming to penetrate between two armored scales. Cutting is almost useless without a magic sword."
+*choice
+	#Tell her you do have a magic "sword."
+		"Really?" Tamara asks, perking up and glancing at the sword at your waist.
+
+		"Not that sword," you say, grinning.
+
+		*goto insulted
+	#Listen respectfully.
+		*goto lesson6
+
+*label lesson6
+"Well, that's good enough for now," Tamara says. "I suggest you practice diagonal sword stabs when you get a chance, but now let's eat."
+
+You find the stew delicious compared to your tasteless rations and decide that despite Tamara's rough ways, she still can pull off the "woman's touch" when she wants to. You hope she does it again after you get in bed.
+
+*goto sleep
+
+*label insulted
+Tamara sighs. "See, this is why the master-apprentice code is so important. How can you learn anything if you're busy fantasizing about me or engaged in some other form of disrespect? All the bossing around, the firewood, the massage... All that's to teach you the necessarily respect and humility to be able to learn at maximum efficiency. It's not because I like it. In fact, it's a responsibility, a burden."
+
+*goto sleep
+
+*label cupbreasts
+After squeezing her shoulder muscles for awhile, you extend to nearby areas, first her arms, then upper back. Tamara moans and seems to be really getting into it. Your fingers inch past her collarbones to the tops of her pectorals. 
+
+"Yes, that's nice," Tamara sighs.
+
+You move your hands a bit further down, just touching the beginning of the fleshy globes of her breasts. She doesn't say anything! You go further, swirling your fingers around her mounds, then cupping them gently. She still doesn't say anything!
+
+"That feels so good..." Tamara murmurs. Then suddenly she jerks with a start. "Whoa! What are you doing?" she cries, yanking your hands off her. "I kinda drifted into a daze there for a bit, but don't take advantage!" She plants your hands firmly back on her shoulders.
+
+*label massage
+You continue squeezing Tamara's coiled shoulder muscles.
+*choice
+	#Try to look at her boobs.
+		*goto trylookboobs
+	#Avoid looking at her bare bosom.
+		*goto avoidbosom
+	
+*label trylookboobs
+You rise up on your knees, ostensibly to be able to bear down onto her shoulder muscles with greater force.
+
+"Yeah," Tamara says. "Push in there hard."
+
+From your new vantage point, you're able to surrepetitiously glance down and see her boobs, and the lust level rises in your body. You feel something grow in your pants, and if you move your body just an inch or two forward, you can brush it against Tamara's spine.
+*choice
+	#Do it.
+		*goto frottage
+	#That might be pushing it.
+		*goto nofrot
+	
+*label frottage
+Pretending to press down into her shoulder muscles at a different angle, you pull back slightly on Tamara's body while simultaneously moving yours forward until contact is made. It feels great, and so far, Tamara says nothing. You continue working her muscles while rubbing yourself on her back, and you start to get harder. You need more. Bad.
+*choice
+	#Hump her back a little.
+		*goto humpback
+	#You can't take anymore. It's either quit or explode, so... quit.
+		*goto quitmassage
+	
+*label humpback
+*achieve backrub
+With every pull on her muscles, you press forward with your hips, and soon you have a nice rhythm going. Your desire makes you pull hard on Tamara's muscles, making her moan appreciatively. 
+
+"That's not where that goes, but I still like this technique," she says.
+*choice
+	#Put it where it goes, and show her your better technique.
+		*goto technique
+	#Keep going.
+		*goto wavetech
+	#Apologize and stop.
+		*goto apolostopwave
+	
+*label technique
+One the next pull of her body, instead of pressing forward with your hips, you let Tamara's body continue falling back, and surprisingly, she doesn't resist, letting you push her all the way down until she's lying on her back looking up at you. 
+*fake_choice
+	#It goes in her mouth.
+	#It goes in her pussy.
+You start to undo your belt buckle, but Tamara quickly sits up. 
+
+"Okaaaaay," she says. "We better stop now. I want it too, but we can't. We really need to maintain our professional relationship."
+*goto professionalchoice
+
+*label wavetech
+"Stop..." Tamara says weakly. "Stop... This is turning me on too much."
+*choice
+	#Stop.
+		*goto stopwave
+	#Ask why you need to stop.
+		*goto whystop
+	
+*label whystop
+Tamara doesn't say anything at first, but then she forces herself to pull away and turn to face you.
+
+"Because we really need to maintain a professional relationship," she says, grabbing clumsily for her top, and as she puts it back on, you take a last, lingering look at her luscious boobies.
+*goto professionalchoice
+
+*label stopwave
+Reluctantly, with great force of will, you stop your rocking motion, and Tamara sits still for awhile, unable to move.
+
+Finally, she grabs clumsily for her top, and as she puts it back on, you take a last, lingering look at her luscious boobies.
+
+Her hands shake a bit as she rummages through her pack for her cooking utensils and ration packs, and you catch her looking at you from time to time.
+
+*goto massagedone2
+
+*label apolostopwave
+"No need to apologize," Tamara says. "I kinda liked it!"
+
+She puts her top back on and rummages through her pack for her cooking utensils and ration packs.
+
+*goto massagedone2
+
+*label quitmassage
+"I have to stop," you say.
+
+"Aww, already?" Tamara says. "It was feeling so good, though!"
+
+You know. Boy, do you know.
+
+"Well, all right," she goes on. "I guess I'll let you off."
+
+Get you off? No... sadly.
+
+She puts her top back on and rummages around in her pack for her cooking utensils and ration packs.
+
+*goto massagedone2
+
+*label nofrot
+You settle for just staring at her boobs while you massage her shoulders, and mesmerized, you go on and on.
+
+Finally Tamara stops you. "Wow, that was almost an hour," she says. "I didn't know you had such strong hands, but thanks!"
+
+She picks up her top, but before putting it on, she bounces her shoulders a bit and says, "Oh, I feel so nice and relaxed. You're the greatest!"
+
+She gives you a hug, pushing her still naked boobs against your body and then puts her top on like it was nothing.
+
+*goto massagedone2
+
+*label avoidbosom
+Constantly fighting the urge to peek at her boobs, you can manage on distracted squeezes on Tamara's tight shoulder muscles.
+
+*goto massagedone
+
+*label sleep
+Slowly, the sun sets, and it gets colder.
+
+Tamara sets up her bedroll on the opposite side of the fire, sits down, takes off all her clothes until she's buck-naked right in front of you, puts on a white nightshirt, and climbs under her blanket, facing away from you. 
+
+All you have is your thin blanket, but it's fine--you're used to camping out. What's not fine is the raging boner you have again.
+*label sleepchoice
+*choice
+	#Go to sleep
+		*goto try2sleep
+	*disable_reuse #See if Tamara wants to talk for a bit
+		*goto try2talk
+	
+*label try2sleep
+You try to sleep, but it's no use. You can't stop thinking about Tamara over there and how you want so badly to go climb into the bedroll with her. It's too embarrassing to masturbate, so you just lie there in agony. 
+
+The minutes tick by slowly, the crackles of the fire marking time. 
+
+One crackle. You're in agony. 
+
+Two crackle. You're still in agony. 
+
+Three crackle. Why did Tamara insist on this professional relationship??? 
+
+Four crackle. You're about to explode! 
+
+Five crackle. That does it! You decide you just have to go out into the forest and masturbate.
+
+You're about to sneak away, claiming you had to "shake dew off your lily pad" if she happens to notice, but you're pretty sure she's asleep. She hasn't moved in a long time. 
+
+You carefully roll over to your side and are just beginning to slooooowly push yourself up to a sitting position when you hear Tamara changing positions.
+
+*choice
+	#Freeze. Pretend to sleep.
+		*goto pretendsleep
+	#Peek.
+		*goto peeksleep
+	#Keep going.
+		*goto lilydew
+	#Look to see what she's doing.
+		*goto looksee
+	
+*label pretendsleep
+You lie there, eyes closed, listening. You can't tell what Tamara's doing, but there's a lot of rustling of fabric as she's moving about. You can tell she's trying to be quiet, but still, you're able to hear a lot. Eventually the rustling sounds become rhythmic, like she's moving something under the covers in the same way again and again.
+
+*choice
+	#Try to see what's going on.
+		*goto trysee
+	#Just keep listening.
+		*goto justkeeplistening
+	#Ask if she's having fun.
+		*goto askfun
+	
+*label trysee
+Unfortunately, you were facing the other way when you froze, so to see, you're going to have to roll over. You try to make it sound like you're just shifting in your sleep, but when you move, you hear all sound stop.
+
+Carefully you slit one eye open, and you see Tamara on the other side of the fire staring straight at you. You almost scream but hold it in, composing yourself, and resume studying the situation. You can't see much more than her upper body, so it looks like she's just lying there looking at you.
+
+After a few moments when you don't move again, she turns away and closes her eyes. The rhythmic sound starts again, and you see that she has both arms under the covers, hands perhaps between her legs. It looks like she's pulling something towards her again and again.
+
+Soon, the tempo increases, and she begins to move a little, shifting the position of her legs. Her back arches, and her head occasionally rolls from side to side. Finally, a soft moan escapes her lips.
+
+*fake_choice
+	#Stand up.
+	#Masturbate too. She won't hear you, with all the noise she's making.
+	#Force yourself to do nothing and just wait for it to be over.
+
+*label rethink
+"I'm ready to rethink this master/apprentice thing," you hear her say.
+
+You're up in a flash and by her bedside.
+
+You see that she's spread her legs, one leg almost completely out of her bedroll. Her lower body is completely naked, and you can nearly see her crotch. She peels back the covers, and you see that she's hiked her nightshirt up over her breasts. Her sword is between her legs, the pommel almost entirely inside her. She slides it out until only the tip is still inside her.
+
+*label phallicsword
+"Did you notice before?" she asks, "My sword has a phallic-shaped pommel." She grins.
+
+You see that it indeed looks exactly like a penis, carved from ivory,
+*if pommelpummeled
+	but you hadn't noticed before, not even when she was pummeling you with it before. Ew!
+	*goto nextpommel
+*else
+	but all this time, you hadn't noticed. You just thought it was oddly decorative.
+*label nextpommel
+
+"I don't know why, but it gives me comfort in battle to grip it," she says. "And then there's this use." She smiles up at you, and her eyes twinkle.
+
+Slowly, she slips it back into herself, closing her eyes and starts to move it in and out in a hypnotic rhythm.
+
+"I do this alone just about every night," she says. "But now I have you."
+
+She pulls the pommel out again, slides the sword up her body, and softly licks the glistening shaft.
+
+"Does it make you hard? Do you want to be inside me?"
+
+You climb on top of her, your member already rock-hard. It's been so for the last half-hour! It feels so good inside her, her snatch already in full slipperiness from the motions of the sword.
+
+You begin to move in and out of her, sometimes with long strokes, other times short, sometimes fast, other times slow. You alternate this with grinding your hips, mashing her sex between you.
+
+"Oh, apprentice," Tamara cooes, "You've learned your lessons well."
+*choice
+	#Tease her.
+		*goto barbknock
+	#Pound her.
+		*goto pound
+
+*label barbknock
+You pull out all the way and make Tamara wait for you to put it back in. 
+
+"I feel so empty without you inside me," she says. "Please fill me again."
+
+You move forward and just the tip of your member barely penetrates her opening. There you stay, rocking back and forth, never fully entering her.
+
+"You drive me crazy," she says. "My body longs for you so bad."
+
+You pick up speed but still do not fully enter.
+
+"Please..." she begs.
+
+You increase your speed yet again, entering slightly further each time, and Tamara's whole body tenses in anticipation. Finally, you plunge in completely, all the way to the hilt, and Tamara cries out, her desperate need filled at last. She wraps her legs around you, holding you inside her, and she continues to moan and shudder. It doesn't stop, only intensifies, and you realize she must be coming already! You pound her, pulling out as far as she'll let you before slamming home again. Whap! Whap! Whap! Your pelvis slaps into hers again and again as she fills the night with her moans. You nearly explode yourself, but with great force of will, you hold it in. Finally, Tamara's body relaxes beneath you.
+*choice
+	#Start to fuck her again.
+		*goto fuckagain
+	#Pull out, move up her body, and put it in her mouth.
+		*goto blowjob
+
+*label fuckagain
+Tamara's body lies below yours quiet and still now as you begin moving in and out of her again, now nice and slow with an even rhythm to slowly stoke her fire back to a bright flame.
+
+You take your time, enjoying the feel of her body beneath you, how she's spread her legs just for you, how her nipples harden as your chest scrapes over them again and again.
+
+You gently nibble her earlobes, then move down her neck, kissing and trailing your tongue. By bending your body, you're able to reach her nipples and dab at the with your tongue as you continue fucking her below.
+
+You feel Tamara's body begin to stir. "I felt done, but you're making me want you again," she says. "This has never happened before."
+
+You continue your exploration down Tamara's body, having to pull out so that your tongue can reach her ribcage, then navel. She stretches and rolls like a cat enjoying being petted.
+
+You kiss up and down her thighs, inching closer to her sex, teasing her again, this time with your mouth, stimulating everywhere except where she wants it most. When finally you begin running your tongue up and down her folds, she moans and grasps the back of your head with both hands.
+
+You make a circular, rhythmic motion with your head, running your tongue over her sex again and again, only occasionally brushing against her clitoris above.
+
+Tamara's body writhes, and her face contorts as if in pain, her legs thrashing, her hips pushing.
+
+Finally, she can take no more, and already crying out, she pulls at your arm, wanting to be mounted.
+
+You're up in a flash and inside her before you know it, pounding her hard, causing her to explode instantly a second time. Once again her cries fill the night, and her head thrashes from side to side, her hands grabbing at you, pulling as if to pull you even closer. Her hips buck wildly, and the er passion of it sends you over the edge as well. Your cries join hers, and each thrust brings you to new heights until finally the spasms subside.
+
+You lie on top of her for awhile but then slide off to one side. Tamara turns toward you and pulls you close, puts her blanket over both your bodies.
+*page_break
+*achieve twotimes
+*goto_scene juliette
+
+*label blowjob
+Walking on your knees, you move slowly up Tamara's body, relishing how it feels between your legs. The hairs of her mound tickle you; then, the softness of her belly. You push your dick between her breasts, feeling their softness give way under your rod of steel. You push it against her throat and chin, feeling it press against her pipes and bones. You lift her head, and though her body is still languid from her orgasm, she moves to cooperate, to let you into her mouth.
+*choice
+	*if (deepthroat) #Push your cock down her throat.
+		*goto deepthroat
+	#Come on her face.
+		*goto comeface
+	#69 her.
+		*goto 69
+	
+*label deepthroat
+You remember how good it felt when Tamara deepthroated you before, and you wonder if she'll let you do that again. You push in, sliding easily down her throat, and though she makes a gagging sound, she allows it. You move in and out of her for a few strokes, before finally retreating past the epiglottis and letting her breathe. Her chest heaves under you, and you allow her only a few breaths before you push in again. You hold yourself fully inside her and push in deeper a few times, jamming your pube hard against her face. Tamara's body stiffens, but she allows it, keeping her hands raised by her head in surrender. 
+
+It feels so good inside her, but you fight the urge to plunge in again to let her breathe. 
+*choice
+	#Plunge in again.
+		*goto deepthroat2
+	#69 her.
+		*goto deep69
+	
+*label deepthroat2
+Tamara takes two quick breaths, knowing you're poised to push down her throat yet again.
+
+Before she can complete her third, you thrust in, and she grunts in surprise, her body stiffening. Briefly, her hands push on your hips, but she removes them, fighting the instinctual urge to push you away and breathe.
+
+She keeps them there even as her epiglottis convulses, trying to swallow but unable, and this brings you to the very edge of orgasm as Tamara's body emits gutteral choking sounds.
+*goto deep69choice
+
+*label deep69
+While Tamara lies there, chest heaving, you move around her body. She turns her head and lifts her chin, enabling you to enter her mouth once again. You sit and look at her body laying before you, chest heaving, legs spread, and you watch her stiffen as you push down her throat again. You lay on top of her and begin to move back and forth, fucking her mouth, her pussy right in front of your face. You wrap your arms around her body like you do during regular sex, kiss her lips like in regular sex too, treating her crotch like her face and her face like her crotch. You're nearly ready to come.
+*label deep69choice
+*choice
+	#Come on her face.
+		*goto comeface69
+	#Shoot your come down her throat.
+		*goto comethroat
+	#Turn her over.
+		*goto turnover
+
+*label comethroat
+*achieve deepthroat
+Tamara's body is bucking, her body screaming for air, but you stay inside her, humping in small furious strokes until her desperate movements send you over the edge. You feel your hot jizz shoot deep inside her, past the vestibular fold. You pull out finally, and Tamara's gasping under you. You press your cock flat against her whole face, humping it, shooting more onto her lips and cheeks until her whole face is covered in it. You remain collapsed on top of her, and she lies under you, doing nothing, breathing gradually returning to normal.
+
+Finally, you roll to one side, and Tamara curls her body to rest her head on your chest.
+
+"You used me like a ragdoll, but I liked it," she whispers, looking up at you. She swirls her fingers in the come you've left on her face, pushing some into her mouth.
+
+The two of you fall asleep backwards in her bedroll.
+*page_break
+*goto_scene juliette
+
+*label turnover
+You pull out of Tamara's mouth and gently twist her body at the shoulders to turn her over. She understands what you want and helps you turn her until she's lying on her belly, head and torso raised on her elbows.
+*choice
+	#Lift her hips, push her head down, and do her doggie style.
+		*goto doggie
+	#Lay on top of her.
+		*goto rearentry
+	
+*label doggie
+*achieve doggie
+You slide your body on top of Tamara's, and she lets her arms collapse, resting her head on her hands. You then move her arms down by her sides and put one hand on her neck, holding her head against the ground. You use your legs to spread her legs apart and feel her sex with your other hand, finding it soft and very wet, aching to be entered. You slide your hand further under her until it's on her mound, and you pull up gently. Tamara again understands what you mean and rises to her knees, her head still held against the ground. You release her, but she stays, head resting on the ground, arms by her sides.
+
+You spread her cheeks apart and let the tip of your member touch her sex, feel its wetness, how much she wants you. Without even using your hands, you keep her spread wide as your member maneuvers its way into her. It goes in part way, and then you can shift your body and slide it in all the way, making Tamara moan. You pick up her arms and cross them behind her back, holding onto each wrist, and you begin to fuck her, now completely helpless. Each thrust pushes her head against the earth, but she trusts you, allows you to keep holding her wrists. She moans half in pleasure, half because she feels out of control, but that's a pleasure too.
+
+As the pleasure builds in your body, you want to slam her harder, so you release her wrists and take hold of her hips. She puts her hands down, but keeps her face on the ground. Slam, slam, slam! The forest echoes with the sound of flesh against flesh intermingled with Tamara's cries of pleasure as you pound her from behind.
+*page_break
+*achieve twotimes
+Ecstasy builds in you to nearly unbearable levels, holds there for an excruciating moment, then spills over into orgasm. You cry out and fall upon her, flattening her against the earth, but still you pound her, your cock thrusting again and again between her cheeks.
+
+Then Tamara begins to cry out too, having an orgasm of her own, and you feel her body struggling beneath you against your weight. She tries to push herself up but cannot, and your thrusts push her back into the ground, the two of you becoming as a single writhing mass of limbs and ecstasy.
+
+At long last, the orgasmic spasms finally wane, and you collapse on top of her, both your chests heaving as you breathe heavily together into the earth by her face. The two of you stay like this a long time, enjoying the intimacy, and you kiss her on the cheek and neck.
+
+"That was wonderful," Tamara says. "No man has ever made me feel so completely owned by him as you just did."
+
+The two of you turn onto your sides, you still inside and behind her, falling asleep still conjoined.
+*page_break
+*goto_scene juliette
+
+*label rearentry
+You slide your body on top of Tamara's, and she lets her arms collapse, resting her head on her hands. You slip your arms under hers into a loose full-nelson, and your cock slips between her cheeks. Even though you're not even inside her yet, just being enclosed by soft warm flesh is already wonderful.
+
+Slowly you move your body down, sliding your cock down her crack until it falls into the space between her legs. Hands still on her head, you use your knees to force her legs further apart, and you move your body to help your cock find its way into her slippery hole. You push a few times before it finally slides in, and you move back up her body until it's fully inside her. 
+
+You slip your hands under her, and she raises herself up to let you cup her breasts. You hold them, fondling them gently as you begin thrusting in and out of her without any hurry. 
+*choice
+	#Stay in this position.
+		*goto rear2
+	#Turn her on her side.
+		*goto siderear
+	
+*label rear2
+With each thrust you pull Tamara gently upward, arching her back, all the while still cupping her breasts. As the pleasure builds in your body, your hands become more active, squeezing her breasts, pulling on them, and rotating them in large circles.
+
+"Ooohh, squeeze them a little harder, please," Tamara says, exhaling pleasureably when you do so. You take her just to the point where the pressure pleases her but not beyond.
+
+The pleasure in your body increases even further, making you desperate for release. Unable to focus on her breasts now, you snake one arm around her throat, pulling to arch her back further, allowing you to pump her faster and harder than before. You hear Tamara's breathing, already quick and deep from her arousal, now forcing itself through her constricted throat, but you can tell by the way she's moving her body and the sounds she's making that she likes it. 
+*label rear2.2
+*page_break
+*achieve twotimes
+You're humping in broad, powerful strokes now, pushing hard each time against the cushion of her buttocks. It lets you pound with abandon, and Tamara even spreads her legs and arches her back further to give you greater access. Neither of you have any need to hold anything back, and Tamara begins to cry out and thrash about as her orgasm begins. 
+
+This summons your own from deep within like a siren calling seamen to their doom. You explode inside her as the two of you cry out in unison, ecstasy reaching excruciating heights before crashing down into the oblivion of bliss. Her spasms relax, and your release is complete with a few final, longing thrusts, ejecting the last of your seed into her.
+
+You lay on top of her, both your chests heaving as you breathe heavily together into the earth by her face. The two of you stay like this a long time, enjoying the intimacy, and you kiss her on the cheek and neck.
+
+"That was wonderful," Tamara says. "No man has ever made me feel so completely owned by him as you just did."
+
+The two of you turn onto your sides, you still inside and behind her, falling asleep still conjoined.
+*page_break
+*goto_scene juliette
+
+*label siderear
+You lay on top of Tamara and, still cupping her breasts, roll to one side, taking her with you so that she's laying on her side too with you behind her. You enfold her in your arms, your left hand on her right breast now and vice versa as you resume your unhurried thrusting.
+
+Tamara bends her top leg at the knee, spreading her legs a little and allowing her to touch herself with her fingers. You feel her make broad circles on her clitoris which pulls her outer lips against first one side of you, then the other. She reaches down and touches you, her fingers playing over your scrotum and shaft, stimulating you and making you want to go faster. Tamara sighs, the pleasure building in her body too.
+*choice
+	#Put her on her stomach again to finish inside her from behind.
+		*goto finishbehind
+	#Roll on your back, Tamara lying on top of you.
+		*goto behindbelow
+	
+*label finishbehind
+Soon, you can take no more. You roll to get on top of Tamara again, and she cries out in surprise as you flatten her again, pressing down on her body with both hands. Holding yourself up like this, you're able to thrust in and out of her by bucking your hips.
+*goto rear2.2
+
+*label behindbelow
+Squeezing Tamara tighter to keep her body locked to yours, you roll onto your back, bringing her with you. You release her now, your hands free to rove over her entire torso.
+
+"We are like the first couple," Tamara says. "Under the stars."
+
+Through the canopy of leaves, on this clear night, the two of you watch the wheeling heavens. You hands move from her breasts to between her legs, and you spread her legs as wide as they'll go with your legs, giving you unfettered access to her sex, still filled with yours. 
+
+You slowly move in and out of her, your fingers touching all around the filled opening. You rub her clitoris in a slow circle in rhythm to your thrusts, gradually building the pleasure in her body, making her sigh and arch her back. Her hands grasp at your forearms or what part of her body she can reach below her.
+
+"I need it bad," she whispers.
+*page_break
+*achieve twotimes
+You bring your hands back to her torso, holding her body tight to yours, sometimes wrapped around to the opposite breast, on her throat, or pressing into her stomach. This enables you to increase the speed of your thrusts, and Tamara reaches between her legs to work her clitoris while you pump her below. She begins to jerk and cry out as she nears orgasm, and her voice echoes in the treetops when she finally spills over into a writhing, bucking climax.
+
+You hold her fast to your body, weathering the storm, and though you're close, the lack of freedom of movement wasn't quite enough to take you there. Finally, Tamara's spasms subside, and her body relaxes on top of yours. You cup her breasts again, feeling her chest heaving under them.
+*page_break
+"I will finish you now," Tamara says. "I'm going to make your spurt reach my chest, maybe even my face."
+
+You stop your thrusts, relax, and feel her fingers upon your manhood, still thrust inside her. She begins to make slow circles over your frenelum, rubbing, rubbing. The pleasure builds in you, making you shift and hold her tighter.
+
+Tamara shifts her body to ease you out of her, and you feel her wet softness rub against the back of your shaft's head. She moves her pelvis rhythmically, her clit and lips moving over your head's rim again and again, all the while the circles on your frenelum never stopping.
+*page_break
+Orgasmic energy fills your entire shaft, making it even harder, and it even bends slightly with its fullness reaching a fever pitch. The quivering pleasure holds there a moment before exploding, shooting your seed upward. Globs of it arch through the air with each pulsing spasm, Tamara's circles never ceasing, sending you to new heights with each one. You seed splatters on her stomach, chest, cheeks, forehead, and lips. She takes it into her mouth with her tongue.
+
+Waning now but still flowing, your seed oozes down your shaft, both over her fingers and onto her mound, where it continues down between the two of you, covering her pussy. Tamara runs her fingers up and down your shaft, spreading the seed. She pushes her fingers into herself to push it inside her. She rubs it over her lips and into her folds.
+
+Finally spent, your shaft begins to soften, nestled between Tamara's legs. She runs her hands up her body, rubbing your seed into her skin wherever it landed. She runs her hands over her mound, stomach, and finally her chest, smoothing it into the flesh of her tits.
+*page_break
+At long last, she slides off you, and turns around to envelope your body with hers. You feel her breasts, slick with sweat and cum, against your chest, and one leg snakes over yours. You feel her sex hot and moist on your hip. She lays her head on your shoulder, globs of your seed still on her face, but she doesn't care. Idly she rubs at them and puts her fingers in her mouth.
+
+Sleep comes to both of you at some point, but you don't remember exactly when.
+*page_break
+*goto_scene juliette
+
+*label comeface
+You slip your member into her mouth, and holding her head to keep it in position, begin to thrust in and out. Tamara glances up at you from time to time with her warm, dark eyes. It's so soft inside her mouth, just like a pussy, but by pushing in different directions there are other sensations. You thrust against the firmness of the roof of her mouth or down into the squishiness of her tongue, all this bringing you closer and closer to orgasm.
+
+Finally, when you're ready, you pull out and begin masturbating at a furious pace with one hand, the other still holding her head in position. Tamara realizes what you're doing but doesn't turn away. She closes her eyes but parts her lips slightly, wanting to take in your seed.
+
+Her fingers begin to play over your balls, and this sends you over the edge. Hot cum spurts first onto her cheek, then forehead, hair, and finally mouth. You push into her mouth and shoot some down her throat, pull out, and press your member against her face, rubbing your seed into it.
+
+"Give me your tongue," you say, and Tamara begins to lick your shaft, letting you rub it all over its wet writhing softness.
+*page_break
+*achieve comeface
+When finally you've exhausted all orgasmic energy in your loins, you lay beside Tamara, and she rests her head on your stomach, hugging your leg. You feel your thigh nestle between her breasts, and she wraps her leg around yours. You feel her sex against you knee, still hot and moist.
+
+Sleep comes to both of you at some point, but you don't remember exactly when.
+*page_break
+*goto_scene juliette
+
+*label comeface69
+You fuck Tamara's face, the pleasure building and building, and you speed up, able to keep your cock from ever pushing too far and making her choke. Tamara's body doesn't even tense, her trust in your skill complete.
+
+Finally, you pull out and mash your cock on her face just as you begin to explode. You can't tell where your cum is going exactly, but you feel it spilling all over between you. It's running down her cheeks and into her hair. You're pressing in along the edge of her nose, scraping it over her lips and eyes, mashing your scrotum on her forehead.
+
+All the while, Tamara's holding you close with her hands and seems to actually like it. At long last, the spurting stops, but some orgasmic energy remains. You press your cock hard against her face a few more times, squeezing the last drops from it before rolling off her.
+*page_break
+*achieve comeface2
+Tamara lies on her back, face covered in come, for awhile, recovering her bearings. She turns and crawls down your body until she can rest her head on your thigh, and she spreads her legs so you can rest your head on hers, lying in a sideway 69. You fall asleep with Tamara's pussy before your face, her head between your legs.
+*page_break
+*goto_scene juliette
+
+*label 69
+You push in and out of Tamara's mouth a few times as she looks up at you with her soft, dark eyes. Then you move so that your legs are above her head, and Tamara turns her head and lifts her chin to keep you in her mouth, your cock twisting inside it. You lay down on top of her and begin to probe her sex with your tongue. Meanwhile, she begins to suck your cock, and you feel her tongue squirming around inside her mouth. As the pleasure builds in your body, you begin to go faster, increasing the pleasure in her body which in turn makes her go faster. It's a difficult angle, but she's able to take you in and out of her mouth to some degree, her ministrations growing more frantic as time goes on. You hands claw at her flesh, and you reach under her legs and desperately squeeze her buttocks. One finger even slips inside her rear hole, but she doesn't seem to mind, even likes it. You alternate between a wild dabbing at her clitoris with your tongue to running your tongue and lips up and down her pussy lips, smearing your face with her wetness. You jam your face deep in her crotch and plunge your tongue into her as far as it can go. You take her entire clitoral area into your mouth, suck hard, and smash her bits back down with your tongue again and again, bobbing your whole head to do it, almost as if fucking. 
+*page_break
+*achieve sixtynine
+*achieve twotimes
+*set deepthroat true
+This drives her over the edge, and her whole body spasms beneath you. She cries out, your cocks still in her mouth, but somehow she retains the self-control not to bite down. She continues to moan, open-mouthed, your cock in her, and suddenly, she grabs your hips and thrusts your cock down her throat, cutting off her own cries. She takes you deep within, and it's extraordinarily tight, causing you to explode immediately, shooting you seed straight into her stomach. Despite her choking sounds, you're able to thrust again and again down her throat, sending your body into paroxyms of ecstasy you've never known before. Tamara's tongue thrashes wildly, stimulating you even more, and her own body continues its bucking and thrashing in the throes of its own orgasm.
+
+Finally, as both your spasms are finally waning, she can take no more and pulls you from her throat, her chest heaving hugely in rapid succession beneath you. You roll off her to give her more air, and she lies next to you on her back, panting deeply, hand between her legs, squeezing hard in the final convulsions of her orgasm. 
+
+Your own final spurts ooze onto her cheek as you press your cock against her face before relaxing into post-coital bliss. Tamara too doesn't move for awhile, but finally she turns her head and takes you into her mouth again, sucking what seed remains in your now soft member. You turn toward her and envelop her head with your legs to keep your cock inside her longer. You rest your head on her thigh, and she in turn envelopes your head, you face pressed against her hot, moist sex.
+
+Sleep comes to both of you at some point, but you don't remember exactly when.
+*page_break
+*goto_scene juliette
+
+*label pound
+*achieve pound
+As the pleasure builds in your body, you begin to need more. You start to thrust in and out more strongly until you're pounding Tamara's body beneath you. Tamara lifts her legs, holding them to either side to spread her legs wider, giving you free access to her sex. She begins to moan and reaches down between your bodies to clutch at her sex, stimulating herself even more, and sometimes her fingers brush against your thrusting cock, doing the same for you. She watches with fascination the pounding between her legs, and you watch her boobs bouncing in step with your incessant rhythm.
+
+Tamara gasps and claws at your back, then desperately clutches at your ass, brought close to orgasm and needing it badly. You're close too and increase your pace to as fast and hard as you can possibly go, and Tamara stays right with you in perfect synchronicity. You won't be able to maintain it for every long, but luckily you feel the orgasmic pressure building, ready to burst. You and Tamara cry out simultaneously as you both finally explode. Your hot cum shoots deep inside her again and again, each time sending you to new heights of orgasmic ecstasy. Tamara's body bucks and writhes violently beneath you, and she pushes her pelvis into yours again and again, pressing her feet on the ground.
+
+Finally her convulsions begin to wane, and her legs fall apart to either side as her body relaxes. She kisses your neck tenderly as her hands caress your back, thanking you for the pleasure you've just given. Slowly, she regains full composure and entwines her legs with yours, holding you close like she never wants to let you go.
+
+Sleep comes to both of you at some point, but you don't remember exactly when.
+*page_break
+*goto_scene juliette
+
+*label justkeeplistening
+You hear the rhythmic sound getting faster, and something's scraping Tamara's blanket again and again under the covers. You hear her body shifting from time to time, and then soft moans. 
+
+Dammit! Why did you just happen to be facing the other way when all this began??? You fight the urge to roll over and have a look.
+
+"Are you awake?" Tamara whispers, her voice strained.
+*choice
+	#"Um, yeah, why?"
+		*goto rethink
+	#Leap up and join her in her bedroll.
+		*goto leapjoin
+	#Continue pretending to sleep.
+		*goto pretendsleep3
+	
+*label leapjoin
+You're by Tamara's sleeping area in an instant and already starting to lift the blanket off her. If you could move this fast in combat, you'd be unbeatable!
+
+"Whoa, WHOA!" Tamara cries, pulling the blanket back over herself, but not before you catch a glimpse of her sword between her legs, its pommel buried deep inside her. "I just asked if you were awake, not for you to pounce on me. Geez!"
+
+"Come on," you say. "We both know why you asked me that." Your lust is already fully aroused, and it's hard to sit still.
+
+"True," Tamara says, "But we've got this master-apprentice relationship going on. This must not mess that up."
+*choice
+	#Reassure her it won't.
+		*goto reassure
+	#Lift the blanket.
+		*goto liftblanket
+	
+*label reassure
+It might be the right thing to do, but going against your own instincts lowers your self-esteem slightly.
+
+*gosub_scene adj_esteem -10
+
+"It better not," Tamara says, "But if it does... if you do ANYTHING disrespectful, anything at all, well, we'll have to do something. How about a MAJOR punishment?"
+
+She stops and thinks a moment, and you can't help but notice the blanket moving a bit around her crotch area.
+
+Finally, she comes up with:
+*label punchoice2
+*choice
+	*hide_reuse #Castration.
+		"Be serious," Tamara says. "What punishment do you really choose?"
+		*goto punchoice2
+	*hide_reuse #Forfeiture of all your possessions to her including your clothes.
+		"On second thought, that won't work," Tamara says. "What punishment do you really choose?"
+		*goto punchoice2
+	*hide_reuse #Put a giant beetle up your butt.
+		"No way would you really do that," Tamara says. "What punishment do you really choose?"
+		*goto punchoice2
+	#Become her personal slave.
+		"That's what I was thinking too," Tamara says. "Is it a deal then?"
+		*choice
+			#Say yes.
+				*goto slavery2
+			#Say no.
+				*goto noslavery4
+			
+*label slavery2
+"Good," Tamara says, almost giggling. "Well, now that we have a deal, aren't you going to unwrap your present?"
+
+You lift the blanket from her body, and you see that she's hiked her nightshirt up over her breasts. Her sword is between her legs, the pommel almost entirely inside her. She slides it out until only the tip is still inside her.
+
+*goto phallicsword
+
+*label noslavery4
+"Are you sure? It might be fun being my slave," Tamara grins.
+*choice
+	#"Weeeell, okay then, I guess."
+		*goto slavery2
+	#Say no to slavery.
+		*goto noslavery5
+	
+*label noslavery5
+"But it won't be all the different than being an apprentice," Tamara insists. "And... sex. Don't you want to have sex with me?" She lifts her blanket to one side, inviting you into her bedroll.
+*choice
+	#"Weeeell, okay then, I guess."
+		*goto slavery2
+	#Still say no to slavery.
+		*goto noslavery6
+	
+*label noslavery6
+"Okay, fine," Tamara pouts. "But I'm going to tell everyone you left a horny girl out in the cold."
+
+She pulls her sword out of her and puts it back in its shealth, then begins to put her boots on, her sex in plain view as she sits on her bedroll.
+
+"I'm going for a walk, you know, to let the cool night air dissipate my desire, but DO NOT follow me."
+
+She gets up, and her nightshirt falls to cover her privates. She walks off into the forest with her sword without looking back.
+*choice
+	#Follow
+		*goto peefollow
+	#Don't follow
+		*goto peenofollow
+
+*label liftblanket
+While Tamara talks, you begin to lift the blanket and see that she's hiked up her nightshirt over her boobs.
+
+"This is serious!" Tamara complains.
+
+"I know," you say. "Very serious." 
+
+You lift the blanket further, see the sword between her legs, and begin to reach for it to remove it from her body.
+
+Tamara wants to talk but is too mesmerized by what you're doing. She gasps as you pull the sword from her body and begin to climb on top of her. You never noticed it before, but Tamara's sword's ivory pommel is shaped just like a long phallus. Who knew!
+
+"If this causes you to lose respect for me..." she starts to say, but you put your finger on her lips, silencing her.
+
+You slide into her wet hole, already well-lubricated from her work with the pommel, and you pick up where she left off.
+
+For a little while, she wants to speak again but doesn't, the new sensations in her body taking precedence.
+
+"Oh, apprentice..." is all she finally manages, and you start to thrust harder, words giving way to moans.
+*choice
+	#Tease her.
+		*goto barbknock
+	#Pound her.
+		*goto pound
+
+*label pretendsleep3
+[This option is yet to be written.]
+
+*label askfun
+[This option is yet to be written.]
+
+
+*label peeksleep
+[This option is yet to be written.]
+
+
+*label lilydew
+[This option is yet to be written.]
+
+
+*label looksee
+You see Tamara sit up and reach over to her belongings. She lifts her sword from where it was sitting and carefully lies back down with it. She glances over in your direction and cries out in surprise when she sees you watching her.
+
+"I just like to sleep with my sword," she says and quickly turns her back to you, hugging her sword like a teddy bear.
+
+*choice
+	#Ask her if her sword is as rock-hard as your sword.
+		*goto asksword
+	#Try to sleep.
+		*goto stilltrying
+	
+*label asksword
+"Yes, now go to sleep," Tamara says. "You're bothering me."
+
+*label stilltrying
+You go back to trying to sleep, and now, even the idea of sneaking off to masturbate is too embarrassing. You lie there ready to explode.
+
+You hear Tamara moving again.
+
+*choice
+	#Pretend to sleep
+		*goto pretendsleep2
+	#Peek
+		*goto peeksleep2
+	#Look to see what she's doing
+		*goto lookseeagain
+	
+*label pretendsleep2
+[This option is yet to be written.]
+
+*label peeksleep2
+[This option is yet to be written.]
+
+*label lookseeagain
+You see Tamara slowly moving her sword from where it was on the outside of her covers to under the covers. She glances over at you, sees you watching her, and sighs.
+
+"Why are you watching me all night long?" she complains, gets up, and stalks off into the forest, taking her sword with her. 
+
+"I'm going to pee," she says, "Want to watch that too? Don't answer that."
+
+She takes a few steps, turns around, and says, "That question was completely rhetorical. I don't want you to watch me pee. Seriously, do not follow me."
+
+She turns and stalks off into the forest, shaking her head.
+
+*choice
+	#Follow
+		*goto peefollow
+	#Don't follow
+		*goto peenofollow
+	
+*label peefollow
+You wait a little while, then, as quietly as you can, get up and follow Tamara into the forest. It's dark, but the light of the moon guides your way. You can see her ghostly form making its way ahead of you.
+
+She turns, sees you, but just keeps walking.
+
+You keep following, and she keeps walking, eventually making a big circle. You arrive back at camp, and she climbs into bed.
+
+"Good night," she says sullenly.
+
+*page_break Morning
+*goto_scene juliette
+
+*label peenofollow
+She's gone an awfully long time. Do you go check up on her?
+
+*choice
+	#Check up on her. Maybe something happened to her.
+		*goto checkup
+	#She said not to follow, so you're not going to follow, not even if you hear a bear roaring and her screaming.
+		*goto bearnofollow
+	
+*label checkup
+You head off into the forest in the direction she was going when you last saw her, wondering if you'll even be able to find her in the dark. In a moment, you hear a sound and head toward it, and as you get closer, you realize that it's the leaves of a tree rustling rhythmically intermixed with the sound of deep breathing and soft moans.
+
+You round a bend and come face to face with Tamara, but somehow she's grown taller. Her face is a foot above you! Then you realize it's because she's up in a tree. Then you realize she's completely nude up in a tree.
+
+She's has each foot on a low branch, her legs splayed wide apart, and she's hanging onto higher branches with her hands, facing the trunk. Her eyes are closed, and she seems to somehow be having sex with something, the tree branches shuddering with each bounce. It takes a moment, but eventually, you realize that it's her sword--she has it staked into the earth at the base of the tree, the pommel inside her.
+
+When she sees you she screams and tries to leap off, but the sword, still inside her, makes her fall backwards instead. Luckily it falls over. She lands hard on her buttocks and scrambles backwards with her legs to get the sword out of her.
+
+"What are you doing here!" she demands, and even in the dim light of the half-moon, you see her turning red.
+
+*fake_choice
+	#"Um... shaking the dew off my lily pad?"
+	#"You were taking way too long, so I thought something happened."
+	#"Let me finish the job!"
+		
+"Shut up and get down here!" Tamara cries and grabs you by the waistband, pulling you on top of her. Her hands are scrambling to free your cock from your trousers.
+
+"Get inside me before I change my mind," she says, finally pulling your swollen member free. 
+
+She grabs your collar and pulls your head down for a passionate kiss while simultaneously wrapping her legs around your waist. Pulling with her legs and guiding your cock with one hand, it easily slips inside her.
+
+"Ride me!" she screams.
+
+*label bearnofollow
+You wait for Tamara to return, and just when you think it's been so long something MUST'VE happened, you see her finally come back into camp. She's quiet and seems pensive. She stands by her bedroll for awhile, staring out into the night, then glances at you.
+
+"You awake?" she finally says.
+
+*choice
+	#Say nothing.
+		*goto bearsaynothing
+	#Say yes.
+		*goto bearsayyes
+	
+*label bearsaynothing
+"Oh, come on, I know you're awake!" Tamara shouts.
+
+*choice
+	#Still say nothing.
+		*goto stillsaynothing
+	#Admit to being awake.
+		*goto bearadmitawake
+	
+*label stillsaynothing
+You pretend to be asleep, watching Tamara through slitted eyelids. She's standing by the fire, facing you fully now, just looking at you, wondering what she should do. After a minute or so, she tosses her sword on her bedroll, removes all her clothes, and is standing there naked, just in her knee-high leather boots.
+
+She sidles over to you, steps over you with one foot, and kneels down over your head, her pussy mere inches from your nose. You can smell her musk and feel the heat of her arousal. Slowly, she moves it closer and closer to your mouth.
+
+*choice
+	#Pretend to sleep.
+		*goto pretend2sleep
+	#Open your eyes.
+		*goto bearopeneyes
+	
+*label pretend2sleep
+[This option is yet to be written.]
+
+
+*label bearopeneyes
+[This option is yet to be written.]
+
+
+*label bearadmitawake
+[This option is yet to be written.]
+
+
+*label bearsayyes
+"If I asked you," she begins, still standing by the fire gazing out into the night, "to have sex with me, but only tonight, would you be able to do it? Would you be able to maintain an apprentice's level of respect for me after that?"
+*choice
+	#Say yes.
+		*goto respectyes
+	#"Ummm..."
+		*goto respectum
+	
+*label respectyes
+"Really?" she asks, suspicious. "It's important."
+*choice
+	#Insist yes.
+		*goto insistyes
+	#"Ummm..."
+		*goto respectum2
+
+*label insistyes
+"Will you accept grievous punishment if you fail?" Tamara asks.
+*choice
+	#Ask what the punishment is.
+		*goto askwhatpunishment
+	#Say yes.
+		*goto yespunishment
+	
+*label askwhatpunishment
+"Hmmm... what should the punishment be?" Tamara muses to herself. 
+
+She thinks a moment, then comes up with:
+*label punchoice
+*choice
+	*hide_reuse #Castration.
+		"Be serious," Tamara says. "What punishment do you really choose?"
+		*goto punchoice
+	*hide_reuse #Forfeiture of all your possessions to her including your clothes.
+		"On second thought, that won't work," Tamara says. "What punishment do you really choose?"
+		*goto punchoice
+	*hide_reuse #Put a giant beetle up your butt.
+		"No way would you really do that," Tamara says. "What punishment do you really choose?"
+		*goto punchoice
+	#Become her personal slave.
+		"That's what I was thinking too," Tamara says. "Is it a deal then?"
+		*choice
+			#Say yes.
+				*goto slavery
+			#Say no.
+				*goto noslavery
+			
+*label slavery
+"Okay," Tamara says, "This is probably a really bad idea, but okay. Come on, then. Have sex with me, but remember, respect me tomorrow or pay the ultimate price, your FREEDOM."
+
+She stands there waiting.
+*label slaverychoice
+*choice
+	*hide_reuse #Ask what she wants to do.
+		"You're the man," Tamara says. "Take charge."
+		*goto slaverychoice
+	#Ask her to take off her clothes.
+		*goto askundress
+	#Ask if she wants you to take her clothes off for her.
+		"You're the man," Tamara says. "Take charge."
+		*goto slaverychoice
+	#Take off your clothes
+		*goto undress
+	
+*label askundress
+[This option is yet to be written.]
+
+*label undress
+You stand and take off your clothes while Tamara watches. Now you're completely nude while Tamara's still in her nightshirt and boots. She stands there frozen, not knowing what to do.
+*choice
+	#Ask her to take off her clothes.
+		*goto askundress2
+	#Ask if she wants you to take her clothes off for her.
+		*goto askclothes
+	#See what's under her nightshirt.
+		*goto nightshirt
+	#Tell her to come over to your sleeping area.
+		*goto yourarea
+
+*label askundress2
+[This option is yet to be written.]
+
+*label askclothes
+"That would be a good idea," Tamara says.
+
+You go over to her and begin to lift off her nightshirt. She raises her arms to help you, and once the nightshirt's off, you see bare boobs and bare snatch.
+
+Your manhood begins to rise in response, and Tamara fixes her eyes upon it, licking her lips in anticipation.
+
+"I'm getting wet," she says.
+*choice
+	#Dip your wick and see how wet she is.
+		*goto wick
+	#Take her boots off.
+		*goto boots
+	
+*label wick
+You move closer to Tamara until you're almost touching. You put one foot between her and gently push her to one side, making her take a step and spread her legs. Then, bending at the knees, you position your member, already standing straight up, right underneath her. You slowly straighten your legs until your member touches her sex.
+
+You find she's not very wet yet, only just beginning to get aroused.
+*choice
+	#Try to push inside.
+		*goto trypush
+	#Make her wet by using your mouth.
+		*goto makewet
+	
+*label trypush
+You push and meet resistance, only getting a tiny bit into her. You pull back out and push in again, and after doing that a few times, you get a tiny bit further in.
+
+"I like when a man pushes inside me when I'm still dry," Tamara says. "I can really feel it then."
+
+"Really?" you ask.
+
+"Yes," she says. "You can push harder."
+
+You push a bit harder, but you only go in a little more.
+
+"Go ahead. Push," Tamara encourages, so you thrust hard, your member forcing its way inside at last. 
+
+"Now fuck me," Tamara says.
+
+You pull out and push in again, and this time, you slide in easy. She was wet on the inside like she said, and now she's fully lubricated. You stand humping her for awhile, the two of you holding each other by the fire.
+*choice
+	#Try to walk to one of your bedrolls.
+		*goto trywalk
+	#Get her to put her legs around you.
+		*goto legsaround
+	#Just keep fucking her standing.
+		*goto fuckstanding
+	
+*label trywalk
+[This option is yet to be written.]
+
+*label legsaround
+[This option is yet to be written.]
+
+*label fuckstanding
+[This option is yet to be written.]
+
+*label makewet
+[This option is yet to be written.]
+
+*label boots
+[This option is yet to be written.]
+
+*label nightshirt
+You lift her nightshirt a little bit, and her naked sex is revealed. You lift it further, and her naked boobs are revealed. There is no Christmas in this fantasy world, but if there were, this would be it.
+
+You wad up the nightshirt's fabric behind her, and by holding it there with one hand, you keep the nightshirt from falling back down. You bend slightly and kiss her nipples, and Tamara closes her eyes.
+*choice
+	#Touch her between the legs.
+		*goto betweenlegs
+	#Take her back to your bedroll.
+		*goto bedroll
+
+*label betweenlegs
+[This option is yet to be written.]
+
+*label bedroll
+[This option is yet to be written.]
+
+*label yourarea
+[This option is yet to be written.]
+
+*label noslavery
+"Are you sure? It might be fun being my slave," Tamara grins.
+*choice
+	#"Weeeell, okay then, I guess."
+		*goto slavery
+	#Say no to slavery.
+		*goto noslavery2
+	
+*label noslavery2
+"But it won't be all the different than being an apprentice," Tamara insists. "And... sex. Don't you want to have sex with me?" She puts her hands out to the side, palm up.
+*choice
+	#"Weeeell, okay then, I guess."
+		*goto slavery
+	#Still say no to slavery.
+		*goto noslavery3
+	
+*label noslavery3
+"Okay, fine," Tamara pouts. "But I'm going to tell everyone you left a horny girl out in the cold."
+
+She stomps over to her bedroll, climbs in, and deliberately faces away from you.
+*choice
+	#Change your mind.
+		*goto slavery
+	#Try to sleep.
+		It's a looooong night.
+		*page_break
+		*goto_scene juliette
+
+*label yespunishment
+"You're not taking this serious," Tamara says and climbs into her bedroll, disgusted. She deliberately turns away from you.
+
+It's a loooong night.
+*page_break Morning
+*goto_scene juliette
+
+
+*label respectum
+"Are you at least willing to try?" Tamara asks.
+*choice
+	#"Heck yeah!"
+		*goto heckyeah
+	#"As much as I would like to, we better not."
+		*goto betternot
+	
+*label respectum2
+"That's what I thought," Tamara says and climbs into her bedroll. 
+*label goodnight
+"Good night. Rest well, for tomorrow we meet our fate."
+
+You don't rest all that well, but eventually the fatigue of the journey allows you to fall into a restless slumber full of dreams of dragons and sexy female thieves taking their clothes off my firelight.
+*page_break
+*goto_scene juliette
+
+*label heckyeah
+"Then what are you waiting for," Tamara says, still just standing by the fire in her nightshirt and boots.
+*choice
+	#"Really?" You can't quite believe it yet.
+		*goto cantbelieve
+	#Jump up and strip her!
+		*goto stripher
+	
+*label cantbelieve
+"Yes," Tamara says, "Do it before I change my mind."
+
+*label stripher
+You jump up and tear her nightshirt off, revealing a totally naked Tamara except for her boots.
+
+You're about the grab her and throw her down when she stops you.
+
+"If you start to disrespect me tomorrow, you become my personal slave as punishment. Got it? Do you agree?"
+*choice
+	#Throw her down and jump her bones.
+		*goto throwdown
+	#Push her down onto her knees and stuff your cock in her mouth.
+		*goto stuffmouth
+	
+*label throwdown
+[This option is yet to be written.]
+
+*label stuffmouth
+Tamara lets you push her onto her knees but starts to say, "I'm serious! If you..."
+
+You force your cock into her mouth, and she begins to suck it, her head bobbing. After a few bobs, she tries to talk again.
+*choice
+	#Let her.
+		*goto lettalk
+	#Put your cock in her mouth again.
+		*goto mouthagain
+	
+*label lettalk
+"I'm taking this as tacit agree..."
+
+You put your cock in her mouth again, and she sucks it again. She seems satisfied with what she was able to say and doesn't stop again, her head now bobbing in earnest for a long time.
+*choice
+	#Put your hand on her head.
+		*goto handhead
+	#Better not.
+		*goto nohandhead
+	
+*label handhead
+You can't help yourself. It feels so good, you have to put your hand on Tamara's head while she blows you, but she doesn't complain. Emboldened, you even pull her head forward and thrust into her mouth, and still she just continues her ministrations.
+
+She's an expert fellatist, sucking incredibly hard and also knowing just how to use her tongue to give you maximum pleasure. She brings you close to the edge in no time, but just before you spill over into orgasm, she stops.
+
+"Please, master," she says, looking up at you with wide, needy eyes. "Can it be my turn now?"
+*choice
+	#Tell her to go a little longer first.
+		*goto golonger
+	#Tell her to turn around, bend over, and grab her ankles.
+		*goto ankles
+	
+*label golonger
+"You promise you won't come?" Tamara asks in a little girl voice.
+
+You just put your cock back in her mouth and start humping it, holding her head with both hands, and Tamara loses her balance. With a little stifled scream, she falls into a sitting position, but you just step over her legs and keep going. Now she's more stable, so you fuck her mouth with abandon. You were already close to orgasm, so you thrust fast and hard to bring yourself still closer, always mindful of not pushing too far and choking her. You push so hard, Tamara starts to fall backward, but she's able to stay upright by clinging to your body. You keep going, bringing yourself closer still, and finally Tamara does fall backwards.
+
+"Please, master," she says. "I need it!"
+*choice
+	#Give it to her.
+		*goto giveit
+	#Put your cock back in her mouth.
+		*goto pushups
+	#Ask her to show you how much she needs it.
+		*goto showneeds
+	
+*label giveit
+Tamara's lying on her back by the fire, her legs bent at the knee. You spread her legs with your foot, gently kicking one of her calves, then the other. She spreads her legs for you, and you can't believe she's the same woman who harangued and bossed you around all day. 
+
+You get on your knees between her legs, look her in the eye a moment, then thrust into her. Hard.
+
+You slide in easy, her entire sex sopping wet, whipped to a frenzy from the way you fucked her mouth.
+
+*label pushups
+[This option is yet to be written.]
+
+*label showneeds
+Tamara pauses a moment, thinking how she can show you. Then she slowly straightens her legs and runs her hands down her torso until they reach her sex. She spreads herself wide before you, knees locked, and her legs just keep going, spreading wider and wider until she's nearly doing the splits. 
+
+"This is how much I need it," she whispers. "Take me..."
+*choice
+	#Take her.
+		*goto splitstake
+	#Taste her sex first.
+		*goto taste
+	
+*label splitstake
+[This option is yet to be written.]
+
+*label taste
+[This option is yet to be written.]
+
+*label ankles
+[This option is yet to be written.]
+
+*label nohandhead
+You force yourself to be respectful and keep your hand locked behind you when all you want to do is grab her head and start fucking it. You're keeping your hands off her, so Tamara takes her hands off you, putting them behind her back. Now you're connected only cock to mouth and nothing more, and this concentrates all the sensation right there. When you sway, Tamara has to struggle to stay attached, but all the while she manages to keep up the rhythmic bobbing of her head.
+
+She's an expert fellatist, sucking incredibly hard and also knowing just how to use her tongue to give you maximum pleasure. She brings you close to the edge in no time, but just before you spill over into orgasm, she stops.
+
+"Please, master," she says, looking up at you with wide, needy eyes. "Can it be my turn now?"
+*choice
+	#Lay her down gently.
+		*goto layherdown
+	#Help her to stand up.
+		*goto helpstand
+	
+*label layherdown
+[This option is yet to be written.]
+
+*label helpstand
+You take one of her hands and help her rise to her feet. You're standing so close together, sometimes her hair or a breast brushes against you.
+
+"Master, can I climb upon you?" Tamara asks.
+*choice
+	#Say yes.
+		*goto letclimb
+	#Pick her up.
+		*goto pickup
+	
+*label letclimb
+Tamara wraps her arms around your neck, and wraps one leg around you. Rising up on her tip-toes, she's just able to get high enough. She reaches down with one hand and guides your member into herself, then wraps her other leg around you until you're supporting her full weight. She rises up until you're just about to fall out of her, but she stops there, embracing you, smothering your face in her chest. 
+
+"Will you bite me?" she asks.
+*choice
+	#Bite her.
+		*goto biteboobs
+	#Start bucking your hips.
+		*goto standbuck
+	#Just lick her boobs but don't bite.
+		*goto nobite
+	
+*label biteboobs
+[This option is yet to be written.]
+
+*label standbuck
+[This option is yet to be written.]
+
+*label nobite
+[This option is yet to be written.]
+
+*label pickup
+[This option is yet to be written.]
+
+*label mouthagain
+[This option is yet to be written.]
+
+*label betternot
+"Yeah, you're right," Tamara says and reluctantly climbs into her bedroll.
+*goto goodnight
+
+*label try2talk
+"Hey, Tamara," you say. "You want to talk for a bit?"
+
+"What? No," Tamara says and seems startled. "I was... thinking, and you disturbed me."
+
+*goto sleepchoice
+	

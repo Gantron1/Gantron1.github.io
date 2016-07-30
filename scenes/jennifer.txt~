@@ -1,0 +1,1442 @@
+*temp naturebed "forest floor"
+*temp soughtwondrousthing false
+*temp coveredinraspberry false
+*temp had_fae_time false
+*temp worriedaboutjen false
+*temp liedonce false
+*temp fae_lie 0
+*comment 0=didn't lie about the fae, 1=lied, 2=really lied
+*temp lied2jen false
+*temp revealedaltar false
+
+*if debug
+	*comment *goto ellasex3
+	*comment *goto fork
+
+"I'm glad you chose me," Jennifer says, wrapping her arms around your neck and giving you a playful yank. "Do you want to carry me some more? I can show you the stream where I swam as a girl, but we can't go swimming until Rebekah returns with the poutice."
+
+*choice
+	#Ask about Rebekah and this poutice
+		*goto askpoutice
+	#Pick Jennifer up
+		*goto stream
+	
+*label askpoutice
+*set rel_d1 %-5
+"Oh, it's just some healing magic," Jennifer says. "Rebekah knows a crazy lady who lives alone in a hut, and she makes things from roots, herbs, and other things she finds in the forest. Why? Why are you so curious about her suddenly?"
+
+*choice
+	#"Not her, just the poutice," you lie.
+		*goto pouticelie
+	#"Not her, just the poutice," you say, and it's the truth. 
+		*goto pouticetruth
+	#"I'm interested in getting to know all your family members better."
+		*goto allfamily
+	#"I'm only interested in you!"
+		*goto onlyyou
+
+*label pouticelie
+[This option is not yet written.]
+	
+*label pouticetruth
+[This option is not yet written.]
+
+*label allfamily
+[This option is not yet written.]
+
+*label stream
+You easily pick Jennifer up again.
+*goto stream2
+	
+*label onlyyou
+*set rel_d1 %+5
+"I'm only interested in you!" you say, and easily pick Jennifer up again.
+
+She squeals and plants a kiss on your neck.
+
+"Behave yourselves, you two!" her mother calls from the porch, broom in hand as if sweeping. You hadn't known she was there.
+
+"Let's get out of here," Jennifer giggles furtively.
+
+*page_break Go to the stream
+*label stream2
+With Jennifer guiding you, you first traverse the farm and then down a path into the small woods behind the back field where the kitchen herbs are growing. At first, Jennifer's little brothers and sisters follow, but they stop at the treeline. 
+
+Alone again, Jennifer nestles her head against your chest. She's changed her dress, and her shin is wrapped with a bandage.
+
+"I'm so glad we met today, strange warrior on the road," she says. 
+
+*choice
+	#"I'm glad we met too."
+		*goto gladtoo
+	#Compliment her new dress
+		*goto compliment
+	
+*label gladtoo
+[This option is not yet written.]
+
+*label compliment
+You look at her new dress and see that it's much the same as the old one, the same peasant girl style, but instead of blue flowers, this cloth is patterned with red ones. The pattern is quaint and pretty, and you tell her so.
+
+"I'm sure you preferred the old one, though," Jennifer laughs.
+
+*choice
+	#Tell her the blue flowers were nice too, but you like the red better.
+		*goto bluered
+	#Tell her you could "fix" the new one to be as good as the old.
+		*goto fixdress
+	
+*label bluered
+[This option is not yet written.]
+	
+*label fixdress
+You tell Jennifer that you can "fix" the new dress to be as good as the old.
+
+"You can?" she asks in mock incredulity. "A warrior like you good at sewing? I thought you worked with 'bigger needles.'"
+
+*choice
+	#"No, I meant I could adjust the neckline."
+		*goto neckline
+	#Tell her that to be good at sewing you need to be good with your hands... which you are.
+		*goto hands
+	
+*label neckline
+[This option is not yet written.]
+	
+*label hands
+"Well, to be good at sewing," you say, "One must be good with his hands... and I am."
+
+"Are you now?" Jennifer asks, a mischievous look in her eye. "Perhaps you can show me later."
+*page_break Continue walking
+*goto fork
+*label fork
+You have come to a place in the woods where the path forks.
+
+"Take the right fork," Jennifer says.
+
+*choice
+	#Take the left fork
+		*goto leftfork
+	#Take the right fork
+		*goto stream3
+	
+*label leftfork
+"No, the other fork," Jennifer says, starting to squirm in your arms.
+
+*choice
+	#You were just joking. Take the right fork.
+		*goto forkjoke
+	#Ask what's down the left fork.
+		*goto askleftfork
+	
+*label forkjoke
+*set rel_d1 %+5
+You laugh and turn around, carrying Jennifer down the right fork.
+
+*goto stream3
+
+*label askleftfork
+"What's down this way, though?" you ask.
+
+"Nothing," Jennifer says, "It's but a small forest after all."
+
+*choice
+	#Keep going down the lefthand path
+		*goto leftpath
+	#Press her for more information
+		*goto press
+	#Shrug and turn around
+		*goto shrug
+	
+*label leftpath
+[This option is not yet written.]
+
+*label shrug
+[This option is not yet written.]
+	
+*label press
+"It may be a small forest, but why have a path that goes nowhere?" you ask, suspiciously.
+
+"It's a deer trail!" Jennifer says, struggling to get out of your arms.
+
+*choice
+	#Let her down
+		*goto down
+	#Turn around and go down the righthand path
+		*goto rightpath
+	
+*label rightpath
+*set rel_d1 %-5
+Jennifer stops struggling once you turn around, but she's distant now.
+
+*choice
+	#Apologize
+		*set rel_d1 %+4
+		"I'm sorry," you say. "I'm a bit too headstrong for my own good sometimes."
+		
+		"'Tis nothing," Jennifer smiles, and you feel her body relax again. "You can make it up to me later."
+		
+		*goto stream3
+	#Make a joke
+		*set rel_d1 %+6
+		You start taking giant steps, making Jennifer wonder what you're doing. Then you start swaying left and right, singing, "Rock a-bye baby... in the tree tops..."
+		
+		Soon, Jennifer is giggling, and things are right between you again.
+		
+		"I do feel just like a little baby when I'm in your arms," she says.
+		
+		*goto stream3
+	
+*label down
+*set rel_d1 %-10
+You can't help but let Jennifer down, and once she's on her feet, she begins to limp toward the righthand path.
+
+"The stream's this way," she says coldly. "You need to learn how to treat a lady."
+
+*choice
+	#Apologize
+		*set rel_d1 %+8
+		*goto apologize
+	#Get irritated
+		*goto irritated
+	
+*label apologize
+*set rel_d1 %+2
+"Sorry," you say. "I'm a brute sometimes."
+
+Jennifer doesn't answer, just continues limping off.
+
+*choice
+	#Catch up and offer to carry her again
+		*goto carryagain
+	#Let her go
+		*goto lethergo
+	
+*label carryagain
+[This option is not yet written.]
+
+*label irritated
+You feel insulted, rejected, misunderstood, and wronged. 
+
+*choice
+	#Say, "I do know how to treat a lady, just that you are not a lady."
+		*goto insult
+	#Let her go
+		*goto lethergo
+		
+*label insult
+[This option is not yet written.]
+
+
+*label lethergo
+You wonder how far Jennifer will get with her injured shin and are surprised to see that she just continues limping off without a backward glance.
+
+*choice
+	#Catch up with her
+		*goto catchup
+	#Wait
+		*goto lethergo2
+
+*label catchup
+[This option is not yet written.]
+	
+*label lethergo2
+In a little while, Jennifer is out of sight, leaving you alone on the lefthand path.
+
+*choice
+	#Head back to the fork
+		*goto headbacktofork
+	#Continue down the lefthand path
+		*goto continueleft
+	
+*label headbacktofork
+[This option is not yet written.]
+	
+*label continueleft
+The lefthand path meanders a lot and grows narrow, not much more than a rabbit trail, but you're able to continue to follow it. The terrain gets rougher, and it becomes a hike.
+
+*choice
+	#Keep going
+		*goto keepgoing
+	#Turn back
+		*goto turnback
+	
+*label turnback
+[This option is not yet written.]
+	
+*label keepgoing
+You press on.
+
+Are you pressing on because:
+
+*fake_choice
+	#You're still angry with Jennifer
+	#You're curious what's down this path
+	#Both
+		
+Just a little further, you find the path terminate at what appears to be a shrine of some kind.
+
+*if rel_fae > 55
+	There's a stillness here, a quietude, and you find it very peaceful, which makes you wonder why Jennifer didn't want to come this way. You wonder if she might enjoy it too, and you start to feel lonely.
+	
+Looking at the shrine a bit more, you see that it's built from river stones carefully placed in the maw of a great fallen oak tree. Around the stones are fresh flowers, showing that the altar has been recently tended, and at the base of the altar is a hollowed out stone with an offering of a strange red, viscous substance.
+
+*if rel_fae < 51
+	It feels wrong to be here, and you start to become slightly afraid for no apparent reason. The day grows slightly darker, and a chill makes you shiver.
+	
+*choice
+	#Investigate the altar more
+		*goto investigate
+	#Destroy the altar
+		*goto destroy
+	#Pray at the altar
+		*goto pray
+	#Leave
+		*goto leave
+	
+*label destroy
+[This option is not yet written.]
+
+*label pray
+[This option is not yet written.]
+	
+*label leave
+[This option is not yet written.]
+
+*label investigate
+*if ((rel_fae > 50) and (rel_el > 50))
+	*goto ella
+*else
+	*goto redstuff
+
+*label redstuff
+[This option is not yet written.]
+
+
+*label ella
+You go up to the altar and are about to bend to inspect it further when a familiar voice from behind your left ear startles you. It's Ella! 
+
+"You may be friend of the fae," Ella says, "But that doesn't mean you can steal my raspberry pudding!" Her familiar laugh, link a tinkling bell, rings out through the trees. "I see you've had a full day, yes? Meeting two beauties of the human variety, and they're already fighting over you." She smiles approvingly, her eyes twinkling.
+
+She floats over to the stone bowl and sits on its far edge, her legs straddling the rim, shamelessly showing you her entire womanhood in all its glory. As if unaware, she nonchalantly begins scooping the goop into her mouth with both hands until she's covered in the sticky goo.
+*temp numquestions 0
+*temp aroused false
+*label questions
+*if numquestions = 4
+	*page_break Ella finishes eating
+	*goto afterquestions
+*set numquestions +1
+*choice
+	*hide_reuse #"The offering was to you?"
+		*goto offeringwastoyou
+	*hide_reuse #"Who made this offering?"
+		*goto whomade
+	*hide_reuse #"You've made a mess of yourself, Ella!"
+		*goto mademess
+	*hide_reuse #"Please close your legs. That's indecent!"
+		*goto closelegs
+	*hide_reuse #"Did you see Jennifer earlier?"
+		*goto seejennifer
+	*hide_reuse #"How did you know I met Rebekah?"
+		*goto ellaknows
+	*if (aroused) #Have sex with Ella
+		*goto ellasex
+	#Leave the altar
+		*goto leavealtar
+	
+*label offeringwastoyou
+"Who else would it be for?" Ella asks incredulously, pausing to look up at you with her wide doe-eyes before resuming her feast.
+
+After a few more bites, she stops and looks at you again. 
+
+"Oh," she says. "Sometimes I forget how humans think. The forest and the earth are one, I and the forest are one, the offering was to the earth mother, and so I get to eat it for her."
+
+Ellas eyes become dreamy when she mentions the earth mother, and both her hands snake into her lap.
+
+"Oh, look what you made me do," she says, removing her hands and showing you her sex, now covered in raspberry pudding.
+
+"You wouldn't want to help me clean this off the way you did before, would you?"
+*set aroused true
+*goto questions
+	
+*label whomade
+"Rebekah made it," Ella says. "She made this altar too, but it has not yet been consecrated. Only the passion of union can do that, and no boy has yet been brave enough, though Rebekah has no shortage of suitors. Sad, really, how afraid of the earth mother humans have become. Their own mother!"
+
+Ella resumes eating.
+*goto questions
+	
+*label mademess
+"Daintiness is a custom of human females," Ella laughs. "I prefer to enjoy myself, and this..." She spreads her arms now as well as her legs to show you her whole body covered in goo. "This gives us a chance to enjoy ourselves another way too! I will share my pudding with you, but only if you use your tongue on me again."
+*set aroused true
+*goto questions
+
+*label closelegs
+"Decency?!? What a trite custom of you humans that I completely do not understand. Will you be talking about modesty next? Yet when the mood strikes you, you humans can't get out of your clothes fast enough and contort into the most in-"decent" of positions! Besides..."
+
+Ella straightens up and, placing her hands on her knees (staining them with raspberry juice), spreads her legs wider.
+
+"You like indecency, don't you?"
+*set aroused true
+*goto questions
+
+*label seejennifer
+"No, not really," Ella says, her mouth full of pudding. "But I can feel things that go on in the forest around me. You had a fight, didn't you? It was like a little tempest, a summer storm that came out of nowhere, and now I feel a sadness... and a waiting... and impatience. You should go to her."
+*goto questions
+	
+*label ellaknows
+When Ella hears you ask how she knew you'd met Rebekah, she pauses her gorging and wipes her mouth before speaking.
+
+"Well," she begins and bats her eyes a bit shyly, "I'm forced to admit I've taken a special interest in you since we met." She's blushing and a hand unconsciously edges closer to her crotch. "You do know it's... well, [i]unusual[/i] for the fae to show themselves to humanfolk? I waited a hundred years for you."
+*goto questions
+
+*label leavealtar
+"Well, Ella," you say. "It was nice seeing you again, but I really must be going."
+
+"So soon?" Ella pouts, her mouth red with goo. "But I wanted to ride you again, and there's something I wanted to show you."
+
+*choice
+	#"What did you want to show me?"
+		*goto whatshow
+	#"I think I need to get back to Jennifer."
+		*goto needgetback
+	#"I'm afraid of the fae."
+		*goto tellafraid
+	#You're afraid of the fae, but you tell her it's that you want to get back to Jennifer.
+		*goto liegetback
+	
+*label whatshow
+"I wanted to show you a wondrous thing," Ella says, "But since you must go, you will miss out. Too bad. So sad. Awwwww..."
+
+She flies in a descending spiral, head bowed as if really sad for you, but when she lands on the ground, she looks up.
+
+"Or... you could let me ride you again, and I will show you the wondrous thing."
+
+*choice
+	#See wondrous thing
+		*temp soughtwondrousthing true
+		*goto wondrousthing
+	#Still leave
+		*label stillneedtogetback
+		"Awwww..." Ella pouts. "Well, you humans are always scurrying about doing your meaningless human business. Go then, and perhaps we'll meet again when you have more time."
+		*page_break Return to the fork in the path
+		*goto altar2fork
+		
+*label wondrousthing
+"I want to see this wondrous thing," you say, and it makes Ella beam. She can't stop smiling!
+
+"Follow me!" she cries.
+
+*goto noconsecrate
+		
+*label needgetback
+You tell Ella that you think you've been gone long enough and need to get back to Jennifer.
+
+Ella pauses and lifts her head as if sniffing the air.
+
+"No," she says, finally. "Jennifer will wait for you. We have time! Don't you want me? Maybe I can give you pleasure this time too? And there's still that thing I wanted to show you."
+
+*choice
+	#"What did you want to show me?"
+		*goto whatshow
+	#Tell Ella you still need to get back
+		*goto stillneedtogetback
+	#Change your mind
+		"Ok, you talked me into it," you say.
+		
+		"I love you!" Ella exclaims. "Follow me!"
+		
+		*achieve ella_l_word
+		*goto noconsecrate
+	
+*label tellafraid
+"I hope you don't take this the wrong way," you say, "But I'm a little afraid of the fae world. Isn't it dangerous for humans to have too much contact with the fae?"
+
+Ella lowers her gaze and doesn't speak for a moment.
+
+"Yes," she says, finally looking up. "We are very different beings, and sometimes we don't understand each other. Initiating violence is impossible for a fae, and yet throughout the ages, some humans have carried justifiable hatred of us, I know not why, just that in their hearts they feel justified. Fae can sense these things. If you wish no more contact with me, I will understand."
+
+*choice
+	#"Yes, I think it's best we no longer see each other."
+		*set no_fae_contact true
+		"Then I am sorry, friend human," Ella says, her eyes brimming with tears. "If you ever change your mind, call to me with your mind, and I will hear you. Goodbye."
+		
+		Ella flits off into the forest and is gone.
+		*set rel_el %- 30
+		*page_break Return to the fork in the path
+		*goto altar2fork
+	#"I want to still see you, but sometimes I will need to hold back."
+		Ella, who's eyes were brimming with tears, smiles, making the tears fall, and as they fall they twinkle and turn into diamonds.
+		
+		"You've made a faerie cry," she says. "Give these to your true love, and she will be yours forever."
+		
+		Ella picks up the diamonds from the ground and places them in your hand before flying off.
+		
+		"Goodbye, friend human," she says and disappears.
+		*achieve fae_diamonds
+		*set has_fae_diamonds true
+		*set rel_el %-10
+		*page_break Return to the fork in the path
+		*goto altar2fork
+	
+*label liegetback
+You lie and tell Ella that you need to get back to Jennifer when really it's because you're afraid of fae magic.
+
+"If you wish to return to Jennifer," Ella says coldly, "Why is there still anger in your heart for her? Well, friend human, go be like your brethren in your ways of hypocrisy. Wear your two faces. Hide your true desires and thereby cut off your true strengths. Chase gold and worldly power and all the things that mean nothing. Eschew love. Die without ever really having lived. I thought you were different. Goodbye."
+
+Ella flits off into the forest, and you are alone.
+*set rel_el %-20
+*page_break Return to the fork in the path
+*goto altar2fork
+	
+*label ellasex
+"Are you hinting at something Ella? Do you want to have sex?" you ask.
+
+*if numquestions > 2
+	"I thought you'd never ask!" Ella laughs. 
+	*goto ellasex2
+*else
+	"Why yes, yes, I do," says Ella, totally forgetting about the raspberry pudding. 
+*label ellasex2
+
+She darts straight up into the air and while piroueting, removes her dress, which flies out and onto a tiny nearby branch. She instantly stops spinning and faces you, her eyes shining with mirth and lust.
+*set consecrate_with_ella true
+*label ellasex3
+*set had_fae_time true
+"This time, lick my whole body!"
+
+*choice
+	#Lick her whole body
+		*goto lick
+	#Ask her to lick you first
+		*goto mefirst
+	
+*label mefirst
+"I could do that," Ella says glancing downward at your crotch. "But then you'll be covered in raspberry. Do you want that?"
+
+*choice
+	#Yes
+		*goto bodyjob
+	#No
+		*goto lick
+	
+*label bodyjob
+*set coveredinraspberry true
+"I'm going to give you a 'bodyjob' then!" Ella laughs.
+
+She touches every buckle on your armor and clothing, and with just a touch, they undo themselves. Soon, you're stark naked, lying on the ${naturebed}, and as you hold your member straight up for her, Ella enfolds it with her whole body, wrapping both her arms and legs around it. She presses her whole face into your frenulum, and you feel her tiny tongue whirling about this most erogenous of zones. Her wings beat rapidly, and she just about [i]buzzes[/i] up and down, almost faster than you can see, all the while her arms and legs stroking and moving, stimulating you in a way impossible to have imagined. 
+
+She takes you almost to the point of orgasm but then gradually slows.
+
+"Will you do me now?" she asks in a little girl voice.
+*set rel_el %+5
+*set rel_fae %+5
+*set ella_stim 1
+*choice
+	#Do her now
+		*goto lick
+	#Not yet
+		*goto finishyou
+	
+*label finishyou
+"Oh, but please? Pretty please?" Ella begs. "I want feel your giant tongue on my whole body this time."
+
+*choice
+	#Give in
+		*goto lick
+	#Hold firm
+		*goto finishyou2
+	
+*label finishyou2
+"Oh, but I need it bad too, Ella!" you complain. "Please just finish me, and then I'll do you."
+
+"Okay!" Ella exclaims and resumes her bodyjob, but now, she begins to fly up and down on your shaft at a much slower rate, keeping you just below the point of no return. The pleasure builds, and the need to finish becomes almost unbearable.
+
+This is when Ella begins to rotate as well. Around and around, as well as up and down, she slides, and not only do you feel her touch, you feel the wind whipped up by her wings caressing your body. Her tongue, face, hair, breasts, legs, arms, hands, feet... everything is making spirals around your shaft, and her skin is so soft everywhere, softer than a human woman's softest places.
+
+It's too much, and you begin to reach climax. You white goo spurts like a fountain above her and then cascades down Ella's whole body. She rises up, catches it with her hands and rubs it over her body while she wraps her legs around your shaft, humping it, rubbing her sex over your frenulum but staying away from the now over-sensitive head ridge.
+
+*page_break Ella climaxes too!
+Midway through your orgasm, Ella begins to reach her climax as well. Her pelvis begins to hump more forcefully until her whole body is bucking with spasms of its own. She can no longer pay attention to your spurts, too overwhelmed by the orgasmic sensations coursing through her body, and when they fly into her face, she just closes her eyes. Her cries of pleasure echo through the forest before both of you finally finish at the same time.
+
+Ella lets herself slide down your still semi-hard shaft and sits at the base of it, lying back onto your stomach. Your swollen member between her legs covers her, and she holds it close to her chest. Once in awhile, she kisses it somewhere, igniting in you a memory of the pleasure that just was.
+
+After resting like this for a few moments, Ella rolls onto her stomach, your cock flopping off to one side. 
+
+"Will you clean me now?" she asks, using her little girl voice again, making the big eyes.
+*set rel_el %+10
+*set rel_fae %+10
+*set ella_stim 2
+*choice
+	#Yes
+		*goto cleanher
+	#No
+		*goto noclean
+
+*label cleanher
+"Thank you," Ella says, smiling appreciatively. "And see, now that your seed has touched my body, it's transformed. No longer is it a gross physical substance but more light than matter."
+
+You see that both your seed and the raspberry goo have become a substance that glows with preternatural light. 
+
+*goto lick
+	
+*label noclean
+You hesitate, and Ella notices it.
+
+"Is it because your own seed disgusts you?" she asks, and it's almost comical how she can be so frank about such things.
+
+*choice
+	#Yes
+		*goto seedtransmute
+	#No
+		*goto notseeddisgust
+	
+*label seedtransmute
+"I thought that might be it," Ella says, "But look."
+
+She spreads her arms and presents her body to you. 
+
+"Now that your seed has touched my body, it's transformed. No longer is it a gross physical substance but more light than matter."
+
+You see that both your seed and the raspberry goo have become a substance that glows with preternatural light. 
+
+"So will you do it now?"
+
+*choice
+	#Yes
+		"Good," Ella says, relieved. She was really worried you weren't going to keep your promise!
+		
+		*goto lick
+	#No
+		*goto reallywont
+
+*label notseeddisgust
+"No?" Ella pouts, eyebrows raising. "But why then? You really won't?"
+
+*choice
+	#Really won't
+		*goto reallywont
+	#Now will
+		*goto nowwill
+	
+*label reallywont
+"I'll give it to the waters of the stream then," Ella says, her wings starting to vibrate, and the buzzing sounds angry, like a disturbed beehive.
+*set rel_el %-15
+*page_break Return to the fork in the path
+*goto altar2fork
+	
+*label nowwill
+You say you will now.
+
+"Good," Ella says. "And see, now that it's touched my body, it's transformed. No longer is it a gross physical substance but more light than matter."
+
+You see that both your seed and the raspberry goo have become a substance that glows with preternatural light. 
+
+*goto lick
+
+*label lick
+Ella lies down on the ${naturebed}, and you, on your hands and knees, move over her, running your tongue up and down her body in long, slow strokes. 
+
+"Yesssss..." Ella says, elongating her body and rolling first to one side, then back again, letting your tongue find new paths to travel. 
+
+You start at her feet, cover both legs at once, then her sex, her stomach, her breasts, her neck, and then her whole face. She turns over, and your tongue moves over her heels, calves, thighs, buttocks, back, neck, and head. You take each arm into your mouth, then each leg, and you can envelope almost her entire limb. You feel them slip down your throat briefly but do not gag. 
+
+Ella spreads her legs and you lick between them until it's clean. You lick between her breasts, her cheeks. You take her whole head in your mouth, and press your tongue into her tiny eyes, ears, nostrils, and mouth.
+
+Finally, she's clean, her body glistening, your saliva turned into ethereal sheen.
+
+"Thank you," she says. "The other faeries just don't know what they're missing!"
+
+She rolls to one side and languidly rises to a sitting position.
+
+"But really," she goes on, "It's only a special human who can do what you just did. Most cannot even see us. Rebekah can, but she's never touched one of us. We straddle the two worlds."
+
+Her wings begin to beat, and Ella rises.
+
+"Until we meet again, friend human," she says and zips off into the forest.
+*set rel_el %+10
+*page_break Return to the fork in the path
+*goto altar2fork
+
+*label afterquestions
+"Okay, I'm done," Ella says after scraping, then licking the bowl clean. She'd gotten on all fours and plowed the bowl forward and back, running her tongue its full length with each stroke. "That was good!"
+
+She stands, balancing on the rim of the bowl and takes off her dress, tossing it to the side where it catches on a tiny nearby branch.
+
+"I meant to do that," she says.
+
+Then she steps into the bowl and kneels, arms to either side supporting herself on the bowl's rim, and begins to slide all parts of her body up and down the inside of the bowl, smearing herself with raspberry residue. You watch her rhythmic movements mesmerized.
+
+Finally, she sits in the middle of the bowl, knees to her chest and arms wrapped around.
+
+"Now I offer myself to you, god of the forest. Come and take me."
+
+She closes her eyes and inhales shakely in anticipation.
+
+*choice
+	#Take her
+		*goto takeher
+	#Don't take her
+		*goto donttake
+	
+*label donttake
+"Ella," you say regretfully. "I can't."
+
+Why can't you:
+
+*choice
+	#You want to get back to Jennifer
+		*goto jennifer
+	#It feels like a desecration of the altar
+		*goto nodesecrate
+	#You're worried Jennifer might find out
+		*goto worry
+	#You're afraid of fae magic
+		*goto tellafraid
+	
+*label jennifer
+You tell Ella that you think you've been gone long enough and need to get back to Jennifer.
+
+Ella pauses and lifts her head as if sniffing the air.
+
+"No," she says, finally. "Jennifer will wait for you. We have time! Won't you stay? There's something special I wanted to show you."
+
+*choice
+	#"What did you want to show me?"
+		*goto whatshow
+	#Tell Ella you still need to get back
+		*goto stillneedtogetback
+	#Change your mind
+		"Ok, you talked me into it," you say.
+		
+		"I love you!" Ella exclaims. "Follow me!"
+		
+		*achieve ella_l_word
+		*goto noconsecrate
+	
+*label nodesecrate
+You tell Ella you don't want to have sex in front of the altar because it feels like a desecration.
+
+"WHAT?!?" Ella exclaims. "One of THE most sacred acts in the universe, and you think it a desecration? Why do humans have sex at all if it's so dirty? Human hypocrisy mystifies me. Come, let us indulge ourselves, and I will show you how our act is really a consecration, not desecration."
+
+*choice
+	#Agree to try it
+		*goto consecrate
+	#Ask to indulge yourselves elsewhere
+		*goto indulgeelsewhere
+	
+*label consecrate
+Ella smiles. "Welcome to the world of the fae," she says and beckons you forward.
+
+*achieve forest_god
+Reverently you approach the stone bowl and reach in, scooping Ella out of it, and you find she's as light as a feather, even when her wings aren't moving, as if she were a being more ephemeral than physical.
+
+Almost like a flower, she blossoms in you hands, and leans back, grasping one of your fingers with each of her hands and spreads her legs, placing a foot on each of your forearms.
+
+Ella runs her hands up and down her body, smearing the red goo everywhere.
+
+*set consecrate_with_ella true
+*set rel_fae %+30
+*goto ellasex3
+
+*label indulgeelsewhere
+*achieve forest_god
+"I don't know," you say hesitantly. "I don't think I'm quite ready for this. Isn't there someplace else we can be together?"
+
+"Oh yes!" Ella exclaims. "There is. I wanted to show you!"
+
+She races off into the forest.
+
+*goto sacred_grove
+
+*label worry
+"I want to have sex with you, Ella," you say, "But I don't want to do anything more to upset Jennifer."
+
+"What?" Ella blinks. "You think Jennifer would be jealous if you slept with me? Does a still leaf envy the one graced by the breeze when it soon will be graced as well? Let my touch wash away your anger, and you can return to her with a positive mind. There may be a rivalry between the sisters if you indulge with one in another's presence, but in general, even humans no longer begrudge another the sacred union if discretion is maintained. Long ago, you did. Isn't that silly? You had funny customs like marriage, monogamy, and cheating."
+
+*choice
+	#"Well, when you put it THAT way..."
+		Ella has convinced you. "Follow me," she says, rising. "There's something I want to show you."
+		
+		*goto noconsecrate
+	#Decide you still want to get back to Jennifer
+		*goto stillneedtogetback
+
+*label takeher
+*achieve forest_god
+Reverently you approach the stone bowl and reach in, scooping Ella out of it, and you find she's as light as a feather, even when her wings aren't moving, as if she were a being more ephemeral than physical.
+
+Almost like a flower, she blossoms in you hands, and leans back, grasping one of your fingers with each of her hands and spreads her legs, placing a foot on each of your forearms.
+
+"You wish to do it here?" she asks.
+*label altarorforest
+*choice
+	#Yes
+		Ella runs her hands up and down her body, smearing the red goo everywhere.
+		
+		*set consecrate_with_ella true
+		*goto ellasex3
+	#No
+		*goto noconsecrate
+	*hide_reuse #Ask if it's bad to have sex in front of the altar
+		*goto askbad
+	
+*label askbad
+"No, silly!" Ella laughs. "How could it ever be bad to have sex in front of an altar?"
+
+Do you wish to have sex with Ella before the altar?
+*goto altarorforest
+	
+*label noconsecrate
+Ella flits away into the forest, leading you off the path. 
+
+*choice
+	#Follow
+		*goto ellasex3
+	#Don't follow
+		*set fae_immunity +1
+		*goto dontfollow
+
+*label sacred_grove
+*set naturebed "bed of moss"
+*temp wondrousthingtext ""
+*if soughtwondrousthing
+	*set wondrousthingtext "See! Isn't this place just the most wondrous thing? "
+*set rel_fae %+5
+You follow until you find yourself in what must be a sacred grove. Enclosed by trees, you have complete privacy, and the ground is a spongy moss, more comfortable than any featherbed.
+
+"${wondrousthingtext}Maybe you can take Rebekah here sometime," Ella muses. "She doesn't know this is here yet."
+
+"If you do, is it okay if I watch?" she winks. 
+
+"Well," she says, running her hands up and down her body, still covered in red goo.
+
+*goto ellasex3
+
+*label dontfollow
+"Wait, Ella!" you cry. "I don't want to go off the path."
+
+Ella comes flitting back.
+
+"Tsk. Tsk," she scolds. "Don't you know it's not nice to keep a faerie waiting? You can come off the path now; it's safe. I have a special place I want to show you."
+
+*choice
+	#Follow
+		*goto sacred_grove
+	#Still don't follow
+		*goto disappointment
+	
+*label disappointment
+*set rel_fae %-5
+*set rel_el %-5
+"No, Ella," you say. "I really mustn't venture off the path with you." 
+
+"As you wish, friend human," she says and flits away.
+*page_break Return to the fork in the road
+*goto altar2fork
+
+*label altar2fork
+*if had_fae_time
+	*goto jenniferworried
+*else
+	*goto jennifermad
+
+*label jenniferworried
+You follow the trail heading back to the fork, the rough terrain giving way to the smoother rabbit trail, then the deer path. Before you make it to the fork, you see Jennifer ahead, limping along toward you, but now she has a makeshift crutch fashioned from a forked branch.
+
+"There you are!" she cries once she sees you and begins hobbling toward you faster. "I was so worried about you. It's been hours!"
+
+"What? It seemed but a half-hour or an hour at most," you reply.
+
+Jennifer's face falls. "Did you have contact with the fae in there?"
+
+*choice
+	#Yes
+		*goto admitfaecontact
+	#No
+		*goto lieaboutfaecontact
+	#Ask if that's bad
+		*goto isfaecontactbad
+	
+*label admitfaecontact
+"Yes," you admit. "I seem to have made a faerie friend."
+
+"How did this happen?" Jennifer asks, incredulous.
+
+*goto faeriefriend
+
+*label lieaboutfaecontact
+"No, of course not!" you retort. 
+
+"But then how do you explain how so much time has elapsed when it felt like only a half-hour to you?" Jennifer asks.
+
+"Maybe one hour?" you remind her.
+
+"It's been over two hours!" Jennifer cries, getting exasperated. "You're hiding something. Tell me what happened!"
+*goto faeconvo
+
+*label isfaecontactbad
+"Would it be bad if I had contact with the fae?" you ask.
+
+"So you did!" Jennifer exclaims. "Tell me what happened."
+
+*label faeconvo
+*choice
+	#Tell her you found an altar
+		*goto foundaltar
+	#Tell her you have a faerie friend
+		*goto faeriefriend
+	#Lie and say some faeries tricked you
+		"I just followed the trail for a bit," you say, "And after a little while I decided to head back. 
+		*goto faetrick
+	*hide_reuse #Ask why fae contact is bad
+		*goto whyfaecontactbad
+	
+*label foundaltar
+*set revealedaltar true
+You tell Jennifer you found an altar.
+
+"That doesn't surprise me," Jennifer says. "Rebekah goes back there from time to time, so that must be what she's doing. I wish she'd never met that old crone, and we all worry she might come to a bad end. However, this doesn't explain the time loss. What did you do at this altar?"
+*label foundaltar2
+*choice
+	*hide_reuse #Tell her you must've fallen asleep
+		*goto fellasleep
+	#Tell her you have a faerie friend
+		*goto faeriefriend
+	#Lie and say some faeries tricked you
+		"Once I saw the altar," you say, "I wanted nothing to do with it, so I headed back. 
+		*goto faetrick
+	
+*label fellasleep
+*set rel_d1 %-5
+"I didn't do anything at the altar," you say. "In fact, I stayed away from it. As for the time loss, I must've fallen asleep or something."
+
+"Must've? You can't remember?"
+
+"Well, I..."
+
+"I can tell when you're lying, ${name}. What really happened? You must've met faeries. Did you?"
+*goto foundaltar2
+	
+*label faeriefriend
+"Earlier today, just before I met you," you say, "I met a faerie, and she appeared again just now."
+
+"What do you mean you 'met a faerie?'" Jennifer asks. "It sounds like you're saying you saw her with your eyes and maybe even talked to her, but of course, that can't be. You must mean that you just awoke to find your possessions rearranged, buckles undone, things like that, yes?"
+
+*choice
+	#Tell her you did indeed see and talk to the faerie
+		"No, Jennifer," you begin, hoping beyond hope that she doesn't take it wrong. "I can actually see and talk to faeries, at least this one these two times."
+		
+		*goto seetalk
+	#Tell her you didn't actually see the faerie
+		*goto didntsee
+	
+*label seetalk
+"She seemed friendly," you say, thinking back to your two interactions with Ella. "And she never did anything to make me think she had any bad intentions."
+
+"What did she want?" Jennifer asks.
+
+*choice
+	#Say you just talked
+		*goto justtalked
+	#Talk about the offering at the altar
+		*goto talkaltar
+	#Admit to having sex
+		*goto admitsex
+	
+*label justtalked
+"We sat and just talked," you say.
+
+"What about?" Jennifer asks.
+
+"Oh, nature, the differences between humans and faeries, stuff like that."
+
+"That's all? Then she leaves?"
+
+"Pretty much."
+
+"You didn't engage in relations?"
+*label relationstalk
+*choice
+	#Admit to having had relations
+		*goto admitrelations
+	#Deny having had relations with Ella
+		*goto denyrelations
+	*hide_reuse #Ask if it would bother Jennifer if you had relations with the faerie
+		*goto botherrelations
+	
+*label admitrelations
+"Ok, yes," you admit. "We did have relations. I'm sorry I tried to hide it, but I didn't know how you'd feel. I don't want you to be jealous."
+
+"I'm not really jealous," Jennifer says. "just sad that you lied to me. I want you to feel you can tell me anything. Now, did you have relations with this faerie both this morning AND just now?"
+*set rel_d1 %-5
+*choice
+	#Admit having sex a second time
+		*goto admitsecondtime
+	#Deny it
+		*goto denysecondtime
+
+*label admitsecondtime
+[This option is not yet written.]
+
+*label denysecondtime
+[This option is not yet written.]
+
+*label admitsex
+"Weeell," you admit, "This morning we did have relations. She seemed curious about humans, but see, nothing happened. The fae might not be as dangerous as we think."
+
+"What about just now?" Jennifer asks.
+
+*label admitsex2
+*choice
+	#Say you just talked
+		*goto justtalked2
+	#Talk about the offering at the altar
+		*goto talkaltar
+	#Admit you also had relations just now
+		*goto alsonow
+	
+*label justtalked2
+"This time we just talked," you say. "We talked for a bit, and then I felt bad about staying away from you for so long."
+
+"Good," Jennifer says. "I guess it's bad enough just to talk with them, so I hope you stay away from them from now on, lest you get drawn into their world and not come back!"
+
+*goto hug
+
+*label alsonow
+*temp whatellasaid ""
+*if worriedaboutjen
+	*set whatellasaid ", but the faerie said it was to ease my anger for when I saw you again"
+"I'm sorry," you say, "But, yes, we did have relations just now as well${whatellasaid}. Are you jealous?"
+
+*label jealousyconvo
+*if rel_d1 > 54
+	*goto alittlejealous
+*else
+	"No, I'm not jealous," Jennifer sniffs, "If you want to be with a faerie, then you will be, or you will choose me. It's your decision, but I'm sad that you left me alone. Mostly, though, I'm worried for you. The fae world is not to be trifled with."
+
+	*set rel_d1 %-10
+	*goto hug
+
+*label alittlejealous
+"Only a little bit," Jennifer says, "And mostly because you went off and left me all alone, but I forgive you. I'm just glad you didn't disappear forever in the faerie realm."
+
+*goto hug
+
+*label denyrelations
+"No," you say, "It seems like relations with the fae might be dangerous, so I wouldn't do it."
+
+"Good," Jennifer says. "I guess it's bad enough just to talk with them, so I hope you stay away from them from now on, lest you get drawn into their world and not come back!"
+
+*goto hug
+
+*label botherrelations
+"Would it bother you if I had relations with the faerie?" you ask.
+
+"If it were safe, it wouldn't," Jennifer answers. "But how do you know you won't disappear into the faerie realm for a hundred years or who knows what other terrible fate? If it were safe, well, I know that you, as a man, have needs, and in the stories, faeries are always very attractive. If you did it with her and made me wait, I would be mad, though. So did you? Did you just have faerie sex?"
+*goto relationstalk
+
+*label talkaltar
+*if revealedaltar 
+	"Remember that altar I told you about?"
+	
+	"Yes," says Jennifer.
+	
+	"Well," you begin, "It 
+	*goto talkaltar2
+*else
+	"Well, the faerie came to me just after I found a stone altar of sorts, and it 
+*label talkaltar2
+had a stone bowl in front of it with an offering inside."
+
+"What kind of offering? Blood?"
+
+"No, food," you say. "Anyway, the faerie ate the food, and we sat and talked."
+
+"That's all?"
+
+*choice
+	#"Yes, that's all."
+		"We just talked for awhile, and then I felt bad about staying away from you for so long."
+
+		"Good," Jennifer says. "I guess it's bad enough just to talk with them, so I hope you stay away from them from now on, lest you get drawn into their world and not come back!"
+
+		*goto hug
+	#Admit you had sex
+		"Weell, after she finished the offering, she did want to have sex again," you say. "Are you jealous?"
+		
+		*goto jealousyconvo
+ 
+*label didntsee
+*set fae_lie 1
+"No, of course, I didn't actually see her," you say, "Just felt her presence, and little bits of mischief occurred."
+
+"How do you know it was a female faerie then?" Jennifer asks.
+
+"Well, I heard her laugh at one point," you answer, thinking fast.
+
+"But this happens occasionally to travelers when they pass through the woods and leave the path, but they never lose time. Are you sure you didn't go into the faerie realm?"
+
+Again, you must think quickly to make something up. You say, "When I heard the laughter, it mesmerized me. I started to follow it as if no longer under my own conscious control, but I quickly came to my senses. That was probably what caused the time loss."
+
+"But this was this morning, wasn't it?" Jennifer questions. "What happened just now?"
+
+*choice
+	#Continue the ruse
+		*goto ruse
+	#Come clean
+		*goto comeclean
+	
+*label ruse
+*set fae_lie 2
+You're starting to sweat but manage to continue the lie. "Like I told you, she came back, and I got mesmerized again. Luckily, I escaped again."
+
+"She's targeted you!" Jennifer exclaims. "You must have no further contact with the fae, and we must warn Rebekah about this as well!"
+
+Jennifer finally calms down and sighs with relief. "I'm just glad you're okay again."
+*page_break
+*goto hug
+
+*label comeclean	
+*set lied2jen true
+Jennifer seems to be getting too suspicious, and the lie is getting too deep. You decide to come clean.
+
+"I'm sorry," you say, "This is very hard for me, but I actually did see the faerie. I can see them, at least this one, as plain as I can see you."
+
+"What!" Jennifer exclaims. "Why did you lie to me?"
+
+"People are afraid of faeries," you say, "And it's all so new to me. I don't really know how to handle things yet or how I feel."
+
+*if rel_d1 > 59
+	*goto jenforgives
+*else
+	"I see I misjudged you," Jennifer says. "You saved me, so I'm grateful for that. However, you went off and left me today to cavort with the faerie realm. It's bad enough my sister does it, and now you. Then you lied. It's too much."
+	*set rel_d1 %-10
+	*goto return2house
+
+*label jenforgives
+"I'm mad at you!" Jennifer quips, softly hitting your arm. "You left me today, and now I find out you're cavorting with faeries. It's bad enough my sister does it, and now you. Then you lied. You did save me today, though, so I'll forgive you on the condition you never lie to me again. Now, will you tell me exactly what really happened today after you left me?
+
+*set rel_d1 %-5
+*goto seetalk
+
+*label faetrick
+*set fae_lie 1
+That's when three faeries appeared and bid me go with the to a faerie feast, and I felt compelled, that I didn't have a choice. I walked with them only a little ways, but somehow I came to my senses and ran."
+
+You got the details of this lie of yours from a story you heard in your youth, and Jennifer exclaims, "It's just like what happeneds in the faerie tales! See! I knew they were dangerous. We must tell Rebekah and get her to stop going back there."
+
+*label hug
+She hugs you and says, "Let's go back. Rebekah and my brothers will be back soon, and it's dinner time. I can show you the stream some other day."
+
+"You're not mad anymore?"
+
+"No," Jennifer says, "I was never mad, just worried. I didn't want you to go to that part of the woods, and now you know why. Let's not fight ever again."
+
+She hugs you again, and the two of you return to the house.
+*page_break Return to the house
+*goto return2house
+
+*label whyfaecontactbad
+"But is it bad if I had contact with the fae?" you ask.
+
+"You lost hours of your life!" Jennifer exclaims. "Next time, it might be longer or you might simply never return. Haven't you heard the stories?"
+
+*goto faeconvo
+
+*label jennifermad
+[This option is yet to be written.]
+
+*label stream3
+Soon you arrive at the stream, the water low, for it's midsummer, the winter snows long since melted.
+
+Jennifer shows you to her favorite place to sit, a large boulder with a flat surface that's half in and half out of the water.
+
+*choice
+	#Carry Jennifer into the water
+		*goto carrywater
+	#Lay Jennifer on the boulder
+		*goto layboulder
+	#Grab one of Jennifer's boulders
+		*goto grabboulder
+	
+*label carrywater
+[This option is not yet written.]
+
+*label layboulder
+What kind of "lay" do you mean?
+
+*choice
+	#"Lay" as in "get laid"
+		*goto getlaid
+	#The regular, non-perverted sense
+		*goto reallay
+	
+*label getlaid
+You "lay" Jennifer on the boulder, and then climb on top of her to "get laid."
+
+"Oh, you're so silly!" Jennifer squeals and tries to push you off. 
+
+*choice
+	#Let her win
+		*goto letwin
+	#Overpower her
+		*goto overpower
+	
+*label letwin
+[This option is not yet written.]
+
+*label overpower
+You keep coming, letting her know you're serious, believing women like it when a man takes charge.
+
+"No... no, please," Jennifer says, still pushing but quickly succumbing to your greater strength. "I really mean it. Stop."
+
+*choice
+	#Keep going
+		*goto overpower2
+	#Stop
+		*goto stop
+
+*label stop
+[This option is not yet written.]
+	
+*label overpower2
+She brought you here because she likes you, so you assume she must be playing hard to get. Firmly but still gently, you hold her so that her arms weaken and finally collapse, and she pulls them in, covering her chest as if she wants to keep you from touching it. 
+
+You try to kiss her.
+
+She turns her head to the side, eyes tightly shut, and instead of on her lips, you can only kiss her cheek. Her body recoils, contracting into a tense ball. 
+
+"No, stop, please."
+
+*choice
+	#Keeping going
+		*goto rapejennifer
+	#Let her go
+		*goto nokiss
+	
+*label rapejennifer
+[This option is not yet written.]
+
+
+*label nokiss
+*set rel_d1 %-10
+You realize that no really means no, let her go and move away. 
+
+Jennifer pulls herself up to a sitting position, drawing her knees to her chest, still tense and self-protective.
+
+"Why did you do that?" she asks, eyes brimming with hurt tears.
+
+*choice
+	#Apologize
+		*goto streamapologize
+	#Get irritated
+		*goto streamirritated
+	
+*label streamapologize
+"I got swept away by my feelings for you," you say. "I'm sorry, and it won't happen again."
+
+"It's okay," Jennifer says, wiping her eyes and then offering a weak smile. "I know how boys can get. Some women too, like Rebekah, for example, but I'm not that way. I need to go slower, to make it special and mean something. Is that what you want too?"
+
+*choice
+	#Yes
+		*goto wantspecial
+	#"You mean like marriage?"
+		*goto marriage
+	
+*label wantspecial
+[This option is yet to be written.]
+
+*label marriage
+"You mean like marriage?" you ask.
+
+"No, silly!" Jennifer laughs, and her hurt seems to have gone. "I'm way too young for that, and I'm not saying we must become monogamous right away, juat that, you know, I want it to be special."
+
+*choice
+	#"What can I do to make this special?"
+		*goto whatdo
+	#Tell her you were trying to make it special
+		*goto weretrying
+	#Hold her hand
+		*goto holdhand
+
+*label whatdo
+[This option is yet to be written.]
+
+*label weretrying
+[This option is yet to be written.]
+
+*label holdhand
+You reach forward to hold her hand, but Jennifer pulls it away slightly. You pause, worried if you're being too forward again.
+
+*choice
+	#Reach forward again
+		*goto reachagain
+	#Move back
+		*goto moveback
+	
+*label reachagain
+You reach for Jennifer's hand again more slowly than before, and this time she doesn't withdraw it. You take her hand into yours.
+
+*choice
+	#Kiss it
+		*goto kisshand
+	#Move in for a hug
+		*goto handhug
+	
+*label kisshand
+[This option is yet to be written.]
+
+*label handhug
+[This option is yet to be written.]
+
+*label moveback
+You quickly withdrawl your hand to show Jennifer you're not a threat.
+
+"Maybe we should go back to the house," Jennifer says. "I should help my mother prepare for dinner."
+
+*choice
+	#Go back to the house
+		*goto return2house
+	#Try to take her hand again
+		*goto reachagain
+	
+*label streamirritated
+*set rel_d1 %-10
+"Why did I do that?" you repeat. "Obviously it's because I thought you brought us here for that kind of thing. You know, ROMANCE?!?"
+
+"I know what romance is, and that was not it," Jennifer says coldly. "Let's go back to the house and not speak of this any further."
+
+*page_break Return to the house
+*goto return2house
+
+*label reallay
+[This option is not yet written.]
+
+
+*label grabboulder
+Really? She doesn't seem like that kind of girl.
+
+*choice
+	#Yes, really.
+		*goto reallygrab
+	#No, make a joke about it instead.
+		*goto boulderjoke
+	#No, do something else.
+		*goto boulderelse
+	
+*label reallygrab
+Well, you never know, I suppose. Sometimes it's surprising what can happen if you have the courage to just put it out there, but let's hope this is "surprising" in a good way.
+
+*choice
+	#Cup a boulder in your hand.
+		*goto cupboulder
+	#Twist one of Jennifer's nipples like a knob.
+		*goto twistknob
+	
+*label cupboulder
+[This option is yet to be written.]
+
+*label twistknob
+As you twist one of Jennifer's nipples like a knob, you make noises like an old-fashioned radio does when searching for the right frequency.
+
+"Wrrr... Wraaawwww...."
+
+"Are you trying to turn me on?" Jennifer laughs.
+
+"Yeah, like a radio," you say. 
+
+"What's a radio?"
+
+Oh, yeah... you're in a fantasy world. This must be, what, tech level 2? Human civilization doesn't get radios until tech level 3, according to your RPG rulebooks.
+
+*choice
+	#Do it again.
+		*goto knobagain
+	#Tell her about radios.
+		*goto tellradios
+	#Tell her it's a magical device.
+		*goto magicradio
+	
+*label knobagain
+[This option is yet to be written.]
+
+*label tellradios
+[This option is yet to be written.]
+
+*label magicradio
+"A radio is a magic item that can hear music or voices we cannot, but by turning the knob, much like I, uh, just pretended, you know, to do on your... you know..."
+
+"Where do these voices and the music come from?" Jennifer asks, seeming interested and completely ignoring your fumbling references to her upper torso anatomy.
+
+*choice
+	#"From the air..."
+		*goto fromair
+	#"See for yourself, if you let me finish turning the knob!"
+		*goto finishknob
+	
+*label fromair
+[This option is yet to be written.]
+
+*label finishknob
+"Now you are just getting lewd," Jennifer says. "Because you saved me today, I've let you take liberties with me I normally deny men I've only just met, but that needs to stop. I like you, but I'm not willing to be just a plaything."
+
+*choice
+	#Laugh it off.
+		*goto knoblaugh
+	#Apologize.
+		*goto knobapologize
+	#Get angry.
+		*goto knobangry
+	
+*label knoblaugh
+"You could never be just a plaything to me, Jennifer. I hope you know that," you say. "However, *I* am certainly willing to be YOUR plaything!"
+
+You laugh and make two "knobs" with your fingers over your own nipple areas.
+
+Jennifer laughs too and twists one of them, making you say, "Brrrweeeee... wrrraaaa... Bottom of the ninth. Mickey Mantle swings and misses! That's two strikes. Can he do it?"
+
+"You are a strange one," Jennifer says, but her smile tells her it's a quirkiness she appreciates.
+
+*choice
+	#Make small talk.
+		*goto smalltalk
+	#Kiss her.
+		*goto goodkiss
+	
+*label smalltalk
+You can't think of anything to say. Dammit, this always happens! (You're a geek, afterall.) You'd hoped that now that you have muscles, armor, and a sword, you'd have grown suave as well. Unfortunately, that doesn't seem to have happened, and an awkward silence ensues.
+
+Luckily, Jennifer takes it upon herself to fill the silence. "Well, what do you think of the stream?" she asks. "Isn't it lovely?"
+
+You look out over the stream as it flows lazily by, the sun glittering gently on the water's surface.
+
+*choice
+	#"It's beautiful."
+		*goto streambeautiful
+	#"It's a magical place."
+		*goto streammagical
+	
+*label streambeautiful
+[This option is yet to be written.]
+
+*label streammagical
+[This option is yet to be written.]
+
+*label goodkiss
+[This option is yet to be written.]
+
+*label knobapologize
+[This option is yet to be written.]
+
+*label knobangry
+[This option is yet to be written.]
+
+*label boulderjoke
+[This option is yet to be written.]
+
+*label boulderelse
+[This option is yet to be written.]
+
+*label return2house
+[Rest of story not yet written, but perhaps you have not yet tried the other branches?]
+*ending

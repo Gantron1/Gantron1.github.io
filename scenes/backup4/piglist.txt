@@ -1,0 +1,9 @@
+*if lilypad1_followed 
+	You followed me to secretly watch me pee.
+*if looked_ass 
+	You glued your eyes to my ass all day while I was climbing in front of you.
+*if bee_sex 
+	You snuck up on me and put honey on my chest.
+*if hill_duel_outcome = "dragon"
+	You held me down and had sex with me instead of fighting fair.
+*return

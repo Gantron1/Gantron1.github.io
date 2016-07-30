@@ -1,0 +1,108 @@
+*label top
+*temp dragon ""
+*check_achievements
+*if choice_achieved_dragonname
+	*set dragon "Myrristicor,"
+
+You are on a quest to rescue Princess Elsbeth from ${dragon} the ancient dragon who lives atop Mt. DragonKeep.
+
+*stat_chart
+	percent esteem Self-Esteem
+
+*if esteem > 79
+	Your high self-esteem gives you the confidence you need to undertake your nearly impossible quest.
+	*goto tamara
+*elseif (esteem < 80) and (esteem > 39)
+	You still have enough self-esteem to continue your quest, but if it ever falls below 40, you cannot continue and lose the game.
+	*goto tamara
+*else
+	You lack the self-confidence to continue your quest.
+	
+*label tamara
+*line_break
+*line_break
+*temp tamara_desc ""
+*set tamara_desc tamara_desc & "a master thief"
+*if tracking_speech
+	*set tamara_desc tamara_desc & " and tracker"
+*set tamara_desc tamara_desc & ", expert on dragonlore."
+*if with_tamara
+	*set tamara_desc tamara_desc & " You are currently traveling together."
+	*goto tamaradesc
+*elseif tamara_enemy
+	*set tamara_desc tamara_desc & " You are currently enemies."
+	*goto tamaradesc
+*else
+	*set tamara_desc tamara_desc & " She seems to be following you."
+	*goto tamaradesc
+
+*label tamaradesc
+*if met_tamara
+	You have met Tamara, ${tamara_desc}
+	*stat_chart
+		percent tamara_respect Tamara's Respect
+	
+*comment SAVE SYSTEM
+
+*label sm_top
+*choice
+	#Save
+		*label save
+		Top save slot is a 'hidden' save - the others are shown. The second uses a default name, the others don't.
+		*choice
+			#${savemod_slot_0}
+				*sm_save 0 | false
+				*goto sm_done
+			#${savemod_slot_1}
+				*sm_save 1 | true | This Uses the Optional 3rd Parameter!
+				*goto sm_done
+			#${savemod_slot_2}
+				*page_break
+				*sm_save 2 | true
+				*goto sm_done
+			#${savemod_slot_3}
+				*sm_save 3 | true
+				*goto sm_done
+			#Return
+				*goto sm_done
+	#Load
+		*label load
+		Top load option is a hidden load, the others are prompted.
+		*choice
+			#${savemod_slot_0}
+				*sm_load 0 | false
+				*goto sm_done
+			#${savemod_slot_1}
+				*sm_load 1 | true
+				*goto sm_done
+			#${savemod_slot_2}
+				*sm_load 2 | true
+				*goto sm_done
+			#${savemod_slot_3}
+				*sm_load 3 | true
+				*goto sm_done
+			#Return
+				*goto sm_done
+	#Delete
+		*label delete
+		*choice
+			#${savemod_slot_0}
+				*sm_delete 0
+				*goto sm_top
+			#${savemod_slot_1}
+				*sm_delete 1
+				*goto sm_top
+			#${savemod_slot_2}
+				*sm_delete 2
+				*goto sm_top
+			#${savemod_slot_3}
+				*sm_delete 3
+				*goto sm_top
+			#Return
+				*goto sm_done
+
+*label sm_done
+*goto top
+
+
+	

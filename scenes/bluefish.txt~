@@ -1,0 +1,62 @@
+*comment
+	
+*comment start
+	
+Text ${var} adf.	'funny text' "not text unless in *set"
+	
+*comment end
+
+*create asdf ""
+
+*set asdf "asdf"
+
+*temp asdf
+
+*set asdf %+10
+*set asdf -2
+
+*goto_scene juliette
+	why did it tab here?
+*gosub_scene adj_respect 10
+didn't tab here (correct)
+[brackets auto create closing]
+'" but quotes and double-quotes don't
+
+smartindent works: *choice, *else, *fake_choice, *stat_chart, *achievement
+smartindent doesn't work: #, *if, *elseif, *elsif	
+smartindent applies wrongly: *comment, *goto_scene
+	
+	
+*choice
+	#adf.
+	#asdf
+		*goto asdf
+	#adfff.
+		*go
+	
+*if adf
+*else
+	
+	*if
+	*if
+	*else
+		*if
+		*if
+		*elseif
+		*elsif
+		*else
+			*choice
+				*fake_choice
+					*stat_chart
+						*achievement
+							*if
+			
+*achieve adf
+*achieve asdf
+good no autoindent here	
+	*comment
+		*if
+		*comment
+			asdf
+			*asdf
+			

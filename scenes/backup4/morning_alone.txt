@@ -1,0 +1,283 @@
+*temp lust 0
+*temp admit_water false
+*temp admit_potion false
+*temp admit_love_potion false
+Early the next morning, you awaken with a start, sure you'd heard something, but when you look around, you see nothing amiss.
+*choice
+	#Search the area.
+		*goto search
+	#Ignore it.
+		*goto ignore
+	
+*label search
+You spend fifteen minutes scrutinizing the ground, but you find nothing amiss.
+*choice
+	#Search your belongings.
+		*goto searchbelongings
+	#Ignore it, eat breakfast, and get going.
+		*goto ignore
+	
+*label searchbelongings
+You rifle through your belongings, but everything seems totally fine. 
+*choice
+	#Throw away your food just to be safe.
+		*goto nofood
+	#Empty your waterskin just to be safe.
+		*goto nowater
+	#Throw away both your food and water.
+		*goto both
+	#Have a normal breakfast and get going.
+		*goto ignore
+	
+*label nofood
+[This option is yet to be written.]
+
+*label nowater
+[This option is yet to be written.]
+
+*label both
+[This option is yet to be written.]
+
+*label ignore
+You cook up a quick breakfast of oatmeal again.
+*if has_honey
+	*choice
+		#Put the last of your honey on it.
+			*set has_honey false
+			*goto nohoney
+		#Save your honey for later.
+			*goto nohoney
+*label nohoney
+You eat quickly, eager to resume your journey. Just as you gulp down some water and begin the day's hike, you hear a voice. A female voice. A very Tamara-like, female voice.
+
+"Hey," she says, sauntering into your camp like she belongs there. "Getting ready for a hike?"
+
+"Yes. What do you want?" you ask, warily. She's acting funny, smirking, almost gleeful.
+
+"You sure you want to do that?" she asks, grinning. "There's not something else you'd like to do?"
+
+"No. Why?"
+
+"Oh, no reason," she says, suppressing a giggle.
+*choice
+	#Grill her for answers.
+		*goto grill
+	#Start your hike.
+		*goto hike
+	
+*label grill
+You decide you need to know what's going on.
+*label grillchoice
+
+What do you ask her?
+*choice
+	*hide_reuse #Ask what she's done.
+		"Oh, I trailed you all yesterday," Tamara says. "I'm not going to let you mess up my plans. You and Juliette moved in generally the same direction, so she's actually pretty close. We're going to catch up with her and get her to join us."
+		
+		*gosub lustcheck
+		*goto grillchoice
+	*hide_reuse #Ask how long she's been hiding nearby.
+		"Not long," Tamara says. "I camped nearby, got up before dawn, then came here."
+		
+		*gosub lustcheck
+		*goto grillchoice
+	*hide_reuse #Ask if she watched you sleep.
+		*set admit_water true
+		"What? No!" Tamara says. "I'm not into things like that. All I did was add something to your water."
+		
+		*gosub lustcheck
+		*goto grillchoice
+	*if admit_water
+		*hide_reuse #Ask what she added to your water.
+			*set admit_potion true
+			"A drop of a magic potion," Tamara says.
+			
+			*gosub lustcheck
+			*goto grillchoice
+	*if admit_potion
+		*hide_reuse #Ask what kind of potion.
+			*set admit_love_potion true
+			"A love potion, of course," Tamara says. "A very special, unique one though. It also has charm and polymorph magic in it as well."
+			
+			*gosub lustcheck
+			*goto grillchoice
+	*if (lust > 1) #Make a pass.
+		*goto pass
+	#No more questions.
+		*goto hike
+
+*label lustcheck
+*if lust = 0
+	You have morning wood. It's not going away.
+	*goto next
+*elseif lust = 1
+	Your morning wood grows stronger, and Tamara starts looking mighty sexy.
+	*goto next
+*elseif lust = 2
+	You start to be unable to think of anything other than how much you want to throw Tamara down and fuck her right on the forest floor.
+	*goto next
+*else 
+	*goto desperation
+*label next
+*set lust +1
+*return
+	
+*label hike
+*if lust = 0
+	You start the day's journey, once again heading toward DragonKeep, the dragon and the princess. Tamara trails along behind you, and after a few minutes, she asks, "Have any morning wood today?"
+
+	Strange... you do still have your morning erection, and usually it'd be gone by now. As you walk, instead of dissipating, your cock only gets harder and harder.
+
+	"Bet I'm looking pretty good right about now, huh?" Tamara says nonchalantly, looking up at the trees.
+
+	Her voice, which normally you find grating, turns you on.
+	*goto hikechoice
+*else
+	You try to focus on the journey despite your raging erection, but all you can think about is Tamara. She's fifteen feet behind you, but you think you can somehow smell her scent even from that distance. It's driving you crazy with desire.
+*label hikechoice
+*choice
+	#Ask her what the &#%@%# she's done to you.
+		*goto askdone
+	#Try to walk it off.
+		*goto walkoff
+		
+*label askdone
+[This option is yet to be written.]turns to see her, visual stim
+
+*label walkoff
+[This option is yet to be written.]gets worse until can only think about one thing. masturbate?
+
+*label desperation
+You can't take it anymore. You need relief NOW or you'll go stark raving mad. 
+*choice
+	#Ask Tamara to fuck you.
+		*goto askfuck
+	#Masturbate.
+		*goto jerkoff
+	
+*label askfuck
+[This option is yet to be written.]If made her beg, pay back time
+
+*label jerkoff
+You try to head off into the forest for privacy, but Tamara easily keeps up with you. It's no use. You need relief so urgently, that you don't care anymore. 
+*choice
+	#Look at Tamara while doing it.
+		*goto masturtam
+	#Face the other direction.
+		*goto faceother
+	
+*label masturtam
+Oh man, that was a mistake. As soon as you look at Tamara, the urge to fuck her is irresistable. Your legs seem to take on a life of their own and start walking toward her.
+
+"Rape, rape, oh no," Tamara says passionlessly, smirking.
+
+You start to rip open her breeches like a starving man and a package of food, while Tamara half-heartedly undoes your belt for you. You get her pants down as far as they'll easily go, whip out your rock-hard member, and thrust it into her. 
+
+Man, it feels good, but you don't care. All you care about is relief, so you begin pounding her so hard it starts driving her backwards.
+
+"Whoa, slow down there," Tamara says, not really meaning it, as she half-falls/half-steps backwards until you have her up against a tree.
+
+Your hands dig into the bark like claws, desperately trying to get a better grip to pound her even more mercilessly.
+
+"Oh, oh, oh yeah," Tamara says. "I'm actually kinda getting turned on now from all this friction. Good thing I lubed myself first or this would be kinda bad."
+
+You jackhammer away.
+
+"I used tallow," she goes on. "Was meant for cooking. Say, wouldn't you like some boob action?"
+
+While you continue humping her furiously, unable to think of anything else, she casually unties the laces of her vest and opens it up. You dive in without missing a beat and begin simultaneously fucking and sucking her.
+
+Tamara stops talking, now just leans against the tree, enjoying the sensations you're stimulating in her body like her own personal little pleasure machine.
+
+"I'll get you for this," you mutter.
+
+Tamara just giggles.
+*page_break
+Slowly, your feelings toward Tamara begin to shift. Anger and distrust dissolve, replaced by attraction and affection, and your thrusting slows as you begin to caress and kiss her. Instead of desperation, you begin to enjoy the process, the exquisite pleasure her body is giving you.
+
+Tamara begins to kiss you back with real feeling and runs her hands up and down your body. Your thrusts become long and powerful, slamming again and again into her, and with each one, Tamara moans with pleasure, her hands beginning to grasp at your flesh longingly.
+
+You pull away from her, so you can look into her eyes, maintaining the strong, powerful thrusts. She looks back at you, her whole body wracked each time you plunge into her again. She closes her eyes in bliss. 
+
+Placing a hand on each shoulder, you gradually increase your pace until Tamara's body is bouncing before you. "Ohhhhh... uhhhhhh......" she says.
+
+You find yourself falling in love with her. This is not good.
+
+"I love you," you hear yourself say involuntarily.
+
+"I know," Tamara says with a touch of resignation. She knows it's just the effect of her magic potion, but to you it feels intensely real. You express this love growing in your heart through your body, and Tamara's body responds. The pleasure grows and grows, each thrust strengthening the emotional bond between you. 
+
+Finally, the pleasure grows unbearable, and both of you cannot help crying out at the top of your lungs. You grasp each other as orgasmic spasms wrack both your bodies, and as you feel your seed shoot deep inside her, it feels like you're now joined in love forever.
+*page_break
+*achieve potionvictim
+When finally it subsides, you regain enough composure to ask, "Uh, how long does this spell last, anyway?"
+
+Tamara doesn't speak for awhile, just remains clinging to you, and you have to admit that holding each other like this feels very nice. You wish you could stay this way forever.
+
+Finally, Tamara releases you and pulls away slightly, and at the sight of her breasts, you feel your spent member begin to rise again.
+
+"Like it or not," Tamara says. "We're lifelong friends now. That's why I try not to use this potion on people. Now get outta me. You gotta save some of that for Juliette."
+
+Reluctantly, you ease yourself from her body and separate, feeling lonely for her touch already.
+*page_break
+"Hey, what's going on here?" says a voice behind you.
+
+Tamara pushes you off her, and pants around your ankles, you fall. She whips out her deadly blade, and you struggle to do the same.
+
+You turn and see that it's Juliette, standing with her hand on the pommel of her sword, looking curious rather than threatening.
+
+"It sounded like you were dying," she says. "I thought an animal was mauling two people."
+
+"That's not too far off," Tamara says laughing while she pulls up her pants. She puts her sword away.
+
+"What do you have to save for me?" Juliette asks, addressing the question to both of you.
+*choice
+	#Let Tamara answer.
+		*goto tamaraanswer
+	#Try to answer in a non-insulting, vague way.
+		*goto vague
+	#Come clean and answer honestly.
+		*goto honest
+	
+*label tamaraanswer
+[This option is yet to be written.]
+
+*label vague
+[This option is yet to be written.]
+
+*label honest
+"I guess you heard the whole conversation, huh?" you ask, and Juliette nods.
+
+"Then I won't try to hide anything," you say. "We talked with Banes earlier and decided we want to join forces with you. My friend here, Tamara, is a master of dragonlore, and she knows the secret entrance."
+
+Tamara nods.
+
+"But what's this you're saving for me?" Juliette asks.
+
+"A personal love machine," Tamara chimes in. "My friend here is a master cunnilinguist."
+
+"Oh, but I'm a lesbian," Juliette says. "No thank you, anyway. I plan to fight chivalrously, not sneak in like a thief in the night. Now that I see no one is being mauled, I'll be on my way. Goodbye."
+
+She turns to go.
+
+You look at Tamara. Tamara looks at you. You stare at each other for a long moment, and finally Tamara mouths the words, "She's... a... lesbian..." Her mouth drops open.
+*fake_choice
+	#Sing the Batman theme song except change the lyrics to, "Nuh nuh nuh nuh nuh... Seduction time... Seduction time... Nuh nuh nuh nuh... Seduction time!" and point at Tamara.
+		
+	#Just laugh.
+"But... but... but... I don't like girls in that way," Tamara says, mouth still open in shock, eyes bugging out at the horror of it all. "No, no, no, I can't do it. You still have to do it. It's too disgusting to me. I only like men, men, MEN!"
+*fake_choice
+	#"Too bad. You have to do it."
+		"Why do I have to do it, though?" Tamara says. "Would you do it if you were as straight as I am, and it was some other man? No. No way would you do it, so I'm not doing it."
+		*fake_choice
+			#Sing the Batman theme song except change the lyrics to, "Nuh nuh nuh nuh nuh... Too bad... Too bad... Nuh nuh nuh nuh... Too bad!"
+			#Just laugh.
+	#"So it was okay forcing ME to seduce her, but now when the tables are turned you won't?
+		"But it's different, though!" Tamara insists. "You're a man. 
+		*gosub_scene piglist
+		
+*label faceother
+[This option is yet to be written.]
+
+
+

@@ -1,0 +1,257 @@
+digraph g {
+	START [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">START: </FONT><FONT POINT-SIZE="7">  The foothills become steeper<BR />now, and the journey is slower<BR />without a path to follow....</FONT></TD></TR><TR><TD>Set stoodupforself to</TD><TD PORT="STARTstoodupforselffalse">false</TD></TR>
+<TR><TD>Set smallfire to</TD><TD PORT="STARTsmallfirefalse">false</TD></TR>
+<TR><TD>Set booboffer to</TD><TD PORT="STARTboobofferfalse">false</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	START -> stealth [taillabel=<<font color="green" point-size="5">#Stealthily follow her. </font>>]
+	START -> waitpee [taillabel=<<font color="green" point-size="5">#Wait </font>>]
+stealth [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">stealth: </FONT><FONT POINT-SIZE="7">  You wait a moment, then follow<BR />her, being as quiet as you<BR />can. You marvel at how qu...</FONT></TD></TR><TR><TD>booboffer</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	stealth -> creep [taillabel=<<font color="green" point-size="5">#Creep up closer </font>>]
+	stealth -> gotcha [taillabel=<<font color="green" point-size="5">#Walk up and say, "Gotcha!" </font>>]
+	stealth -> headback [taillabel=<<font color="green" point-size="5">#Head back </font>>]
+	stealth -> keepwatching [taillabel=<<font color="green" point-size="5">#Keep watching </font>>]
+creep [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">creep: </FONT><FONT POINT-SIZE="7">  You, creep, begin to creep in<BR />a small arc in order to see<BR />more of her body, but you j...</FONT></TD></TR><TR><TD>booboffer</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	creep -> suspicions [taillabel=<<font color="green" point-size="5">#"Look, I don't know you well<BR />yet, so I was just making sure<BR />you were really doing what<BR />yo...</font>>]
+	creep -> looklily [taillabel=<<font color="green" point-size="5">#"I was just looking for my<BR />own place to shake my<BR />lilypad." </font>>]
+	creep -> stammer [taillabel=<<font color="green" point-size="5">#Stammer </font>>]
+suspicions [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">suspicions: </FONT><FONT POINT-SIZE="7">  "It wasn't just an excuse to<BR />watch me make water?" Tamara<BR />asks, her eyes narrowe...</FONT></TD></TR><TR><TD>Set tamara_respect to</TD><TD PORT="suspicionstamara_respect%+20">%+20</TD></TR>
+<TR><TD>tamara_respect</TD><TD></TD></TR>
+</TABLE>> shape="rectangle"]
+	suspicions -> camp
+looklily [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">looklily: </FONT><FONT POINT-SIZE="7">  "Oh my gods," Tamara cries.<BR />"Do you really expect me to<BR />believe that? Look, you an...</FONT></TD></TR><TR><TD>booboffer</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	looklily -> peeupslope
+stammer [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">stammer: </FONT><FONT POINT-SIZE="7">  "I thought so," Tamara says.<BR />"You men are all alike. Look,<BR />you and I have a profess...</FONT></TD></TR><TR><TD>Set had_pro_talk to</TD><TD PORT="stammerhad_pro_talktrue">true</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	stammer -> peeupslope
+peeupslope [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">peeupslope: </FONT><FONT POINT-SIZE="7">  She's heading up the slope of<BR />the foothill, so you assume<BR />she's resuming the jou...</FONT></TD></TR><TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	peeupslope -> catchupa [taillabel=<<font color="green" point-size="5">#Catch up with her and<BR />apologize. </font>>]
+	peeupslope -> catchupn [taillabel=<<font color="green" point-size="5">#Catch up but say nothing. </font>>]
+	peeupslope -> follow [taillabel=<<font color="green" point-size="5">#Follow from a distance. </font>>]
+catchupa [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">catchupa: </FONT><FONT POINT-SIZE="7">  You hurry to catch up.  "I'm<BR />sorry, Tamara," you say. "It<BR />won't happen again."  Ta...</FONT></TD></TR><TR><TD>Set tamara_respect to</TD><TD PORT="catchupatamara_respect%+10">%+10</TD></TR>
+<TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	catchupa -> camp
+catchupn [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">catchupn: </FONT><FONT POINT-SIZE="7">  As soon as you're in range,<BR />Tamara slaps you on the cheek.<BR /> "That's for trying to ...</FONT></TD></TR><TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	catchupn -> slap [taillabel=<<font color="green" point-size="5">#Slap her back </font>>]
+	catchupn -> noslap [taillabel=<<font color="green" point-size="5">#Do nothing </font>>]
+slap [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slap: </FONT><FONT POINT-SIZE="7">  Tamara's face becomes a<BR />mixture of disbelief and fury.<BR /> "How dare you!" she cries.<BR />"Th...</FONT></TD></TR><TR><TD>Set tamara_respect to</TD><TD PORT="slaptamara_respect%-20">%-20</TD></TR>
+<TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slap -> slapcatchup [taillabel=<<font color="green" point-size="5">#Catch up to her. </font>>]
+	slap -> slapbye [taillabel=<<font color="green" point-size="5">#Good riddance. </font>>]
+slapcatchup [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapcatchup: </FONT><FONT POINT-SIZE="7">  You quickly catch up to<BR />Tamara, but she refuses to<BR />acknowledge you and<BR />continue...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapcatchup -> slapapol [taillabel=<<font color="green" point-size="5">#Apologize. </font>>]
+	slapcatchup -> slapnothing [taillabel=<<font color="green" point-size="5">#Say nothing. Just continue to<BR />follow her. </font>>]
+slapapol [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapapol: </FONT><FONT POINT-SIZE="7">  "What part of 'we're done,'<BR />don't you understand?" Tamara<BR />spats. "Stop following m...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapapol -> slapbye [taillabel=<<font color="green" point-size="5">#Stop following. </font>>]
+	slapapol -> slapkeepapol [taillabel=<<font color="green" point-size="5">#Keep apologizing. </font>>]
+slapkeepapol [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapkeepapol: </FONT><FONT POINT-SIZE="7">  Finally Tamara stops walking,<BR />but she still doesn't<BR />acknowledge you or your ap...</FONT></TD></TR><TR><TD>Set tamara_respect to</TD><TD PORT="slapkeepapoltamara_respect%+20">%+20</TD></TR>
+<TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapkeepapol -> camp
+slapnothing [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapnothing: </FONT><FONT POINT-SIZE="7">  "Why are you following me!"<BR />Tamara cries and slaps you<BR />again. She grips you by ...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapnothing -> slapkiss [taillabel=<<font color="green" point-size="5">#Kiss her back. </font>>]
+	slapnothing -> slappush [taillabel=<<font color="green" point-size="5">#Push her away. </font>>]
+slapkissOPTION0 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapkissOPTION0: </FONT><FONT POINT-SIZE="7">  		You know it's for the best.<BR />She's here to rob the beast,<BR />and your quest i...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapkissOPTION0 -> camp
+slapkissOPTION1 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapkissOPTION1: </FONT><FONT POINT-SIZE="7">  		"Because," Tamara says, "My<BR />aid to you extends only to the<BR />point of our e...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapkissOPTION1 -> camp
+slapkiss [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapkiss: </FONT><FONT POINT-SIZE="7">  You wrap your arms around<BR />Tamara just as passionately,<BR />returning her kiss with equ...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapkiss -> slapkissOPTION0 [taillabel=<<font color="green" point-size="5">#Agree. </font>>]
+	slapkiss -> slapkissOPTION1 [taillabel=<<font color="green" point-size="5">#Ask why you can't have a<BR />relationship and continue your<BR />quest at the same time. </font>>]
+slappush [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slappush: </FONT><FONT POINT-SIZE="7">  "What are you doing, Tamara?"<BR />you cry, startled by her<BR />sudden, amorous transformat...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slappush -> slapreasonable [taillabel=<<font color="green" point-size="5">#Be reasonable: Tell her<BR />that's not it. You're just<BR />trying to maintain a<BR />professional rela...</font>>]
+	slappush -> slapweak [taillabel=<<font color="green" point-size="5">#Get angry: Tell her no one<BR />calls you weak and gets away<BR />with it. </font>>]
+	slappush -> slapkiss2 [taillabel=<<font color="green" point-size="5">#Change your mind: Tell her<BR />she's not too much woman and<BR />kiss her. </font>>]
+slapreasonable [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapreasonable: </FONT><FONT POINT-SIZE="7">  Tamara tosses her head to one<BR />side disdainfully. "That's a<BR />noble idea," she ...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapreasonable -> camp
+slapweak [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapweak: </FONT><FONT POINT-SIZE="7">  [This option is yet to be<BR />written.]  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapweak -> slapkiss2
+slapkiss2 [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapkiss2: </FONT><FONT POINT-SIZE="7">  [This option is yet to be<BR />written.]  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapkiss2 -> slapbye
+slapbye [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">slapbye: </FONT><FONT POINT-SIZE="7">  [This option is yet to be<BR />written.]  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	slapbye -> noslap
+noslap [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">noslap: </FONT><FONT POINT-SIZE="7">  [This option is yet to be<BR />written.]  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	noslap -> follow
+follow [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">follow: </FONT><FONT POINT-SIZE="7">  [This option is yet to be<BR />written.]  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	follow -> gotcha
+gotcha [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">gotcha: </FONT><FONT POINT-SIZE="7">  [This option is yet to be<BR />written.]  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	gotcha -> headback
+headback [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">headback: </FONT><FONT POINT-SIZE="7">  [This option is yet to be<BR />written.]  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	headback -> keepwatching
+keepwatching [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">keepwatching: </FONT><FONT POINT-SIZE="7">  In a few moments, Tamara<BR />stands and begins returning<BR />the way she came, adjusti...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	keepwatching -> hidecloser [taillabel=<<font color="green" point-size="5">#OH NO, why didn't you realize<BR />this would happen??? Hide! </font>>]
+	keepwatching -> show [taillabel=<<font color="green" point-size="5">#Show yourself </font>>]
+hidecloser [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">hidecloser: </FONT><FONT POINT-SIZE="7">  You try to hide, but it's no<BR />use. Tamara sees you, and you<BR />cringe, ready for a t...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	hidecloser -> sawtrees [taillabel=<<font color="green" point-size="5">#Tell her you saw nothing, the<BR />trees were in the way. </font>>]
+	hidecloser -> sawbody [taillabel=<<font color="green" point-size="5">#Tell her you saw her<BR />beautiful body. </font>>]
+sawtrees [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">sawtrees: </FONT><FONT POINT-SIZE="7">  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	sawtrees -> sawbody
+sawbody [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">sawbody: </FONT><FONT POINT-SIZE="7">  "But nothing more?" Gabriella<BR />questions, her eyes narrowed<BR />suspiciously.  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	sawbody -> sawnothingmore [taillabel=<<font color="green" point-size="5">#"Nothing more." </font>>]
+	sawbody -> peesuspicious [taillabel=<<font color="green" point-size="5">#"What were you doing there?" </font>>]
+sawnothingmore [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">sawnothingmore: </FONT><FONT POINT-SIZE="7">  "Why did you follow me when I<BR />told you to stay put?" she<BR />asks, obviously ver...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	sawnothingmore -> peeapologize [taillabel=<<font color="green" point-size="5">#Apologize </font>>]
+	sawnothingmore -> resistpee [taillabel=<<font color="green" point-size="5">#Tell her it's been a long<BR />time since you've been with a<BR />woman, and even a glimpse of<BR />her ...</font>>]
+	sawnothingmore -> peesuspicious [taillabel=<<font color="green" point-size="5">#Tell her you just met her, so<BR />you needed to make sure she<BR />wasn't up to anything<BR />suspiciou...</font>>]
+peeapologize [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">peeapologize: </FONT><FONT POINT-SIZE="7">  "That's it?" Gabriella asks in<BR />disbelief. "You hide to watch<BR />me pee and think ...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	peeapologize -> peeresume
+bow [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">bow: </FONT><FONT POINT-SIZE="7">  </FONT></TD></TR></TABLE>> shape="rectangle"]
+	bow -> promisenotbow
+promisenotbow [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">promisenotbow: </FONT><FONT POINT-SIZE="7">  </FONT></TD></TR></TABLE>> shape="rectangle"]
+	promisenotbow -> refuseapologetic
+refuseapologetic [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">refuseapologetic: </FONT><FONT POINT-SIZE="7">  </FONT></TD></TR></TABLE>> shape="rectangle"]
+	refuseapologetic -> refuseangrily
+refuseangrily [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">refuseangrily: </FONT><FONT POINT-SIZE="7">  </FONT></TD></TR></TABLE>> shape="rectangle"]
+	refuseangrily -> peepartways
+peepartways [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">peepartways: </FONT><FONT POINT-SIZE="7">  </FONT></TD></TR></TABLE>> shape="rectangle"]
+	peepartways -> whatgems
+whatgems [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">whatgems: </FONT><FONT POINT-SIZE="7">  </FONT></TD></TR></TABLE>> shape="rectangle"]
+	whatgems -> resistpee
+resistpee [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">resistpee: </FONT><FONT POINT-SIZE="7">  "Men are all alike," Gabriella<BR />says, shaking her head. "I was<BR />kinda liking you be...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	resistpee -> peeresume
+peesuspicious [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">peesuspicious: </FONT><FONT POINT-SIZE="7">  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	peesuspicious -> hide
+hide [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">hide: </FONT><FONT POINT-SIZE="7">  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	hide -> show
+show [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">show: </FONT><FONT POINT-SIZE="7">  </FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	show -> peeresume
+peeresume [label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD>
+<FONT COLOR="blue" POINT-SIZE="10">peeresume: </FONT><FONT POINT-SIZE="7">  She walks past you, resuming<BR />the journey, and you walk in<BR />silence for about an ho...</FONT></TD></TR><TR><TD>tamara_respect</TD><TD>0</TD></TR>
+<TR><TD>booboffer</TD><TD>0</TD></TR>
+<TR><TD>had_pro_talk</TD><TD>0</TD></TR>
+</TABLE>> shape="rectangle"]
+	peeresume -> camp
+}

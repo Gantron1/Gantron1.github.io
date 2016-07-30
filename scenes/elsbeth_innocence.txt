@@ -1,0 +1,36 @@
+You remember a legend that said that occasionally a kidnapped maiden would fall in love with her dragon captor and serve him with fanatical devotion, even to the point it decided to eat her, and then she would offer her very body and life to him as her final gift!
+
+When Tamara was running the streets as a child-pickpocket, Elsbeth must've sat in her palace chambers waited upon hand and foot, and when Tamara learned further the ways of the world, forced to be men's plaything, Elsbeth was likely still playing with dolls. 
+
+Then, upon coming of age, Elsbeth would have been subjected to an endless parade of fawning suitors so full of courtesy that one might think they had no cock at all. It's no wonder then, that in the face of the dragon's unbridled masculinity, even in such, the darkest of forms, her reason would break.
+
+Is it possible to restore it? That is the question, and an urgent one, for your entire mission, it seems, depends upon it. Juliette and Tamara, for all their might and cunning, are not equipped to perform it, and so the success of this desperate bid comes to rest solely on you.
+
+How, though? Is your manliness enough to break the spell of a dragon???
+*choice
+	#Show her your dick.
+		*goto showdick
+	#Woo her like a gentleman.
+		*goto wooher
+
+*label showdick
+Well, it certain is long, large and manly-like. Now, is it flaccid or in full bloom?
+*choice
+	#Flaccid
+		*goto flacciddick
+	#Full-bloom
+		*goto fullbloom
+
+*label flacciddick
+It is not as impressive when flaccid, but you hope it will be enough. Perhaps Elsbeth will be impressed at your reserve and control?
+
+She gasps and stares at your crotch, transfixed, and you realize she's probably never before seen a man's penis.
+
+*label fullbloom
+Elsbeth screams when she sees your member in full bloom, and you realize how frightening it must be for a girl, having never even seen a penis before, to have her first glimpse be of a full erection. It must appear monstrous! 
+
+Her face reddens terribly, and she dashes away, leaving you alone in the twisty passage behind the dragon's den.
+
+*label wooher
+You can tell Elsbeth is not impressed. She tries to be polite at your overtures and proferring of both flowers and flowery words, but compared to a knight in shining armor, an array of weapons, astride a fleet horse, you are, well, rather ordinary.
+

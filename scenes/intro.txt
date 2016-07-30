@@ -1,0 +1,91 @@
+*temp namecount 0
+
+Your first name is:
+*choice
+	#Den.
+		*set fname "Den"
+		*goto lname
+	#Torral.
+		*set fname "Torral"
+		*goto lname
+	#Glus.
+		*set fname "Glus"
+		*goto lname
+	#Conan the (Lady) Conquerer. (No last name required.)
+		*set fname "Conan"
+		*set title "the (Lady) Conquerer"
+		*goto donename 
+	#Alexander the Great (in Bed). (No last name required.)
+		*set fname "Alexander"
+		*set title "the Great (in Bed)"
+		*goto donename 
+	#Richard the Lion-donged. (No last name required.)
+		*set fname "Richard"
+		*set title "the Lion-donged"
+		*goto donename 
+	#Frankie.
+		*set fname "Frankie"
+		*goto lname
+	#I'd like to enter a different name than any of these
+		*label input_name
+		*if namecount = 22
+			There are no other easter eggs in this game.
+			
+			*goto input_name2
+		*elseif namecount = 11
+			Why are you changing your name so much? What's wrong with you?
+			
+		*set namecount +1
+		*label input_name2
+		Please enter the first name of your character in this story:
+		*input_text fname 
+		Your name is $!{fname}. Is that right?
+		*choice
+			#Yes
+				*goto lname
+			#No
+				*goto input_name
+
+*label lname
+What is your last name?
+*choice
+	#Hawkclaw
+		*set lname "Hawkclaw"
+		*goto donename
+	#Grimoire
+		*set lname "Grimoire"
+		*goto donename
+	#Greystone
+		*set lname "Greystone"
+		*goto donename
+	#Silverway	
+		*set lname "Silverway"
+		*goto donename
+	#Lee	
+		*set lname "Lee"
+		*goto donename
+	#I'd like to enter a different name than any of these
+		*set namecount 0
+		*label input_lname
+		*if namecount = 11
+			Why are you changing your name so much? What's wrong with you?
+			
+			*goto input_lname2
+		*elseif namecount = 22
+			There are no other easter eggs in this game.
+			
+		*set namecount +1
+		*label input_lname2
+		Please enter the last name of your character in this story:
+		*input_text lname 
+		Your last name is $!{lname}. Is that right?
+		*choice
+			#Yes
+				*goto donename 
+			#No
+				*goto input_lname
+	#No last name needed.
+		Ah, you must be a great warrior if you don't need a last name. Like Conan, Gilgamesh, Samson, Heracles, Odysseus, and so on. Let's see if you can live up to it!
+
+*label donename
+*return

@@ -1,0 +1,348 @@
+The knight and old man will probably be just ahead on this path, as it's the only one in the area. 
+
+*choice
+	#Take this opportunity to tell Tamara about the two people you saw.
+		*goto tell
+	#Keep quiet about it and say nothing about having seen them earlier if you do catch up with them.
+		*goto chardell
+	
+*label tell
+"By the way, you say, "Perhaps it would be good for me to tell you that just before I met you, while scouting, I saw from a distance two people and their campsite. We will likely catch up with them soon."
+
+"Was one a woman in armor and the other an old man?" Tamara asks, her tone of voice making it sound like she already knows all about them.
+
+"Why yes! How did you know?" you exclaim.
+
+"I've been tracking them the same as I've been tracking you, of course, dummy. How could I know about you but not them?"
+
+"You saw them already, then? Have you talked to them?"
+
+"No, of course not. They're ahead of you."
+
+"But how then did you know what they look like?"
+
+"By the gods, how stupid can one person be?" she spats. "Women's feet are smaller proportioned than men's, but leave a heavy indention in the earth. The way the man shuffles along tells me he's elderly. I can tell a lot of other things about them from the sign they leave as well, and... I know what they do every morning. What did you see?"
+
+*choice
+	#Tell her you saw the man perform cunnilingus on the knight.
+		*goto tellcun
+	#Be discreet. 
+		*goto notellcun
+
+*label tellcun
+"Well, since you already know, I suppose there's no reason not to tell," you say. "It seems the old man pleasures the woman."
+
+"It must be nice having that service available at your beck and call, isn't it?" Tamara laughs. 
+*label juicy
+"It's always the same. She leans up on something, and he kneels before her. It takes, maybe, three minutes, and she tries not to move or cry out very much."
+
+"How in the world do you know all that?" What she described is exactly what you saw!
+
+"I told you," Tamara says. "I read the signs. It's all there if you know how to look. Anyway..."
+
+Tamara signs dejectedly. "I'm going to have to help them as well, for a knight will certainly bungle a stealthy approach if left on her own. She seems to like a man's touch, so it'd be nice if you flirt with her and otherwise do what you can to make a good impression."
+
+*choice
+	#"Sure!" You would anyway.
+		*goto agreeflirt
+	#Tell Tamara you will do as you see fit.
+		*goto noagreeflirt
+	
+*label agreeflirt
+"I see we make a good team when you do everything I say," Tamara says, pleased with herself.
+
+*goto chardell
+
+*label noagreeflirt
+"What?" Tamara says and punches you on the arm. It wasn't hard enough to injure you, but it did hurt. "Didn't we agree you'd do everything I asked? I even asked nicely. That's the last time I'm ever doing THAT! 
+
+"Some people... show any kindness, any kindness at all, and they see it as weakness. 
+
+"Iron hand... that's what my mother always used to tell me, 'Rule with an iron hand.' 
+
+Look, we HAVE TO get them to cooperate. I know the area. I know this dragon. I have devised an intricate strategy that covers all contingencies, and the presence of bumbling fools, which it seems I just had to have the misfortune to encounter, requires... REQUIRES their cooperation. It's IN THE PLAN. It's the only way. Will you do it or not?"
+
+*choice
+	#Not.
+		*goto not
+	#"Fine, fine, if it means that much to you, I will, but no guarantees."
+		*goto agreeflirt2
+	#"So in this great,all-mighty plan of yours, does it say that when you meet 'bumbling fool #1' you are to cajole him and demand that he get 'bumbling fool #2' to also agree to become a subservient slave subject to endless abuse and do anything you say?"
+		*goto sarcasm
+	
+*label not
+"Not?!?" Tamara cries, eyes bulging out in disbelief. "Okay, that's it. I'm not helping you anymore. You and the idiot knight can go get yourselves killed, and I'll be sitting there laughing. This is actually in my plan too. If the bumbling fools become even bigger fools by not accepting my help, I let them distract the dragon, which makes things even better for me. See how masterfully crafted my plan is? I just be a little snarky, and it's like pulling a puppet's strings--you go and do exactly what I really wanted all along. Muhahahahahahahaha!"
+
+Tamara erupts into maniacal laughter and can't stop for several minutes.
+
+*choice
+	#Announce that you'll never let her snarkiness affect you again.
+		*goto disdain
+	#Sit down and tell her you're now waiting for HER to go first and distract the dragon for YOU.
+		*goto sit
+	#Just ignore her when she gets like this.
+		*goto ignore
+	#Walk off. She said she won't help you anymore, and you're holding her to it.
+		*goto walkoff
+
+*label disdain
+"I guess I'll have to stop being snarky, then," Tamara says.
+
+"And sarcastic," you add.
+
+"That too!" she says.
+
+*goto chardell
+
+*label sit
+You sit down.
+
+Tamara turns around, confused. "What are you doing?" 
+
+"I am sitting here, and I won't get up until YOU go first. Is THAT in your plan?"
+
+"What?!?" Tamara says, aghast. "Wait, no, yes. It actually IS in the plan. See?"
+
+She walks off, and soon, you're by yourself.
+
+*choice
+	#Just wait.
+		*goto keepsitting
+	#Ok, this is silly. Get up and follow her.
+		*goto getup
+
+*label keepsitting
+It feels like a long time, but it's probably only a minute or two before Tamara comes back. You suppress a smile, thinking you've won, but then you see that she herself is barely suppressing a grin. Oh, no... What is she up to now?
+
+She sits in front of you and just stares at you.
+
+*label keepsittingchoice
+*choice
+	#"What?"
+		*goto what
+	#Stay silent.
+		*goto staysilent
+	#Give in and agree to flirt with the stupid knight.
+		*goto givein
+	
+*label what
+"What?" you say after the silence gets unbearable.
+
+"Oh, nothing," Tamara says. "I was just sitting here thinking about what might be happening to the princess."
+
+She stops talking, and it's silent again, except now you are worrying about the princess. Tamara stares at you, doing nothing, saying nothing, her face expressionless.
+
+*temp silentcount 1
+*label whatchoice
+*choice
+	*if (silentcount = 2) #Fight fire with fire: "If the knight sees me as a big baby, I guess my flirting chances are ruined, huh?"
+		"It'd be worth it, though," Tamara says. "I'm telling the princess how big a baby you were too, so unless you get up right now, your chances with both with be ruined. Ruined!"
+		*set silentcount +1
+		*goto whatchoice
+	#Stay silent.
+		*goto staysilent2
+	#Give in and agree to flirt with the stupid knight.
+		*goto givein
+	*if (silentcount > 2) #Get up and walk away from this silly game.
+		*goto quitstupidity
+	
+*label staysilent
+You sit and stare at Tamara. Tamara sits and stares at you.
+*goto keepsittingchoice
+
+*label staysilent2
+*if silentcount = 1
+	*achieve contest
+	"What if the knight shows up and sees you being a big baby like this?" Tamara asks, almost as if talking to herself.
+	
+	Now you're worrying about the princess AND the knight.
+	*goto staysilent3
+*elseif silentcount = 2
+	Tamara yawns and stretches. The sit-in continues.
+	*goto staysilent3
+*elseif silentcount = 3
+	Tamara lays on her side. "This is me being the dragon," she says, and she starts imitating a dragon lying on its pile of treasure. "Oh, look at all my pretty baubles," she goes on, looking around at the imaginary pile of treasure under her. "Oh, and here comes the princess," she says, glancing over to one side. "What shall I do with her?"
+	*goto staysilent3
+*elseif silentcount = 4
+	"Shall I eat her?" Tamara says, licking her chops, staring at the imaginary, tiny princess.
+	*goto staysilent3
+*elseif silentcount = 5
+	"Yes! I WILL eat her!"
+	*goto staysilent3
+*elseif silentcount = 6
+	Tamara is making eating sounds and pretending to rip apart the pretend princess with her pretend claws.
+	*goto staysilent3
+*elseif silentcount = 7
+	"Ok, this is stupid. Stupid!" Tamara says, gets up, and kicks some dirt in your general direction. "I'm leaving. Bye!"
+	
+	*goto winstupidity
+*label staysilent3
+*set silentcount +1
+*goto whatchoice
+
+*label givein
+[This option is yet to be written.]
+
+*label getup
+[This option is yet to be written.]
+
+
+*label ignore
+[This option is yet to be written.]
+
+*label walkoff
+[This option is yet to be written.]
+
+*label winstupidity
+*achieve woncontest
+*choice
+	#Keep sitting
+		*goto staysilent4
+	#Get up and follow her
+		*goto getup
+
+*label staysilent4
+You're taking this whole thing a little too seriously, don't you think? What is this? The third grade in grammar school?
+*choice
+	#Get up and see if you can catch up with Tamara.
+		*goto getup
+	#Get up and go off on your own.
+		Enough is enough. You resume your quest and don't look for Tamara, walking down the path, enjoying the peaceful silence. Ahhhh...
+		
+		Tamara is nowhere to be seen. Good. Good riddance.
+		*set tamara_spat true
+		*set with_tamara false
+		*goto_scene chardell_alone
+	
+*label quitstupidity
+[This option is yet to be written.]
+
+*label agreeflirt2
+"Good," Tamara sighs, her irritation dissipating. 
+
+She walks in silence a moment, and then a smirk appears on her face.
+
+"No guarantees?" she says, still smirking. "That's fine. My plan covers your inadequacies, whatever they are. It might be this--"
+
+She holds her hands in front of her, palms facing each other around seven inches apart and then moves them closer to more like three.
+
+"Or this--"
+
+She holds her hand up, fingers together, and then makes it droop flaccidly.
+
+"Or..."
+
+She goes on making all kinds of hand gestures, some of which you understand and some you don't. Obviously, she's an encyclopedia of male inadequacies, but you refrain from speculating as to how she might've acquired her wealth of knowledge. (Because it's obvious. Sadly.) Most of them don't apply to you, but you stop looking just in case.
+*page_break
+*goto chardell
+
+*label sarcasm
+"Why yes," Tamara says. "That's exactly what the plan says."
+
+"Like you really thought of all that beforehand..." 
+
+"I did," Tamara says, totally serious. "Once I saw there were two, that is. A good plan is one that is always subject to amendment." She giggles.
+
+*goto chardell
+
+*label notellcun
+"Well, since you already know all about it, I don't need to tell you all the sordid details, do I?" you say.
+
+"Nope, you don't," Tamara smiles. "And I won't tell you any of the details either. It took them three days on this road, so the other two times... well, no details for you!"
+
+*choice
+	#Tell her you were just trying to be discreet but would like to hear the details.
+		*goto details
+	#Act like you don't care.
+		You let Tamara have her smug little fun and say nothing. If you don't encourage her, maybe she'll shut up.
+		
+		*goto chardell
+
+*label details
+"Actually, there's not much to tell," Tamara says, still smiling, obviously enjoying gossiping about other people's juicy details. 
+*goto juicy
+	
+*label chardell
+In a little while, the path descends into a small wooded valley, and at the bottom, you find a small clearing with a large stake in the center. 
+
+"This is Chardell," Tamara whispers softly.
+
+You recognize the name. Chardell is the place where the annual sacrifice was made, and you realize with horror that over a hundred maidens were in turn chained to that stake to await the dragon. You wonder how many are still alive and of those, how many will let you boink them.
+
+Some of the surrounding trees are charred, and the burned areas are higher up with the lower branches untouched. It's obviously from dragonfire, but why? 
+
+"Sad isn't it?" Tamara says, gazing at the now empty clearing. 
+
+"Yes," you agree, glad to see that Tamara has a softer side.
+
+"Yeah," Tamara says. "A hundred and fifty chests of treasure, now just sitting up in DragonKeep doing nobody any good."
+
+*choice
+	#"By the gods, woman! Don't you think at all of the poor maidens?"
+		*goto aghast
+	#"What do you think charred the trees like this?"
+		*goto speculation
+	#There's nothing more to say. Continue the journey.
+		*goto leavechardell
+	
+*label aghast
+"You sentimental fool," Tamara snaps. "It could easily have been me being sacrificed, so yeah, I have thought about it. A lot, but you know what? In the end we all have to die sometime, some just sooner rather than later. These girls at least lived long enough to see the flowering of their womanhood, something not everyone does."
+
+She walks up to the stake and spits.
+
+"To hell with you, dragon!" she says. "And to hell with all the kings who fed you our daughters."
+
+*choice
+	#"You don't think the dragon eats the girls, do you?"
+		*goto eats
+	#"What do you think charred the trees like this?"
+		*goto speculation
+	#Continue on.
+		*goto leavechardell
+	
+*label speculation
+Tamara inspects one of the charred trees.
+
+"This is old," she says. "It must've happened a hundred years ago. I guess people wised up after that."
+
+"But what happened to cause it?" you ask. "Was the dragon displeased for some reason? Or perhaps it was from a battle as some would-be hero attempted to rescue that year's sacrifice?"
+
+Tamara laughs. "More likely the battle was with a band of thieves after the treasure... and the girl too, I suppose."
+
+*label cross
+Tamara crosses the clearing and jerks her head to indicate that you should follow.
+
+*goto leavechardell
+
+*label eats
+"No, he feeds them tenderly, and DragonKeep is full of white-haired old ladies," Tamara spats sarcastically. "Regardless of what it does with them, I'm sure it's not fun, so let's waste no time."
+
+*goto cross
+
+*label leavechardell
+"There's no path from here on, for obvious reasons," she says. "Only heroes and fools pass this point, and it remains to be seen which we are."
+
+"The foothills get steeper past this point," Tamara says. "I'd estimate that if we travel at your speed, we'll reach the foot of the mountain sometime tomorrow, though I could make it on my own in one day. I hope you're up for it. Try and keep up, but don't let yourself get too tired. There probably won't be any hostile encounters here, but it's always good to maintain vigilance."
+*page_break Onward!
+You make your way up the rocky slope, making slow but steady progress. You have a hard trek ahead of you today, but you're up to the task. Tamara, carrying a lighter load, wearing more nimble boots, is having an easier time of it, but even she is a bit breathless. Because of this, she's not talking much, and you enjoy the respite from her normally constant assessment and advice. You can't help but notice the sheen of a thin layer of sweat on her skin and how her chest heaves a bit when she breathes--she's attractive when her lips aren't moving! 
+
+"We're catching up to them," Tamara says, panting a bit. "The knight is weighed down by her armor, but judging by the tracks, it's really the old man who's holding them back." You look down but can't for the life of you see any sign or tracks.
+
+At a particularly steep point, Tamara grabs onto the trunk of a small tree and reaches back, offering you her hand to help hoist you over the steep part.
+
+*choice
+	#Accept the help.
+		*goto hoist
+	#Politely decline.
+		*goto polite
+	#Trudge by, saying nothing.
+		*goto slight
+	
+*label hoist
+Tamara pulls hard and propels you over the steep part and several feet in front of her, making the both of you laugh.
+*goto_scene oldman
+
+*label polite
+*label slight
+"Just trying to help the slow poke," Tamara shrugs. "Get ya to the princess faster that way, but have it your way."
+*goto_scene oldman

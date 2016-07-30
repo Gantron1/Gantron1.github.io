@@ -1,0 +1,396 @@
+*temp scount 0
+*temp mcount 0
+You wake up.
+
+"Darn it," you mutter to yourself. Why do you always wake up just before the good part?
+
+Every time you have a dream like this, you find yourself wishing you could really go to an alternate reality, a realm of high fantasy, with wizards and warriors, exotic maidens to rescue (who then gratefully wish to thank you with a boink of appreciation), seductive faeries, and everything else your creative mind can dream up.
+
+You swing your legs off the bed, intending to get up and start your (oh so ordinary) day when you discover that the floor is missing! Looking around, you see that your bed is suspended in empty space, an infinite void of blackness all around it.
+
+You slip off and nearly fall into this void, desperately grasping your covers, your legs dangling, kicking helplessly.
+
+*choice
+	#Try to climb back on the bed.
+		*goto climb
+	# Take the opportunity to study the underside of your bed.
+		*goto study
+	# Let go!
+		*goto letgo
+	#I've played this game before and want to skip this part.
+		Wooooooo.... you fall through the void until you realize you can create reality with your thoughts. It's easy this time because you've done it all before.
+
+		*goto faeriedrift
+		
+*label climb
+You try to climb back onto your bed, but the covers keep slipping further off. Don't you wish you tucked them in better now?
+
+It's no use. The covers quickly slip completely off the bed, and you find yourself falling through space, making a mental note to be more conscientious about making your bed in the future.
+*page_break Falling...
+*goto falling
+
+*label study
+You see your stash of girlie magazines hidden inside your boxspring.
+
+"Oh, so that's where those went," you think to yourself as you slip further and further off your bed until you're falling through space.
+*page_break Falling...
+*goto falling
+	
+*label letgo
+Let go? Really? Just let go and fall into an endless void, leaving behind the last remnant of familiarity you know? It was such a comfortable bed too! 
+
+*label falling
+As you fall, you watch as your bed gradually appears to grow smaller until it disappears above you. Once it's out of sight, you turn your attention to what's below, but you find that with nothing but the inky blackness of infinity in all directions, you no longer know which way is up or down. Are you even falling anymore or just suspended in space? Is there even a bottom? Could you be trapped here for eternity?
+
+*temp t 0
+*temp scared false
+*label fallingchoice
+*if t = 1
+	You are falling... or are you? 
+	*goto fallingchoice4real
+*elseif t = 2
+	You are still falling (or not).
+	*goto fallingchoice4real
+*elseif t = 3
+	You are in an inky black void wondering if you're falling or not.
+	*goto fallingchoice4real
+*elseif t > 3
+	You are in an inky black void.
+	
+*label fallingchoice4real
+*choice
+	*if (t <= 3) #Wait
+		*set t + 1
+		Nothing happens.
+		*line_break
+		*line_break
+		*page_break
+		*goto fallingchoice
+	*if (t>3) #Get bored.
+		*set t+1
+		*if scared
+			You were just scared. How can you be bored already?
+			*line_break
+			*line_break
+			*line_break
+			*line_break
+			*page_break
+			*goto fallingchoice
+		*else
+			You're bored while either falling through or floating in the inky black void.
+			*line_break
+			*line_break
+			*line_break
+			*line_break
+		*page_break
+		*goto fallingchoice
+	*if (t>3) #Get scared.
+		*set t+1
+		*if t < 7
+			Scared already? You've only been here a few minutes. Don't be a wuss.
+			*line_break
+			*line_break
+			*line_break
+			*line_break
+			*page_break
+			*goto fallingchoice
+		*else 
+			*set scared true
+			You're scared while either falling through or floating in the inky black void.
+			*line_break
+			*line_break
+			*line_break
+			*line_break
+		*page_break
+		*goto fallingchoice
+	*if (t>9) #Hit bottom.
+		*set t+1
+		There is no bottom, only inky black void.
+		*page_break
+		*goto fallingchoice
+	*if (t>9) #Realize the secrets of the universe.
+		*set t+1
+		*set scount +1
+		What is time and space, anyway?
+		
+		Falling or not... it's all just a matter of perspective. If there's nothing else to see, motion no longer has any meaning. Space has no meaning. You now have firsthand knowledge of the Theory of Relativity!
+		*page_break
+		*goto void
+	*if (t>9) #Masturbate.
+		*set t+1
+		*set mcount +1
+		Yeah, why not? It's what you always do when no one else is around and there's nothing to do, and now, there REALLY is no one else around and REALLY nothing to do.
+		*page_break
+		*goto void
+	
+*label void
+You are in an inky black void.
+
+*choice
+	*selectable_if (scount < 11) #Realize the secrets of the universe.
+		*gosub realize
+		*goto void
+	#Masturbate.
+		*gosub jerkoff
+		*goto void
+
+*label realize
+*set scount+1
+*if scount = 1
+	What is time and space, anyway?
+		
+	Falling or not... it's all just a matter of perspective. If there's nothing else to see, motion no longer has any meaning. Space has no meaning. You now have firsthand knowledge of the Theory of Relativity!
+	*page_break
+	*goto realize_done
+*elseif scount = 2
+	If space has no meaning when nothing else is around, maybe time doesn't either! No one to talk to. Nothing happening. Time no longer exists.
+	*line_break
+	*line_break
+	*line_break
+	*goto realize_done
+*elseif scount = 3
+	If time and space don't exist, what does?
+	*line_break
+	*line_break
+	*line_break
+	*line_break
+	*goto realize_done
+*elseif scount = 4
+	Is the blackness you see really black? Do colors exist when nothing exists? Maybe what you think you're seeing is just the absence of sight. With no variations in your field of view, how can you know? Maybe you're blind!
+	*line_break
+	*line_break
+	*goto realize_done
+*elseif scount = 5
+	Do you have any senses at all? There's nothing here to taste, feel, or smell.
+	*line_break
+	*line_break
+	*line_break
+	*goto realize_done
+*elseif scount = 6
+	You try to look down to see if you have a body, and there is no body. There is nothing in the Void, not even you!
+	*line_break
+	*line_break
+	*line_break
+	*goto realize_done
+*elseif scount = 7
+	If you don't exist, what's left? Was Descartes right when he said, "I think, therefore I am?"
+	*line_break
+	*line_break
+	*line_break
+	*goto realize_done
+*elseif scount = 8
+	All that's left is pure consciousness...
+	*line_break
+	*line_break
+	*line_break
+	*line_break
+	*goto realize_done
+*elseif scount = 9
+	Maybe thought creates reality...
+	*line_break
+	*line_break
+	*line_break
+	*line_break
+	*goto realize_done
+*elseif scount = 10
+	Your head hurts. This was way too much philosophy for one day.
+	*goto realize_done
+*else
+	Seriously, no more thinking. You can't handle it.
+	*goto realize_done
+
+*label realize_done
+*page_break
+*return
+
+*label jerkoff
+*set mcount+1
+
+*if scount > 8
+	*goto lettherebelight
+*elseif scount > 5
+	You don't have a body. How can you masturbate?
+	*goto jerkdone
+
+*if mcount = 1
+	Yeah, why not? It's what you always do when no one else is around and there's nothing to do, and now, there REALLY is no one else around and REALLY nothing to do.
+	*goto jerkdone
+*elseif mcount = 22
+	*achieve death
+	You may be studly, but nobody is THIS studly. Congratulations, you have found ending #1: Death by Ejaculation.
+	*ending
+*else
+	Again? Well, you are indeed studly that way. Why not!
+	*goto jerkdone
+
+*label jerkdone
+*page_break
+*return
+
+*label lettherebelight
+*if (scount = 9) 
+	*achieve hello_world
+
+Well, maybe you don't have a body, but you can at least fantasize. Oh wait, now that you thought of your body, you have a body... with no clothes on it. How convenient. 
+
+This body you've manifested has a pecker too, but unfortunately the pecker is not yet erect. You start to fantasize, and every thought you think of manifests before you, filling the empty space all around you with boobs, butts, and whatever else you fantasize about.
+
+You see hot women... Hey, was that Heather Locklear? It was! 
+
+Wow, but did she have such big boobs? Maybe not, but this one does!
+
+*label faeriedrift
+A faerie drifts by and winks at you. Hey! It's the one from your dream. You try to will her to grow to human size again, but instead she just flits around your body before disappearing off into the inky black background. 
+
+*page_break
+You find that the inky black void around you is gradually turning into something more solid. There are greens and browns now, all swirling about. Earth forms below your feet. Some of the brown also turns into trees, the greens becoming leaves.
+
+As if through a haze, you see you're on a dirt road in a forest, and gradually, it begins to solidify until it looks and feels as real as your everyday reality ever felt. You hear birds chirping and leaves rustling in the breeze, all the sights and sounds just like you remember. It's around noon on a warm summer day, sunlight filtering down through the leaves. You are alone, standing on the road.
+
+Your body feels oddly different, and when you look down, you see that you are a young man with a sword by your side, a reinforced leather breastplate covering your chest and abdomen. Somehow you know that you have traveled far from a tiny farming village, heading to the ancient capital city called Zagos to seek your fortune.
+	
+Before you can ponder how you know this, a strange memory comes to you, and you realize that you're remembering what you, as this new self of yours, did the previous night.
+*page_break I remember now...
+You are in a tavern not far from where you are now. Your memory is hazy, everything moving in slow motion, and you realize it must be because you are drunk. You remember the barmaid... Did you have a fling with her? You can't remember, but you do remember talking with the other patrons.
+
+"You're new to these parts, aren't you, youngster?" an older man is saying, his grizled features wrinkling as he smiles amiably.
+
+"Yes," you remember yourself saying, "Just passing through."
+
+"Then you ought to know the legends of the woods you're about to enter," someone else chimes in.
+
+"Yes," the first man says, his face growing serious. "This tavern sits just outside of Orlon Forest, and the road passes through it in some parts. When you're passing through the forest, it's best to move as fast as you can and avoid spending the night if possible."
+
+"Good advice..." the second man says, "For farmers, that is, but look at who you're speaking to, man! This one comes both armed and armored."
+
+"Even so..." the first man says cryptically, making you wonder if he has more to say about the legends of Orlon Forest.
+
+*temp askedfae false
+*temp askedroad false
+*temp askedcapital false
+*temp askedfarms false
+*temp askedjen false
+*temp askedjenandpaid false
+*temp askedforest false
+*temp askedbandits false
+*temp askedwolves false
+*temp askedghosts false
+
+*label convo
+*choice
+	*if (askedfarms) 
+		*hide_reuse #Ask about Jennifer
+			*set askedjen true
+			*goto askjen
+	*if (askedroad) 
+		*hide_reuse #Ask about the capital
+			*set askedcapital true
+			*goto askcapital
+	*if (askedroad) 
+		*hide_reuse #Ask about the farms
+			*set askedfarms true
+			*goto askfarms
+	*if (askedforest)
+		*hide_reuse #Ask about bandits
+			*set askedbandits true
+			*goto askbandits
+	*if (askedforest)
+		*hide_reuse #Ask about wolves
+			*set askedwolves true
+			*goto askwolves
+	*if (askedforest)
+		*hide_reuse #Ask about ghosts
+			*set askedghosts true
+			*goto askghosts
+	*if (askedforest)
+		*hide_reuse #Ask about faeries
+			*set askedfae true
+			*goto askfae
+	*hide_reuse #Ask about Orlon Forest
+		*set askedforest true
+		*goto askforest
+	*hide_reuse #Ask where the road leads
+		*set askedroad true
+		*goto askroad
+	#Ask no more questions
+		Your reverie ends, and you find yourself back on the path through the forest.
+		
+		*goto_scene theroad
+	
+*label askforest
+"Beware the Forest Orlon through which the road to Zagos often passes, for lone travelers are targeted, often by things not of this world," the second man intones dramatically.
+
+"Don't listen to him. Farmers use that road all the time. *I* use that road all the time, and no one ever accosted me, let alone GHOSTS! Hahahahaaaa...." the first man laughs.
+
+"I don't know. Once I felt like I was being watched, and an icy chill descended, even on the hot summer day that it was. I ran and didn't look back!" a third man chimes in. 
+
+"The parson's boy disappeared in there once, and they say he was 'taken.'" The whole tavern seems to be getting in on the conversation now. 
+
+"Taken by what? Ghosts?" 
+
+"I'll tell ya who took 'im. A sex-starved faerie! Hahahahaaa..." 
+
+"That's no joke. There be fae in those woods!" 
+
+"And the occasional bandit. He was probably just waylaid."
+
+"Or eaten by a wolf or some other creature. Like any forest, it's dangerous if you leave the path."
+*goto convo
+
+*label askroad
+"It leads on to the capital city, Zagos, but first it winds its way through both farm country and the sprawling Orlon Forest. This being the 'back side,' so to speak, of the capital, the road receives little traffic, mostly just farmers bringing their foodstuffs to market."
+
+*goto convo
+
+*label askcapital
+"A den of sin it is, but also of great wealth and opulence. It's less than a day away."
+
+*goto convo
+
+*label askfarms
+"The surrounding farms supply the food for the capital, mostly growing grain."
+
+"And it's where Jennifer lives!" the second man chimes in again.
+
+"Aye," the first man says. "A beauty among the peasants. It's not often suitors from the capital deign to stoop for brides among the peasantry, but for her they make an exception."
+
+*goto convo
+
+*label askjen
+"Top off my glass, and I'll tell you all about her," the second man says, eyes getting glassy.
+
+*choice
+	#Buy him a drink (Cost: 1 gold piece. You have ${gold} gold pieces.)
+		*set gold -1
+		*set askedjenandpaid true
+		"She's been bringing vegetables to the city since she's been a wee lass, and that must be how the nobles first caught sight of her. Since then, many have been out to her family's farm all a wooin' and a courtin', but she still has hasn't made her decision. 
+		
+		"All dainty charm that one is, and that's what makes her so attractive. I'd have gone a courting too, except I'm a bit old for her now... and of course, have a wife. Still, we pass on the road at times, and she's always been friendly to me. I think that's another reason why the nobles like her; she's not all snooty like the ladies of the gentry."
+		*goto convo
+	#Ask about something else
+		*goto convo
+	
+*label askbandits
+"Oh, on any road anywhere there are bound to be bandits, but back here, there's not much for them to steal. What? A sack of potatoes? A few apples from a farmer's apple cart? Don't let us scare you, boy, the road is mostly safe, else the farmer's wouldn't use it. During the day, that is."
+
+"But what about the legends?" the second man butts in.
+
+"You mean the fairytales?" the first man retorts, getting irritated. "There may be monsters and such deeper in toward the Iron Stand mountains, maybe even elves or the faeries you keep talking about, but not around here. The hunters from Zagos keep this area pretty clear, for afterall, the farms feed them. Without the farms, Zagos would starve within a month, and heck, that'd take the whole blasted empire with it!"
+*goto convo
+
+*label askwolves
+"There's an occasional wolf about. Bears too, so when livestock goes missing, that's the obvious reason why. That and theft, not some exotic monster, a ghost, or a faerie! Long ago, this place was wild, and those things were likely here. Now, though, Zagos sends out regular hunting parties. It's good sport among the nobility, so again, pass through quickly and don't sleep out in the open. You'll be just fine."
+*goto convo
+
+*label askghosts
+"Dammit, man! There are no such thing as ghosts."
+
+"Yes there are," the second man says gravely. "If a person dies with unfinished business, his soul may rise again and wander the earth as a restless spirit. Always speak to a ghost first, as a ghost cannot speak unless spoken to. Some ghosts are evil and might curse you, but others might simply need you to fulfill a task for them before they can enter eternal rest."
+*goto convo
+
+*label askfae
+Before the first man can speak, the second man butts in. "I've heard it said," he says, "That travelers who spend the night on the road in these parts often awake to find little bits of mischief done: trinkets missing, buckles undone, and the like. That, my friend, be the work of the fae! There's a reason they say never to leave the path. Of course, people do all the time, for their, uh, business, and the occasional tryst, secret dealings, hunting, and whatnot, but if you ever sense the presence of the fae, do NOT leave the path! You could get invited to a Faerie Feast and disappear into the Faerie Realm. Some people come back fifty years later, completely unaged, and others never return at all."
+
+"When did this EVER happen?" the first man retorts, unable to contain himself any longer.
+*goto convo
+

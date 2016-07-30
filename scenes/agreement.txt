@@ -1,0 +1,57 @@
+*label agree
+"Good," Tamara says. "Oh, but now that I'm supposed to help you, I'll need you to agree to do everything I say, no questions asked, got it? If I say to step where I step, you do it. If I say to be quiet, even if you don't know why, you do it without a word. Understand? This is very important."
+
+*fake_choice
+	#Agree.
+		
+"Good," Tamara says and holds out her hand for you to shake.
+
+*fake_choice
+	#Shake it.
+		
+"There, now the deal is sealed," Tamara says, trying to hide a smirk. "There's no going back on your word once you've shaken on it, right?"
+
+*fake_choice
+	#Right.
+		
+"Good," Tamara says. "Well, let's be off then. Time is not of the essence to me, but it is to you. I'd hate for us to get there one minute after the dragon tires of Elsbeth and eats her, wouldn't you?"
+
+*fake_choice
+	#Agree.
+		
+"See," Tamara says. "I look out for you. We're a team now, and that means IMPLICIT TRUST."
+
+*if past_path
+	She resumes climbing the slope, seeming unusually happy. In fact, she's nearly bounding up like a little girl.
+	*goto followchoice
+*else
+	She turns and hurries down the path, seeming unusually happy. In fact, she's almost skipping along like a little girl.
+
+*label followchoice
+*fake_choice
+	#Follow.
+		
+*set with_tamara true
+*set tamara_enemy false
+By the time you catch up to her, she's back to her sullen self.
+
+"You walk too loud, you know that?" she says, barely glancing at you in acknowledgement. "I could track you blindfolded, and that's the first thing we need to change. Walk softly. 
+*if learned_dragon_sense
+	Remember, the dragon senses things."
+	
+	You sigh, but figure learning to walk softly will help sneaking around the dragon's lair.
+	*return
+*else
+	*temp distance "fifteen miles"
+	*if past_path
+		*set distance "six miles"
+	The dragon is watching all the time, and even now, from perhaps ${distance} away, through tons of rock, it can probably sense us to at least some extent. Did you know that? Sounds. Smells. Their senses are extraordinarily powerful, but they also extend into the psychic realm. They can sense the negative emotions of all who approach from miles away. Greed. Anger. Jealousy. This is only one of the many things I know about dragons, and I know many secrets about this one in particular."
+	
+	*choice
+		#Ask her what else she knows.
+			"You're supposed to be working on your silent walking," Tamara says. "Be silent. Talking is not silence."
+			
+			You sigh, but figure learning to walk softly will help sneaking around the dragon's lair.
+			*return
+		#Just walk silently.
+			*return

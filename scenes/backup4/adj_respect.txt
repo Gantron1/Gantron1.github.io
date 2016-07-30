@@ -1,0 +1,83 @@
+*bug adj_respect subroutine called without parameter.
+*return
+
+*label 5
+*set tamara_respect %+5
+Tamara's respect for you rises very slightly:
+*stat_chart
+	percent tamara_respect Tamara's Respect
+*line_break
+*return
+
+*label 10
+*set tamara_respect %+10
+Tamara's respect for you rises slightly:
+*stat_chart
+	percent tamara_respect Tamara's Respect
+*line_break
+*return
+
+*label 20
+*set tamara_respect %+20
+Tamara's respect for you rises.
+*stat_chart
+	percent tamara_respect Tamara's Respect
+*line_break
+*return
+
+*label 30
+*set tamara_respect %+30
+Tamara's respect for you rises significantly.
+*stat_chart
+	percent tamara_respect Tamara's Respect
+*line_break
+*return
+
+*label 40
+*set tamara_respect %+40
+Tamara's respect for you rises greatly!
+*stat_chart
+	percent tamara_respect Tamara's Respect
+*line_break
+*return
+
+*label -5
+*set tamara_respect %-5
+Tamara's respect for you falls very slightly:
+*stat_chart
+	percent tamara_respect Tamara's Respect
+*line_break
+*return
+
+*label -10
+*set tamara_respect %-10
+Tamara's respect for you falls slightly:
+*stat_chart
+	percent tamara_respect Tamara's Respect
+*line_break
+*return
+
+*label -20
+*set tamara_respect %-20
+Tamara's respect for you falls.
+*stat_chart
+	percent tamara_respect Tamara's Respect
+*line_break
+*return
+
+*label -30
+*set tamara_respect %-30
+Tamara's respect for you falls significantly.
+*stat_chart
+	percent tamara_respect Tamara's Respect
+*line_break
+*return
+
+*label -40
+*set tamara_respect %-40
+Tamara's respect for you falls greatly.
+*stat_chart
+	percent tamara_respect Tamara's Respect
+*line_break
+*return
+

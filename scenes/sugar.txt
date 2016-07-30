@@ -1,0 +1,193 @@
+*temp honeypot false
+She roughly pushes you down onto your knees in front of her, undoes her belt buckle, and pulls her breeches down as far as they'll go without taking off her knee-high boots. She spreads her legs as wide as she can, exposing her luscious sex, inches from your face.
+
+*if twobuckets
+	*goto autocunn
+
+How you wish you could get sugar too, but barring that, it drives you crazy to give without getting. If only she could give herself sugar somehow... Well, perhaps in another universe...
+
+*if has_honey
+	*set has_honey false
+	*set honeypot true
+	*achieve honeypot
+	You're about to dive in when she says, "Give me your honey," and begins rifling through your pack. She pulls it out and smears it all over her twat, even pushing some inside it.
+	
+"Okay, go," she says 
+*if honeypot
+	*achieve sugarhoney 
+	and pulls your face right into the honey. You begin to lick at the honey, and Tamara urges you on. "Harder!" she whispers, and you begin making strong lapping motions, pushing hard with your tongue to scrape as much honey off her outer labia as possible. 
+	
+	"Yes, like that!" Tamara says, her voice already showing strain. "Like that everywhere."
+	*goto lap
+*else
+	*achieve sugar
+	and pulls your head forward until your mouth is on her sex, already warm and moist. Your tongue slips easily inside her, exploring that most secret of places your cock is much more suited to.
+	
+*label lap
+She leans against a tree and bends at the knees to spread her legs wider, thrusting her pelvis forward. In a little while, she starts making soft moaning sounds, and pulls your head more firmly into her snatch. In another minute or so, her hips start bucking, she goes weak in the knees, and her cries become desperate, though she does her best to stifle them. Her hands rifle through your hair, fingers grasping at your scalp as unbearable ecstasy consumes her body. 
+
+Finally her mostly-stifled cries and moans die down, and she begins combing your hair back into place.
+
+"That was good, 
+*if tamaras_slave
+	apprent... I mean, slave," Tamara says. She pats your head. "I like having a slave."
+	
+	*goto done
+*else 
+	apprentice," Tamara says. "Well, we better get a move on."
+	
+*label done
+She pulls her breeches back up, and you watch her luscious sex disappear within it, wondering if this is the last time you'll see it.
+
+"Don't worry," she says. "You'll get yours later today. If Juliette only likes head and doesn't put out, there's always Princess Elsbeth."
+
+You adjust your pants around your raging boner and fall in step behind Tamara. It interferes with your silent stepping skills, but if she notices, she keeps quiet for once.
+*return
+
+*label autocunn
+"You know..." you say. "You could give YOURSELF sugar any time you like."
+
+"True, but head's more fun when it comes from another person," Tamara says.
+
+"True," you agree, "But it drives me crazy. Can't you do it yourself this time?"
+
+Tamara sighs.
+
+"Well, I suppose that would be better, you being my apprentice and all," she says reluctantly. "Fine, but can you at least hold my head down?"
+
+"Sure."
+
+"Okay, then."
+
+Tamara removes her boots and breeches, spreads her legs and lowers her head between them just like last night. 
+
+You start to place your hands in the same position as before, but she says, "From behind is better."
+
+You sit behind Tamara, and she leans back against you between your legs. You find this position indeed makes it easier, making you wonder if she's done this before. What other wonders have men lucky enough to spend time with Tamara witnessed!
+*page_break
+"Can I watch?" you ask.
+
+"If you want to drive yourself crazy that way, knock yourself out," Tamara says.
+
+You find that you can crane your neck around her body to peer between her legs, and you see her face is still rather far from her pussy. You begin to apply more and more pressure, and it gets closer and closer. You push Tamara's head down further and further, still astonished at her incredible flexibility, and finally her tonguetip is able to touch her clitoris.
+
+"More," Tamara grunts, and, shaking your head in wonder, push her even further until she's able to lip her own pussy. You hold her there and watch as she works herself, and wow, you actually learn a few techniques. No one knows better what feels good than a person giving themselves head!
+
+Unfortunately, watching a woman service herself is more of a tease than if you'd done it, not to mention how she's nearly sitting in your lap. ARGH!!! You curse the master-apprentice relationship again, despite the invaluable skills you're learning.
+*page_break
+*achieve autocunn 
+Tamara, knowing exactly what to do for herself and when, quickly brings herself to orgasm, and you have to fight hard to keep her head pressed down as her body bucks and writhes. She nearly falls over from the exuberance of her thrashing, and this upsets your balance, making you fall backwards. Your pressure releases, and Tamara's mouth pulls away from her pussy. You see her tongue stretch forward as she desperately tries to get it back onto herself, and you quickly reach both hands under her knees to pull her head back down. 
+
+Now, holding her very securely this way, Tamara can buck and thrash all she wants without disturbing your stability, and her screams come in short, stifled bursts of intensity as her airway can only open for brief moments.
+*page_break
+In your new position, the more you pull her down, the more her body is pulled back against yours, right between your legs. Already hard, her struggling body writhes against your member, and you're almost there.
+*page_break
+Maddeningly, Tamara's wild motions calm as her orgasm finally wanes, and it leaves you all dressed up and nowhere to go. You can't help but keep pulling hard, holding her against you, but now you must do your own bucking and thrashing.
+
+"Done..." Tamara manages through her pinched airway. "Let me... go now..."
+
+You can't. You just can't.
+
+Tamara starts to struggle, and ironically, that helps. A lot.
+
+You let loose just as she breaks free.
+
+"What were you..." Tamara begins, then sees you writhing and moaning, hand pressed tightly to your crotch.
+
+"Oh," she says.
+*page_break
+Tamara waits for your orgasm to finish, then falls to her knees and starts undoing your buckle.
+
+"What are you doing?" you ask.
+
+"Dummy, what do you think Juliette will think if she find you've come already today?" she snaps. "I just hope you can work up the necessary passion again when the time comes, but in any event, we need to get you cleaned up.
+
+Tamara's hands fly about your loins, first releasing your belt, then the buttons of your fly. It feels funny, watching a woman furiously undressing you, yet it be not about sex.
+*page_break
+Tamara roughly pulls down your pants, whips your loincloth away, and tosses it in the bushes.
+
+"Can't waste water," she says. "I have to lick it up."
+
+Somehow, you think it's that she actually likes cum.
+*choice
+	#Ask her.
+		*goto likecum
+	#Just let her clean in peace.
+		Tamara places her wide-open mouth onto various cum puddles and scrapes with her lips, drawing as much cum into herself as she can in the shortest amount of time.
+
+		*goto cleanpeace
+
+*label likecum
+"You seem to like cum," you say.
+
+"That's neither here nor there," Tamara says as places her wide-open mouth onto various cum puddles and scrapes with her lips.
+
+"Okay, yeah, I like it," she admits, now licking all over. "This might be the last I get for awhile... or ever, if we don't make it."
+
+*label cleanpeace
+She pops your member in her mouth and quickly slurps it clean. Wow, you never received such totally non-sexual head before.
+
+Tamara's about to move on to detailing the base of your cock, but she hesitates, tempted. She gives in, but just momentarily, giving you some real, sexual head for a few head bobs.
+
+"We don't have time for that," she says, forcing herself to stop.
+*page_break
+You cock clean, she eyes it for a moment.
+
+"It's still hard, huh? Think we have time for it to just sit inside me until it shrinks?" Tamara wonders.
+
+You don't say anything.
+
+"Well?" Tamara says.
+*choice
+	#"It's you who keeps the schedule."
+		"I think it's okay," Tamara says, convincing herself.
+
+		*goto sitshrink
+	#"Yes!"
+		"I think so too," Tamara says, letting herself be convinced.
+
+		*goto sitshrink
+	#"Isn't time of the essence?"
+		*goto timeessence
+
+*label sitshrink
+She shoves you down and climbs on top of you, and you must admit, being inside her is nice.
+
+"I like keeping a man inside me until he shrinks and gets pushed out," Tamara says. "I don't know why."
+
+"I like it too," you say. "Feels totally, totally done that way."
+
+Tamara nods, closing her eyes and sitting back to wait and enjoy.
+*page_break
+A watched pot never boils. A long time passes, and your cock doesn't shrink, perhaps because you think this might be the last time you ever get to be inside Tamara, perhaps any woman ever. In the outer world, you're in a hurry, but your cock has other ideas.
+
+"We have to go," Tamara says but doesn't move or even open her eyes.
+
+"Yeah, let's go," you say.
+
+"Yes, let's," Tamara says but still doesn't move.
+*page_break
+Another long minute passes. If there were a grandfather clock here, you could hear it ticking.
+
+Tick... tick... tick... tick... tick...
+
+"Okay, we really have to go," Tamara says and gets up.
+
+You use a little water to give yourself a final scrub, and both of you quickly get dressed. You ease your still somewhat rigid member into your pants and enjoy yourself, falling in step behind Tamara.
+*return
+
+*label timeessence
+"Yes, yes, you're right," Tamara says and starts getting dressed. "In fact, I was just testing you, and you passed."
+
+You use a little water to give yourself a final scrub and shove your member into your pants.
+
+"You only have one loincloth, don't you?" Tamara grins, and you sheepishly nod.
+
+"Juliette's going to get treated to a man going commando," she laughs.
+
+The two of you chuckle as you resume the hike, and things are lighthearted until thoughts of what lies ahead return into your minds--the prospect of never being with Tamara as a man and woman again, and, of course, the perilous danger you're about to face.
+*return
+
+
+
+

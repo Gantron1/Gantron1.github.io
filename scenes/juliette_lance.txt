@@ -1,0 +1,130 @@
+*gosub settempvars
+
+"Is that the Dragonlance of Perrindor?" Tamara asks, awe in her voice.
+
+"It is," says Juliette, hefting it over her shoulder.
+
+Tamara nudges you in the ribs.
+
+"Look at it," she whispers. "Forged three hundred years ago in the icy north. Shaft of solid steel. Two blades, perpendicular, mutually strengthening each other, so that as they slip beneath the scales, neither breaks. That weapon slew the dragons Marxillus and the unnamed drake, the Terror of Perrindor, hence its name."
+
+Tamara jogs to catch up with Juliette.
+
+"They say only Humontor Dragonslayer was strong enough to wield it, and so it sat upon the mantle of the King, Osrick, Lord of the Barren Crags. How did you come by it, and what do you plan to do with it?"
+
+"I still have people in the icy north, my old country," Juliette says. "It is on loan in exchange for a share of the treasure, and as far as what I plan to do with it, I will use it as it was made to be used--I will wield it in battle."
+
+"But how can you?" Tamara says, incredulous. "Three generations of the strongest heroes couldn't, even when the drake-plague whirled full force upon the peoples of the Arjerral Tundra. Humal lost his life, lifting it in vain against the dragon Verristral which to this day inhabits the icy peak, Balakanja, and none stronger have yet been born in the northern lands. The muscles of his arms were found ripped from the bones from his own efforts."
+
+"Your knowledge of dragonlore is impressive," Juliette replies, evading the question with the tact appropriate to her class, the nobility.
+
+"You have strength magic, then?" Tamara asks, undeterred.
+
+"What I have is none of your business," Juliette replies icily. 
+
+"You are a fool, then," Tamara sneers. "I saw you just now, muscles straining to lift it. There is no way you could wield this weapon effectively in battle."
+
+Juliette merely walks off, stride as resolute as ever, DragonKeep in the distance. If Tamara's doubts affected her confidence, it doesn't show.
+*choice
+	#Chide Tamara for insulting a knight.
+		*goto chideinsult
+	#Catch up with Juliette and apologize for Tamara's insult.
+		*goto apologizeinsult
+	#See what Tamara does.
+		*goto waitinsult
+	#Propose stopping Juliette by force to save her life.
+		*goto proposeinsult
+
+*label chideinsult
+"Idiots need to be informed of their idiocy," Tamara says. "How else will they know to change their ways? Come on."
+
+She resumes following Juliette, once again remaining out of sight, using silent step, occasionally glancing at the tracks yet never losing awareness of her surroundings. It all seems so completely natural to her, as if she does all of it simultaneously without thinking, and you wonder if one day you will achieve this level of mastery.
+
+In a little while, she says, "Let's catch up with her again. Maybe seeing DragonKeep loom larger and larger has changed her mind about not allying with us."
+*page_break
+*goto_scene juliette_beast
+
+*label apologizeinsult
+"She can think what she wants," Juliette says when you fall in step with her. "Only the truth matters."
+
+"But if what she says is true, how can you wield it in battle?" you ask.
+
+"Watch me when the time comes, and you will know," Juliette smiles.
+*choice
+	#Press her for answers.
+		*goto pressjul
+	#Ask her how she can walk so fast, carrying such a heavy load.
+		*goto howjulwalkfast
+	#Maybe it's better not to pester her with questions.
+		*goto nopressjul
+
+*label pressjul
+[This option is yet to be written.]
+
+*label howjulwalkfast
+"Maybe I am just naturally gifted?" Juliette says. "Maybe the strength that allows me to walk at this pace will also allow me to wield the dragonlance."
+
+"You're as strong as Humontor?" you ask, incredulously.
+
+"Why is that so odd?" Juliette laughs. "Merely because he is legend and I am not? A hundred years from now, maybe you or I will also be legend."
+*page_break
+*goto_scene juliette_odd
+
+*label nopressjul
+[This option is yet to be written.]
+
+*label waitinsult
+[This option is yet to be written.]
+
+*label proposeinsult
+As soon as Juliette is out of earshot, you whisper your proposal.
+
+"Nay," Tamara whispers back. "We don't know her well enough to justify controlling her to that degree. Perhaps she does have strength magic hidden somehow from dragonsight or some other reason that would explain her actions we do not yet understand. I doubt it, of course. Like you, I'm sure she's merely after suicidal glory, but if so, if we cannot make her see reason, there is nothing more for me than to stand by her side to the end. Come, let's follow at short distance."
+
+The two of you jog uphill until Juliette is once again visible, finding her doggedly threading her way through the trees, the dragonlance still on one shoulder.
+*if not(had_tracking_talk)
+	*page_break
+	"Look at her footprints here," Tamara says, pointing to a gash in the pine needles even your untrained eye recognizes as the tread of a human being. "I should've been able to tell she was carrying such a heavy lance the way her weight wavers left and right, how the load is heavier on only one side. In my haste, I merely assumed she was carrying a top-heavy pack. Did you notice the thinness of the plates of her armor? Though in the style of the knights of the realm, unlike them, she has chosen speed over protection, and this further confounded my assessment. Pay attention to all details, for you never know when they may be of use."
+*choice
+	#Catch up with Juliette and talk while you walk.
+		*goto catchtalk
+	#Stay back with Tamara.
+		*goto nocatchtalk
+
+*label catchtalk
+Juliette still walks with unexplainable speed, and you must exert considerably to be able to catch up with her.
+
+She says nothing when you fall in step by her side.
+
+starthere
+
+*label nocatchtalk
+[This option is yet to be written.]
+
+*label hadspat
+*gosub settempvars
+The two of you follow Juliette for awhile remaining far enough behind that she cannot see you.
+
+"Let's give her a chance to cool down before catching up with her," Tamara says. "In the meantime, look at her footprints here." 
+
+The two of you bend to scrutinize a particularly clear set of tracks.
+
+"I should've been able to tell she was carrying such a heavy lance the way her weight wavers left and right, how the load is heavier on only one side," Tamara says. "In my haste, I merely assumed she was carrying a top-heavy pack. Did you notice the thinness of the plates of her armor? Though in the style of the knights of the realm, unlike them, she has chosen speed over protection, and this further confounded my assessment. She seems to defend her brethrens' methods even as she uses different tactics."
+
+Tamara stands and continues to track Juliette, and though she occasionally tries to give you pointers, you still fail to see any but the most obvious tracks.
+
+"I think she should be cooled down by now," Tamara says and quickens her pace to catch up.
+
+The two of you jog a bit, Tamara allowing herself to make noise, and soon Juliette comes into view, still steadfastly hiking in the direction of DragonKeep.
+*page_break
+"Hey, Juliette," Tamara calls, and Juliette turns around, shifting the lance to her other shoulder, so only her body turns, leaving the lance motionless (and still facing you).
+
+"That can't be the Dragonlance of Perrindor, can it?" Tamara asks.
+
+"Actually, it is," Juliette says.
+
+*goto perrindor
+
+*label settempvars
+*temp had_tracking_talk false
+*return

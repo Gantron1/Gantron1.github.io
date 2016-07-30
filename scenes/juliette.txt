@@ -1,0 +1,1390 @@
+*temp wary false
+*temp malebutterfly false
+*temp proposed_alliance false
+
+*if logictrap
+	Tamara wakes you up just before dawn by nudging you in the ribs.
+
+	"Hey," she says. "I'm going to prove I'm not a wishy-washy woman today. You just watch."
+
+	She gets up and dresses purposefully, looking for all the world like a great warrior at the dawn before battle... and she is.
+
+	"I know you're not," you says. "You don't have to prove anything to me. I know you're a master thief and strategist, a peerless fighter."
+
+	"Still, you will see," she says seriously, eyes on the distant peak of DragonKeep.
+	*page_break
+	*goto predawnwalk
+
+*if slept_alone
+	*goto alone_sex
+	
+*if camp1_no_sex
+	*achieve nosex
+	*label alone_sex
+	Just before dawn, you're awakened by a pebble hitting you in the face. It's Tamara, sitting on her bedroll, topless, her breeches already on, putting on her boots.
+	
+	"Come on," she says. "If my calculations are correct, now's the time we have to leave to catch Juliette at her special morning time."
+	
+	It's still quite dark, and you're sleepy.
+	*choice
+		#Go back to sleep.
+			"How about a morning blowjob?" Tamara asks, and you're up like a shot.
+			
+			"Just kidding," she says, putting on her vest. "Now let's get going."
+			
+			Tamara has no tolerance for laziness. 
+			*gosub_scene adj_respect -10
+			
+			*goto predawnwalk
+		#Get up grumbling.
+			"I don't know what you're complaining about," Tamara says, putting on her vest. "In a few hours, you'll be lapping Juliette's cunt."
+			
+			*goto predawnwalk
+		#Get up and get ready without complaint.
+			Tamara nods to herself when she sees you getting up, puts on her vest, and is ready to go.
+			
+			*gosub_scene adj_respect 5
+			
+			*goto predawnwalk
+*elseif title = "the Clitoral Failure"
+		"Hey, you. Clitoral Failure. Time to wake up," you hear Tamara say.
+
+		She wiggles her legs, and you realize you slept between them the whole night, your face now plastered to her pussy.
+
+		"Get your face out of my crotch," she says, scooting out from under you and doing a backward roll into a standing position.
+
+		She stretches a bit, doing some nude calisthenics before starting to get dressed.
+
+		"I'm a bit stiff," she explains. "Kinda like when I was a girl and had a pussy that liked to sleep between my legs all the time."
+
+		You're a bit "stiff" yourself.
+		*choice
+			#Ask Tamara to help you stop being so "stiff."
+				*goto stiff
+			#Ask Tamara if the pussy between her legs is awake now.
+				*set pussycat true
+				*goto pussyawake
+*else
+	Tamara wakes you up just before dawn by nudging you in the ribs.
+	*choice
+		#Have morning sex.
+			*goto morningsex
+		#Ask her what she wants.
+			*goto whatwants
+	
+*label stiff
+"Just do some quick calisthenics like me," Tamara says, lifting her leg high in the air and pulling it toward her head. Her flexibility is incredible and so was the view of her still naked pussy. Then she starts pulling on her breeches.
+
+Looks like once again it's no joy for you or Mr. Woody.
+
+"We must resume our journey at this pre-dawn hour," she goes on, slipping into her leather vest, "If we are to catch up with Juliette at her special morning time."
+*page_break
+*goto predawnwalk
+
+*label pussyawake
+"I don't have that cat anymore," Tamara says distractedly, pulling on her breeches. "Come on, we gotta move," she says. "If my calculations are correct, now's the time we need to get going if we're going to catch up with Juliette for her special morning time."
+
+*label morningsex
+You notice you have morning wood, so it's just a simple matter of slipping into her and...
+
+"There's no time for that," Tamara says. "We need to get up early to catch up with Juliette at her special morning time."
+*choice
+	#"Can't we have sex first?"
+		*goto cantsex
+	#"But it's too eeeaaarly!"
+		*goto early
+		
+*label cantsex
+"No we can't," Tamara says, already up and getting dressed. She kicks you with her foot.
+
+*goto hike
+
+*label early
+"Don't be a cry-baby," Tamara says, already up and getting dressed. She kicks you with her foot.
+
+*goto hike
+
+*label whatwants
+"We need to get up early to catch up with Juliette at her special morning time," Tamara says, already up and getting dressed. She kicks you with her foot.
+
+*label hike
+*label predawnwalk
+*comment should consolidate 2 labels into 1
+The crisp morning air refreshes you as you follow behind Tamara, resuming your march uphill. Your muscles are a bit sore, but not too bad.
+
+*if logictrap
+	*gosub logictrap
+
+*if thousandmilestare
+	Tamara's strange behavior right at the end last night is bothering you a bit, so you decide to ask her about it.
+
+	"Um, Tamara?" you say after walking for a bit.
+
+	"Yeah, what?" Tamara says, stopping and turning around.
+
+	She certainly seems back to her normal self.
+
+	"Uh, was the sex all right last night? I thought it was good, but then you..."
+
+	"Shut up, apprentice," Tamara says and starts walking again, and you figure you should let the matter rest. She seems fine.
+
+*if camp1_no_sex
+	"Gods, I am so horny," Tamara mutters as she walks. "Why didn't you jump my bones last night after all the hints I was dropping?"
+	*fake_choice
+		#"Ummm... the MASTER/APPRENTICE RELATIONSHIP THING	?!?"
+	"Yeah, but once you seduce Juliette, you won't need me anymore. We could've probably done it," Tamara says.
+	
+	You kick yourself.
+	*page_break
+	*goto hike2
+*elseif thousandmilestare 
+	*goto thousandmilestare
+*elseif motionkarezza
+	As you walk, it seems like Tamara wants to talk about something, but each time you look at her, she looks away.
+
+	Eventually, she says, "That was some weird sex last night, huh?"
+
+	She doesn't want to discuss it further.
+	*page_break
+*else
+	*goto slavereassurance
+
+*label slavereassurance
+Tamara turns around. "Ok, look here, apprentice," she says. "Last night was great, but don't make me regret it. It will never happen again, and 
+*if slave_deal
+	*goto slavedeal
+*else
+	*goto noslavedeal
+
+*label slavedeal
+remember, if you let it get to your head and show even the slightest sign of disrespect, it's slavery time."
+
+*goto hike2
+
+*label noslavedeal
+I think we need to put in place some extreme measures to ensure you maintain an apprentice's proper level of respect. How about if you ever disrespect me, even just a little, you become my personal slave?"
+*label noslavedealchoice
+*fake_choice
+	#"It will never happen."
+	#"Ummm... okaaaay..."
+	#"No way! I'll never be anybody's slave."
+"Good, it's settled then," Tamara says, nodding and resuming the hike. "Stay apprentice-like, and no slavery will befall you."
+*goto hike2
+
+*label thousandmilestare
+You walk for another ten minutes or so, and Tamara turns around again.
+
+"Okay, about last night..." she begins, then pauses, and exhales, centering herself. "Well, first of all, the sex was... well, without sounding all sentimental again, that was just about the best sex I ever had, so if that's what you're worried about forget it. It was great. It was so great, I got just a tiny bit sentimental, but I'm over it now. We're going to find Juliette and slay this dragon, just like before, okay? Are all your worries put to rest now???"
+
+Well, it doesn't matter. She'll either rise to the challenge or fall. It's in the hands of fate now. 
+
+You nod, and Tamara says, "Good."
+
+The two of you continue on your way.
+*page_break
+After another ten minutes or so, Tamara turns around again. 
+
+"Oh, and another thing," she says. "I shouldn't have to say this, but you know we're back to a purely master-apprentice relationship now, right? Don't let the sex go to your head. It'll never happen again, and
+*goto noslavedeal
+	
+*label hike2
+You and Tamara share your smoked pork and beef jerky while walking in silence and the morning mist. All you hear is the regular crunch-crunch of the pine needles under your feet.
+*page_break
+Tamara gets on your case for not practicing your silent stepping.
+*if not(camp1_no_sex)
+	(Good thing she didn't take it as a sign of disrespect!)
+	
+You walk in silence for around fifteen minutes, amazed that you're able to walk silently even on pine needles.
+*page_break
+You notice Tamara's steps starting to make some noise, and she seems distracted, pensive. Eventually, she stops walking, her eyes glazed like she's lost in thought.
+*fake_choice
+	#"You're not going to start crying again?"
+	#Just wait.		
+"Give me some sugar," Tamara says, her gaze still as if staring at something off in the distance.
+*fake_choice
+	#"What?"
+	#"Excuse me?"
+	#"Sugar?"
+"I said give me some sugar," she repeats.
+*choice
+	#Give her some sugar.
+		*goto sugar
+	*if (logictrap) #"Wait. You JUST enforced master-apprentice proper distance, and now you're asking for sugar? This seems wishy-washy."
+		*goto wishywashy
+	*if (not(logictrap)) #Ask what she means.
+		"Look," Tamara says. "I know what I just said, but we're going to catch up with Juliette soon. When that happens, I want you to focus all your amorous attention on her. ALL. Got it? So now, THIS ONE TIME, I'm asking you to break our master-apprentice deal and GIVE ME SOME SUGAR!"
+		*choice
+			#Give her some sugar.
+				*goto sugar
+			#Tell her you want to, but you can't risk the master/apprentice relationship.
+				"YOU, apprentice, are disobeying your master, which equates to disrespect," Tamara says sharply. "You are now my slave, and I order you to give me some sugar."
+				*set tamaras_slave true
+				*achieve slave
+				*fake_choice
+					#Give her some sugar.
+				*goto sugar
+
+*label sugar
+*gosub_scene sugar
+*page_break
+After perhaps an hour, the dim, near darkness gives way to rosy dawn, but the chill lingers in the air. Tamara motions for you to be quiet, and carefully, the two of you creep from tree to tree until finally Tamara says, "There she is."
+
+You peer around the tree the two of you are hiding behind and see Juliette still sleeping next to a small fire.
+
+Tamara nudges you. "Seduction time," she whispers. "Go!"
+*choice
+	#Approach the sleeping Juliette.
+		*goto approach
+	#Tell Tamara you want to wait until Juliette awakens.
+		*goto nosneak
+	
+*label approach
+How do you approach?
+*choice
+	#Sneak up and join Juliette under her blanket.
+		*goto join
+	#Hail her.
+		*goto hail
+	
+*label join
+*set wary true
+You get perhaps ten feet from Juliette when she bursts awake and leaps to her feet. Out of the corner of your eye, you see Tamara smack herself on the forehead and mutter something about your stupidity.
+
+Juliette's still in her armor, and apparently even sleeps in her helm. She whips out her sword but her shield is still propped against a log near the fire.
+
+"State your business, cretin," she demands, but already she's advancing on you.
+
+Tamara shows herself, causing Juliette to cease her advance.
+
+"We come as friends," Tamara says.
+
+"Why send your compatriot forward in stealth then," Juliette says, eyes narrowed suspiciously as she retreats a few steps and picks up her shield.
+
+"Yeah, why?" Tamara says, looking at you. 
+*choice
+	#"Um, you looked lonely sleeping there all by yourself?"
+		*goto lonely
+	#"Banes said we could make friends with you by seducing you?"
+		*goto banessaid
+	#"Um, uh..."
+		*goto umuh
+	
+*label lonely
+"And you thought you'd keep me company, I presume?" Juliette says disgustedly. "I should slay you where you stand."
+
+Tamara steps in front of you and shoves you behind her. "I apologize for him," she says. "He means well but gets crazy ideas sometimes. Why just yesterday, he was... Well, never mind that. Suffice it to say he did many unusual things yesterday.
+
+"Didn't you?"
+*temp nothingscount 0
+*label lonelychoice
+*choice
+	#Say nothing.
+		*if nothingscount = 0
+			"Didn't you?" Tamara says again.
+			*set nothingscount +1
+			*goto lonelychoice
+		*else
+			"DIDN'T YOU?" Tamara says, glaring at you.
+			*set nothingscount +1
+			*goto lonelychoice
+	#"Yes."
+		*goto tamaratakesover
+	
+*label banessaid
+"You met Banes?" Juliette asks. After a pause, she says, "And he said WHAT???"
+
+"Yes, we met Banes," Tamara says, stepping in front of you and shoving you behind her. "But, noooo, he did not say anything of the kind. You'll have to forgive my compatriot here. He confuses fantasy with reality.
+
+"Don't you?"
+*temp nothingscount 0
+*label banessaidchoice
+*choice
+	#Say nothing.
+		*if nothingscount = 0
+			"Don't you?" Tamara says again.
+			*set nothingscount +1
+			*goto banessaidchoice
+		*else
+			"DON'T YOU?" Tamara says, glaring at you.
+			*set nothingscount +1
+			*goto banessaidchoice
+	#"Yes."
+		*goto tamaratakesover
+
+*label umuh
+Tamara sees you without a ready answer and tries to come up with one herself.
+
+"I didn't send him forward in stealth," she says. "We just thought the appearance of one stranger would be less threatening than two."
+
+"And yet he advanced to nearly sword-range without announcing his presence?" Juliette shrieks. "You're likely nothing more than murderous thieves!"
+
+"Nay, nay," Tamara protests. "It's just that my compatriot is a bit slow. Dull, really. Perhaps he thought it best to gently touch you to awaken you, or maybe he thought you might like male company at this time of day."
+
+"Slow? Dull?" Juliette says, eying you appraisingly. "He doesn't look so retarded."
+
+"Oh, but he is," Tamara insists. "Why, just yesterday, he... Well, never mind that. Suffice it to say he was constantly blundering, making mistakes, and generally being his slow, dull self, weren't you, apprentice?"
+*temp nothingscount 0
+*label dullchoice
+*choice
+	#Say nothing.
+		*if nothingscount = 0
+			"Weren't you?" Tamara says again.
+			*set nothingscount +1
+			*goto lonelychoice
+		*else
+			"WEREN'T YOU?" Tamara says, glaring at you.
+			*set nothingscount +1
+			*goto lonelychoice
+	#"Yes."
+		*goto tamaratakesover
+
+*label hail
+"Juliette?" you say when you are several paces from her sleeping form.
+
+Juliette bursts awake and leaps to her feet, and you realize that she must sleep in full armor, even her helm.
+
+"Who are you?" she asks warily, her hand ready to draw her sword.
+*choice
+	#Introduce yourself.
+		*goto introself
+	#Introduce both yourself and Tamara.
+		*goto introboth
+	
+*label introself
+"I am ${fname} ${lname}," you say. "At your service... literally, for I believe we share the same quest."
+
+You glance at DragonKeep, and Juliette nods. "Yes, my quest lies with the dragon, also," she says.
+
+Out of the corner of your eye, you see Tamara grin, give you the thumbs up, and tip toe away.
+*choice
+	#"I also am available for service in a different way..."
+		"What way would that be?" Juliette asks, eyebrows knitting.
+		
+		*goto proposal
+	#"Isn't this about the time you..."
+		"About the time I what?" Juliette asks, eyebrows creasing.
+		
+		*goto proposal
+	#"How is it traveling without your manservant?"
+		*goto banes
+	#"I see a nice rock over there that you can half-lean/half-sit on like you do every morning around this time..."
+		*goto clair
+	
+*label clair
+Juliette stands and stares at you for a long time, not knowing what to do or say. Finally, at long last she says in a very low, quiet voice, "How would you know that? Do you have clairvoyance powers?"
+*choice
+	#Admit that you saw her cunnilingus session yesterday morning.
+		*goto admitsaw
+	#"Nay, but I have other powers I would like to show you."
+		*goto otherclair
+
+*label admitsaw
+"Banes said he thought he heard something!" Juliette cries. "Overcome by pleasure, I let my attention lapse." 
+
+Juliette's face reddens in embarrassment, but you don't know if it's because of being seen or merely her lapse of attention.
+
+"I am not in the habit of cavorting with strangers in the middle of the woods," she says coldly, already gathering her gear. "I will take my leave."
+*choice
+	#Show her your giant member. Sometimes that turns on a woman enough to get her to change her mind.
+		*goto showmember
+	#Apologize profusely.
+		*goto proposalapologize
+	#Beg her pardon very enthusiastically.
+		*goto proposalapologize
+	#Say sorry many times.
+		*goto proposalapologize
+	
+*label showmember
+"Would you like to see what you're missing?" you say and begin undoing your belt.
+
+Juliette ignores you, finishes packing her gear, and turns to go just as you're whipping it out. 
+
+"That's disgusting," she says, glancing at that which has swelled the hearts of so many others.
+
+"Is it not the biggest you've seen?" you say, waggling it proudly.
+
+"Actually, it is," Juliette sniffs. "But my experience is limited, you see, for I happen to be a lesbian, full monosexual${monosexual_asterisk}. Your vulgarity proves my initial impressions, and I trust you will seek no further intercourse. Good bye."
+
+Once out of sword range, Juliette places her shield on her back and picks up what looks like an extraordinarily heavy, but finely wrought, dragonlance. Hefting it onto her shoulder, she turns to go.
+
+You put your member back in your pants, wondering why it didn't work. It always seems to for John Leslie!
+
+*if monosexual_asterisk = "*"
+	*set monosexual_asterisk ""
+	_____________________________
+	* Monosexual: On this world, true monosexuality, either purely heterosexual or homosexual, is rare, the vast majority bisexual, though a greater percentage prefer the opposite sex more than their own. 
+*choice
+	#Chase after her.
+		*goto chasejul
+	#Go tell Tamara about this turn of events.
+		*goto findtam
+
+*label chasejul
+"Wait!" you cry. 
+
+As soon as you take one step toward her, Juliette whirls, and you suddenly find the razor-sharp point of her lance in your face.
+
+"Cretin, I seek the dragon alone. Do not spoil the glory of this day with your crude presence. Further intercourse with me will be blade on blade."
+*fake_choice
+	#"Blade on blade? How about man on woman?"
+		Juliette scoffs.
+
+		"My point proven," she says and walks off.
+
+	#"Not sword in pussy?"
+		Juliette scoffs.
+
+		"My point proven," she says and walks off.
+
+	#Say nothing and let her go.
+		Juliette walks off.
+
+*goto findtam2
+
+*label findtam
+You're about to go look for Tamara when she melts from within the forest foliage.
+
+*label findtam2
+"Well, so Juliette is a lesbian," you say. "I guess that means YOU have to seduce her, huh?"
+
+"This is terrible..." Tamara mutters, trudging over to you, utterly dejected. "The problem is, I'm monosexual too, just the other way. I CAN'T do it. I just can't."
+
+"I'm also monosexual," you say.
+
+"Great, just great," Tamara retorts. "That fact is of no strategic bearing at the current time. We must find a way to seduce Juliette or otherwise get her to agree to our aid. Think, apprentice!"
+
+starthere
+
+*label proposalapologize
+"You could do with lessons in discretion," Juliette says. "However, I accept your apology. Now, if you would, please leave me to my task. We may both have business with the dragon, but mine is one I must undertake alone."
+
+"Why must it be alone?" you hear Tamara's voice somewhere among the trees.
+
+"Who's there!" Juliette cries, hand whipping to the pommel of her sword.
+
+Tamara appears, purposely treading noisily, and Juliette glances at you, eyes narrowed suspiciously.
+
+"Is this an ambush then?" she asks, backing away to keep the both of you in her field of vision.
+
+"No, no, not at all," Tamara hastens to say. "We just thought the approach of one less threatening than the approach of two, but when I heard you say you must undertake your business alone, I couldn't help but question such sheer stupidity. Are you mad, woman?"
+
+"I cannot share glory with ones such as yourselves," Juliette says simply.
+
+*label tambristle
+You see Tamara bristle and her fists clench.
+*choice
+	#See what Tamara does.
+		*goto tambristle2
+	#Ask Juliette what she means.
+		*goto whatjulmeans
+
+*label tambristle2
+"Ones such as ourselves?!?" Tamara cries. "First, you class ME, a master-thief, with my bumbling apprentice??? Second, you dare denigrate the noble profession of thievery? Perhaps you may consider knighthood superior to thievery, but is your skill in duel superior to mine? Let us settle this matter by test to mettle!"
+
+"I meant no insult," Juliette replies calmly. "If one was inadvertently given, I apologize. Also, I misspoke, for even if you both were knights, I would still deny your company, for my dragonquest I must undertake alone."
+
+"I guess I accept your apology," Tamara mutters, visibly calming though still quite tense.
+
+"Good, then," Juliette says emotionlessly, meeting Tamara eye to eye. "Well, it was nice meeting you both, but now I must take my leave."
+
+*goto pickuplance
+
+*label whatjulmeans
+"By your manners, you are commoners, are you not?" Juliette says. "I meant no insult, but I am simply a knight while one of you has the appearance of a rogue. The other, if not rogue himself, at least conspires with rogues. Even if you were knights, however, I would deign share my glory. I will slay this dragon alone."
+
+"You seem confident," Tamara sneers, but at least she no longer appears ready to spring.
+
+Juliette shrugs. "I have no fear at least."
+
+"And it makes you foolhardy," Tamara retorts.
+*choice
+	#Try to make peace.
+		*goto makepeace
+	#Bid Juliette goodbye and try to talk with Tamara alone.
+		*goto talktamalone
+	#Enjoy the war of words. Just keep listening.
+		*goto warwords
+
+*label makepeace
+"Ladies, ladies, please!" you say. "It seems we've gotten off on the wrong foot."
+
+"Not at all," Juliette says. "The dragon's lair is near, and mine is a solitary quest. Nothing more need be said. I am glad to have made your acquaintance but must now take my leave. Good tidings to you both."
+
+*label pickuplance
+Juliette backs out of sword range before placing her shield on her back, then bends to pick up what looks like an extraordinarily heavy, but finely wrought, dragonlance.
+
+*goto_scene juliette_lance
+
+*label talktamalone
+Seeing the conversation going nowhere, you endeavor to at least keep it from spiraling down into violence, and in the end, Juliette leaves, everyone's honor intact.
+
+You breathe a sigh of relief.
+
+"Well, it looks like you failed in seducing her," Tamara says before you can say anything. "If you hadn't, she'd have likely accepted my proposal. Well, I guess there's nothing more for it. I will have to win her over the same way as you, following at a distance."
+*fake_choice
+	#"And insulting her at every opportunity?"
+		"It seems to help," Tamara shrugs. "Makes people realize they need my help more. Come on."
+
+		She walks off, and you follow, shaking your head. 
+	#Say nothing.
+		"Come on," Tamara says, and you fall in step behind her.
+*page_break
+You spend the morning tracking Juliette, and Tamara even teaches you a little, showing you how to see the tiniest details in what would look, to the untrained eye, to be utterly barren of sign.
+
+"I think she's stopping for a rest," Tamara says after maybe a half-hour. 
+
+"You can tell that from her tracks???"
+
+"No, the vague clinking of her armor has stopped. Couldn't you hear it? She's not that far ahead. Come on, apprentice! Pay attention." Tamara snaps.
+*page_break
+Sure enough, in a few minutes you come upon Juliette half-sitting on a boulder, the lance by her side.
+
+"You again," Juliette says. 
+
+"Yes, us," Tamara says. "We hail the stubborn knight doomed to die, too proud to accept the aid of common thieves."
+
+"Warrior," you correct. "Thief-apprentice."
+
+"Yeah, and I was a warrior and other things before becoming a thief too. Shut up, apprentice," Tamara snaps.
+*page_break
+Ignoring you, Juliette stands to resume her journey, picking up the lance, struggling slightly under its great weight.
+
+Tamara fixes her eyes upon it as if for the first time.
+
+*goto_scene juliette_lance
+
+*label warwords
+"That's what thieves who creep in the dark say of knights who stand firm on the line," Juliette fires back.
+
+"And still it's true enough," Tamara says. "What lunacy, fighting all in a row... like ducks."
+
+"Well, thief," Juliette says, collecting her things. "As interesting a discussion as this may be, I must resume my quest."
+
+*goto pickuplance
+
+*label otherclair
+"Even if I did not find the forwardness of your proposal insulting," Juliette says, seeming unperturbed, "The point is moot. I am lesbian, full monosexual${monosexual_asterisk}."
+
+*if monosexual_asterisk = "*"
+	*set monosexual_asterisk ""
+	_____________________________
+	* Monosexual: On this world, true monosexuality, either purely heterosexual or homosexual, is rare, the vast majority bisexual, though a greater percentage prefer the opposite sex more than their own. 
+
+*page_break
+*goto_scene morning_alone lesbian
+
+*label banes
+"Banes?" Juliette says, surprised. "Did you meet him? How is he?"
+*choice
+	#Tell her he's fine.
+		*goto banesfine
+	#Tell her he must be missing serving her, especially around this hour.
+		*goto banesmissing
+
+*label banesfine
+"He was doing well," you say, "Though, of course, saddened he could no longer share your company. He hoped you would accept our aid so that you and he could be reunited as soon as possible."
+
+"He is a sweet old man," Juliette says, wiping a solitary tear from her eye. "Unfortunately, mine is a solitary quest, but I thank you for your offer. However, perhaps you would like to share my morning meal with me? I'd like to hear more about you and your meeting with my manservant."
+*label banesfinechoice
+*choice
+	#Accept her offer.
+		*goto acceptoffer
+	#Tell her you would like to accept her offer, but you have a companion scouting about elsewhere who would worry about you.
+		*goto noacceptoffer
+
+*label acceptoffer
+*comment Juliette invites to talk about Banes more.
+[This option is yet to be written.]
+
+*label noacceptoffer
+[This option is yet to be written.]
+
+*label banesmissing
+Juliette's eyes narrow.
+
+"What do you mean, sir?" she inquires suspiciously.
+*choice
+	#Tell her he said she has certain needs that a man might especially like satisfying.
+		*goto baneslike
+	#Stammer.
+		*goto banesstammer
+	#Offer to perform cunnilingus on her.
+		*goto offercunn
+
+*label baneslike
+[This option is yet to be written.]
+
+*label banesstammer
+[This option is yet to be written.]
+
+*label offercunn
+"Just what did Banes tell you?!" Juliette cries, face reddening.
+
+Suddenly, she gasps.
+
+"Did you torture him? Why else would he reveal such private business with you!"
+*choice
+	#Admit you spied upon them yesterday.
+		*goto admitsaw
+	#Tell her you have a tracker friend who deduced it.
+		*goto trackerdeduction
+	#Tell her Banes only told you because he cares so much for her.
+		*goto banescares
+
+*label trackerdeduction
+"So you didn't torture him?"
+
+Juliette breathes a sigh of relief when you shake your head.
+
+"A tracker friend?" she says once she's recovered. "I find it highly unlikely even the most skilled tracker could discern such a thing from just footprints. Have you been following and spying on me? Are you a pervert?"
+*choice
+	#Deny being a pervert.
+		*goto denypervert
+	#Weeeell... you have been following her... aaaand you did spy on her that one time...
+		*goto nodenypervert
+
+*label denypervert
+"No!" you cry.
+
+"Then how do you know about the service Banes performed for me every morning?" Juliette asks pointedly.
+*choice
+	#Insist that your tracker friend could indeed read it in the signs.
+		*goto insisttracker
+	#Admit you saw her.
+		*goto admitsaw
+
+*label insisttracker
+"How is that possible? Magic? Clairvoyance, perhaps? Without magic, you'd have to think me a fool to believe that. This conversation is going nowhere, and the day is growing long. I must resume my quest and take my leave. Good day."
+
+Juliette turns to go.
+*choice
+	#"Yeah, yeah, it was clairvoyance!"
+		*goto reallyclair
+	#Let her go.
+		*goto tamtrack
+
+*label reallyclair
+"Then you were spying on me. With magic!" Juliette cries. "I may never feel safe again."
+
+She glances about, wondering if even now someone could be watching her as they did (or so you claim) during her most private of moments.
+
+*label tamtrack
+Tamara bursts into Juliette's camp, purposely making noise to announce her presence.
+
+"Greetings!" she says cheerfully. "I see you have already met my compatriot. I was scouting elsewhere and have just returned. Did I happen to overhear something about tracking and clairvoyance?"
+
+"You're the clairvoyant, then?" Juliette says icily.
+
+"My friend exaggerates," Tamara says. "It requires no magic, just training and a keen eye. Perhaps I could prove it to you? Would you believe it if I could tell you something only a tracker could know?"
+
+"I'm listening," Juliette says warily.
+
+"Well, you have an old injury just above your left knee. Here, let me show you," Tamara says and crouches, scanning the ground before her. "Okay, see this footprint here?"
+
+Juliette, still wary, nevertheless crouches with Tamara and listens as Tamara describes the meaning of all the characteristics of a footprint so faint it hardly even exists, each little shift of weight from which an entire picture forms. It's incredible.
+*page_break
+"So you lied about clairvoyance?" Juliette says, rising to her feet.
+
+"He was just speaking nonsense," Tamara laughs. "Horniness will do that to a man. Aren't you glad we women don't have that problem?"
+
+A smirk creeps across Juliette's lips.
+
+"I suppose you're right," she says. "I can see the source of the misunderstanding clearly now."
+
+She turns to you and says, "I appreciate your offer, but know that for a knight, decorum comes first. I will excuse your forwardness if you will excuse my accusations of perversion. I wonder if now we might not share a morning meal and bring a bit of civilization even here, in the shadow of DragonKeep?"
+
+*goto breakfast
+
+*label nodenypervert
+"I did witness it for myself once..." you reluctantly admit. "But! My tracker friend really can discern the most astonishing details from the tiniest sign."
+
+"Whether that's true or not is of no consequence," Juliette says coldly. "I do not take kindly to being spied upon, and I believe our conversation is over. I must resume my quest. Good day."
+
+She turns to go when suddenly Tamara appears from behind a tree.
+*page_break
+"Hi, I'm the tracker friend," Tamara says, smiling friendly-like. "I was out scouting, just returned, and couldn't help but overhear your conversation."
+
+"Then perhaps you heard your friend's proposal and admission, the former of which I found insultingly presumptuous, and the latter, horrifying. I don't know what the two of you are doing here, so close to DragonKeep, but I ask that you do not interfere with my quest."
+
+"We offer aid, not interference," Tamara says.
+
+"That is the same thing to me," Juliette replies. "A knight cannot share the glory with ones such as yourselves."
+
+*goto tambristle
+
+*label banescares
+Juliette regards you suspiciously for awhile longer before finally calming. She sighs and says, "Oh, he is such a sweet man, and yes, I suppose I can admit that he fulfilled my needs every morning. However, I find it a bit too forward of you to presume I would be willing to engage in such a liaison with you, for I hardly know you, sir!"
+*set hardlyknow false
+*label  banescareschoice
+*choice
+	#Suggest that sometimes it's more fun with complete strangers.
+		*goto funstrangers
+	*if (not(hardlyknow)) #"Did you say 'hardly'?"
+		*goto hardlyknow
+	*if (not(hardlyknow)) #"'Know' as in the biblical sense?"
+		*goto hardlyknow
+	#Apologize for your forwardness.
+		*goto apoloforward
+
+*label funstrangers
+"Perhaps it's like that for some people, but you are being quite rude," Juliette says, her chivalric manners stretched to their limit. "If I find that you have molested my manservant in any way, I will kill you, but as of now, I have a quest to complete. Good day."
+
+She turns to go.
+
+You want to say something but can't think of anything, realizing you just screwed up royally. She's a knight, for Aslan's sake! Joking and joshing might work with a bar wench, but nobles follow different rules.
+
+You watch as she places her shield on her back and bends to lift an enormous dragonlance onto her shoulder before walking off in the direction of DragonKeep.
+*page_break
+In a little while, Tamara emerges from the woods.
+
+"Well, that went well," she says. "Here I was expecting a fun sex show, but instead I got an even more entertaining comedy of epic proportions."
+
+Strange... why isn't she chewing you out? Could it be she's hot for Juliette? Or maybe last night's fun has softened her toward you?
+
+*comment Check if they had fun or not.
+
+"Did you see that lance of hers?" Tamara says excitedly. "I need to go ask her about it."
+
+"Wait!" Tamara cries, jogging to catch up with Juliette and disappearing in the trees.
+
+You hear Juliette shout a challenge much like the one you received, followed by explanations and introductions of which you can only catch part of.
+
+You catch up just as Tamara's asking about the lance.
+*page_break The Dragonlance
+*goto_scene juliette_lance
+
+*label hardlyknow
+*set hardlyknow true
+Har, har, har. To "hardly know." You're very clever.
+
+Now try something else.
+*goto banescareschoice
+
+*label apoloforward
+"No need," Juliette smiles. "I appreciate frankness, and it's just that you've caught me off-guard. The thought of the dragon looms large in my mind, I'm afraid, and I worry for my quest despite myself."
+
+After a short, awkward silence, Juliette says, "Though time is short, and my supplies are meager, perhaps you would like to share my morning meal with me? I'd like to hear more about you and your meeting with my manservant."
+*goto banesfinechoice
+
+*label proposal
+*choice
+	#Be subtle about your proposal.
+		"Isn't this around the time you take care of certain bodily needs?" you ask. "If so, I am here to help you in whatever manner you may need."
+		starthere
+		*ending
+	#Just come out and say it.
+		"If you happen to get horny at any time, I hope you know that I am at your service," you say.
+		starthere
+		*ending
+	#It feels wrong. You just can't do it.
+		"Um... Uhhh...." you stammer. 
+		
+		Knights are trained in diplomacy and manners almost as much as they learn the combat arts. "Would you perhaps care for some breakfast?" Juliette offers to help you out of your quandry. "I'm sorry, but all I have it oatmeal."
+		*goto breakfast
+
+*label introboth
+[This option is yet to be written.]
+
+*label tamaratakesover
+*set proposed_alliance true
+"We met Banes shortly after Chardell," Tamara says. "He told us of your quest, and as it is our quest as well, we endeavored to catch you. Perhaps we can join forces?"
+
+*label appraisal
+Juliette looks the both of you over.
+
+*if wary
+	"I decline," she says. "Leave now, and I will not consider us enemies."
+	
+	*goto noinvite
+*else
+	"I thank you for your offer," Juliette says, "But I'm sorry. I must decline. However, perhaps you would care to join me in breakfast? Even here, in the wilds, we can, after all, enjoy civilized behavior."
+	
+*label breakfast
+*comment Tamara already present.
+*comment Might need to check if lesbian revelation occurred or not.
+Juliette bids you sit by her fire while she rummages in her pack for her store of oatmeal. It's not enough for three, and you and Tamara must supply your own bowl as well.
+
+Juliette apologizes profusely for being a poor hostess, and you and Tamara cannot help but smile at the difference between your classes, for commoners think nothing of sharing their supplies. Juliette, however, feels she must still follow the rules of etiquette as if you were at a banquet.
+
+While the food cooks, you speak of Banes and assure Juliette he's all right, that they will soon reunite at Chardell. Juliette's eyes moisten, and no one mentions the other possibility, that he will wait there for her in vain.
+
+Shortly, the food is ready, and Juliette fills your bowls with steaming oatmeal.
+*choice
+	#Comment on how nice it is for people of different classes to enjoy their common appreciation of a hot meal.
+		*goto breakfastcomment
+	#Try to think of a way to seduce her.
+		*goto thinkseduce
+	#Propose you join forces without seducing her first.
+		*goto breakfastpropose
+	#Wait for Tamara to do something.
+		*goto breakfastwait
+
+*label breakfastcomment
+*comment Starts off nice but leads to *goto oldways (an argument)
+"Yes, it is," Juliette smiles, drizzling a small amount of honey into each bowl.
+
+"You have honey?" Tamara says, sounding a bit excited.
+
+"Only a small amount," Juliette says. "But we can share it."
+
+You see her scrape the very last of the honey into her own bowl, giving herself the smallest portion.
+*choice
+	#Offer her your larger portion.
+		*goto largerhoney
+	#Thank her for her generosity in giving her guests the greater portion.
+		*goto nolargerhoney
+
+*label largerhoney
+[This option is yet to be written.]
+
+*label nolargerhoney
+"The pleasure is mine," Juliette says. 
+
+Tamara snatches up her bowl and starts wolfing down the steaming hot oatmeal.
+
+"Ow, ow!" she says, burning her mouth on it but still not slowing down.
+
+"She likes honey," you say.
+
+Juliette, slightly taken aback at the unladylike display, remains tactful and thus, silent. 
+*page_break
+Tamara's already finished while you and Juliette are only just beginning to eat, and she reclines, stretching her body like a cat and crossing her legs.
+
+"That was good," she says, wiping some stray white goo from around her mouth.
+
+"What? Does this remind you of something or something?" Tamara asks, seeing the both of you staring at her.
+
+"Hey, Juliette," Tamara says. "I see I may not eat like a knight, and I don't fight like one either. Lemme ask ya somethin'. Why you knights always fight in a big line? You lose maneuverability that way... not that you have much to begin with, wearing heavy armor and all. Don't you feel clumsy? Why remove such an important advantage, that of mobility?"
+
+"It's called a phalanx," Juliette sniffs. "A group of knights in formation is stronger than the sum of them as individuals."
+
+"Yeah, but tell that to the guy who gets wounded but remains boxed in on all sides by friend and foe alike. He's done for then, and it seems cruel to ask people to put themselves in that position, ya know?"
+*choice
+	#Try to change the subject.
+		*goto changesubject
+	#Keep listening. You might learn some strategy and tactics.
+		*goto nochangesubject
+
+*label changesubject
+[This option is yet to be written.]
+
+*label nochangesubject
+"To die in battle serving the just cause of one's lord is the highest honor," Juliette says. "I suppose you thieves..."
+
+She catches herself.
+
+"We thieves what?" Tamara demands.
+
+"Nothing, nothing," Juliette says. "I suppose there are just different tactics for different types of people, that's all. Who's to say which is better or worse?"
+
+"Well, I suppose if fighting like mindless, clunky brutes gives an advantage, who cares about individual lives, right? The thing is, though: what if your lord is wrong? What if the cause he asks you to fight and die for is no longer just?"
+
+"It is a lord's sworn duty to do only that which is just," Juliette says, as patiently as she can. "Our entire political and military system rests upon that maxim."
+
+*goto oldways
+
+*label thinkseduce
+*comment If already know lesbian, might think of honey-tam trick now. Else, be nice, brag, brag with insults to tam, if know lesbian, praise tam, praise tam and praise her sexual skills, etc?
+
+[This option is yet to be written.]
+
+*label breakfastpropose
+*comment Might change if already proposed.
+[This option is yet to be written.]
+
+*label breakfastwait
+*comment Tamara will be far too frank in pursuing seduction.
+[This option is yet to be written.]
+
+She has honey, but it will be stretched thin over the three portions.
+
+*if not(has_honey)
+	Unfortunately, you have none to offer.
+*page_break
+
+
+
+*label noinvite
+[This option is yet to be written.]
+
+*label oldways
+*comment For a future convo between J and T.
+"Ha!" Tamara snorts. "Many of my compatriots have served your lords as spies for generations."
+
+"Not I," Juliette retorts. "I follow the old ways, those of honor and chivalry."
+
+"Is that the real reason why your brother outshines you?" Tamara asks darkly. 
+
+*comment Only if they found this out from Banes.
+
+Juliette blushes and turns away.
+
+"You know nothing of my family business," she says haughtily.
+
+She quickly gathers her cooking utensils and breaks camp.
+
+"I enjoyed dining with you both," she says tactfully. "Now we must part ways, but perhaps we will meet again after the dragon's slain."
+
+After shouldering her pack and placing her shield on her back, Juliette picks up what looks like an extraordinarily heavy, but finely wrought, dragonlance. Hefting it onto her shoulder, she turns to go.
+*page_break
+Once Juliette's gone, Tamara sighs.
+
+"Well, I kinda screwed that one up, didn't I?" she says. "Knights just irritate me is all, with their pompous ways, but I think my plan will still work. She cannot outrun us, and we will follow her to the dragon's lair. Did you see that lance she has? I have to go ask her about it."
+
+*goto_scene juliette_lance hadspat
+
+*label nosneak
+"Oh, you want to wait for her to wake up on her own?" Tamara says. "Well, you're the master seductionist."
+
+The two of you go a little ways away where Juliette's still in earshot but no longer visible. Tamara waits patiently for exactly nine seconds, then starts to get antsy.
+
+"If we're going to be waiting so long," she says. "I think I need some sugar again."
+*choice
+	#"But Juliette might hear."
+		*goto sugarhear
+	#"Let's just talk instead."
+		*goto talkinstead
+	#"I'll give you sugar, but can I have some sugar first?"
+		*goto sugarfirst
+	
+*label sugarhear
+"YOU are a genius!" Tamara says, her mouth falling open. "Juliette will hear, come, investigate, and see how good you are at cunnilingus. One thing will lead to another, and your seduction will be complete. I get sugar, then she gets sugar, and you get sugar too."
+*choice
+	#Hmm... that actually kinda sorta makes sense...
+		*goto givesugar
+	#Still refuse to give any sugar.
+		*goto refusesugar
+
+*label talkinstead
+"Um, okay, but this better be more interesting than sugar. I really like sugar," Tamara says.
+
+What do you talk about?
+*label talkchoice
+*choice
+	*hide_reuse *if (deepthroat) #"Where did you get your fantastic deepthroat ability?"
+		*goto deepthroatabil
+	*hide_reuse #Ask where she learned so much dragonlore.
+		*goto dragonlore
+	*hide_reuse #Ask where she got the dragoneye.
+		*goto dragoneye
+	*hide_reuse *if (bee_sex) #Ask just what happened after you got stung and nearly died.
+		*goto honeystung
+	*hide_reuse #Ask if, since the dragon can sense magic, can it sense the dragoneye.
+		*goto dragonsenseeye
+	*hide_reuse *if (pussycat) #Tell me more about the pussy that used to sleep between your legs.
+		*goto pussycat
+	#No more questions.
+		"Conversation is nice and all, but now how about my sugar?" Tamara says.
+		*choice
+			#"But Juliette might hear."
+				*goto sugarhear
+			#"I'll give you sugar, but can I have some sugar first?"
+				*goto sugarfirst
+	
+*label dragonsenseeye
+"No," Tamara says. "My belt pouch is made from leather from a non-magical universe, so any magic items within are hidden from the dragon. This pouch was used by the thief, Drazmeare, when he infiltrated the tower of the wizard, Archfur."
+
+"But what about when you use the eye?" you ask.
+
+"Brief periods are okay," Tamara says. "A wizard once told me why, and it was something to do with magic items' interaction with the ambient mana that the dragon senses, not the item itself."
+
+Do you wish to talk further?
+*goto talkchoice
+
+*label pussycat
+"It was a calico," Tamara says.
+
+Do you ask more about the pussy?
+*choice
+	#Yes.
+		*goto pussycat2
+	#No.
+		Do you wish to talk further?
+		*goto talkchoice
+	
+*label pussycat2
+"I had it when I was seven," Tamara says.
+*choice
+	#Ask what it did between her legs.
+		*goto pussycat3
+	#Talk about something else.
+		*goto talkchoice
+	
+*label pussycat3
+"Sleep," Tamara says. "All night too, but back then, I was soft-hearted and couldn't get myself to disturb it. I slept all night flat on my back without moving."
+*choice
+	#"What happened to the pussy?"
+		*goto pussycat4
+	#Talk about something else.
+		*goto talkchoice
+	
+*label pussycat4
+"I don't know," Tamara says. "After a year of idyllic co-habitation, I got kidnapped, sold into slavery, and made into the cutthroat, jaded person I am today. Why are you so interested in my pussy anyway?"
+*page_break
+*set pussycattalk true
+"Ohhhhhh..." Tamara says, realization dawning on her face. "Grow up, silly kid."
+
+There seems to be nothing more to ask about the pussy, and somehow, you thought the conversation would be more interesting. Oh well. Do you want to ask Tamara about something else?
+*goto talkchoice
+	
+*label deepthroatabil
+"You like that, huh?" Tamara says smiling. "Well, it takes more work than most people are willing to put in, but there was a time in my life when I had, shall we say, the motivation for learning that and all manner of sexual skills. I wasn't always a thief, you know."
+*choice
+	#Ask what other skills she has.
+		*goto otherskills
+	#Ask what she was before she was a thief.
+		*goto beforethief
+	
+*label otherskills
+"Just about any you can think of and many you can't," Tamara says. 
+*choice
+	#"Name one," you ask, almost drooling.
+		*goto nameone
+	#"Where the heck could you possibly have learned all that?"
+		*goto beforethief
+	
+*label nameone
+*if anal
+	"My anal skills," Tamara says. "You already know about that."
+	
+	*goto nameonechoice
+*else
+	"Weeeell..." Tamara begins. "I do have certain anal skills, but too bad for you, they're not for you anymore. See if Juliette or your princess wants to go there." She laughs.
+	
+*label nameonechoice
+*choice
+	*if (not(knows_women_like_anal)) #"Don't all women hate anal?"
+		*goto hateanal
+	#"Can't we do it real quick?"
+		*goto quickanal
+	#Claim there can't be a skill she has that you haven't heard of.
+		*goto claim
+	
+*label hateanal
+"Not true!" Tamara says. "In the beginning it hurts, but then again, so does regular sex. Some of us start to like it. It actually feels good; you ought to try it."
+*choice
+	#"Umm... no thanks..."
+		*goto noanal
+	#"I'll try it if you give me sugar."
+		*set will_try_anal true 
+		*goto tryit
+	
+*label noanal
+"Your loss," Tamara says. "Now how about my sugar?"
+*goto sugarfirstchoice
+
+*label tryit
+"Sugar. Yeah, where's my sugar?" Tamara says.
+*goto sugarfirstchoice
+
+*label quickanal
+"That would be awesome," Tamara says, "But right now, all we have time for is some quick sugar for me, and then Juliette will be awake to give you your sugar."
+*goto sugarfirstchoice
+
+*label claim
+"Have you heard of the 'Pulsating Vortex of Indescribable Sensations'?" Tamara asks.
+
+*if sleep_sex
+	You're not exactly sure what this "pulsating vortex" is, but it reminds you of last night. Could this be what she used on you while you slept?
+*choice
+	#"No..."
+		"Well, I can do it," Tamara says. "Have you heard of the 'Butterfly Flip'?"
+		*choice
+			#"No..."
+				"Well, the people I've done it on think it's amazing," Tamara says. 
+				*if butterfly
+					"I used it briefly on you last night when I brought you back to life, but its real power is when used at the end. Have you heard of the Smoking Dragon?"
+					*choice
+						#"No..."
+							"Good. It's not a nice thing to do to a woman," Tamara says. "Now, have you heard of 'giving sugar'??? My time for getting sugar is ticking away, so will you give me sugar or not???"
+							*goto sugarfirstchoice
+						#Yup, you know all about it.
+							*goto expertise
+				*elseif butterfly2
+					"We did it last night with the Pseudo-Telepathic variation. Wasn't that fun? You know what else is fun? Giving sugar. Can I have my sugar now, please?"
+					*goto sugarfirstchoice
+				*else
+					"When a man does it on me, I think it's pretty amazing too, so while you're giving me sugar, I'll teach you the male version. What do you say?"
+					*goto sugarfirstchoice
+			#Yup, you know all about it.
+				"Good," Tamara says. "You can do it on me while giving me my sugar."
+				*goto sugarfirstchoice
+	#Yup, you know all about it.
+		"Really!" Tamara says. "It seems you know more than I gave you credit for. Mind showing me what you know while giving me my dang sugar?"
+		*goto sugarfirstchoice
+	*hide_reuse *if (rise_vortex or sleep_sex) #Ask if she used the pulsating vortex on you last night.
+		*goto sleepsex
+						
+*label sleepsex
+*achieve vortex
+*if sleep_sex
+	"I did," Tamara smiles. "You left your filly unfulfilled, so I had to take it upon myself. I've trained my inner muscles to a fine degree of coordination, and I'm using them all the time, not just when you were asleep. Did you notice?"
+
+	Now that she mentions it, there was indeed something different and more pleasurable about being inside Tamara as compared to other women.
+
+	"When you were soft and asleep, I held you in with the muscles near the entrance, and I gently nursed your stalk back to life with the inner. Just tensing my muscles gives me pleasure if I do it long enough, but it's better with a man inside me. You grew strong again and gave me several hours of pleasure while you slumbered, but it seems you gained some pleasure?"
+
+	You tell Tamara what you experienced, and she nods. "The lore about this technique is correct then," she says. "What you describe is what is reputed to occur when used in the way I did last night."
+	*goto sleepsexchoice
+*else
+	*comment rise_vortex is true
+	"I did, yes," Tamara says. "To make you rise again when you were inside me. I've trained my inner muscles to a fine degree of coordination, and I'm using them all the time, not just that particular time. Did you notice?"
+
+	Now that she mentions it, there was indeed something different and more pleasurable about being inside Tamara as compared to other women.
+	
+	"When you were soft and inside me, I held you in with the muscles near the entrance, and I gently nursed your stalk back to life with the inner. Just tensing my muscles gives me pleasure if I do it long enough, but it's better with a man inside me." 
+	*goto sleepsexchoice
+
+*label sleepsexchoice
+*choice
+	#Ask where she learned so much about sexual techniques.
+		*goto beforethief
+	#Ask her something else.
+		What do you want to talk about?
+		*goto talkchoice
+		
+*label expertise
+"Good," Tamara says. "Since you're such an expert, how about showing me your 'giving sugar' expertise?"
+*goto sugarfirstchoice
+
+*label beforethief
+"I don't usually talk about it, but if you promise to give me sugar, I'll tell you," Tamara says.
+*choice
+	#Deal.
+		*goto beforethief2
+	#No deal.
+		Tamara sighs with frustration and grabs at her crotch, aching with desire. "Ooohhh! Will you give me sugar or not???"
+		*goto sugarfirstchoice
+	
+*label beforethief2
+"Well, I was a street urchin in the capital city of Mog, far to the east of here, and I was fourteen when I was kidnapped and sold into slavery. I was bought by the sultan of Bil-afrren, one of the kingdoms of the Great Dunes, and it was in his harem that I learned many of my skills. At seventeen, I escaped to the border kingdom, Unitzifar, gateway between the two great human cultures, Sand and Snow. My sword, hybrid between Sandy scimitar and Snowy long sword, was won as the prize of a duel to the death with my elder classmate, Zorlal the Cunning. Our master, the great Zoldan, taught me the hybrid art of the hybrid sword, superior to both Sand and Snow styles.
+
+"When I returned to Mog, I reunited with the remaining urchins of my youth, now fully grown, and made my name as pirate, mercenary, spy, assassin, rogue, highwaywoman, and master thief. My reputation proceeded me, the guild found me, and today, I serve the chapter here in Zhang until the winds shift and take me elsewhere.
+
+"Thus ends the tale of my sordid past, and can I please have my damn sugar now?"
+
+*goto sugarfirstchoice
+
+*label dragonlore
+"One of my first jobs as a thief under the auspices of the guild was to steal a book from the Library Fordholm in the icy north, last bastion against the snow worms. I was successful my my quest, but the travelogue of Zyxus caught my eye. In it was much knowledge of the snow worms but much of the dragon of DragonKeep as well. It told too of the dragoneye, and a commentary in the margin revealed its present location, at least until which it was acquired by me.
+
+"Since then, I have traveled widely and always sought to learn from the masters of dragonlore as well as thievery, seduction, swordplay, strategy, and any other art I deem useful."
+
+Do you wish to talk further?
+*goto talkchoice
+
+*label dragoneye
+"After Zyxus's defeat in the Battle of Herringbone, the dragoneye was lost for many decades, but somehow it came into the possession of the magister Rexor, lineage-holder of the school of Maldoon himself. Rexor plumbed its secrets until driven mad, after which the Eye was jealously guarded by successor after successor, until the method of its use was lost. It lay forgotten in Crimbald's decrepid tower until my infiltration, and now I am perhaps one of four who know how to use it to any degree of effectiveness."
+
+Do you wish to talk further?
+*goto talkchoice
+
+*label honeystung
+"Ah," Tamara says. "Now that you have sworn apprenticeship to me, I can tell you. I happen to have yet another priceless magic item in my possession, the fabled Love Potion of Rivex, the Lone Wolf Conquerer. Perhaps you've heard the legend of how his court magician, Lothlorthon, fabricated the love potion for his wife, the Lady of Pearls, Fylodorma? It has the power to heal, to charm, and polymorph if the proper method of its use is known. It can also be used for torture and even kill, and two generations of the Rivex line used it again and again in all its insidious functions until, to seal the peace with the three kingdoms, its use was outlawed. It sat gathering dust in the great vault of Castle Whiterock, fortress of the great-grand-niece of Rivex himself, until I was able to achieve its liberation.
+
+"It was with this potion that I healed you, and the method of its function is sexual. Only upon the orgasmic release of the subject is power lent to the spell, so in short, I dosed you with the potion and used my mouth on you." Tamara laughs. "Too bad you weren't awake to enjoy it. In fact, you were almost dead. I saved your life, and in some cultures that would make you my slave for life."
+
+Do you wish to talk further?
+*comment Make an option to ask about the potions other uses
+*goto talkchoice
+
+*label sugarfirst
+"Your sugar comes from Juliette," Tamara says. "Come on, I might get no more sugar for a long time after this, so can I please have sugar this one last time?"
+*label sugarfirstchoice
+*choice
+	#Give Tamara sugar.
+		*goto givesugar
+	#Tell her it would be a bad idea for Juliette to hear.
+		*goto badidea
+	
+*label givesugar
+"Finally! Geez!" Tamara says. "Hey, let me find a rock to half-sit/half-lean on like Juliette does, so that will give you practice for the real thing."
+
+She gets up, looks around for a bit, and finally finds a suitable boulder several yards away. She pulls her breeches down, leans up against it, and says, "Oh, Banes, come to me, you stallion!"
+*page_break
+"What's going on here?!?" says a voice. 
+
+You both turn and see Juliette, in all her finery, standing with her hand defensively on the pommel of her sword. 
+*choice
+	#Stutter.
+		*goto stutter
+	#Tell her the gods-honest truth.
+		*goto banestruth
+	#Make up an elaborate story.
+		*goto elabstory
+	
+*label stutter
+Tamara quickly pulls her breeches up and pretends as if nothing untoward had just been going on.
+
+"Hello, miss knight," she says. "My friend Banes and I are here to slay the dragon. Is that your quest as well? We did not expect to meet another human being so close to the lair."
+
+"Your name is Banes?" Juliette asks suspiciously, turning to you.
+*fake_choice
+	#"Yup, Banes is my name. That's me!"
+	#"Umm... yeah..."
+"So this has nothing to do with my manservant, Banes?" Juliette asks, still suspicious, but she takes her hand off her sword.
+*choice
+	#"Who? You have a manservant with the same name as me? Is he studly like me too?"
+		*goto studly
+	#"Well, we met your manservant, but it's only an odd coincidence that I have the same name as him."
+		*goto metbanes
+	
+*label studly
+"Yes, I do have a manservant named Banes," Juliette says, ignoring your inappropriate reference to your own masculinity. "It is an odd coincidence, don't you think?"
+*choice
+	#Propose to be her manservant. "It seems you are alone, so I assume you are currently without your manservant. Since I have his same name, perhaps I could temporarily take his place and serve you in all the same ways he usually does?"
+		*goto proposebanes
+	#Do not make the proposal.
+		*goto noproposebanes
+	
+*label proposebanes
+"All the same ways?" Juliette says, suspicious once again. "These 'ways' wouldn't have anything to do with me half-sitting/half-leaning against a rock to receive oral pleasure, would they?"
+
+"Yes!" Tamara says, butting in. "My companion here is a master cunnilinguist."
+
+"I'm sure he is," Juliette sniffs. "However, even if I were the kind to engage with strangers, I would have to refuse. I am a lesbian, full monosexual${monosexual_asterisk}."
+
+*if monosexual_asterisk = "*"
+	*set monosexual_asterisk ""
+	_____________________________
+
+	* Monosexual: On this world, true monosexuality, either purely heterosexual or homosexual, is rare, the vast majority bisexual, though a greater percentage prefer the opposite sex more than their own. 
+*page_break
+*goto_scene morning_alone lesbian
+
+*label noproposebanes
+"No more odd than the three of us just happening to approach DragonKeep at the same time," Tamara says. "And I believe that is a happy coincidence. Perhaps we can join forces?"
+
+*goto appraisal
+
+*label metbanes
+"You met my Banes?" Juliette asks, surprised. "How is he?"
+
+"He is fine," Tamara says. "He will meet us at Chardell, and we told him we would offer our services to you. Would you like to join forces with us?"
+
+*goto appraisal
+
+*label banestruth
+You reveal to Juliette how Tamara is a tracker who read her tracks and how you met Banes who verified her morning ritual, and yes, you were re-enacting it but meant no insult.
+
+Juliette stands listening, extremely red-faced. 
+
+"C-carry on, then," she manages, now turning ashen and turning to go. 
+
+Tamara smacks herself on the forehead. "You don't have to be a guild-trained thief to know honesty is not always the best policy," she says. "Let me see if I can salvage this."
+
+*gosub_scene adj_esteem -10
+
+*gosub_scene adj_respect -10
+
+She catches up to Juliette and says, "Please forgive my compatriot. He is sometimes honest to a fault, but perhaps a knight like yourself can appreciate the honor in that in the general sense? In any event, it was Banes' wish we aid you in your quest. I propose an alliance. Do you accept?"
+
+*goto appraisal
+
+*label elabstory
+"Weeelll," you begin, not realizing that this is not the most auspicious way to initiate a masterful lie. "My girlfriend, Tamara, here has a fetish for horses, so every morning, I pretend to be her stallion, Manes, you know, because horses have manes, so that's what she named me. I then neigh and gallop over to her and pretend that she's my feeding trough. That's why she half-sits/half-leans against a boulder--to imitate a trough of horse food. I then go over to her, eat my fill, and that's my breakfast. Then she rides me around for a bit, but we had no idea you were nearby or I'm sure we'd have skipped our morning fantasy fun ritual."
+
+You look at Juliette hoping she buys it.
+
+"That story is too outlandish to be a falsehood," she says finally. "Thus, I am inclined to believe it despite its very outlandishness."
+*choice
+	#Ask Juliette if she'd like to be your feeding trough today.
+		*goto asktrough
+	#Better not.
+		*goto notrough
+	
+*label asktrough
+"Sorry, sir," Juliette says. "Unlike your girlfriend, I have no fetish for horses, but if I did, I would prefer other mares, if you understand my symbolism."
+
+"Wait, what?" Tamara asks.
+
+"I'm a lesbian," Juliette says curtly. "Good day. I shall leave you to your feeding."
+
+*comment add true monosexual part here. Make gosub for it, maybe even own scene in case the footnote might appear in a different scene. Ah, or leave it as is, but in morning_alone->lesbian, put a monosexuality explanation later.
+
+*goto_scene morning_alone lesbian
+
+*label notrough
+There is a bit of an awkward silence before Juliette, a knight trained in diplomacy as much as swordplay, says, "Well, I am sorry to have disturbed you, but now that I have, perhaps you would care to join me in breakfast? Even here, in the wilds, we can, after all, enjoy civilized behavior."
+
+You and Tamara look at each other, then nod.
+
+"Good," Juliette smiles and leads you back to her camp.
+*page_break Breakfast with Juliette
+*goto breakfast
+
+*label badidea
+"No! It's actually a great idea!" Tamara says excitedly. "She might come to investigate and see how good you are at cunnilingus, and one thing will lead to another, and I'll have done your job for you."
+*choice
+	#Ask her if she will do a "job" for you.
+		*goto askjob
+	#Hmm... that actually kinda sorta makes sense...
+		*goto givesugar
+	#Still refuse to give any sugar.
+		*goto refusesugar
+
+*label askjob
+"Like your sugar," Tamara explains, speaking very slowly and enunciating each word like she's talking to a very slow learning child, "Any 'jobs' you receive come from Juliette now. I wish I had a knight of my own to seduce, but I don't, so can you please do a 'job' on me right the heck now??? It might be my last one!!!"
+*choice
+	#Finally give Tamara the sugar (and job).
+		*goto givesugar
+	#Still refuse to give any sugar (or job).
+		*goto refusesugar
+
+*label refusesugar
+"I was just testing you," Tamara says. "Obviously now is not the time for playing around."
+
+*gosub_scene adj_respect 10
+*choice
+	#"But you'd have partaken if I'd said yes, right?" Wink, wink.
+		"True," Tamara laughs. "I actually am very horny right now and want my last sugar, but I guess it's a good thing you save that for Juliette."
+		
+		"Save what for me?" says a voice.
+		
+		You and Tamara quickly turn and see Juliette in all her finery.
+		*gosub_scene morning_alone saveforjuliettechoice
+	#Just shake your head.
+		*goto julietteawake
+
+*label julietteawake
+"Shhh! I hear something," Tamara whispers, and you heard it too. It's Juliette stirring.
+
+"Time to make your move," Tamara says. "I'll wait here while you go apply your fantastic seduction skills!"
+
+[starthere]
+
+*label logictrap
+You walk for half-an-hour, all the while Tamara serious and warrior-like.
+
+Finally, she turns.
+
+"Okay, apprentice, now that the wishy-washy woman stuff is behind us, there's this other thing we need to talk about--the disrespect."
+
+"I was just kidding!" you protest. "I would have even given you head if you weren't so preoccupied!"
+
+"Really?" Tamara says and her eyes take on a far-away look. 
+
+She shakes it off.
+
+"Well, that's neither here nor there," she says. "Even if you were joking, it was too much like disrespect, so I need to emphasize that we are back to a purely master-apprentice relationship now. Don't let the sex go to your head. It'll never happen again, and I think we need to put in place some extreme measures to ensure you respect never flags again. How about if you ever disrespect me, even just a little, you become my personal slave?"
+*goto noslavedealchoice
+
+*label wishywashy
+Tamara's mouth falls open, and her eyes bug out.
+
+"I AM wishy-washy..." she mutters.
+
+She stares at the ground for a long while.
+
+"No, NO!" she cries. "No, I was horny the whole time. That's not wishy-washy. It's a tactial reconsideration. I didn't know I would need sugar so badly right now, and it's fine because soon, apprentice will be engaged in Juliette's seduction."
+
+She nods, having worked out a proper solution.
+
+"Give me some sugar," she says, looking you straight in the eye.
+*fake_choice
+	#"But... but..."
+"NOW!" Tamara cries.
+
+She certainly does NOT seem wishy-washy!
+
+*goto sugar

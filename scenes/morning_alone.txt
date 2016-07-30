@@ -1,0 +1,717 @@
+*temp lust 0
+*temp admit_water false
+*temp admit_potion false
+*temp admit_love_potion false
+*temp cumvest false
+Early the next morning, you awaken with a start, sure you'd heard something, but when you look around, you see nothing amiss.
+*choice
+	#Search the area.
+		*goto search
+	#Ignore it.
+		*goto ignore
+	
+*label search
+You spend fifteen minutes scrutinizing the ground, but you find nothing amiss.
+*choice
+	#Search your belongings.
+		*goto searchbelongings
+	#Ignore it, eat breakfast, and get going.
+		*goto ignore
+	
+*label searchbelongings
+You rifle through your belongings, but everything seems totally fine. 
+*choice
+	#Throw away your food just to be safe.
+		*goto nofood
+	#Empty your waterskin just to be safe.
+		*goto nowater
+	#Throw away both your food and water.
+		*goto both
+	#Have a normal breakfast and get going.
+		*goto ignore
+	
+*label nofood
+[This option is yet to be written.]
+
+*label nowater
+[This option is yet to be written.]
+
+*label both
+[This option is yet to be written.]
+
+*label ignore
+You cook up a quick breakfast of oatmeal again.
+*if has_honey
+	*choice
+		#Put the last of your honey on it.
+			*set has_honey false
+			*goto nohoney
+		#Save your honey for later.
+			*goto nohoney
+*label nohoney
+You eat quickly, eager to resume your journey. Just as you gulp down some water and begin the day's hike, you hear a voice. A female voice. A very Tamara-like, female voice.
+
+"Hey," she says, sauntering into your camp like she belongs there. "Getting ready for a hike?"
+
+"Yes. What do you want?" you ask, warily. She's acting funny, smirking, almost gleeful.
+
+"You sure you want to do that?" she asks, grinning. "There's not something else you'd like to do?"
+
+"No. Why?"
+
+"Oh, no reason," she says, suppressing a giggle.
+*choice
+	#Grill her for answers.
+		*goto grill
+	#Start your hike.
+		*goto hike
+	
+*label grill
+You decide you need to know what's going on.
+*label grillchoice
+
+What do you ask her?
+*choice
+	*hide_reuse #Ask what she's done.
+		"Oh, I trailed you all yesterday," Tamara says. "I'm not going to let you mess up my plans. You and Juliette moved in generally the same direction, so she's actually pretty close. We're going to catch up with her and get her to join us."
+		
+		*gosub lustcheck
+		*goto grillchoice
+	*hide_reuse #Ask how long she's been hiding nearby.
+		"Not long," Tamara says. "I camped nearby, got up before dawn, then came here."
+		
+		*gosub lustcheck
+		*goto grillchoice
+	*hide_reuse #Ask if she watched you sleep.
+		*set admit_water true
+		"What? No!" Tamara says. "I'm not into things like that. All I did was add something to your water."
+		
+		*gosub lustcheck
+		*goto grillchoice
+	*if admit_water
+		*hide_reuse #Ask what she added to your water.
+			*set admit_potion true
+			"A drop of a magic potion," Tamara says.
+			
+			*gosub lustcheck
+			*goto grillchoice
+	*if admit_potion
+		*hide_reuse #Ask what kind of potion.
+			*set admit_love_potion true
+			"A love potion, of course," Tamara says. "A very special, unique one though. It also has charm and polymorph magic in it as well."
+			
+			*gosub lustcheck
+			*goto grillchoice
+	*if (lust > 1) #Make a pass.
+		*goto pass
+	#No more questions.
+		*goto hike
+
+*label pass
+[This option is yet to be written.]
+*goto hike
+
+*label lustcheck
+*if lust = 0
+	You have morning wood. It's not going away.
+	*goto next
+*elseif lust = 1
+	Your morning wood grows stronger, and Tamara starts looking mighty sexy.
+	*goto next
+*elseif lust = 2
+	You start to be unable to think of anything other than how much you want to throw Tamara down and fuck her right on the forest floor.
+	*goto next
+*else 
+	*goto desperation
+*label next
+*set lust +1
+*return
+	
+*label hike
+*if lust = 0
+	You start the day's journey, once again heading toward DragonKeep, the dragon and the princess. Tamara trails along behind you, and after a few minutes, she asks, "Have any morning wood today?"
+
+	Strange... you do still have your morning erection, and usually it'd be gone by now. As you walk, instead of dissipating, your cock only gets harder and harder.
+
+	"Bet I'm looking pretty good right about now, huh?" Tamara says nonchalantly, looking up at the trees.
+
+	Her voice, which normally you find grating, turns you on.
+	*goto hikechoice
+*else
+	You try to focus on the journey despite your raging erection, but all you can think about is Tamara. She's fifteen feet behind you, but you think you can somehow smell her scent even from that distance. It's driving you crazy with desire.
+*label hikechoice
+*choice
+	#Ask her what the &#%@%# she's done to you.
+		*goto askdone
+	#Try to walk it off.
+		*goto walkoff
+		
+*label askdone
+[This option is yet to be written.]turns to see her, visual stim
+
+*label walkoff
+[This option is yet to be written.]gets worse until can only think about one thing. masturbate?
+
+*label desperation
+You can't take it anymore. You need relief NOW or you'll go stark raving mad. 
+*choice
+	#Ask Tamara to fuck you.
+		*goto askfuck
+	#Masturbate.
+		*goto jerkoff
+	
+*label askfuck
+[This option is yet to be written.]If made her beg, pay back time
+
+*label jerkoff
+You try to head off into the forest for privacy, but Tamara easily keeps up with you. It's no use. You need relief so urgently, that you don't care anymore. 
+*choice
+	#Look at Tamara while doing it.
+		*goto masturtam
+	#Face the other direction.
+		*goto faceother
+	
+*label masturtam
+Oh man, that was a mistake. As soon as you look at Tamara, the urge to fuck her is irresistable. Your legs seem to take on a life of their own and start walking toward her.
+
+"Rape, rape, oh no," Tamara says passionlessly, smirking.
+
+*if tamara_begged
+	*goto quid
+	
+You start to rip open her breeches like a starving man and a package of food, while Tamara half-heartedly undoes your belt for you. You get her pants down as far as they'll easily go, whip out your rock-hard member, and thrust it into her. 
+
+Man, it feels good, but you don't care. All you care about is relief, so you begin pounding her so hard it starts driving her backwards.
+
+"Whoa, slow down there," Tamara says, not really meaning it, as she half-falls/half-steps backwards until you have her up against a tree.
+
+Your hands dig into the bark like claws, desperately trying to get a better grip to pound her even more mercilessly.
+
+"Oh, oh, oh yeah," Tamara says. "I'm actually kinda getting turned on now from all this friction. Good thing I lubed myself first or this would be kinda bad."
+
+You jackhammer away.
+
+"I used tallow," she goes on. "Was meant for cooking. Say, wouldn't you like some boob action?"
+
+While you continue humping her furiously, unable to think of anything else, she casually unties the laces of her vest and opens it up. You dive in without missing a beat and begin simultaneously fucking and sucking her.
+
+Tamara stops talking, now just leans against the tree, enjoying the sensations you're stimulating in her body like her own personal little pleasure machine.
+
+"I'll get you for this," you mutter.
+
+Tamara just giggles.
+*page_break
+Slowly, your feelings toward Tamara begin to shift. Anger and distrust dissolve, replaced by attraction and affection, and your thrusting slows as you begin to caress and kiss her. Instead of desperation, you begin to enjoy the process, the exquisite pleasure her body is giving you.
+
+Tamara begins to kiss you back with real feeling and runs her hands up and down your body. Your thrusts become long and powerful, slamming again and again into her, and with each one, Tamara moans with pleasure, her hands beginning to grasp at your flesh longingly.
+
+You pull away from her, so you can look into her eyes, maintaining the strong, powerful thrusts. She looks back at you, her whole body wracked each time you plunge into her again. She closes her eyes in bliss. 
+
+Placing a hand on each shoulder, you gradually increase your pace until Tamara's body is bouncing before you. "Ohhhhh... uhhhhhh......" she says.
+
+You find yourself falling in love with her. This is not good.
+
+"I love you," you hear yourself say involuntarily.
+
+"I know," Tamara says with a touch of resignation. She knows it's just the effect of her magic potion, but to you it feels intensely real. You express this love growing in your heart through your body, and Tamara's body responds. The pleasure grows and grows, each thrust strengthening the emotional bond between you. 
+
+Finally, the pleasure grows unbearable, and both of you cannot help crying out at the top of your lungs. You grasp each other as orgasmic spasms wrack both your bodies, and as you feel your seed shoot deep inside her, it feels like you're now joined in love forever.
+*page_break
+*achieve potionvictim
+When finally it subsides, you regain enough composure to ask, "Uh, how long does this spell last, anyway?"
+
+Tamara doesn't speak for awhile, just remains clinging to you, and you have to admit that holding each other like this feels very nice. You wish you could stay this way forever.
+
+Finally, Tamara releases you and pulls away slightly, and at the sight of her breasts, you feel your spent member begin to rise again.
+
+"Like it or not," Tamara says. "We're lifelong friends now. That's why I try not to use this potion on people. Now get outta me. You gotta save some of that for Juliette."
+
+Reluctantly, you ease yourself from her body and separate, feeling lonely for her touch already.
+*page_break
+"Hey, what's going on here?" says a voice behind you.
+
+Tamara pushes you off her, and pants around your ankles, you fall. She whips out her deadly blade, and you struggle to do the same.
+
+You turn and see that it's Juliette, standing with her hand on the pommel of her sword, looking curious rather than threatening.
+
+"It sounded like you were dying," she says. "I thought an animal was mauling two people."
+
+"That's not too far off," Tamara says laughing while she pulls up her pants. She puts her sword away.
+
+"What do you have to save for me?" Juliette asks, addressing the question to both of you.
+*label saveforjuliettechoice
+*choice
+	#Let Tamara answer.
+		*goto tamaraanswer
+	#Try to answer in a non-insulting, vague way.
+		*goto vague
+	#Come clean and answer honestly.
+		*goto honest
+	
+*label tamaraanswer
+[This option is yet to be written.]
+
+*label vague
+[This option is yet to be written.]
+
+*label honest
+"I guess you heard the whole conversation, huh?" you ask, and Juliette nods.
+
+"Then I won't try to hide anything," you say. "We talked with Banes earlier and decided we want to join forces with you. My friend here, Tamara, is a master of dragonlore, and she knows the secret entrance."
+
+Tamara nods.
+
+"But what's this you're saving for me?" Juliette asks.
+
+"A personal love machine," Tamara chimes in. "My friend here is a master cunnilinguist."
+
+"Oh, but I'm a lesbian, full monosexual${monosexual_asterisk}," Juliette says. "No thank you, anyway. I plan to fight chivalrously, not sneak in like a thief in the night. Now that I see no one is being mauled, I'll be on my way. Goodbye."
+
+*if monosexual_asterisk = "*"
+	*set monosexual_asterisk ""
+	_____________________________
+	* Monosexual: On this world, true monosexuality, either purely heterosexual or homosexual, is rare, the vast majority bisexual, though a greater percentage prefer the opposite sex more than their own. 
+
+*page_break
+*label lesbian
+She turns to go.
+
+You look at Tamara. Tamara looks at you. You stare at each other for a long moment, and finally Tamara mouths the words, "She's... a... lesbian..." Her mouth drops open.
+*fake_choice
+	#Sing the Batman theme song except change the lyrics to, "Nuh nuh nuh nuh nuh... Seduction time... Seduction time... Nuh nuh nuh nuh... Seduction time!" and point at Tamara.
+		
+	#Just laugh.
+"But... but... but... I don't like girls in that way," Tamara says, mouth still open in shock, eyes bugging out at the horror of it all. "No, no, no, I can't do it. You still have to do it. It's too disgusting to me. I only like men, men, MEN!"
+*choice
+	#"Too bad. You have to do it."
+		"Why do I have to do it, though?" Tamara says. "Would you do it if you were as straight as I am, and it was some other man? No. No way would you do it, so I'm not doing it."
+		*fake_choice
+			#Sing the Batman theme song except change the lyrics to, "Nuh nuh nuh nuh nuh... Too bad... Too bad... Nuh nuh nuh nuh... Too bad!"
+			#Just laugh.
+		*goto lesbian2
+	#"So it was okay forcing ME to seduce her, but now when the tables are turned you won't?
+		"But it's different, though!" Tamara insists. "You're a man. 
+		*gosub_scene piglist
+		Need I go on?"
+		*ending
+[Unfinished]
+
+*label lesbian2
+[This option is yet to be written.]
+*ending
+
+*label quid
+You start to rip open her breeches like a starving man and a package of food, but Tamara catches your hands in a vise-like grip and presses down until you fall on your knees before her. 
+	
+"Remember how you made me beg yesterday?" she sneers. "Now, it's payback time."
+*choice
+	#Beg, beg, and beg some more.
+		*goto beg
+	#Beg not to have to beg.
+		*goto begbeg
+	#Pull your hands free.
+		*goto pullfree
+	
+*label beg
+You fall to your knees.
+
+"Yeah?" Tamara asks. "What do you want?"
+*choice
+	#"Sex, please."
+		*goto sexplease
+	#Masturbate instead. This is too humiliating.
+		*goto enemyjerk
+	
+*label sexplease
+[This option is yet to be written.]
+
+*label enemyjerk
+Despite the embarrassment of jerking off in front of not only a hot woman but one who's almost your enemy, you simply don't have the luxury of privacy. You pull down your pants, whip out your painfully swollen member, and get yanking.
+
+"That doesn't work," Tamara says.
+
+You don't listen. (Wank, wank, wank.)
+
+"Seriously, it doesn't work," Tamara says, "And it's bad for your health."
+
+"Will I go blind too???" you cry. (Wank, wank, wank.) 
+
+"You'll wank until you die and never get any relief," Tamara says.
+
+"Shut up, shut up, SHUT UP!" you cry. If only she'd shut up, maybe you could get relief, or... could she be telling the truth?
+*choice
+	#It's a trick. Keep going.
+		*goto enemyjerk2
+	#Beg not to have to beg anymore.
+		*goto begbeg2
+
+*label enemyjerk2
+"Well, if you're gonna kill yourself, can you at least hurry up about it?" Tamara says. "Here, I'll help."
+
+She pushes a finger into herself and starts moving it in and out in front of you.
+
+It certainly helps...
+*choice
+	#Keep going.
+		*goto enemyjerk3
+	#Hmm... maybe THIS is a trick now?
+		*goto tricktrick
+
+*label enemyjerk3
+Now that Tamara's not yacking anymore and is doing something mildly visually appealing, you're able to concentrate on your wanking. The pleasure builds, builds, and builds, taking you to masturbatory heights you have never before experienced. It reaches an unbearable level, and your hand is a frantic blur as you inch closer and closer to release. You arm tires, but with great force of will, you redouble your efforts and are finally rewarded with the spew of white goo.
+
+It flies so far, Tamara has to take a step back to avoid being hit, and the spurts just keep going. Instead of dying down, the soul-wrenching desire remains the same, so you keep hammering your loins, releasing spurt after spurt.
+
+Tamara pulls her finger out of herself. "Ok, see, you're going to drain yourself dry and die," she says. "Now's about your last chance. Beg, and I'll give you release. It's your only other option at this point."
+*choice
+	#Keep going.
+		*goto enemyjerk4
+	#Beg.
+		*goto begdie
+
+*label enemyjerk4
+*achieve ending7
+Soon, instead of spurts, your come flows out in a constant stream like a fountain, gallons of it before it begins to die down to a trickle. The trickle turns to blood, and then finally, a feeble puff of air.
+
+You die, utterly drained of vital essence.
+
+THE END.
+
+Perhaps someone knows the fate that befell Princess Elsbeth and Juliette the knight, but it's not you. At least not in this life.
+
+You have reached Ending #7 of 7: Utter Exhaustion.
+*page_break
+*ending
+
+*label begdie
+"Please, Tamara! Please!" you cry.
+
+Your seed begins to flow in a continuous stream like a fountain now, and it won't stop, forming great puddles all around you.
+
+"Swear eternal allegiance to me," Tamara demands, remaining rooted to the spot while your very life drains away.
+
+"Yes, anything!" you cry.
+
+"So you're my slave now?" Tamara asks, taking a tentative step closer.
+
+"YES!!!"
+*page_break
+*set tamaras_slave true
+*achieve slave
+Tamara rushes to you and leaps upon your spurting member, and once it's inside her, the life draining torrent eases, then stops. You're still rock-hard but exhausted.
+
+"Slave, take my clothes off," Tamara says. "You must stay in me at all times or face punishment."
+*choice
+	#Obey.
+		*goto takeclothes
+	#Balk.
+		*goto balk
+	
+*label takeclothes
+*if cumvest
+	You take Tamara's vest off first, gingerly avoiding the cum-soaked areas.
+	*goto nexttakeclothes
+*else
+	You take Tamara's vest off first, revealing her naked torso.
+*label nexttakeclothes
+Her boots are a little harder to remove, while underneath her and needing to stay inside her, but she cooperates, letting you eventually get them off. The same goes for her breeches, but she again cooperates, moving all about as needed. All this stimulates you to no end, but she doesn't let you fuck her until all her clothes are off. Then she makes you take your own off, which is easier, and she rides you while you do it like a rider on a bucking horse.
+
+"That felt good," she says. "Now, slave, roll me around in these puddles. You spewed it, so we might as well put it to use."
+*page_break
+*achieve cumbath
+You roll her over and fuck her while she lies right on top of the biggest puddle. She lies there, legs spread and lifted to each side, bent at the knee.
+
+"Slave," she says after a good bit. "Put my feet next to your head."
+
+You put her feet next to your head, now fucking down into her, and it makes her pussy tighter.
+
+After another good bit, she lets her feet fall, both to one side, until she's lying on her side, still in the puddle of cum. "Stay in me, slave, or be punished!" she says. You manage to stay in her by straddling one of her legs, and you find you can sit on her thigh and push all the way in. You hold her upper thigh against you as you continue humping away in this, the scissors position.
+
+Tamara turns onto her stomach, and you scramble to stay inside her. You fuck her on top from behind while she squirms around beneath you, smearing her breasts in the cum puddle.
+
+The pleasure builds, and you begin to pound her harder, making cum fly out from under her with each powerful thrust. You hear her boobs slapping again and again against the wet ground as she continues her squirming. You reach around and fondle her breasts, all slippery with your seed. You wrap your arm around her throat and press her face and body into the cum-soaked earth. Tamara's limbs begin to flail beneath you as she approaches climax, and she starts to moan again and again.
+*page_break
+Slowly, your feelings toward Tamara begin to shift. Anger and distrust dissolve, replaced by attraction and affection, and it build with each thrust, lust magically transforming into love. As your passion reaches its crescendo, and you're pounding her hard, the words, "I love you," fly from your lips. You're surprised to realize you really mean it.
+
+"I know," Tamara says with a touch of resignation. She knows it's just the effect of her magic potion, but to you it feels intensely real. 
+
+Finally, the pleasure, as well as love, grows unbearable, and both of you cannot help crying out at the top of your lungs. Your arms easily snake around Tamara's cum-lubricated body to hold her close, and her hands scramble in the earth as orgasmic spasms wrack her body. You feel your seed shoot deep inside her, and it feels like you're now joined in love forever.
+*page_break
+*achieve potionvictim
+When finally it subsides, you regain enough composure to ask, "Uh, how long does this spell last, anyway?"
+
+Tamara doesn't speak for awhile, just remains laying beneath you, still breathing hard. You have to admit that lying here with her feels very nice, and you wish you could stay this way forever.
+
+Finally, Tamara shifts and turns over.
+
+"Like it or not," Tamara says. "We're lifelong friends now."
+
+She rises to her knees. "Plus, you're my slave, so now it's time to clean your master's body... with your tongue."
+*choice
+	#Do it.
+		You run your tongue all over Tamara's cum-smeared body until she's entirely clean.
+		
+		"That was so good, every bath of mine from now on will be like this," she laughs. 
+		
+		*goto juliettecomes
+	#"Ummm..."
+		Tamara laughs. "Even I am not THAT cruel," she says. "You can use this rag and some of my water."
+		
+		You use the wet rag to diligently scrub Tamara's whole body clean as well as her vest.
+		
+		*goto juliettecomes
+
+*label juliettecomes
+Tamara looks around at the cum-spattered area around you. "I hope you've saved some of this for Juliette," she jokes.
+*page_break
+"Hey, what's going on here?" says a voice behind you.
+
+You spin around while Tamara lunges for her sword, lying discarded nearby on the ground.
+
+You see Juliette, standing with her hand on the pommel of her sword, but she looks more curious than threatening.
+
+"It sounded like you were dying," she says. "I thought an animal was mauling two people."
+
+"That's not too far off," Tamara says laughing while she scrambles to get dressed. She puts her sword away.
+
+"This looks like a scene from erotic Eden," Juliette says, looking around at the puddles and your two naked bodies. "What were you doing?"
+
+"Cementing a friendship," Tamara says as she pulls on her breeches.
+
+"Here? So close to the dragon's lair?" Juliette asks incredulously.
+
+"One does what one must," Tamara shrugs, slipping on her embroidered leather vest.
+
+"When I first arrived, I heard something about you saving something for me?" Juliette asks, addressing the question to both of you.
+*choice
+	#Let Tamara answer.
+		*goto tamaraanswer
+	#Try to answer in a non-insulting, vague way.
+		*goto vague
+	#Come clean and answer honestly.
+		*goto honest
+
+*label balk
+"Please, Tamara," you say. "I begged. Isn't that enough?"
+
+"No!" Tamara says, bouncing up and down on you in frustration, ironically sending paroxyms of pleasure through your body. "I get on my knees for no man, and you spurned me. You're lucky to be alive."
+*choice
+	#"I didn't mean to spurn you, just that I can't trust you."
+		"But you have to trust me," Tamara says. "We're going to help Juliette slay the dragon and rescue the princess. Please, just take off my clothes? We need to finish this."
+		*choice
+			#Ask why you need to finish this.
+				Tamara snickers, and it makes her boobs bounce. You like how that looks but not how it sounds.
+				
+				"I've caught you in a wicked love spell," Tamara says, smiling. "I didn't want to do it, but you gave me no choice. If we consummate now, you will be bound to me for life by charm magic, and if we don't, you'll die of insatiable lust unless you can find another suitable partner. Take off my clothes now, please."
+				*choice
+					#Take off her clothes.
+						*goto takeclothes
+					#Ask what it means to be bound for life to her.
+						"Oh, you will still have free will," Tamara says. "You needn't worry about that, and you can still be with as many different women as you please."
+						
+						You breathe a sigh of relief.
+						
+						"It's just that we'll be like very good, lifelong friends," she goes on. "That may not sound so bad, but it can be. Conflicts arise. Obligations. Loyalties. Bickering. Friendship causes all manner of complications, so that's why I never use it unless I have to."
+						
+						All the while, your cock remains stubbornly rock-hard inside her, a horse champing at the bit.
+						*choice
+							#Take off her clothes.
+								*goto takeclothes
+							#Push her off you.
+								*set cumvest true
+								You turn to one side, and Tamara falls off you. Your dick pops out of her and is so erect it slaps into your stomach, making a sound like meat thrown against more meat. Instantly, the insatiable lust builds in you.
+								
+								"You pushed me into a cum puddle," Tamara says, pouting. "Take off my clothes."
+								
+								Your will breaks. Having just been inside her, you can't resist the lust when it returns full force.
+								
+								You start to take off Tamara's clothing.
+								
+								"Ah ah ah," she says shaking her head. "The slave must be inside me."
+								
+								She climbs back on you, and your still rock-hard dick slides right in again. 
+								
+								*goto takeclothes
+			#Take off her clothes.
+				*goto takeclothes
+	#Take off her clothes just to shut her up, but you know you're not her slave.
+		*goto takeclothes
+								
+*label tricktrick
+[This option is yet to be written.]
+
+*label begbeg2
+[This option is yet to be written.]
+
+*label begbeg
+[This option is yet to be written.]
+
+*label pullfree
+You try to wrench your hands free, and surprisingly, Tamara instantly lets go, causing you to fall.
+
+"How bad do you want it?" Tamara demands.
+
+You want it bad. Really bad.
+*choice
+	#Do whatever you have to do to get relief.
+		*goto whateverrelief
+	#Resist. The potion's gotta wear off sometime.
+		*goto resist
+	
+*label whateverrelief
+"On you knees," Tamara says. "You know what to do."
+*choice
+	#Get on your knees and beg.
+		*goto beg
+	#Refuse.
+		*goto refuse
+	
+*label refuse
+Tamara just stands there doing nothing... except to you, "doing nothing" means exuding an irresistable aura of overpowering sexuality. It's all you can do to keep from jumping her bones. You're losing your mind to the intensity of the magically-charged passions roiling in your body.
+*choice
+	#Jump her bones.
+		*goto jumpbones
+	#Give in and just beg.
+		*goto beg
+	#Resist. The potion's gotta wear off sometime.
+		*goto resist
+	
+*label jumpbones
+You charge at Tamara, but she was expecting this. She leaps out of your grasp and scurries away, and you know she's faster than you. You'll never catch her.
+
+The intense desire surging in your loins, combined with the realization of defeat, make you collapse to your knees.
+
+"Good," Tamara says. "That's the position I want, and you know what comes next."
+
+Sweat is pouring down your face, and you don't know how much more of this you can take.
+*choice
+	#Give in and just beg.
+		*goto beg
+	#Resist. The potion's gotta wear off sometime.
+		*goto resist
+
+*label resist
+You force yourself to breathe slowly, shut your eyes tight, and think of all the disgusting things you can imagine. 
+
+You think of a putrid refuse heap, but a beautiful maiden emerges from the slime like Aphrodite birthed from sea foam. You shove the maiden back down and cover her with a hundred years of accumulated filth, and it kind of works. It feels like an eternity in that refuse heap full of every possible disgusting thing, with boobs and butts appearing in the darndest of places, but eventually, the magic lust subsides. You collapse in utter exhaustion, drenched in sweat.
+
+"By the gods!" Tamara cries. "I have never seen a man with such strength."
+*choice
+	#Stand up, dust yourself off, and strut.
+		*goto strut
+	#Rest for a bit.
+		*goto rest
+	
+*label strut
+You try to stand, but you legs falter. Tamara rushes to steady you and helps you to sit on a nearby tree stump. Her touch, while pleasant, now lacks the preternatural force of attraction from before.
+
+"A man with such self-control can go all night, can't he?" Tamara asks, her voice full of admiration. "No man has ever brought me to climax," she goes on. "The potion's worn off, but I offer myself to you nonetheless. You're the one to take where I've never been."
+
+She stands and begins to slowly strip off her clothing.
+*choice
+	#No harm in just watching, is there?
+		*goto watch
+	#It's a trick. Tear your eyes away.
+		*goto teareyes
+
+*label watch
+*achieve strip
+Tamara's thieves guild must teach dance classes or something, for she's able to sway and move while undressing in a way that's totally mesmerizing. Her vest falls open, giving you snatches of glimpses of her breasts bouncing within. She reaches in and caresses herself and lets her hand nudge her vest open a bit further. Her gloved hands then run down her torso and reach into her skin-tight leather breeches, alternating as they slide, first one and then the other, over her sex. She pulls her breeches down with one hand, revealing her sex, one finger already inside. She spreads her legs, and thrusting her pube forward, parts her lips for you.
+
+"I give myself to you..." she whispers sensually. "Take me..."
+*choice
+	#Take her.
+		*goto takeher
+	#It must be a trick...
+		*goto suspecttrick
+	
+*label takeher
+[This option is yet to be written.]
+
+*label suspecttrick
+You suspect it's a trick, then you KNOW it's a trick. The now familiar preternatural lust is once again rising in your loins, and you realize that you were able to fight it off only when there was no stimulus at all. It seemed gone, but now with stimulus, it's power is as strong as ever. Already exhausted, you doubt you'll be able to resist for long.
+
+"The more things change, the more they stay the same," Tamara says. "Beg."
+
+(Ten points if you know where that's from.)
+*label suspecttrickchoice
+*choice
+	#Beg.
+		*goto beg
+	#Resist.
+		*goto resist2
+	*disable_reuse #Answer the question for ten points.
+		In what movie is the line, "The more things change, the more they stay the same?"
+		*choice
+			#2001: A Space Odyssey
+				Wrong, but you get a second chance: The monolith brings on many changes, and I can take or leave it if I please. (Ten points if you know where that's from.)
+				*choice
+					#Answer the question for ten points.
+						What movie had a song with the lyrics: "...brings on many changes, and I can take or leave it if I please?"
+						*choice
+							#Insatiable.
+								Before she was a MILF. Nice, but she definitely couldn't leave it.
+								
+								Do you beg or not?
+								*goto suspecttrickchoice
+							#Leave It to Beaver
+								It has the leave it part, and beaver is always cool, but... no take. Sorry, no dice.
+								
+								Do you beg or not?
+								*goto suspecttrickchoice
+							#M.A.S.H.
+								*achieve mash
+								Bingo!
+								
+								Now back to our story: Do you beg or not?
+								*goto suspecttrickchoice
+							#Pussy Mashers
+								Um, yeah... that almost works... Do you beg or not?
+								*goto suspecttrickchoice
+					#Screw these stupid trivia questions.
+						That's what she said. Do you beg or not?
+						*goto suspecttrickchoice
+			#Escape From L.A.
+				*achieve changesame
+				Don't they now? Congratulations. Now...  Do you beg or not?
+				*goto suspecttrickchoice
+			#Batman: Arkham City
+				That's a video game, not a movie. Close but no cigar.
+				
+				Do you beg or not?
+				*goto suspecttrickchoice
+			#Black Sabbath: The Wasted Years
+				That's... just slightly mixed up. In two ways.
+				
+				Do you beg or not?
+				*goto suspecttrickchoice
+			#Spiderman II: Electric Boogaloo
+				Spiderman can't do a backspin! Do you beg or not?
+				*goto suspecttrickchoice
+			
+*label resist2
+You try to return to the most disgusting place in the universe, the cesspool in your mind, but unfortunately now, instead of piles of refuse, it's an endless field of rolling hills, all shaped like breasts and butts. For the life of you, you can't think of a single disgusting thing.
+
+Tamara stands nearby waiting patiently, her pants still down, nonchalantly rubbing a boob now and again.
+
+You can't help yourself...
+
+*goto beg
+
+*label teareyes
+You avert your eyes just as Tamara's vest falls open, and for the briefest moment, you saw her breasts and felt a surge of the now familiar preternatural lust rise in your loins again. Indeed it was a trick!
+
+Tamara pulls her vest's laces tight again.
+
+"Smart man," she says coldly. "You better hope it's enough to outwit a dragon."
+
+She turns and leaves.
+*page_break
+*goto_scene juliette_alone
+
+*label rest
+[This option is yet to be written.]
+
+*label faceother
+[This option is yet to be written.]
+

@@ -1,0 +1,44 @@
+kanon vo2max *label journey
+The path, no wider than an ox cart, continues its windy journey through Orlon Forest, rounding boulders and rock outcroppings here and there. You come to a point where the path takes a long detour, avoiding a small cliff with a drop of only ten feet or so, and you feel you could easily climb down, saving yourself a good ten minutes.
+
+*choice
+	#Climb down
+		*goto climbdown
+	#Stay on the path
+		*goto staypath
+	
+*label climbdown
+You easily climb down the small cliff, and nothing happens. No faerie waylaid you or anything. You didn't even slip. The path goes around simply because the road is used by farmers with their wagons, and you wonder just how serious the admonishment against leaving the path is.
+
+*goto wagon
+
+*label staypath
+Better to be safe than sorry, for though you can see the path below, who knows what could happen. Not only might you slip, but you've heard that going off path is dangerous. The path's slope is gradual, and it shortly makes a hairpin turn, bringing you to the section you saw earlier.
+
+*label wagon
+In another ten minutes or so, you round a bend and see a wagon sitting in the middle of the road. It seems to be abandoned, its horse missing.
+
+*choice
+	#Investigate
+		*goto investigate
+	#Go off path to go around it, avoiding it completely.
+		*goto goaround
+	#Hide and watch it for awhile
+		*goto watchwagon
+	#Just walk on by
+		*goto walkby
+	
+You have sex with 1000 beautiful maidens, but you never know it because this code is never reached in the game.	
+	
+*label investigate
+
+
+*label goaround
+
+
+*label watchwagon
+
+
+*label walkby
+
+

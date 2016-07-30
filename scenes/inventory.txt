@@ -1,0 +1,53 @@
+*temp first true
+*temp comma ""
+*temp inventory ""
+
+*if sword
+	*gosub comma
+	*set inventory ((inventory&comma)&"sword")
+*if armor
+	*gosub comma
+	*set inventory ((inventory&comma)&"basic armor (forearm greaves, lower leg greaves, breastplate, pot helm)")
+*if rope
+	*gosub comma
+	*set inventory ((inventory&comma)&"100' rope")
+*if climb_equip
+	*gosub comma 
+	*set inventory ((inventory&comma)&"misc. climbing equipment (spikes, hammer, etc.)")
+*if bedroll
+	*gosub comma
+	*set inventory ((inventory&comma)&"bedroll")
+*if messkit
+	*gosub comma
+	*set inventory ((inventory&comma)&"mess kit")
+*if water_skin
+	*gosub comma
+	*set inventory ((inventory&comma)&"water skin (with ${water} out of 16 cups of water)")
+*if flint_tinder
+	*gosub comma
+	*set inventory ((inventory&comma)&"fire kit (flint, steel, tinder)")
+*if backpack
+	*gosub comma
+	*set inventory ((inventory&comma)&"backpack")
+*if has_honey
+	*gosub comma
+	*set inventory ((inventory&comma)&"honey")
+*if twelve_inch_penis
+	*gosub comma
+	*set inventory ((inventory&comma)&"a twelve-inch penis")
+*if love_potion
+	*gosub comma
+	*set inventory ((inventory&comma)&"love potion")
+*comment and your undying love for Princess Elsbeth, though you've never met.
+
+[b]Inventory:[/b] ${inventory}.
+*return
+
+*label comma
+*if (not(first))
+	*set comma ", "
+	*return
+*else
+	*set comma ""
+	*set first false
+*return

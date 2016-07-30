@@ -1,0 +1,87 @@
+*label sm_top
+*choice
+	#Load
+		*label load
+		*choice
+			#${savemod_slot_0}
+				*sm_load 0 | false
+				*goto sm_done
+			#${savemod_slot_1}
+				*sm_load 1 | false
+				*goto sm_done
+			#${savemod_slot_2}
+				*sm_load 2 | false
+				*goto sm_done
+			#${savemod_slot_3}
+				*sm_load 3 | false
+				*goto sm_done
+			#${savemod_slot_4}
+				*sm_load 4 | false
+				*goto sm_done
+			#${savemod_slot_5}
+				*sm_load 5 | false
+				*goto sm_done
+			#${savemod_slot_6}
+				*sm_load 6 | false
+				*goto sm_done
+			#${savemod_slot_7}
+				*sm_load 7 | false
+				*goto sm_done
+			#${savemod_slot_8}
+				*sm_load 8 | false
+				*goto sm_done
+			#${savemod_slot_9}
+				*sm_load 9 | false
+				*goto sm_done
+			#${savemod_slot_10}
+				*sm_load 10 | false
+				*goto sm_done
+			#${savemod_slot_11}
+				*sm_load 11 | false
+				*goto sm_done
+			#Return
+				*goto sm_done
+	#Delete
+		*label delete
+		*choice
+			#${savemod_slot_0}
+				*sm_delete 0
+				*goto delete
+			#${savemod_slot_1}
+				*sm_delete 1
+				*goto delete
+			#${savemod_slot_2}
+				*sm_delete 2
+				*goto delete
+			#${savemod_slot_3}
+				*sm_delete 3
+				*goto delete
+			#${savemod_slot_4}
+				*sm_delete 4
+				*goto delete
+			#${savemod_slot_5}
+				*sm_delete 5
+				*goto delete
+			#${savemod_slot_6}
+				*sm_delete 6
+				*goto delete
+			#${savemod_slot_7}
+				*sm_delete 7
+				*goto delete
+			#${savemod_slot_8}
+				*sm_delete 8
+				*goto delete
+			#${savemod_slot_9}
+				*sm_delete 9
+				*goto delete
+			#${savemod_slot_10}
+				*sm_delete 10
+				*goto delete
+			#${savemod_slot_11}
+				*sm_delete 11
+				*goto delete
+			#Return
+				*goto sm_top
+
+*label sm_done
+*return

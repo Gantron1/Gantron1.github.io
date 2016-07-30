@@ -1,0 +1,992 @@
+*temp gabriella_saw_gem false
+*temp stoodupforself false
+*temp smallfire false
+*temp booboffer false
+
+*comment *goto thighs
+
+The foothills become steeper now, and the journey is slower without a path to follow.
+
+In a short while, Tamara stops and thinks a moment.
+
+"Wait here," she says. "I need to shake the dew from my lily pad."
+
+She goes off into the forest by herself.
+
+*choice
+	#Stealthily follow her.
+		*goto stealth
+	#Wait
+		*goto waitpee
+	
+*label stealth
+You wait a moment, then follow her, being as quiet as you can. You marvel at how quietly she's able to walk, never rustling leaves or grass, nor stepping on any twigs. Maybe she really is a master thief like she claims? You do your best to move quietly as well, and you are, for the most part, successful. At least, Tamara doesn't show any sign that she knows you've followed her.
+
+Eventually, she stops, and you watch her from behind a tree a few dozen yards away.
+
+She fumbles with her belt a little, then squats on the other side of a tree which partially obstructs your view of her. You can't really see much more than her left arm and shoulder.
+
+*choice
+	#Creep up closer
+		*goto creep
+	#Walk up and say, "Gotcha!"
+		*goto gotcha
+	#Head back
+		*goto headback
+	#Keep watching
+		*goto keepwatching
+	
+*label creep
+*set gabriella_saw_gem true
+You, creep, creep as close as you dare before stopping again, and you're now able to see her whole body from the rear and slightly to the left. You see that her leather pants are pulled down around her ankles, but unfortunately, a small bush is still obscuring the lower half of her body.
+
+*choice
+	#Creep again.
+		*goto creepagain
+	#Keep watching.
+		*goto keepwatching2
+	#Show yourself and say, "Gotcha!"
+		*goto gotcha
+	#Head back
+		*goto headback2
+	
+*label creepagain
+You continue being a creep and stealthily creep in a wide circle in order to see her without the bush obscuring your vision.
+
+"Was the bush obscuring my bush?" Tamara says, making you freeze in your tracks. Dang, you've been caught.
+
+*choice
+	#"Look, I don't know you well yet, so I was just making sure you were really doing what you claimed to be doing."
+		*goto suspicions
+	#"I was just looking for my own place to shake my lilypad."
+		*goto looklily
+	#Stammer
+		*goto stammer
+	
+*label suspicions
+[This option is yet to be written.]
+
+*label looklily
+[This option is yet to be written.]
+
+*label stammer
+Tamara, who had her belt pouch in her lap, puts something back in it, and moves the pouch out of the way. She spreads her legs, giving you full view of her "bush."
+
+"There," she says. "Happy now?"
+
+She quickly wipes with a clump of moss, stands, and pulls her pants up. 
+
+*label keepwatching2
+[This option is yet to be written.]
+
+*label headback2
+[This option is yet to be written.]
+
+*label gotcha
+[This option is yet to be written.]
+
+*label headback
+[This option is yet to be written.]
+
+*label keepwatching
+[This option is yet to be written.]
+
+but . You hear Gabriella urinating gushily, holding the bag with the faerie in it as she does so. In short order, the sounds stops, and she extracts a few gems from the bag, careful not to let the faerie escape. Then she stands and dresses herself, taking her time, completely oblivious to your presence. She then turns and starts to head back, and she's coming right towards you.
+
+*choice
+	#OH NO, why didn't you realize this would happen??? Hide!
+		*goto hidecloser
+	#Show yourself
+		*goto show
+	
+*label hidecloser
+*set rel_wh %-10
+You try to hide, but it's no use. Gabriella sees you, and you cringe, ready for a tongue-lashing or even a blow. 
+
+"What did you see!" she demands.
+
+*temp sawonething false
+*temp toldsawgems false
+*label hidecloserchoice
+*choice
+	#Tell her you saw nothing, the trees were in the way.
+		*goto sawtrees
+	#Tell her you saw her beautiful body.
+		*goto sawbody
+	#Tell her you saw her take gems from the faerie bag.
+		*goto sawgems
+	*if (sawonething) #Tell her you saw nothing more.
+		*goto sawnothingmore
+
+*label sawtrees
+*set sawonething true
+"But nothing more?" Gabriella questions, her eyes narrowed suspiciously.
+
+*goto hidecloserchoice
+
+*label sawbody
+*set sawonething true
+"But nothing more?" Gabriella questions, her eyes narrowed suspiciously.
+
+*goto hidecloserchoice
+
+*label sawgems
+*set toldsawgems true
+"What kind of gems?" Gabriella ask demandingly.
+
+You answer honestly, saying it was too far to see, and you don't even really remember their colors.
+
+*label sawnothingmore
+"Why did you follow me when I told you to stay put?" she asks, obviously very angry with you. "Can't a lady take a whiz in peace?
+*if promised2begood
+	You promised to be good, and THIS is what you do???"
+	*goto sawnothingmorechoice
+*else
+	"
+
+*label sawnothingmorechoice
+*choice
+	#Apologize
+		*goto peeapologize
+	*if (toldsawgems) #Ask what she was doing with the gems.
+		*goto whatgems
+	#Tell her it's been a long time since you've been with a woman, and even a glimpse of her peeing was too hard to resist.
+		*goto resistpee
+	#Tell her you just met her, so you needed to make sure she wasn't up to anything suspicious.
+		*goto peesuspicious
+	
+*label peeapologize
+"That's it?" Gabriella asks in disbelief. "You hide to watch me pee and think just an apology is good enough?"
+
+*if promised2begood
+	"Well, since you promised to be good, I'll forgive you THIS ONE TIME... if you bow before me and promise to never be sneaky again."
+	
+	*choice
+		#You agree. You bow before her and make the promise.
+			*goto bow
+		#Tell her you will make the promise but not bow.
+			*goto promisenotbow
+		#Refuse but remain apologetic.
+			*goto refuseapologetic
+		#Refuse angrily.
+			*goto refuseangrily
+*elseif rel_wh < 40
+	"I can't trust you," Gabriella says. "You and I part ways here."
+	
+	She starts stomping off into the forest.
+	
+	*goto peepartways
+*else
+	Gabriella stares at you for a long time, thinking. Finally, she seems to have come to a decision.
+	
+	"All right," she says. "I'll let you off the hook this one time, but if you ever do anything like that again, I'll cut something off."
+	
+	*goto peeresume
+
+*label bow
+
+
+*label promisenotbow
+
+
+*label refuseapologetic
+
+
+*label refuseangrily
+
+
+*label peepartways
+
+
+*label whatgems
+
+
+*label resistpee
+"Men are all alike," Gabriella says, shaking her head. "I was kinda liking you before, was even gonna make a pass at you in a bit, but now, no way. No nookie for you ever!"
+
+*goto peeresume
+	
+*label peesuspicious	
+	
+	
+*label gotcha
+
+
+*label headback
+
+
+*label keepwatching
+You can't see much from this distance, but it seems like she really might just be "shaking the dew off her lily pad." 
+
+In a short while, you see her stand and pull her breaches back on. She refastens her belt, taking her time, totally oblivious of your presence. Then she starts heading back and is coming right towards you. 
+
+*choice
+	#OH NO, why didn't you realize this would happen??? Hide!
+		*goto hide
+	#Show yourself
+		*goto show
+	
+*label hide
+
+
+*label show
+
+
+*label peeresume
+She walks past you, resuming the journey, and you walk in silence for about an hour, making slow progress through the thick forest foliage.
+
+
+*label waitpee
+You wait, and you wait. It always seems a long time when you're waiting.
+
+Finally, she returns, sees you, and says, "Good. I'm glad you didn't follow me in there to rape me when I had my pants down."
+
+She smiles at her joke, and you realize it's the first time you've seen her smile. She's pretty when she does that, but the smile's woefully shortlived.
+
+"Okay," she says, getting back down to business. "Maybe you can help me search for the witch. Are you with me? Are you going to become a witch hunter too? I'll give you a 25% cut of the bounty until you learn the trade, and then we can renegotiate. If you're pulling your own weight, we can make it 50/50. Deal?"
+
+You've heard of witch hunters before, and it's a dangerous, though lucrative career. You'd never attempt it without training, but she seems to be offering to take you on as an apprentice. Judging by her gear and clothing, she seems to be doing quite well at it, so she must have skills. She seems sure of herself anyway.
+
+*choice
+	#Agree to help her
+		*goto witchhunter
+	#Ask how good she is at it
+		*goto askhowgood
+	#Decide against it
+		*goto declinehunting
+	
+*label witchhunter
+"Good," she says matter-of-facting, as if she always assumed you would. "The witch is somewhere in this direction," she says, pointing with both arms in a V-shape in roughly the direction you were already traveling. "Probably within a day's walk, as the crow flies."
+
+She starts walking again, and after a few hours, as the sun begins to get lower in the sky, she says, "Well, this looks like a good place to make camp. You're my apprentice, so go gather a bunch of firewood. Then come back and rub my feet and shoulders."
+
+*choice
+	#Protest
+		*goto protestwood
+	#Do as you're told
+		*goto dotold
+	
+*label protestwood
+
+
+*label dotold
+You go into the forest gathering firewood.
+
+*choice
+	#You do so eagerly, glad to be learning a lucrative trade, and hope to impress your new teacher.
+		*goto eager
+	#You grumble the whole time.
+		*goto grumble
+	
+*label eager
+*set was_eager true
+
+*label grumble
+You start gathering firewood, making a big pile that you have to keep coming back to, grumbling that it'd be much easier with two people because that way, one person can hold their arms out while the other loads it with sticks. It's much more efficient, but it seems like Gabriella wants to treat you like a slave. She's probably back there doing her nails or something, but still, you know how master and apprentices work. The apprentice is expected to do whatever the master wants, keyword: whatever. To pass the time, you fantasize about what it'd be like when you have an apprentice, and you hope it's a hot girl like Gabriella. You wonder what she was like when she was younger and just starting out, imagining all the ways she had to serve her master.
+
+Finally, you have a pile that seems enough to last all night and bring it back to the campsite in only three trips. You wonder if Gabriella will be impressed by how much you manage to carry each time, but nope, she doesn't even seem to look up, just points at the circle of stones she's made.
+
+*choice
+	#Make a big fire
+		*goto bigfire
+	#Make a small fire
+		*goto smallfire
+	
+*label bigfire
+
+
+*label smallfire
+You start to make a small fire, knowing that it'll make less smoke and use less wood, but Gabriella says, "That fire has to last all night, you know."
+
+*choice
+	#Make a big fire, even though it means you have to go back out and find a few more logs if it's to last all night.
+		*goto morelogs
+	#Explain that you want to make a small fire and why.
+		*goto explain
+	
+*label morelogs
+
+
+*label explain
+"Oh pooh," Gabriella spats. "I don't care who sees the smoke, and I like big fires. Keeps me warm."
+
+*label explainchoice
+*choice
+	*hide_reuse #"How big do you want it?" Wink, wink.
+		*goto bigwink
+	*hide_reuse #Ask her if she made big fires when she was on her own.
+		*goto askbig
+	*hide_reuse #Tell her you'll keep her warm.
+		*goto keepherwarm
+	*hide_reuse #Be a good apprentice and go get more logs.
+		*goto morelogs
+	*hide_reuse #Tell her if she wants a big fire, she can do it herself. You're making a fire the way you like it.
+		*goto insistsmall
+	*hide_reuse #Try to reason with her, saying why you want a small fire.
+		*goto reasonsmall
+	
+*label bigwink
+"Way bigger than that," Gabriella says, her face deadpan. She can't be... But she hasn't even seen your... She can't mean... She does! You make a mental note to yourself not to ever challenge Gabriella to a battle of sexual innuendos.
+*goto explainchoice
+	
+*label askbig
+"Nope," Gabriella says. "I'm too lazy, but now I have you!"
+*goto explainchoice
+
+*label keepherwarm
+"You could..." Gabriella says, "IF I let you in my bedroll. Who says I am?"
+*goto explainchoice
+
+*label insistsmall
+"That's not the way this works," Gabriella says, her voice growing severe. "I'm teaching you my trade. Do you know how valuable this is? A few extra logs is not a big deal, and if it makes me happy, I'll be happier while I'm teaching you. It'll be a more pleasant experience for us both, and you'll probably learn better too. Plus, if I'm happy, I might be more apt to tell you more things. Make sense?"
+
+*choice
+	#Yes. Go get more logs.
+		*goto morelogs
+	#No. You need to nip this in the bud or else she might abuse her position.
+		*goto nipbud
+	#Get angry.
+		*goto angry
+	
+*label nipbud
+*set stoodupforself true
+You drop the piece of wood you're holding and stand up, inhale deeply, and pause to collect your thoughts.
+
+"Look, Gabriella," you say. "I appreciate your teaching me your craft, but I don't like being bossed around. If you really wanted a bigger fire, you could've asked me nicely."
+
+*if (was_eager)
+	*goto givesin
+*else
+	*set gabriella_mad true
+	*set smallfire true
+	"I could've," Gabriella says, "But I didn't feel like it. Make a small fire. I don't care anymore."
+	
+	*goto sleep
+
+*label angry
+*set stoodupforself true
+You drop the piece of wood you're holding and stand up.
+
+"Dammit, woman!" you retort. "I'm an apprentice not a slave. I got the wood, and now I'm building the fire. If that's not good enough, too bad!"
+
+*if (was_eager)
+	*goto givesin
+*else
+	*set gabriella_mad true
+	*goto challenge
+
+*label givesin
+"Fair enough," Gabriella grumbles. 
+	
+She gets up and gets more logs herself, comes back, and adds them to your fire, making it bigger.
+	
+"See, now, was that so hard?" she says. "Don't be lazy or you'll never make it as a witch hunter."
+
+The two of you stoke the fire until it's nice and stable. You like watching her poking a stick in and out, but when she sees you watching, she throws the stick into the fire. You like watching the stick burn and shrivel up a lot less.
+
+*goto backandfoot
+
+*label challenge
+Gabriella stands up too.
+
+"Yeah, I saw you grumbling the whole time gathering the wood, and it took you forever too. Either you make that fire bigger or I'll slice you open and make YOU bigger."
+
+She looks you squarely in the eyes, a fierce look on her face, sword arm poised to draw on you.
+
+*choice
+	#"Bring it."
+		*goto bringit
+	#Back down
+		*goto backdown
+	
+*label bringit
+Slowly she draws her sword.
+
+"We doing this or what?"
+
+*choice
+	#Draw your sword
+		*goto drawsword
+	#Take your sword belt off and challenge her to unarmed combat
+		*goto nosword
+
+*label drawsword
+Gabriella's eyes widen when she sees you draw your sword, but it's only for the barest instant.
+
+"So that's how you are," she sneers. "We're done. You lack the necessary respect to be my apprentice."
+
+She puts her sword away and stalks off into the forest.
+
+*choice
+	#Demand she fight you
+		*goto demandfight
+	#Let her go
+		*goto lethergoafterfight
+	#Follow her
+		*goto followafterfight
+	
+*label demandfight
+
+
+*label lethergoafterfight
+
+
+*label followafterfight
+
+
+*label nosword
+
+	
+*label backdown
+"Whoa, whoa!" you say taking a step back. "No need to get violent." 
+
+For a long minute, Gabriella's body remains tense, ready to spring, but when you don't instigate, she finally she relaxes. She sits back down.
+
+"Sorry about that," she says. "I've just got a temper on me."
+
+*choice
+	#Build a small fire
+		*goto stillsmallfire
+	#Go get more logs to build a bigger fire
+		*set gabriella_mad false
+		*goto morewood
+	
+*label stillsmallfire
+*set smallfire true
+Gabriella sees you're still making a small fire but doesn't say anything. Nobody talks for the rest of the evening, and you can cut the tension with a knife.
+
+*goto sleep
+
+*label reasonsmall
+You start to reason with Gabriella, but you get no more than a few words out of your mouth before she cuts you off. "Don't make me repeat myself," she says coldly.
+
+*choice
+	#Better go get that wood
+		*goto morewood
+	#Get angry
+		*goto angry
+
+*label backandfoot
+*if gabriella_mad
+	*goto sleep2
+
+"Okay, how about that back rub and foot rub?" Gabriella says once the fire's going well.
+
+She takes off both her boots and presents her feet to you.
+
+"Might want to wash them first," she adds and wiggles her toes at you. You notice that they're painted sapphire blue, same as her fingernails.
+
+*choice
+	#Refuse politely
+		*goto refusepolitely
+	#Refuse gruffly
+		*goto refusegruffly
+	#Get on your knees and get rubbing
+		*goto footrub
+	
+*label footrub
+You wash her feet first, but considering you're not by a stream, you need to conserve water. Still, they're not too smelly, and in fact, it's been so long since you've been with a woman, just touching her feet is turning you on.
+
+"Why you being so gentle?" Gabriella asks, breaking you out of your lustful reverie. "You're not a foot fetishist, are you?"
+
+*choice
+	#Yes
+		Gabriella yanks her foot away from your hands. 
+		
+		"Okay, my feet feel much better now. Thanks. Now how about that shoulder rub?"
+		*goto shoulderrub
+	#No
+		*goto nofetish
+	
+*label nofetish
+"Good," Gabriella says. "I never understood why guys would be into that, but then why are you getting turned on? It seems like you're getting turned on."
+
+*choice
+	#Deny it
+		*goto denyit
+	#Tell her it's been a long time
+		*goto longtime
+	
+*label denyit
+
+
+*label longtime
+"It's been a long time for me too," Gabriella says, "But you don't see me turning ent-like, do you? Why do guys have such one track minds?"
+
+"Don't answer that," she says quickly before you can say anything. "How about that shoulder rub?"
+
+*label shoulderrub
+She takes off her top and turns around, presenting her back and shoulders to you. It was so fast that you hardly saw it, but for a brief moment, you got to see her breasts. You can't believe it! Has she no shame?
+
+*choice
+	#Ask her if she has no shame.
+		*goto noshame
+	#Just give her the shoulder rub.
+		*goto rubshoulders
+	
+*label noshame
+"Out here?!?" Gabriella cries, aghast, as if you'd have to be crazy to think she'd feel the need for modesty. "Don't be a silly-willy."
+
+You wonder if she really doesn't know how much all this is turning you on.
+
+*label rubshoulders
+You start to knead her shoulders, and they're like steel springs, large for such a small-framed woman. You've got a good grip, but even so, you can barely squeeze them. It must be from all her training with the sword.
+
+Gabriella laughs. "Tight, huh? That's what I get for carrying a heavy backpack around all day."
+
+*choice
+	#Ask if that's the only thing that's tight.
+		*goto tight
+	#Reach around and cup her breasts
+		*goto cupbreasts
+	#Just keep working them
+		*goto massage
+	
+*label tight
+"My abs are pretty tight too," Gabriella replies, and it somehow seems she totally missed your double entendre. Either that or she's teasing you. 
+
+"And my thighs." She MUST be teasing you!
+
+*choice
+	#Ask to feel her abs
+		*goto abs
+	#Ask to feel her thighs
+		*goto thighs
+	#Reach around and cup her breasts
+		*goto cupbreasts
+	#Just keep working her shoulder muscles
+		*goto massage
+	
+*label abs
+"Only my boyfriend gets to feel those," Gabriella says, and once again, she seems totally oblivious to both your hints and current state of extreme arousal. She's a big tease!
+
+*choice
+	#Reach around and cup her breasts
+		*goto cupbreasts
+	#Just keep working her shoulder muscles
+		*goto massage
+
+*label thighs
+"Sure," she says, "But then you gotta massage them too. And my calfs. Don't forget the calfs."
+
+She lies down and squeezes the big, bunched up muscles near her knees. "These," she says. "Especially these."
+
+Her boobs are now in plain view, the sunlight beating right down on them!
+
+*temp peeked false
+*label thighschoice
+*choice
+	*if (peeked = false)
+		*disable_reuse #Stare.
+			*goto stare
+	*disable_reuse #Sneak a peek while massaging her thighs.
+		*goto peek
+	#Force yourself not to look at her boobs.
+		*goto noboobs
+	
+*label stare
+You stare at the sun, burning your retinas. Now you're blind. JUST KIDDING! But you're not very much better off staring at Gabriella's boobs, to tell the truth. It's been so long since you've been with a woman, you're about to explode.
+
+"Yeah, right there..." Gabriella says as you start to knead her tight thigh muscles. "Hey!"
+
+She notices you looking at her boobs. 
+
+"You can look at those later. Right now, concentrate on your work."
+
+Oh man, did she just give you permission to look at her boobs later? Maybe this means you're gonna get lucky tonight!
+
+*set booboffer true
+*goto thighschoice
+
+*label peek
+*set peeked true
+"Hey, no peeking!" Gabriella says.
+
+*goto thighschoice
+
+*label noboobs
+It takes great willpower, but you manage to finish massaging her thighs while not looking at her boobs.
+
+Ok, no. I lied. It didn't take any willpower. No man has that much willpower. You managed to not look at her boobs by staring at her crotch. You undressed it with your eyes. You imagined what it looks like, what it feels like, what it feels like to push inside it! 
+
+It got so intense that you squeezed her thigh muscles really hard.
+
+"Yeah!" Gabriella exclaims. "Now you're putting your weight into it."
+
+That's not all you want to put your weight into.
+
+"Okay, that's good enough. Thanks," Gabriella says, sits up, and puts her top back on.
+
+"Hey, I got some smoked pork. You wanna share?" she asks.
+
+ARE YOU KIDDING ME???
+
+*choice
+	#Tell her to smoke YOUR pork.
+		*goto professional
+	#Tell her yes, you want to share. Now. Badly.
+		*goto professional
+	#Help her cook dinner
+		*goto dinner
+	
+*label professional
+"That sounds fun and all," Gabriella says, "But don't you think we need to keep a professional relationship? Things get messed up if you're hot for teacher."
+
+*choice
+	#Quit being a witch hunter and start being a regular man, dammit.
+		*goto quit
+	#Grudgingly agree
+		*goto grudgeagree
+	#Complain that she teased you shamelessly!
+		*goto complaintease
+	*if (booboffer)
+		#"But didn't you say I could look at your boobs later?"
+			*goto boobslater
+		
+*label quit
+
+
+*label grudgeagree
+
+
+*label complaintease
+
+
+*label boobslater
+"I did," Gabriella admits, forehead creasing. She's silent and tense for a minute but then she brightens up and says, "After your training is done! I'll show them to you then."
+
+Nice save.
+
+*label dinner
+You can hardly move, your dick is so hard in your pants, and your blue balls are terrible too. However, you force yourself to help cook dinner, even offering up some of your beef jerky.
+
+"Oh yeah! I love beef jerky," Gabriella says, taking it from you. 
+
+You hand it over, wondering how you're going to beef jerky yourself later.
+
+*goto sleep
+
+*label cupbreasts
+
+
+*label massage
+
+
+*label sleep
+Slowly, the sun sets, and it gets colder.
+
+You and Gabriella cook a few things over the fire and eat in silence.
+
+Gabriella sets up her bedroll on the opposite side of the fire as you and lies down facing away from you. All you have is your thin blanket, but you're used to camping out. 
+
+*label sleepchoice
+*choice
+	#Go to sleep
+		*goto try2sleep
+	*disable_reuse #See if Gabriella wants to talk for a bit
+		*goto try2talk
+	
+*label try2sleep
+You try to sleep, but it's no use. You can't stop thinking about Gabriella over there and how you want so badly to go climb into the bedroll with her. It's too embarrassing to masturbate, so you just lie there in agony. 
+
+The minutes tick by slowly, the crackles of the fire marking time. One crackle. You're in agony. Two crackle. You're still in agony. Three crackle. Why did Gabriella insist on this professional relationship??? Four crackle. Maybe I really should quit. Five crackle. That does it! I'm gonna go out into the forest and masturbate.
+
+You're about to sneak away, claiming you had to "shake dew off your lily pad" if she happens to notice, but you're pretty sure she's asleep. She hasn't moved in a long time. 
+
+You carefully roll over to your side and are just beginning to slooooowly push yourself up to a sitting position when you hear Gabriella changing positions.
+
+*choice
+	#Freeze. Pretend to sleep.
+		*goto pretendsleep
+	#Peek.
+		*goto peeksleep
+	#Keep going.
+		*goto lilydew
+	#Look to see what she's doing.
+		*goto looksee
+	
+*label pretendsleep
+You lie there, eyes closed, listening. You can't tell what Gabriella's doing, but there's a lot of rustling of fabric as she's moving about. You can tell she's trying to be quiet, but still, you're able to hear a lot. Eventually the rustling sounds become rhythmic, like she's moving something under the covers in the same way again and again.
+
+*choice
+	#Try to see what's going on.
+		*goto trysee
+	#Just keep listening.
+		*goto justkeeplistening
+	#Ask if she's having fun.
+		*goto askfun
+	
+*label trysee
+Unfortunately, you were facing the other way when you froze, so to see, you're going to have to roll over. You try to make it sound like you're just shifting in your sleep, but when you move, you hear all sound stop.
+
+Carefully you slit one eye open, and you see Gabriella on the other side of the fire staring straight at you. You almost scream but hold it in, composing yourself, and resume studying the situation. You can't see much more than her upper body, so it looks like she's just lying there looking at you.
+
+After a few moments when you don't move again, she turns away and closes her eyes. The rhythmic sound starts again, and you see that she has both arms under the covers, hands perhaps between her legs. It looks like she's pulling something towards her again and again.
+
+Soon, the tempo increases, and she begins to move a little, shifting the position of her legs. Her back arches, and her head occasionally rolls from side to side. Finally, a soft moan escapes her lips.
+
+*fake_choice
+	#Stand up.
+	#Masturbate too. She won't hear you, with all the noise she's making.
+	#Force yourself to do nothing and just wait for it to be over.
+
+"I'm ready to rethink this master/apprentice thing," you hear her say.
+
+You're up in a flash and by her bedside.
+
+"That was fast," she laughs. 
+
+You see that she's spread her legs, one leg almost completely out of her bedroll. Her lower body is completely naked, and you can nearly see her crotch. She peels back the covers, and you see that she's hiked her shirt up (she's taken off the vest and is just sleeping in the white shirt she wears under it) over her breasts. Her sword is between her legs, the pommel almost entirely inside her. She pulls it out and shows it to you.
+
+"See," she says, "I have a phallic-shaped pommel." 
+
+You see that it indeed looks exactly like a penis, carved from ivory.
+
+"I don't know why, but it gives me comfort in battle to grip it. It's like hugging an old friend."
+
+She slips it back into herself and starts to move it in and out again.
+
+"I do this alone just about every night," she says. "But now I have you."
+
+She pulls the pommel out again, slides the sword up her body, and starts softly licking the glistening shaft.
+
+"Does it make you hard? Do you want to be inside me?"
+
+You climb on top of her, your member already rock-hard. It's been so for the last half-hour! It feels so good inside her already worked snatch, and you begin to work it some more.
+		
+*label justkeeplistening
+
+
+*label askfun
+
+
+*label peeksleep
+
+
+*label lilydew
+
+
+*label looksee
+You see Gabriella sit up and reach over to her belongings. She lifts her sword from where it was sitting and carefully lies back down with it. She glances over in your direction and cries out in surprise when she sees you watching her.
+
+"I just like to sleep with my sword," she says and quickly turns her back to you, hugging her sword like a teddy bear.
+
+*choice
+	#Ask her if her sword is as rock-hard as your sword.
+		*goto asksword
+	#Try to sleep.
+		*goto stilltrying
+	
+*label asksword
+"Yes, now go to sleep," Gabriella says. "You're bothering me."
+
+*label stilltrying
+You go back to trying to sleep, and now, even the idea of sneaking off to masturbate is too embarrassing. You lie there ready to explode.
+
+You hear Gabriella moving again.
+
+*choice
+	#Pretend to sleep
+		*goto pretendsleep
+	#Peek
+		*goto peek
+	#Look to see what she's doing
+		*goto lookseeagain
+	
+*label lookseeagain
+You see Gabriella slowly moving her sword from where it was on the outside of her covers to under the covers. She glances over at you, sees you watching her, and sighs.
+
+"Why are you watching me all night long?" she complains, gets up, and stalks off into the forest, taking her sword with her. 
+
+"I'm going to pee," she says, "Want to watch that too? Don't answer that."
+
+She takes a few steps, turns around, and says, "That question was completely rhetorical. I don't want you to watch me pee. Seriously, do not follow me."
+
+She turns and stalks off into the forest, shaking her head.
+
+*choice
+	#Follow
+		*goto peefollow
+	#Don't follow
+		*goto peenofollow
+	
+*label peefollow
+You wait a little while, then, as quietly as you can, get up and follow Gabriella into the forest. It's dark, but the light of the moon guides your way. You can see her ghostly form making its way ahead of you.
+
+She turns, sees you, but just keeps walking.
+
+You keep following, and she keeps walking, eventually making a big circle. You arrive back at camp, and she climbs into bed.
+
+"Good night," she says sullenly.
+
+*page_break Morning
+*goto morning
+
+*label peenofollow
+She's gone an awfully long time. Do you go check up on her?
+
+*choice
+	#Check up on her. Maybe something happened to her.
+		*goto checkup
+	#She said not to follow, so you're not going to follow, not even if you hear a bear roaring and her screaming.
+		*goto bearnofollow
+	
+*label checkup
+You head off into the forest in the direction she was going when you last saw her, wondering if you'll even be able to find her in the dark. In a moment, you hear a sound and head toward it, and as you get closer, you realize that it's the leaves of a tree rustling rhythmically intermixed with the sound of deep breathing and soft moans.
+
+You round a bend and come face to face with Gabriella, but somehow she's grown taller. Her face is a foot above you! She's completely nude and hanging onto the branches of a tree, her legs splayed apart, each foot on a low branch. Her sword is staked into the earth at the base of the tree, and she's riding the pommel of it, the tree branches shuddering with each bounce.
+
+When she sees you she screams and tries to leap off, but the sword's still inside her, making her fall backwards instead. She lands hard on her buttocks and scrambles backwards with her legs to get the sword out of her.
+
+"What are you doing here!" she demands, and even in the dim light of the half-moon, you see her turning red.
+
+*fake_choice
+	#"Um... shaking the dew off my lily pad?"
+	#"You were taking way too long, so I thought something happened."
+	#"Let me finish the job!"
+		
+"Shut up and get down here!" Gabriella cries and grabs you by the waistband, pulling you on top of her. Her hands are scrambling to free your cock from your trousers.
+
+"Get inside me before I change my mind," she says, finally pulling your swollen member free. 
+
+She grabs your collar and pulls your head down for a passionate kiss while simultaneously wrapping her legs around your waist. Pulling with her legs and guiding your cock with one hand, it easily slips inside her.
+
+"Ride me!" she screams.
+
+*label bearnofollow
+You wait for Gabriella to return, and just when you think it's been so long something MUST'VE happened, you see her finally come back into camp. She's quiet and seems pensive. She stands by her bedroll for awhile, staring out into the night, then glances at you.
+
+"You awake?" she finally says.
+
+*choice
+	#Say nothing.
+		*goto bearsaynothing
+	#Say yes.
+		*goto bearsayyes
+	
+*label bearsaynothing
+"Oh, come on, I know you're awake!" Gabriella shouts.
+
+*choice
+	#Still say nothing.
+		*goto stillsaynothing
+	#Admit to being awake.
+		*goto bearadmitawake
+	
+*label stillsaynothing
+You pretend to be asleep, watching Gabriella through slitted eyelids. She's standing by the fire, facing you fully now, just looking at you, wondering what she should do. After a minute or so, she tosses her sword on her bedroll, removes all her clothes, and is standing there naked, just in her knee-high leather boots.
+
+She sidles over to you, steps over you with one foot, and kneels down, giving you a fantastic view of her pussy. Slowly, she moves it closer and closer to your face.
+
+*choice
+	#Pretend to sleep.
+		*goto pretend2sleep
+	#Open your eyes.
+		*goto bearopeneyes
+	
+*label pretend2sleep
+
+
+*label bearopeneyes
+
+
+*label bearadmitawake
+
+
+*label bearsayyes
+
+
+*label try2talk
+"Hey, Gabriella," you say. "You want to talk for a bit?"
+
+*if (gabriella_mad)
+	She doesn't say anything.
+	
+	*goto try2sleep
+
+"What? No," Gabriella says and seems startled. "I was... thinking, and you disturbed me."
+
+*goto sleepchoice
+	
+
+*label askhowgood
+
+
+*label declinehunting
+
+
+*label gabrielleappearance
+The woman's perhaps 5'6" tall, slender but muscular. She's wearing tan, skin-tight corduroy breeches that does well to show off her shapely behind. Her boots are knee-high, fashioned from expensive leather, and she seems to have a custom-made padded leather vest that's a beautifully deep red color. It must've cost a fortune. 
+
+Her breasts are small enough that they show no cleavage in the vest's neckline, but they are still a shapely pair. Her arms are bare, but she's wearing doe-skin gloves that go up to her elbows.
+
+She has a backpack and belt pouch, and by her side is a slender, wicked-looking sword. A crossbow is draped over her back with quarrels at the ready.
+
+Her hair's chestnut brown and falls to her shoulders. Her eyes are a piercing green, and when she looks at you, her intensity makes you nervous sometimes. You don't know if she's going to snap at you or simply turn away in disdain.
+
+*return
+
+*label questions
+
+	
+*label lethergo
+Are you nuts? This woman is beautiful, and not only that, in a way, you helped her catch the faerie. Maybe she owes you at least an explanation, if not even... "gratitude." Wink, wink.
+
+Are you sure?
+
+*choice
+	#Really let her go.
+		*goto really
+	#Chase after her.
+		*goto chase
+	
+*label really
+I don't know why you just let her leave, but I suppose your reasons are your own. Maybe she gave you the creeps. Maybe you're afraid of hot women, but whatever your reason, you find yourself alone again and resume your journey.
+
+*label journey
+The path, no wider than an ox cart, continues its windy journey through Orlon Forest, rounding boulders and rock outcroppings here and there. You come to a point where the path takes a long detour, avoiding a small cliff with a drop of only ten feet or so, and you feel you could easily climb down, saving yourself a good ten minutes.
+
+*choice
+	#Climb down
+		*goto climbdown
+	#Stay on the path
+		*goto staypath
+	
+*label climbdown
+You easily climb down the small cliff, and nothing happens. No faerie waylaid you or anything. You didn't even slip. The path goes around simply because the road is used by farmers with their wagons, and you wonder just how serious the admonishment against leaving the path is.
+
+*goto wagon
+
+*label staypath
+Better to be safe than sorry, for though you can see the path below, who knows what could happen. Not only might you slip, but you've heard that going off path is dangerous. The path's slope is gradual, and it shortly makes a hairpin turn, bringing you to the section you saw earlier.
+
+*label wagon
+In another ten minutes or so, you round a bend and see a wagon sitting in the middle of the road. It seems to be abandoned, its horse missing.
+
+*choice
+	#Investigate
+		*goto investigate
+	#Go off path to go around it, avoiding it completely.
+		*goto goaround
+	#Hide and watch it for awhile
+		*goto watchwagon
+	#Just walk on by
+		*goto walkby
+	
+You have sex with 1000 beautiful maidens, but you never know it because this code is never reached in the game.	
+	
+*label investigate
+
+
+*label goaround
+
+
+*label watchwagon
+
+
+*label walkby
+
+
+*label chase
+
+

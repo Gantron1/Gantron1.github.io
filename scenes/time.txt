@@ -1,0 +1,92 @@
+*label meetelsbeth
+"I am Princess Elsbeth of the family Cour 'd Roy," she says.
+
+*if lname = ""
+	"I am ${fname}," you say.
+
+	"Just ${fname}? No family name?" Elsbeth asks.
+	*set moniker "the Lion-donged (or whatever)"
+	*choice
+		*disable_reuse #"Well, sometimes I'm called ${fname} ${moniker}."
+			Really? You say that?
+			*choice
+				#Yup, you really say that.
+					*comment [Unfinished]
+					*ending
+				#No, of course not.
+					*goto meetelsbethchoice
+		#"Just ${fname}."
+			"You must be a great hero, then," Elsbeth says. "Only great heroes have but a single name, so perhaps you really will succeed in slaying this dragon."
+*else
+	[unfinished]
+	
+*label timebox
+"There may be a way..." the crone says. "There's a magic item in Myrristicor's hoard, a strange box made of an unknown black substance, and it allows one to return to any moment in the recent past. It could allow you a second chance!"
+*choice
+	#Ask why she didn't use it to escape.
+	#Ask how she knew of it.
+		"I was a wizard's apprentice," the crone says. "Long ago, when my hair was still golden, my eyes bright with wonder. I was very beautiful but spurned all my suitors for my books, and it was in one of these books, a most rare and ancient tome that I read of this strange box that has no name. The description was vague, gave no history, for it was copied from fragments of an even more ancient work, now lost. However, when one day I happened to come upon the box, I recognized it instantly. Myrristicor has no idea it's here or what it can do. I used it to try and escape, but alas, its limit seems to be a mere two days. I'd been prisoner here for over a year by then, and in all the decades that followed, I almost forgot it was here. I wish I could've used it to turn forward the hands of time and end my wretched days earlier. Well, it won't be long now, I suppose. I am ancient myself now."
+
+		She smiles wryly. 
+
+*label howcronebecameprisoner
+"It was one of my suitors," she sighs. "Jealous that I'd spurned him, he decided that if he could not have me, he'd punish me in the worst way possible. Through bribes or trickery, he managed to rig the lottery, and I was chosen as the next sacrifice. The last laugh is mine, however, as I found the dragon a source of neverending fascination. His ancientness... his very nature is magical. It's a dark magic, to be sure, but still a key, a glimpse of the wonders beyond the Great Veil. I was the one who taught Elsbeth the way to open her eyes and find the goodness in the very heart of evil, for it's the only way for a maiden to survive. Woe, but I never guessed how far she would take it. No one in all of known history has ever fallen in love with a dragon like she has."
+
+*label cronebook
+"I've written a book," the crone says. "Eighty years of confinement with a dragon... Can you imagine the things that could be learned? Most maidens barely last a day, few more than a year. In all of history, never has a maiden been found older than thirty in any vanquished dragon's lair... except for me. Always the dragon corrupts their maiden hearts, you see, and once consumed by their pain and hate, all innocence lost, they become as he is, and he has no use for them anymore. 
+
+"Have you ever stopped to wonder why dragons keep treasure and maidens? They never spend a coin, never marry or have sex. No, dragons are the spawn of all men's evil, born from the rocks in lonely, desolate places. I'm the only one who knows this. All the sages in the world have only guesses, some saying wizards made them as weapons in an ancient and forgotten war, others saying it was merely from our dabbling in dark arts that awakened them or brought them from some terrible other plane of pure evil. Never did they realize that it was not wizards but all of us who made them, every dark thought or dark deed feeds an invisible vortex until enough Greed, enough Lust, is gathered to coalesce into a dragon egg in the magma deep underground. It journeys for hundreds of years in semi-physical form, through the rocks, until finally the dragon is born on a barren crag or rocky wasteland. You cannot know the hunger, the excruciating desire, a thousand times greater than you have ever felt, for in the heart of every dragon are the unrequited yearnings of millions of crushed dreams. All this and more have I recorded in my book, written in blood, on the blank pages at the end of Feldaz's last spellbook. My hope is that one day greater wizards than I will further my research and find a way to rid this world of dragons once and for all."
+
+*label howlearned
+"I was a mind-mage," the crone says. "Eschewing rituals and props, I would lie all day in wondrous journeys outside my body. Once you can do that, merging with others is easy, though it is not without its dangers, for souls can become entwined. There are ways to avoid that, however, and here, slowly, I perfected the technique of merging with the mind of a dragon without losing one's sanity. I've searched his past, seen his birth. I know what he's made of."
+
+*label meetcrone
+"Come this way," Elsbeth says. "I will introduce you to the matriarch. She has no name anymore, but you may call her simply 'the crone.'"
+
+*label maidenroom
+Elsbeth takes you into one of the mazelike tunnels, and after many twists and turns, it opens into a chamber perhaps 20' by 20', all of the same smooth, rounded stone of the long vanished rockworms.
+
+Five women are here, all naked, huddling together for warmth along the far wall. When they see you, they give off a collective gasp.
+
+"Shhh!!" Elsbeth chastizes them, glancing in the direction of the treasure chamber and Myrristicor's roost.
+
+Some of them haven't seen a man in many years.
+
+Elsbeth introduces you:
+
+A raven haired beauty with piercing green eyes, large breasts, and shapely figure, is named Eve.
+
+A petite girl with long, light brown hair in a loose braid is named Giselle. She seems depressed and listless.
+
+A waifish girl with long, skinny arms and legs is named Zara. She seems quiet and shy.
+
+A redhead, also with large breasts, is named Aislynne. She smiles at you.
+
+And finally, there's a woman perhaps in her late twenties with short-cropped dirty blonde hair, named Katrina. She nods in greeting but doesn't smile.
+
+*label meetcrone2
+Elsbeth leads you through the commonroom to a smaller tunnel in back which leads to a small, almost spherical chamber. Inside is a very ancient old woman, also completely nude, sitting in front of, not a fire, but what looks like a large flat stone glowing red with heat. Upon it is a large black cauldron in which some kind of stew is brewing.
+
+"Crone," Elsbeth says. "This is ${fname} ${lname}, come to slay the dragon."
+
+"Gooood!" the crone entones mightily, and Elsbeth gasps.
+
+"How can you say that?" she cries. "Don't you know I love him?"
+*page_break
+Huh? A captive maiden in love with the dragon who keeps her? You look to the crone for answers.
+
+"It's time, dear Elsbeth," the crone says. "I always knew this day would come, but if it's small consolation to you, I've seen two other heroes try and fail. However, this one..." She looks you up and down a moment. "This one seems different!"
+
+"He mustn't!" Elsbeth cries, nearly in tears.
+
+"Leave us," says the crone, her voice quiet but full of power, and Elsbeth hesitates only a moment before running from the room.
+
+"Sit," the crone says, motioning to a place before her, near the cauldron.
+*fake_choice
+	#Sit.
+"I can see you're surprised," says the crone. "It surprises me too, a maiden, a princess at that, in love with her captor. Myrristicor tortures his captives too, you know, but even so, she is as she is. I told her to bring you here, and perhaps she thought I'd try to talk you out of it. Tell you it's dangerous, perhaps. Tell you your chances are slim. Well, all that may be true, but the chance to rid the world of such a beast is worth the risk, don't you think? Tell me, young warrior, why are you here?"
+*choice
+	#"To save the maidens."
+	#"I'm in love with Princess Elsbeth."
+	#"The glory... and the treasure."
+	#"I'm helping a knight on her quest."

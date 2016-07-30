@@ -1,0 +1,511 @@
+*temp bandit_alive true
+
+*if debug 
+	*comment *show_password
+	*goto wordsagain
+
+You start out bright and early.
+*if rel_es > 55
+	Esmerelda smiles and waves goodbye to you.
+	*goto road
+*elseif rel_es < 45
+	Esmerelda scowls and ignores you as you pass her at the bar.
+	*goto road
+
+*label road
+Sigurd, the innkeeper, says, "Good luck courting the princess!"
+
+You smile and nod, despite believing you stand no chance. You're not a member of the gentry and are, in fact, almost penniless. Though you are decently skilled with a sword, you lack knowledge of jousting, horsemanship, strategy, and all the other gentlemanly arts required of a knight and prince. However, you think to yourself, there are plenty of other women to be had, as well as adventures, and who knows what Lady Luck might bring your way. You set off to seek your fortune!
+*page_break
+You begin to walk down the road to Zagos, capital city of the empire of Mog, it's thirty-foot tall walls imposing even from this great distance. The road, used mostly only by farmers, is narrow and winds its way through, in parts, a small forest while at other times passes, mostly in a straight line, through seemingly endless cultivated fields. The occasional farmhouse dots the otherwise monotonous landscape.
+
+All is quiet as you enter yet another section of wooded land when you sense a presence, as if someone (or something) were watching you from further in the woods.
+
+[Add to rumors in prev scene: "Beware the Forest Orlon through which the road to Zagos often passes, for lone travelers are targeted, often by things not of this world." "Don't listen to him. Farmers use that road all the time. *I* use that road all the time, and no one ever accosted me, let alone GHOSTS! Hahahahaaaa...." "I don't know. Once I felt like I was being watched, and an icy chill descended, even on the hot summer day that it was. I ran and didn't look back!" "The parson's boy disappeared in there once, and they say he was 'taken.'" "Taken by what? Ghosts?" "I'll tell ya who took 'im. A sex-starved faerie! Hahahahaaa..." "That's no joke. There be fae in those woods!" "And the occasional bandit. He was probably just waylaid."]
+
+*choice
+	#Stop and see if you can see or hear anything
+		*goto listen
+	#Call out
+		*goto callout
+	#Place a hand on the pommel of your sword and issue a warning
+	#Draw your sword and advance
+	#Slowly back out of the forest
+	#Turn and run!
+		*goto run
+
+*label callout
+"Hello?" you call out, questioningly.
+
+"Hello?" a voice repeats from somewhere ahead, and strangely, it sounds just like your own. You wait, but there's no further sound or activity.
+
+*choice
+	#Laugh nervously
+		*goto laugh
+	#Place a hand on the pommel of your sword and issue a warning
+	#Slowly back out of the forest
+	#Turn and run!
+		*goto run
+
+*label laugh
+You laugh nervously but quickly stop when a green glow appears from behind a tree perhaps twenty-five feet in front of you and slightly to the right. Then there's a shrill laughter, and this time it isn't like your voice at all, more like that of a tiny girl, shrunken down to faerie size. 
+
+In fact, that's just what it is, a wee little faerie, less than a foot tall, glowing green, wearing a green dress, and flitting about on a pair of what look like dragonfly wings.
+
+"Greetings, traveler," she says, trying to sound solemn but unable to suppress the mischievous grin on her face. "My name is Ella, river fae from the Forest Orlon, and I have knowledge you might pay for. Do you want it?"
+
+*if heard_fae_rumors
+	You remember the dire warnings the patrons at the inn told you last night, but she seems so innocent, even guiless. On the other hand, you wonder if that's how they trick humans.
+	*goto fae_childhood
+
+*label fae_childhood
+You think back to the stories about the fae you heard as a child and remember that they liked to seduce humans and lure them into the woods. Sometimes the person would return forty years later, seemingly unaged, or other times, they wouldn't return at all. On the other hand, there were stories about faeries coming to the aid of lost children or even allying with the rangers against mutual enemies. Mostly, no one had ever seen a faerie, only heard stories, and your mother warned you of their mischief and advised you stay away if you ever encountered the fae.
+
+In light of all this, you are...
+
+*choice
+	#Hostile
+		*set rel_fae 30
+		*temp reaction "hostile"
+		*goto action
+	#Suspicious
+		*set rel_fae 45
+		*temp reaction "suspicious"
+		*goto action
+	#Indifferent
+		*set rel_fae 50
+		*temp reaction "indifferent to the fae"
+		*goto action
+	#Curious but wary
+		*set rel_fae 55
+		*temp reaction "curious but wary"
+		*goto action
+	#Intrigued
+		*set rel_fae 60
+		*temp reaction "intrigued"
+		*goto action
+
+*label action
+You are ${reaction}. 
+
+*choice
+	*selectable_if (rel_fae < 45) #Attack
+		*goto attack
+	#"What is it about?"
+		*goto whatabout
+	#"No, I want nothing to do with the fae."
+	#Turn and run
+		*goto run2
+
+*label whatabout
+"I only offer what I know you'd want," the faerie giggles. "Yes or no. Final offer." She smiles mischievously.
+
+*if debug
+	*show_password
+
+*choice
+	#Yes
+		*goto accept
+	#No
+		*goto decline
+	#Ask how much it will cost
+		*goto howmuch
+	#Insist on knowing what it's about first
+		*goto insist
+
+*label accept
+The faerie's face breaks into an overjoyed grin. "I am so happy!" she cries, and her voice sounds like little bells ringing. "Perhaps you've heard of us, the faerie folk? We are just like you, seeking for that which our hearts yearn. Will you give me... satisfaction?"
+
+*choice
+	#"What kind of 'satisfaction'?"
+		*goto whatkind
+	#"If it's what I'm thinking, yes!"
+	#"Why don't you get it from someone more your size?"
+		*goto moresize
+	#"Satisfaction? Do you mean gold pieces?"
+		*goto howmuch
+
+*label moresize
+"You are my size," the faerie says, her face deadpan. Only after a pause that's a little too long does she burst into laughter. "You, Silly!" she giggles. "Faerie males are all right, but I've always dreamt of riding a giant, slippery, red, quivering..."
+
+She stops speaking and just stares at you, one hand pressing between her strongly clenched legs.
+
+Finally, she's able to go on, "Oh, you know what I mean. Your tongue! Your tongue! Will you? Please? Please?"
+
+*choice
+	#Tell her to fly over as you tilt your head back
+	#Offer money instead
+	#Approach slowly
+		*goto approach
+
+*label approach
+"Oh yes! Oh yes!" the faerie screams, so happy her wish is about to be fulfilled. Hovering in midair, she leans back until she's horizontal and spreads her legs, giving you full view of her tiny vulva which, despite its tiny size, looks exactly like a human girl's.
+
+"Oh, poke me with it," she asks, her voice lusty, her eyes already closed.
+
+*choice
+	#Give her what she wants
+		*goto givewants
+	*selectable_if (rel_fae < 51) #Catch her and put her in a bag
+	*selectable_if (rel_fae < 46) #Kill her
+		*goto kill
+
+*label givewants
+The faerie is wearing tiny little olive green slippers, but otherwise, her legs are completely bare under her dress. Daintily you grasp each of her tiny ankles between your thumb and forefinger to pull her hovering, supine body toward your salivating mouth. 
+
+Ella inhales in anticipation and exhales, "Ahhhh..." when your tongue slides between her thin little legs. Compared to her body, your tongue is so large, it covers her entire pube and half her thighs if you push it forward. She begins undulating her body in a mesmerizing wave motion human women are incapable of performing with anything approaching the same level of grace. It's as if a current from deep beneath the sea were made manifest right there in front of your nose.
+
+"Poke me. Poke me..." she murmurs, and you begin darting your tongue forward and back, causing Ella to emit long slow moans that echo into the surrounding forest. 
+
+"Harder... harder..." Ella begs, and though at first you worry about hurting her, her cries of pleasure urge you on until she explodes into a little crescendo of ecstasy right in front of your face.
+*page_break
+"Oh, thank you, thank you!" Ella says when she finally recovers her composure. After her orgasm, she floated about aimlessly for so long you worried she might flit off and forget about your deal.
+
+"The information I promised," she begins, her face still rosy, still a bit breathless, "Is that further ahead, on this very path, is a chance for a strong warrior to rescue a damsel in distress, and for which she will be very grateful. However, if not a strong warrior ye be, this encounter ye best avoid."
+
+After speaking, Ella smooths her dress, which had hiked up and become disheveled. 
+
+"Good luck, human wanderer," she says, rising up into the canopy of leaves. "Know that you will always be... friend of the fae." And with that, she was gone, disappeared into the forest, leaving only the gentle rustling of the leaves, almost as if your tryst had never been.
+
+*choice
+	#Move ahead quickly
+		*goto quickly
+	#Move ahead cautiously
+	#Go off the path to avoid what's ahead
+	#Leave the forest and go around through the corn fields
+		*goto goaround
+
+*label quickly
+Never one to tarry when a damsel in distress is waiting, you throw caution to the wind, and in only a few minutes or so, you hear the sound of men's voices mixed with the shrieks of a young woman coming from somewhere off the path. 
+
+While it appears that Ella spoke true, you do wonder if this could be a bit of fae mischief.
+
+*choice
+	#Chivalrously charge
+		*goto charge
+	#Sneak up
+	#Avoid the encounter
+		*goto avoid
+
+*label charge
+You break into a trot, heading into the thicket, the sounds of distress growing louder with each step.
+
+"Is she princess enough for ya, Harod?" you hear a man laugh.
+
+"We peasants can't bed princesses, so this will have to do," you hear someone, perhaps Harod, retort.
+
+"Oh, she's as fine as any princess, I'd say," you hear a third man exclaim.
+
+Your pace quickens, despite the rough terrain, and soon you burst into a small clearing several dozen yards into the woods away from the road. There are three slovenly-looking men kneeling, surrounding a young peasant girl on the ground, struggling to escape. Her dress is torn in several places, one breast already exposed, and the men are rapidly ripping the rest from her body.
+
+"Oh, please, kind sirs," she begs, "Let me go. Let me go, please!"
+
+*if (sword > 1) and (cockatrice_str > 0)
+	You are upon them before they know it and quickly behead the nearest man. The other two scramble away in a comical display of gasps of horror and the pulling up of breaches. One is grabbing for his belt which has his short sword (really just a long knife), while the other manages to get to his feet and run. You believe you can easily kill one or the other but not both.
+
+	*choice
+		#Slay the man going for his sword
+			*goto slay
+		#Chase the one who's running away
+			*goto chase
+
+*label slay
+You hack the man down just as the knife is halfway out of the shealth.
+
+The other man is getting away, but you believe you have a chance of catching him.
+*choice
+	#Chase the other man
+		*set rel_d1 %+ 20
+		*goto chase2
+	#See if the girl is all right
+		*set rel_d1 %+ 30
+		*goto see_allright
+
+*label see_allright
+The girl is already scrambling away herself but trips on the dress already half off her body. She falls and gashes her shin badly on a sharp rock, screams in pain and then subsides into sobbing.
+
+"Are you all right, miss?" you say in your most chivalrous voice.
+
+"Yes, oh yes, thank you, kind sir," the girl says through her sobs which quickly turn from those of terror to relief.
+
+It seems like she needs a hug.
+
+*choice
+	#Hug her
+		*set rel_d1 +5
+		*goto hug
+	#Comfort her another way
+		*goto anothercomfort
+	#Don't comfort her at all
+		*goto nocomfort
+	
+*label anothercomfort
+What kind of other kind of comfort do you offer?
+
+*choice
+	#Sex, of course. Isn't that the most comfort possible?
+		*goto comfortsex
+	#Use words and only words. Women like words.
+		*goto comfortwords
+	
+*label comfortwords
+You're not too good at mushy stuff. If she were a boy, you'd know what to say, stuff about being brave and acting like a man. There's nothing a hearty slap on the back or a pub crawl can't fix, right? But somehow you don't think that'd go over too well in this situation.
+
+You try to come up with things to say and even say a few of them. It seems to work. Sort of. She stops crying, but you wonder if she doesn't seem a bit disappointed at the same time. 
+
+"Sir," she says, "Thank you again for rescuing me. My name is Jennifer, and I live on my family's farm a few miles from here. I'm injured and cannot walk, so I was wondering if you could help me back to my wagon?"
+
+*choice
+	#Help her to her wagon
+		*goto wagon
+	*if (bandit_alive) #Tell her you must deal with the other bandit first
+		*goto findbandit
+	#Comfort her some more first
+		*goto morecomfort
+	
+*label morecomfort
+She was disappointed by your fumbling words, and you can't leave it like that. You just can't, not when she's so pretty and so vulnerable right now. Play your cards right, and you might get some!
+
+*choice
+	#Try the word approach again
+		*goto wordsagain
+	#Now the hug
+		*goto nowhug
+	#She seems ready for sex
+		*goto seemsready
+	
+*label wordsagain
+*temp bandit_alive_temp "."
+*if bandit_alive 
+	*set bandit_alive_temp ", or the bandit you let escape stole it."
+
+You come up with something fantastic to say! It's VERY comforting AND makes you look fantastically suave WITHOUT making you look too lecherous. It's perfect, but you're not even a quarter of the way throught it before the she says, "Excuse me, sir, but I'm worried the other man may return. Can we go to my wagon now?"
+
+Dang it, women always muddle your thinking like this. As gently as you can, you help Jennifer to her feet and carry her to the wagon, which is just a little ways further up the road.
+
+"Oh no..." Jennifer says. "The horse is missing."
+
+You surmise it must've run off when Jennifer was first accosted${bandit_alive_temp}
+
+*temp roadrumor ""
+*if heard_road_rumor
+	*set roadrumor ", though you know this road receives little traffic."
+
+*choice
+	#Offer to carry her all the way back to her farm several miles away
+		*goto carryher
+	#Wait with her for someone to pass by${roadrumor}
+		*goto wait
+	
+*label carryher
+You offer to carry her home.
+
+"Are you sure?" Jennifer asks, her eyes widening. "Are you strong enough?"
+
+"Come, I will show you," you say, easily lifting her from the ground.
+
+"Oh my!" Jennifer laughs. "You are strong!"
+
+With a spring in your step, you begin to saunter down the road, whistling a merry tune as if you had not a care in the world. This makes Jennifer giggle. You're scoring points!
+
+*choice
+	#Sneak a peek at her boobs
+		*goto peek
+	#Be a gentleman
+		*goto nopeek
+	
+*label peek
+How could you not sneak a peek at Jennifer's boobs? Carrying her in your arms, they are just RIGHT there. Even if you're looking straight ahead, you're seeing them, so she won't notice if you happen to glance a tiny bit downward now and again, would she? In fact, SHOULDN'T you be glancing downward anyway for stray roots or stones in the road? A true gentleman is careful and would do nothing to trip and fall in this situation, wouldn't he?
+
+Plus, with her dress torn, it's become rather revealing, and it would take a man of iron will to keep his eyes up for all this time. If you had to summon up so much willpower, you might get too tired, have to put her down, or God forbid, not be at your best if a confrontation with another traveler occurs.
+
+Yes, not only can you not avoid looking at her boobs, you in fact MUST look at her boobs for the safety of everyone involved.
+*page_break Boobs
+You find them to be very fine boobs indeed, large for such a thin, even waifish girl, but not too large. Juuuust right. And perky! Very perky.
+
+You are so absorbed with Jennifer's boobs that you trip on a small rock.
+
+"It's okay," Jennifer says. "You can look. We all have animal natures, after all."
+
+*choice
+	#Compliment her boobs
+		*goto complimentboobs
+	#Get embarrassed
+		*goto embarrassed
+	#Deny it
+		"Thank you," you say. "As we are walking, I have indeed been looking, looking around, at all the nature... and animals. You are indeed correct, for there are many animals and nature around us, and it is indeed beautiful."
+		*goto tired
+
+*label tired
+*page_break Continue walking
+After a time, you begin to tire.
+
+*choice
+	#Suck it up, hide it, and impress Jennifer with your manly strength
+		*goto hidefatigue
+	#Take a break, with the excuse of giving her a rest
+		*goto rest
+	
+*label hidefatigue
+You continue walking, doing your best to show no sign of fatigue. Jennifer's family's farm is only a mile further, and you think you can make it.
+
+"You seem to be struggling, sir," Jennifer says. "Are you sure you wouldn't benefit from a rest?"
+
+*choice
+	#It's a trap. She wants to see if you're weak or not. Keep going!
+		*goto keepgoing
+	#Take a rest
+		*goto rest2
+	
+*label rest2
+"Perhaps a short rest would be good," you say as you put her down, "Though it's not really necessary. However, perhaps the lady might like a brief respite?"
+		
+Jennifer smiles, perhaps amused at your machismo.
+
+The two of you sit down by the side of the road, and you enjoy a cool breeze that dries the sweat on your brow and under your heavy leather breastplate.
+
+"Would you..." Jennifer begins and then pauses shyly before mustering the courage to continue, "Would you perhaps like me to massage the muscles in your arms? It's the least I could do after you've gone to such great expense to help me."
+
+*choice
+	#Tell her your arms aren't tired. 
+		*goto nomassage
+	#Politely decline. It would be unseemly for a woman to massage a man she hardly knows by the side of the road.
+		*goto nomassage
+	#Accept the offer
+		*goto massage
+	
+*label massage
+"Well," you say, "Since you did notice I was 'struggling,' despite my attempts to hide it. I might as well admit that, yes, my arms could use a bit of massaging, but the word 'struggling'... I don't believe it was THAT toilsome, more like just a slight..."
+
+"Oh, shush," Jennifer says. "You have already impressed me enough today."
+
+You do not use greaves, so your arms are already bare. Jennifer takes first your right and then your left, kneading them with hands surprisingly strong for such a small woman.
+
+"From all those loaves of bread I baked with Mum," she laughs and gives your bicep an impressively powerful squeeze.
+
+*choice
+	#Offer her a massage in return
+		*goto reciprocate
+	#Kiss her
+		*goto kiss
+	
+*label kiss
+You take the opportunity to move in for a kiss, but Jennifer pulls away.
+
+"I'm sorry, sir," she protests. "I did not intend... I really was only thinking of your tired arms. Come, let us return to our journey. I think I can walk if you give me your shoulder to lean on."
+
+*choice
+	#Kiss her
+		*goto tryagain
+	#Give her your shoulder to lean on
+		*goto shoulder
+	#Offer to carry her again
+		*goto carry
+	
+*label tryagain
+No woman massages a man's arms if she's not interested in him; she must be playing hard to get. Firmly but still gently, you hold her so that she cannot pull away very far. Looking in her eyes, you move forward to kiss her again.
+
+"No..." she says, pulling away again.
+
+*choice
+	#Keeping going
+		*goto kiss3
+	#Let her go
+		*goto nokiss
+	
+*label kiss3
+You wrap your arms around her to prevent her from getting away when suddenly she screams, "NO!!!!" and shoves you hard.
+
+Stunned, you let her go, and she scrambles away from you.
+
+"You're just like the men from before!" she cries. "Begone. I can find my own way home from here."
+
+*choice
+	#Apologize profusely
+		*goto apologize
+	#Slink away
+		*goto slink
+	#Leave insulted
+		*goto insulted
+	#Get your kiss no matter what
+		*goto kiss4
+	
+*label kiss4
+No woman has ever rebuffed you before, and you're not allowed to start now, especially not a peasant, not one who should be more grateful for the danger you placed yourself in rescuing her. 
+
+You grab her and kiss her. Hard.
+
+She's screaming and struggling hard. Her dress rips more and is nearly off her body, but she manages to scramble away on her hands and knees, making for a copse of nearby trees.
+
+*choice
+	#Let her go
+		*goto lethergo
+	#Give chase
+		*goto chase
+	
+*label chase
+Despite her injury, she moves surprisingly fast, but you manage to keep her in sight. Seeing she can't get away, Jennifer grabs the nearest stick she can find.
+
+"Stay back!" she yells, brandishing it in front of her, holding it in one hand while covering her exposed chest with the other. Tears are streaming down her face.
+
+*choice
+	#Apologize and try to make amends
+		*goto amends
+	#Grab her
+		*goto grab
+	
+*label grab
+You charge forward, and she's unable to raise the stick in time. You grab her, trapping the makeshift club between your two bodies, and the two of you fall together onto the ground.
+
+*choice
+	#Kiss her
+		*goto kiss5
+	#Hold her in place to try and make things right
+		*goto trapped
+	
+*label kiss5
+As you attempt to kiss her, Jennifer keeps turning her face left, then right, the touch of your lips utterly abhorrent to her. You are much stronger than her, however, and are eventually able to force your kiss on her lips. It's then she begins to sob, falling limp in your arms, no longer struggling.
+
+*choice
+	#Take her
+		*goto rape
+	#Realize your mistake and let her go
+		*goto realize
+	
+*label rape
+You rip off the remains of her dress and force her legs apart. Quickly freeing your member from your breaches, you attempt to penetrate her, but you find her sex utterly dry.
+
+*choice
+	#Keep trying
+		*goto keeptrying
+	#Realize your mistake
+		*goto realize
+	
+*label keeptrying
+You keep thrusting against her closed off hole, and slowly you find yourself gaining partial entry. You keep thrusting and bit by bit, you enter more and more, all the while Jennifer laying like a dishrag, utterly compliant, eyes tightly shut. Her arms, legs, nothing moves. She's just waiting for it to be over.
+
+You thrust again and again before exploding inside her, though it's far less pleasurable than it usually is. Suddenly it dawns on you: this is rape, and you feel ashamed.
+
+You get off her and run away, still going to Zagos like you planned, but eventually your crime catches up with you. A posse catches you, a trial is held, and you are hanged.
+
+THE END
+*finish
+
+*label realize 
+You let her go and move back. Jennifer continues laying there motionless as if dead.
+
+*choice
+	#Apologize
+		*goto apologize2
+	#Leave
+		*goto leave
+	
+*label apologize2
+You try to apologize, but words are useless at this point. She's laying there, naked, and you could've stopped long before it reached this point.
+
+After a few moments, Jennifer curls into a ball, quietly sobbing, seeming to not hear a word you're saying.
+
+You can do nothing but leave her there, and though you go to Zagos like you planned, soon everyone knows you as "the rapist." You're lucky you didn't get lynched, but the incident stifles all hopes of advancement in society. 
+
+THE END
+*finish

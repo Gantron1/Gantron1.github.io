@@ -1,0 +1,413 @@
+*temp spat false
+*temp tried_hold_hands false
+*temp was_rude false
+
+You decide to go with Rebekah to visit the Crone.
+
+"Who is this 'crone,'" you ask once you and Rebekah are alone, having gone off path and into Orlon Forest.
+
+"Nobody knows," Rebekah says. "She's been living in different places in the forest for as long as anyone can remember but with no kinfolk in the area. Some say she came from the Faerie Realm, but that's just nonsense. To me, she's a mentor and teacher, and many go to her when in need of healing."
+
+"Aren't they afraid?" you ask.
+
+"Yes, and many do not find her. Remember the way we are walking in case you need to find her on your own someday."
+
+So far, it seems straightforward, just heading north from where the wagon was.
+
+*choice
+	#See if Rebekah wants to hold hands
+		*goto holdhands
+	#Ask about the faerie realm
+		*goto askrealm
+	
+*label holdhands
+*set tried_hold_hands true
+You take Rebekah's hand, but in a moment, she pulls it from your grasp.
+
+"We must speak of serious matters," she says, walking alone once more. "I need to tell you of the faerie realm."
+
+You nod.
+
+*label askrealm
+*if rebekah_chase_went_bad
+	"It's a realm not to be trifled with, so in a way, your reluctance before is valid, though born of ignorance and superstition. For example, your sword... can you not accidentally cut yourself? You would not give it to a child to play with, but in your hands it serves a good purpose."
+	*goto askrealm2
+*else
+	"I can sense in you a natural aptitude for faerie magic," Rebekah says. "I'm glad you chose to come with me. The faerie realm is none other than the reality behind what is commonly believed to be reality, the physical dross and animalistic passions, but the truth is far more subtle. With practice, we can make it sublime."
+	
+	She pauses as if to let her words sink in, looking about her as if seeing things you cannot see.
+	
+	She goes on, "It is, of course, not without its dangers. Always keep your wits about you, lest you forget yourself and be lured into it, perhaps to a Faerie Feast. Time moves more quickly in the faerie realm, and this results in people disappearing. However, know that there is no malice in the fae any more than there is in nature, for malice and evil intent exist solely in the hearts of men. They simply do not understand time as we do, nor value the same things."
+	
+*label askrealm2
+*choice
+	*if (rebekah_chase_went_bad) #Joke that your 'other sword' also serves a good purpose
+		*goto swordjoke
+	#See if she wants to hold hands
+		*goto holdhands2
+	*if (rel_el > 50) #Tell her about Ella
+		*goto tellella
+	#Walk in silence
+		*goto walksilence
+	
+*label swordjoke
+"Like how my 'other sword' also serves a good purpose?" you joke.
+
+Rebekah exhales irritably. "Please try to be serious," she quips. "The dangers are real. Do you want to be invited to a Faerie Feast, accept the invitation ignorant of the dangers, and never return?"
+
+*choice
+	#Apologize
+		*goto apologize
+	#Get irritated yourself
+		*goto irritated
+	
+*label apologize
+"I'm sorry," you say. "I know this is serious."
+
+"It's okay," Rebekah says. "Jokes can dispel the tension sometimes, and yes, your other sword can serve a very powerful purpose indeed."
+*goto walksilence
+
+*label irritated
+"I can handle any dangers myself," you bark irritably. "I wouldn't go to any stupid feast anyway."
+*set rel_d2 %- 5
+
+Rebekah says nothing, just keeps walking.
+
+*choice
+	#Change your mind about going to see the crone
+		*goto changemind
+	#Walk in silence
+		*set spat true
+		*goto walksilence
+
+*label changemind
+[This option is not yet written.]
+
+	
+*label holdhands2
+*if tried_hold_hands
+	You try to take Rebekah's hand again, wondering if she'll allow it now. She does!
+	*goto holdhands3
+*else
+	You take Rebekah's hand, and she smiles and squeezes your hand affectionately.
+	
+*label holdhands3
+*set rel_d2 %+5
+*choice
+	#Take it to the next level
+		*goto nextlevel
+	#Walk in silence
+		*goto walksilence
+
+*label nextlevel
+You stop walking, and because you're holding hands, Rebekah must stop too. You pull her towards you into a hug and kiss her on the lips.
+
+She kisses you back, but in a moment pulls away.
+
+"There'll be time for such things later," she says. "After what you learn, you may think twice about whether it's what you want."
+
+*goto walksilence
+	
+*label tellella
+You tell Rebekah about how you met Ella.
+
+"Really?" Rebekah says. "You can see faeries already? I must admit, I can only hear them and sense them, and I'm only just beginning to see them. You have a gift, ${name}, and I hope you do not squander it, giving in to greed or fear."
+
+*label walksilence
+You walk in silence until a hidden path is revealed. You follow this path another mile, and the woods become quiet. A chill wind blows.
+
+*if spat
+	"We are dealing with serious matters, ${name}," Rebekah says. "I advise you be respectful and not make jokes with the crone. Pay careful attention to everything she says."
+	
+	*goto hut
+*else
+	"Can you sense it?" Rebekah asks, pausing and looking about. "That's faerie magic. Sometimes it's cold and heavy, other times light and warm, but these are just how our human senses imagine what is really an energy all its own."
+	
+*label hut
+[Keep track of how many times was afraid vs unafraid around fae. Crone will know if he's lying later.]
+
+"Come, the hut is not much further now," she says.
+
+[Add part where pc can express concern about going off the path]
+
+You walk another hundred paces, off the path again, and if Rebekah hadn't pointed it out, you could've easily missed seeing the hut, for it blends in almost perfectly with the surrounding foliage.
+
+"I'm here, Teacher," Rebekah says, stooping at the hide-covered entrance, her voice low and full of respect. "I have brought a friend."
+
+"Enter," says a voice, female yet guttural, sounding as if it were a thousand years old.
+
+You and Rebekah enter the hut, and the crone is sitting across a pit fire with a black cauldron sitting over it. A strange white substance is boiling within.
+
+"The poutice is almost ready," the crone says, gesturing toward the cauldron. Then, turning toward you, she says, "I see you have made contact with the fae today. How do you feel about that?" She motions for the two of you to sit.
+
+*label hut2
+*choice
+	*hide_reuse #Ask how she knew you were coming for a poutice
+		*goto knewpoutice
+	#Tell her it was wonderful
+		*goto wonderful
+	#Tell her you are a bit afraid
+		*goto afraid
+	
+*label knewpoutice
+"How did you know we were coming her for a poutice?" you ask.
+
+"A little birdy told me," the crone smiles, her already wrinkled face wrinkling even more, making it an almost scary visage, despite her obvious mirth. "And the name of this bird?" she goes on. "Ella..."
+
+She turns to Rebekah and says, "The faerie, Ella, warned this man of the unfortunate event that befell your sister today. We are glad the forest is rid of the evil energy they brought to it."
+
+"Now, ${name}," she says, turning back to you. "I ask you again how you feel about making contact with the fae?"
+
+*goto hut2
+
+*label wonderful
+"I'm sure it was," the crone laughs mirthfully. "Faeries can indeed be wonderful."
+
+She grows serious. "But," she says. "Your exuberance troubles me. Have you not heard the tales of the grave dangers of cavorting with the fae? Do you really pay so little heed to the warnings? One as careless as you is ripe to disappear into the faerie realm and never return."
+
+*choice
+	#Tell her you can handle the danger. 
+		*goto canhandle
+	#Ask how you can be more careful.
+		*goto askhow
+
+*label canhandle
+*set rel_d2 %-10
+*set was_rude true
+The crone's face darkens. "Fools rush in where angels fear to tread," she says, but she no longer seems to be talking to you.
+
+"I'm sorry, Teacher," Rebekah says, her face pained.
+
+*goto leavehut
+
+*label askhow
+[This option is not yet written.]
+
+	
+*label afraid
+[This option is not yet written.]
+
+
+*label leavehut
+The crone dips a long bandage in the bubbling white liquid in the cauldron, then places it in a pouch made from large leaves.
+
+"My blessings to your sister," she says as she hands it to Rebekah.
+
+"Thank you, Teacher," Rebekah says, bowing her head and accepting the package with both hands.
+
+The two of you crawl to the exit and leave the hut.
+
+*if was_rude
+	Once outside, Rebekah says sullenly, "I thought I told you to be respectful."
+	
+	*goto farm
+
+Rebekah walks ahead of you, not speaking and seems lost in thought. The hut is quickly lost in the foliage, and the normal forest sounds return, the preternatural feeling lifting.
+
+She turns to you and says, "My body burns for you, and I want to see the fae!"
+	
+*choice
+	#Take her now
+		*goto takeher
+	#Wait
+		*goto wait
+	
+*label takeher
+*set fae_rush_in +1
+
+
+*label wait
+You remember the warnings about not rushing in, about how you should only be with Rebekah if you know what you're getting into. It's hard to resist your passions, but your will is good. This time.
+
+Rebekah, however, seems to be swept away by hers. She grabs you in passionate embrace and kisses you hard and long.
+
+*choice
+	#Kiss her back
+		*goto kissback
+	#Pull away
+		*goto pullaway
+	
+*label kissback
+[This option is not yet written.]
+
+
+*label pullaway
+Your will is still good... barely. "Wait... Rebekah..." you manage. "Aren't you supposed to tell me about the dangers and whatnot?"
+
+With great effort, Rebekah reins herself in but needs a moment to gather her composure. She's breathing heavy, head down, body away from yours, her hands on your shoulders, supporting herself. 
+
+Finally, she looks up. "Yes," she says. "As you have just seen, the passions are strong in me, and that is but one of the dangers. Floodgates closed in others are opened when you study sex magic, and it's impossible to study fae magic without also involving yourself with sex magic. That would be like studying botany without studying pollen and flowers, pistels and stamens. Do you understand?"
+
+"Yes."
+
+"These doors," she goes on, "Once opened, can never be closed again, and forces, stagnant in normal men and women, flow, often quite strongly. If a man or woman who's energy flows like this conjoins with one who does not know the Ways, he or she cannot help but steal the latent energy of the stagnant one. Normally, it's not very much, unless the initiate is evil and purposely sucks the normal person dry. A tryst once or twice is no cause for alarm, but over time, it would be a problem. Only conjoin with me now if you wish to learn the ways of the fae wholeheartedly and without further ambivalence." [check if had any ambivalence or not here]
+
+*choice
+	#Decide to wholeheartedly learn the ways of the fae
+		*goto wholeheartedly
+	#Take more time to think about it
+		*goto needtime
+	#Decide fae magic is not for you
+		*goto notforhim
+	
+*label wholeheartedly
+*set rel_d2 %+5
+"Good!" Rebekah exclaims. "You don't know how happy this makes me. I've been so lonely on this path, misunderstood even by my own kin, but finally I have a partner with which to learn... among other things."
+
+*goto sex
+
+*label needtime
+*set rel_fae %-20
+
+*label notforhim
+*set rel_fae %-20
+*set rel_d2 %-20
+
+*label sex
+She backs away from you and removes her clothing until she's wearing nothing but her soft-soled mocassins-like boots. Naked, she stands before you, her nipples pert in the cool breeze, her sex wet with desire.
+
+Suddenly, she lunges for you, but instead of an embrace, she shoves you backward, hard. You stumble and barely manage to keep your footing, and by the time you regain your balance, you discover that Rebekah has disappeared into the woods.
+
+*choice
+	#Run her down and tackle her
+		*goto rundown
+	#Follow, calling to her
+		*goto follow
+	
+*label rundown
+[if high rel_el, she helps him by removing his clothing as he runs, leading to increased rel_d2 but also increased fae_rush_in]
+You charge after her, knowing that the tiniest delay will enable her to disappear the way she did last time, and though you could call upon your subtle senses again, your blood is too hot with passion right now. You MUST catch her!
+
+You burst through the foliage quick enough to catch a glimpse of Rebekah disappearing behind a distant tree, still in full flight, her soft-soled boot making hardly a sound and enabling her to run like the wind, even over uneven ground. Your thick-soled boots, however, plow through the underbrush as if you were wearing bricks, gashing the earth and raising a great ruckus. You realize you have a lot to learn of the ways of the fae and Mother Nature. You overcome you disadvantage with sheer brawn, tearing ahead, and when you round the tree, you see you've closed the distance greatly.
+
+You lunge for her with a primal roar, and Rebekah screams as you catch her ankle, causing her to crash face first onto the forest floor.
+
+*choice
+	#Take her
+		*goto takeher2
+	#Ask if she's all right
+		*goto askallright
+	
+*label takeher2
+
+
+*label askallright
+"Don't ask me if I'm all right!" Rebekah yells, though you can tell she's not mad and is, in fact, still in strong lust. She turns to face you and starts fighting you off, her arms and legs thrashing.
+
+*choice
+	#Overpower her
+		*goto overpower
+	#Back away
+		*goto backaway
+	
+*label overpower
+Maintaining a vise-like grip on her ankle, you pull hard, and Rebekah's body slides over the earth toward you. She screams and redoubles her effort to escape, but you quickly crawl up her body, bringing your full weight to bear. She's trapped and would normally be helpless, but somehow, she seems to call upon a reserve of nearly preternatural strength.
+
+She throws you off and in a flash is on her feet.
+
+"I am the deer of the forest," she says. "Hunt me!"
+
+She resumes her flight, but your lunge is lightning fast as well. You catch her ankle again and drag her down, enveloping your body with yours. She struggles but in vain, and her chest is heaving madly in near hyperventilation.
+
+You force her legs apart and put your weight upon her so that her body flattens beneath you, removing her ability to continue her struggle. No longer able to fight you, her body relaxes, save for the heaving gasps for air. Her breasts rise and fall against your chest as your member easily slips inside her.
+
+She cries out as you begin to pound her, pressing her body deeper into the earth underneath her with each powerful thrust.
+
+"Yes! Yes!" she cries, her head thrown back in utter abandon. Her arms to either side, bent at the elbow, forearms off the ground, but not touching you as if she were afraid they'd be hurt, so powerfully is your body moving. Her legs too have spread akimbo, knees bent, feet off the ground to either side to give you full and complete access to her sex.
+
+Soon her soft cries increase in volume and intensity, and she begins to cry out almost as if in pain, yet it is in fact the height of pleasure. Her hands claw the earth, and her legs straighten, pressing against the earth, pushing her pelvis up against yours. The two of you reach climax simultaneously in a seemingly endless succession of ecstatic spasms, your vital life-force flowing into Rebekah's body with each spurt of seed. Finally the throes of passion subside, and you collapse upon her, utterly spent.
+
+Slowly, her breathing returns to normal, and she wraps her arms around you, holding you close. You lay to one side but pull her body with you, keeping you conjoined for a bit longer. It still feels wonderful to be inside her.
+
+"How is it to be the hunter who utterly consumes his prey?" she whispers softly. "There's nothing left of me."
+
+"I think it's the other way around," you say. "You're the one who consumed me."
+*page_break Ella comes
+Her characteristic green glow preceeds her arrival. As the two of you lay holding each other in post-coital embrace, Ella appears, peaking shyly around a nearby tree.
+
+"I thought you'd never finish," she laughs. "It's always like that when you're the one left out!"
+
+Rebekah, who'd been lying there, eyes closed, still in a state of bliss, slowly opens her eyes. "I heard something," she says, anticipation rising in her voice as she suspects her senses are expanding, becoming able to sense the fae to a greater level. She looks around, first left, then right, but still, she doesn't see Ella.
+
+"Rebekah, I'm right here!" Ella giggles, and Rebekah's head jerks in somewhat the right direction. She stares and stares, and for a moment, it feels to you as though she disappeared, though her body remained right there, still conjoined with yours.
+
+"There you are!" Rebekah says, smiling. "How is it I was so blind before?"
+
+Ella waves, and Rebekah waves back, grinning ear to ear.
+
+"Thank you, my hunter," she whispers in your ear. "I gave myself to you so completely that I opened to the Sight. Thank you."
+
+*page_break Sex Magic
+A communication you can't hear passes between Ella and Rebekah, and then Ella left, buzzing off into the forest.
+
+Rebekah shifts her weight until she's on top of you, you still inside her. With a gentle touch, using both her finger and lips and tongue, she caresses your body. Her hips move ever so slightly, and you find that your manhood, recently spent and growing flaccid, begins to surge again with vitality.
+
+*choice
+	#Resist. You've had enough.
+		*goto resist
+	#Let her continue.
+		*goto lether
+	
+*label resist
+*set rel_fae %-20
+"No..." you say, though it's difficult resisting the urge slowly growing within you, but you remember what Rebekah had just said about the draining of energy.
+
+"It's okay, Hunter," she says, grinning. "My passion took over just now, but now I will teach you like I meant to. Don't you trust me?"
+
+*choice
+	#Trust
+		*goto trust
+	#Tell her to teach you later. You need to regain your energy first.
+		*goto teachlater
+	#Ask what she and Ella just talked about
+		*goto asksecret
+	#Look around. She might be draining you to set you up for an ambush.
+		*goto ambush
+
+*label trust
+[This option is not yet written.]
+
+
+*label teachlater
+[This option is not yet written.]
+
+
+*label asksecret
+[This option is not yet written.]
+
+	
+*label ambush
+"Oh my hunter, you make me so sad," Rebekah says. "How could you suspect me after what we just shared? Are you looking for the army of fae who will now descend upon you to consume you like you just consumed me? I did not make you weak on purpose! It just happens, but now I will show you other ways."
+
+*choice
+	#Ask why she didn't show you before
+		*goto whydidnt
+	#Get dressed
+		*goto getdressed
+	#Decide to trust her, for now
+		*goto partialtrust
+	
+*label whydidnt
+[This option is not yet written.]
+
+*label getdressed
+[This option is not yet written.]
+	
+*label partialtrust
+[This option is not yet written.]
+
+*label lether
+[This option is not yet written.]
+
+
+*label backaway
+[This option is not yet written.]
+
+
+*label follow
+
+
+"You are the hunter. Can you take me? Will you consume me like the hunter consumes his prey?"
+
+*label farm
+[This option is not yet written.]

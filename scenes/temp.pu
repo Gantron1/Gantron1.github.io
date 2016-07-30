@@ -1,0 +1,36 @@
+@startuml
+state tryfind as "~*label tryfind" {
+	tryfind: You hurry forward in the direction she ran, but there's no sign of her. It's like she just disappeared!\n\nOne one hand, it might be good to find her, but you also worry about leaving your possessions...
+	keepLookingOption -> keepLookingText
+	returnToYourOption -> returnToYourText
+}
+
+state keepLookingOption as "~#Keep looking for her."
+
+state returnToYourOption as "~#Return to your campsite." 
+
+state keepLookingText as "You charge through the..." {
+	keepLooking2Option -> keeplooking
+	ReturnToCampOption -> lost
+}
+
+state keepLooking2Option as "~#Keep looking for Tamara"
+keepLooking2Option: ~*goto keeplooking
+
+state ReturnToCampOption as "~#Return to your campsite."
+ReturnToCampOption: ~*goto lost 
+
+state returnToYourText as "You find nothing amiss..." {
+	returnToYourText: ~*goto continue
+}
+
+state keeplooking as "~*label keeplooking" {
+	keeplooking: "~*set numlooks +1"
+}
+
+state lost as "~*label lost" {
+	lost: [Yet to be written.]
+}
+
+tryfind -> lost
+@enduml

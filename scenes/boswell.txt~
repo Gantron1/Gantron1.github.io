@@ -1,0 +1,27 @@
+title {Good News, Bad News}
+roles 1
+score $#sc
+@start => [Swings and roundabouts.<br>|What happened next?]{
+You won the lottery.=>You won the lottery.
+$#sc += 10;
+@goodnews
+|You received a gift.=>You received a gift.
+$#sc += 5;
+@goodnews
+|You inherited a fortune.=>You inherited a fortune.
+$#sc += 2;
+@goodnews|You found some money.=>Some money was lying on the ground, so you picked it up.
+$#sc += 7;
+@store}
+@store => [You go to the store. What do you buy?]{Groceries=>You decide to be practical and buy groceries. Your refrigerator is now well stocked!
+@fair|Electronics=>You bu electronic devices.
+@watchtv}
+@watchtv => {}
+@fair => {}
+@goodnews => [Ups and downs.<br>|Then what happened?]{You crashed your car=>Then, you crashed your car.
+$#sc += 10;
+@start|You fell off a building=>Then, you fell off a building.
+$#sc += 10;
+@start|You ran into the lake=>Then, you ran into the lake.
+$#sc += 20;
+@start}

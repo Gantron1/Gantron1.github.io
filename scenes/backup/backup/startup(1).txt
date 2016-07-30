@@ -1,0 +1,168 @@
+*comment *********************
+*comment **     HEADER      **
+*comment *********************
+
+*title SeductQuest: The Dragon and the Princess
+*author Gantron
+
+*scene_list
+	startup
+	meet_tamara
+	chardell
+	chardell_alone
+	lilypad
+
+*create debug true
+
+*comment *********************
+*comment **  ACHIEVEMENTS   **
+*comment *********************
+
+*achievement dragonname visible 10 Name of the Dragon
+	Learn the dragon's name.
+	You learn the dragon's name is Myrristicor.
+	
+*achievement weakness visible 10 Secret Weakness
+	Learn the dragon's secret weakness.
+	The dragon has no secret weakness.
+	
+*achievement contest hidden -10 Sit-in
+	hidden
+	You engaged in a stupid sitting contest.
+	
+*achievement woncontest hidden -20 Won Sit-in
+	hidden
+	You actually "won" the stupid sitting contest.
+
+*comment *********************
+*comment **      STATS      **
+*comment *********************
+	
+*create name "warrior"
+
+*comment *********************
+*comment **  RELATIONSHIPS  **
+*comment *********************
+
+*comment REL: 0 to 100, 50 being neutral
+*comment tamara_respect: Starts at 0. Above X, and she starts to actually like him.
+
+*create met_tamara false
+*create rel_tamara 50
+*create tamara_respect 0
+
+*comment *********************
+*comment **  SITUATIONALS   **
+*comment *********************
+
+*create learned_dragon_sense false
+*create had_pro_talk false
+*create has_honey true
+*create tamara_spat false
+*create with_tamara false
+
+*comment *************************
+*comment *************************
+*comment ****    TEST GOTO    ****
+*comment *************************
+*comment *************************
+
+*if debug
+	*comment *goto_scene theroad
+	*comment 
+	*goto_scene chardell
+
+
+*comment *********************
+*comment **    THE GAME!    **
+*comment *********************
+
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=40&text=SeductQuest:&color=000000&matte=F0D6AD&shadow=inv
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=30&text=The%20Dragon%20and%20the%20Princess&color=000000&matte=F0D6AD&shadow=inv
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=25&text=by&color=000000&matte=F0D6AD&shadow=inv
+*image http://herbaloutfitters.com/textimage/text_image.php?font=MervaleScript-Regular&fontsize=25&text=Gantron&color=000000&matte=F0D6AD&shadow=inv
+
+[b]WARNING: [/b]This game is a work of erotica and contains explicit sexual content. Reader discretion is advised.
+
+[center]***[/center]
+
+You remember well the moment your life changed forever. You were crossing the Corkish Mountains and just cresting the summit of Mt. Everhorn when the entire valley below became visible. You could see the walled capital city of the Kingdom of Zhan sitting in the middle of the plain, its magnificent spires thrusting skyward.
+
+Then, from the northeast, the dragon came. 
+
+Even from afar, it's terrible magnificence was dreadfully clear, and you saw its fiery breath, bright in your eyes, even in broad daylight. The knights who rode out to meet it looked like tiny ants from your vantage point, and they were just as feeble against the dragon's might.
+
+The dragon then rose to the highest tower, the one you knew housed the chambers of the princess Elsbeth, and with a sweep of its tail sundered with ease the stone wall capable of withstanding one hundred sieges. You watched in horror as it reached in with its claw and extracted the princess, dressed in all her finery, and then the dragon was gone, returning to its aerie atop the far mountain range, DragonKeep.
+
+Since that day, you made it your sole mission in life to rescue Princess Elsbeth, to succeed where so many have failed, and you now find yourself on in the wooded foothills below the great DragonKeep itself, having faced much hardship and difficulty. 
+
+It's sunrise, and you've left last night's campsite to scout ahead a bit while your breakfast cooks. You've been following the known path leading toward the dragon's lair, but your habit has been to camp a little ways off the path. Now that you're quite close to the lair (perhaps a mile, as the crow flies), you feel it prudent to look around a bit before returning to the path.
+*page_break
+The ground is rocky and uneven, and there are many trees, boulders, and outcroppings. You find nothing of note and are about to head back when you hear a faint female voice from somewhere up ahead, perhaps just over a fairly steep ridge fifty feet ahead.
+*label startchoice
+*choice
+	*disable_reuse #Stop and listen.
+		*goto listen
+	#Quietly move forward to investigate.
+		You move forward as quickly as you can while remaining quiet, and you carefully climb to the top of the ridge until just your head is peeking over the top.
+		
+		*goto investigate
+	#Quickly move forward to investigate.
+		You move forward as quickly as you can, not worrying about stepping on any twigs or rustling any leaves. Most likely, whoever or whatever is on the other side of the ridge wouldn't hear such noises anyway, but it's still definitely possible that they could. You reach the ridge and climb to the top until just your head is peeking over.
+		
+		*goto investigate
+	
+*label listen
+You pause for a moment but hear nothing more. The voice didn't seem distressed, but from the inflection, it sounded like perhaps it was making a request to another person. However, it was too faint to be sure of anything.
+
+You wonder if it could be a trap. Perhaps a faerie's prank? It's odd for a woman to be found this close to the dragon's lair, lest it kidnap her too.
+
+Despite these concerns, you decide you must investigate, for isn't it better to know what you're dealing with? Besides, you're confident you could handle whatever comes your way. Afterall, compared to a dragon's might, how bad could it really be? Also, it's a woman. Maybe you could get lucky!
+*goto startchoice
+
+*label investigate
+On the other side of the ridge is a small ravine with a gentle wooded slope leading down to a dry creekbed. There are small trees here that provide you with some cover, but you can still see the ravine bottom perhaps fifty feet ahead.
+
+The other side of the dry creekbed is the base of a small cliff, and there are many jagged boulders of various size littering the area. Someone seems to have camped her last night, as you can see the still smoking remains of a campfire, two bedrolls, and other equipment.
+
+A woman is leaning against a three-foot tall, square-ish boulder, and her plate armor dazzles you in the early morning sunlight. It's incredibly finely wrought and probably covered with silver veneer to make it glitter as it does. Her helm is silver too, with little golden wings on each side. She has a royal blue cape, and next to her, leaning against the boulder is a fine broadsword in an ebroidered leather scabbard and a metal shield bearing the crest of a noble family.
+
+Next to her is an elderly man in old gray robes who looks like he must be her manservant.
+
+The woman is working at something just below waist-level and then removes the part of her armor covering the crotch area, revealing her naked sex. She spreads her legs to shoulder width, and the man kneels, placing his head between her legs. You see her body stiffen, and she puts her mailed but still dainty hand on the back of the man's head, closes her eyes.
+
+*choice
+	#It's probably a good idea not to disturb them, and your breakfast is definitely overcooked by now. Go back to your camp.
+		*goto camp
+	#You can't help yourself and watch a bit longer, even if it risks being discovered and burning your breakfast.
+		*goto watch
+	
+*label camp
+*set has_honey false
+You ease yourself up, preparing to go back down the ridge, and though doing so causes a small avalanche of dirt and stones, the couple below is so absorbed in what they're doing that they don't notice.
+
+You carefully climb down the ridge, and in perhaps ten minutes, you are back in your camp. The oatmeal you left cooking is burned on the bottom but otherwise edible, and you use the last of your honey to sweeten it.
+
+*label eat
+You eat quickly, hoping to catch up with the two strangers, and are packing your supplies when...
+*page_break
+*goto_scene meet_tamara
+
+*label watch
+You see the man's head undulate rhythmically between the female knight's legs while she remains stock still as if resisting giving any sign of the pleasure that is so obviously coursing through her body. She doesn't even spread her legs more.
+
+In a few moments, her back arches slightly, and she emits a tiny gasp. The hand on the back of the man's head pulls him closer, and her other hand is grasping frantically at the edge of the boulder she's leaning/half-sitting against.
+
+"Faster..." she gasps. "I'm close!"
+
+The man grabs the knight by the hips and redoubles his efforts, and she begins to emit a few more moans and soft cries despite her attempts not to. She's close, but it's not orgasm yet.
+
+You tear yourself away, knowing that this is the best time to leave. If you wait any longer, they'll be done, and resting in the aftermath, they'd likely hear any sound you make.
+
+As you climb down the ridge, you cause a small avalanche of dirt and small stones, but the woman's cries of mounting orgasm tell you they have remained oblivious to your presence.
+
+Having descended the ridge, you begin to return to your camp, listening as the woman's ecstasy finally spills over into orgasm. You've been traveling by yourself a long time, and this makes you long desperately for the company of a woman. Oh well. You think of how wonderful it will be after you rescue the princess and how grateful she will be.
+
+Back in camp, you find the oatmeal mostly burned, and you scrape the small amount that's still edible from the top. It's not a full breakfast, but it'll have to do.
+
+*goto eat

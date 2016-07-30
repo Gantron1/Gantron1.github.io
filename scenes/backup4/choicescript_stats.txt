@@ -1,0 +1,22 @@
+*temp dragon ""
+*check_achievements
+*if choice_achieved_dragonname
+	*set dragon "Myrristicor,"
+
+You are on a quest to rescue Princess Elsbeth from ${dragon} the ancient dragon who lives atop Mt. DragonKeep.
+
+*stat_chart
+	percent esteem Self-Esteem
+
+*temp tamara_desc ""
+*set tamara_desc tamara_desc & "a master thief"
+*if tracking_speech
+	*set tamara_desc tamara_desc & " and tracker"
+*set tamara_desc tamara_desc & ", expert on dragonlore."
+*if met_tamara
+	You have met Tamara, ${tamara_desc}
+	*stat_chart
+		percent tamara_respect Tamara's Respect
+	
+
+	

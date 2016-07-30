@@ -1,0 +1,342 @@
+You and Tamara catch up with Juliette, finding her standing in a rocky clearing, stooped over as if looking at something.
+
+"Wassamatter?" Tamara calls. "You find a fewmet?"
+
+Juliette whirls about, and something is wrong, very wrong. She's crouched, ready to spring, and her whole body is shaking as if fighting very strong urges.
+
+Tamara freezes in her tracks.
+
+"Miscalculation..." you hear Juliette muttering, voice a fearsome hiss. "Anticipating deadly duel, followed by miscreants, the stress... the stress... Makes the beast hunt closer the surface, ever so close, so close... STAY BACK!"
+
+She almost sounds like another person, seething, one about to lose control.
+
+"What's the matter with her?" Tamara whispers to you.
+
+You have no idea. Is she a werewolf? Is she into some kind of weird sex and having a delayed reaction to your massive studliness? 
+*choice
+	#Stay back.
+		*goto stayback
+	#Approach closer to see better.
+		*goto nostayback
+
+*label stayback
+Juliette falls to her knees.
+
+"Leave me!" she cries. "I will not be able to control myself much longer!"
+*choice
+	#Retreat back into the cover of the trees.
+		*goto retreattrees
+	#Ask her what's wrong.
+		*goto noretreattrees
+
+*label retreattrees
+[This option is yet to be written.]
+
+*label noretreattrees
+"Go!" she cries, and suddenly she's on her feet. Despite the incredible weight of the lance and her armor, Juliette moves like lightning.
+
+She brings the lance to a fighting position and begins advancing, her step halting as if part of her is exerting extreme will not to charge. Her entire body is coiled like a spring.
+
+"Cursed blood in my veins..." she mutters, her voice not her own again. "The will to battle... give in... give in..."
+*choice
+	#Retreat into the forest.
+		*goto retreat2
+	#Do not move.
+		*goto noretreat2
+
+*label retreat2
+[This option is yet to be written.]
+
+*label noretreat2
+Juliette falls to her knees again, this time thrusting the lance from her hands, and though it seemed like a toothpick to her, when it smashes into the rocks at your feet, three of them crack under its weight.
+
+"Help me..." she says, looking up at you pleadingly, and yet, behind it you sense an unimaginable bloodlust roiling, about to explode.
+*page_break
+Suddenly, Tamara is upon her, having used silent step to creep behind her, and she leaps upon her back, arms about her neck.
+
+Juliette erupts in rage, leaping to her feet and clawing behind her, but Tamara evades her grasp, though she's nearly thrown clear off, Juliette's thrashing as powerful as a bull. You've never seen anything like it, Juliette stronger than the strongest warrior you've ever seen.
+
+Tamara squeezes Juliette's neck relentlessly, and Juliette, unable to shake her, unable to bring to bear her strength, finally succumbs and collapses. Tamara pulls her backwards, lying on her back and trapping Juliette's legs with her own.
+
+"Ask her, apprentice, why I shouldn't snap her neck right here!" Tamara shouts.
+
+She releases her hold slightly, and Juliette, drowsy, begins to rouse.
+
+You don't have time to ask, for the moment the tiniest bit of consciousness returns, Juliette once again struggles like a savage beast. Tamara, nearly losing her grasp from the sheer violence of Juliette's thrashing, manages to apply the hold again, and Juliette once again collapses into unconsciousness.
+
+"Apprentice, the rope," Tamara says.
+*page_break
+You bind Juliette, using the stout rope's entire length, and you're still worried she'll break free, for it seems all the forces of nature surge in her body.
+
+Tamara waits, keeps the chokehold tight until you're completely finished, then hurriedly moves away, drawing her sword.
+
+You wait for Juliette to awaken, staring at her bound body like it were a bomb that might explode.
+*page_break
+And explode she does, though the bonds hold. She struggles long before finally collapsing, and when her eyes open again, she seems calm, nearly herself again, though present just beneath the surface, you sense another force, dark and utterly powerful, a force that wants only to kill.
+
+"Now you see how I would kill the dragon," Juliette says, barely containing her raw aggression, "How I would wield Humontor's lance, for I am a berserker, last of the accursed line of Throrson."
+
+"You!" Tamara cries. "Your ancestors are the ones who swept the field, when Belgrave's forces fled? Five berserkers against six legions who won the field?"
+
+"Yes, and turned on the cowards, their former compatriots, when Belgrave tried to press the advantage. He won, at great loss, and marked my family for death. Some of us escaped."
+
+"But the knights of your order?" Tamara says, aghast. "How could you possibly keep this a secret? You can fight and train without entering bloodlust?"
+
+"Yes," Juliette says, seeming almost normal now. "I suppose having revealed this much, I can tell you the whole story, but I ask you keep my secret. My honor must be intact. A knight must slay this dragon, not a berserker."
+
+Tamara nods.
+
+Juliette looks to you, and you nod also.
+*page_break
+"The energy that drives the berserker," Juliette begins, "Is the same as that which drives magic, ambition, and all other human passions. It's all the same, the difference lying only in the way it's channeled. Do you understand? War is not the only way it can be satiated."
+
+"Well, it is said your people lived in the mountains in peacetime," Tamara says. "What did you do up there?"
+
+"Orgies," Juliette says. "Revelry. We chased wild animals and tore them to pieces, consumed them raw. We clawed the bark from trees with our bare hands, and we also..."
+
+"Sex," Tamara says, realizing. "The human passion, stronger even than hunger, second only to the love of war."
+
+"You have read Homer, I see," Juliette says. "'Men tire of sleep, love, singing, and dancing sooner than war.' What a strange rogue, and yet you've subdued a berserker. That's enough for legends to be written."
+
+"If we give you sex, you could control your passions again?" Tamara asks.
+
+"It might work," Juliette says, suddenly straining against the bonds again, eyes fixed steadily on Tamara like predator on prey.
+
+Tamara tenses, uncomfortable.
+
+"Not me, though, surely," she says. "My apprentice can... like Banes."
+
+"Not when it's this strong," Juliette says, her voice loud now, filling with power and lust, lust for both blood and sex. "Only you."
+
+Tamara stares at Juliette, unable to believe she's even considering it, yet with so much riding on it, she forces herself.
+
+"No, I can't. I can't," she says. "Not with you so terribly passionate. Not even otherwise!"
+
+She shudders violently.
+
+"You are also monosexual?" Juliette cries disbelievingly. "Just our luck."
+
+Tamara chuckles.
+
+"And that's not all. Apprentice is not only monosexual, he's also homophobic."
+
+"What an impossible conjuction..." Juliette says in utter awe at the implausiblity.
+*fake_choice
+	#You have an idea...
+Yes, you have an idea, a crazy idea, an idea that if under any other circumstances would be so incredibly outlandish that you would hardly think it, let alone give it voice, let alone to a woman, let alone to TWO women. In fact, even now, you are reconsidering, anticipating the neverending ridicule you will endure.
+
+But... perhaps since there's no other choice?
+*page_break
+"Um, I have an idea," you offer tentatively, not believing you're actually going to make this preposterous proposal. "How about if Tamara... well, she hugs you, but then down below, well, I'll be down there, and..."
+
+"No!" Tamara cries.
+
+Juliette is silent, considering it.
+
+"No," Tamara says again.
+
+"Could she be fully clothed?" you ask Juliette.
+
+Juliette remains silent, blushing, looking down, but then a smile creeps across her lips.
+
+"That would work," she says, smirking, still red-faced.
+*page_break
+It's Tamara's turn to be silent.
+
+At long last... "Fully clothed?" she says. "Well, if it means you could focus your bloodrage solely on the dragon and not us, I suppose I could allow myself to be pawed by a lesbian berserker..."
+
+You almost can't believe they agreed, but I guess desperate times call for desperate measures.
+
+"Untie me," Juliette says.
+
+You hesitate.
+
+"Don't worry," she says. "I'm solely in lust now. You're safe... from death and injury at least."
+
+Juliette begins to strain at her bonds, eyes fixed on Tamara.
+*choice
+	#Untie her.
+		*goto untiejul
+	#Hesitate some more.
+		*goto nountiejul
+
+*label untiejul
+[This option is yet to be written.]
+
+*label nountiejul
+"Untie me!" Juliette cries, desperate now. "How will you access my sex? You must untie me for that anyway!"
+
+"How about just her legs?" Tamara says.
+
+"If you do it," Juliette says. "Naked."
+
+"How about just topless?" Tamara offers.
+
+"Do it!" Juliette cries.
+*page_break
+At Juliette's desperate urgings, Tamara quickly unties and throws off her vest, then falls upon the knots binding Juliette's legs, all the while, Juliette staring, drinking in her beauty.
+
+When her legs are free, Juliette says, "Now hug me! Hide the male from my sight."
+
+"Let me put my vest back on," Tamara says, moving to pick it up, but Juliette screams, "No!" with such fury that Tamara quickly stops and returns.
+
+With only a split-second hesitation, she lays upon Juliette's body, the rope still coiled around her upper half so completely none of her armor shows through. It was the only way to contain her incredible strength.
+*page_break
+As you move to work free Juliette's armor's crotch piece, she says, "If more than your lips or tongue touch me, ${fname}, by all the gods, I will break free and slay you. Never has a man desecrated my body and must not now. Lips and tongue only, not even fingers."
+
+Darn. Well, a man's gotta do what a man's gotta do.
+*page_break
+You work the crotch piece free, and Juliette's sex is laid bare, for she wears nothing beneath it, neither tunic nor girdle.
+
+And what a glorious work of womanhood it is! To think that it's as of yet unspoiled by man. It feels almost a shame to touch it, even with just lips and tongue, like desecrating an altar, but there has never been an altar like this! A norsewoman, Juliette's fair hair extends to her entire body, her snatch no exception, and her skin, fair also, a virginal pink.
+
+Juliette spreads her still armored legs wide.
+
+"Tamara, oh, Tamara!" she cries. "Fuck me!"
+*page_break
+Tamara lies stiffly upon Juliette, arms about her but utterly dispassionate, eyes staring at the rocks by her head.
+
+You dive in, tongue touching Juliette's luscious folds for the first time, and she cries out, redoubling her efforts against her bonds. You run your tongue up and down her lips, soft and thin, her fine blonde hairs tantalizing you.
+
+Juliette makes desperate little cries of frustration, unable to free her arms, Tamara's naked torso so maddeningly close. The ropes loosen slightly, showing her body underneath, but still they hold her fast.
+*page_break
+"Your breasts, your breasts!" Juliette cries. "Bring them up to me!"
+
+"No," Tamara says, her utter lack of emotion in sharp contrast to Juliette's desperation.
+
+"Please!" Juliette begs, struggling so hard she's able to bend her elbows, and the coiled rope slips up slightly toward her shoulders, though it still tightly binds her upper arms to her sides.
+
+"No," Tamara says again. "Just looking only."
+
+This response elicits an even greater surge in Juliette's struggles, and though your knots were true, her berserker-fueled lust is enough to allow her to slip her hand through the coil. 
+*choice
+	#Keep eating!
+		*goto keepeating
+	#Stop and try to tighten the rope.
+		*goto nokeepeating
+
+*label keepeating 
+[This option is yet to be written.]
+
+*label nokeepeating
+When Juliette feels your tongue leave her pussy, she screams in rage. Her whole body bucks and thrashes against her bonds, and escape is imminent.
+
+"Eat her, you fool!" Tamara cries, hugging Juliette hard, trying to keep her arms against her sides. 
+*choice
+	#Quickly resume the cunt-lapping.
+		*goto keepeating2
+	#It's too dangerous. You must resecure the bonds.
+		*goto nokeepeating2
+		
+		
+*label keepeating2
+You quickly fall back into Juliette's cunt, and as soon as your tongue touches her again, you feel her body relax. She exhales, and her back arches as bloodlust reverts back to regular lust.
+
+"I think it's safe if her arms come out," Tamara says. "Just make sure you don't stop no matter what."
+
+Juliette's arms eventually work their way free and wrap around Tamara's body, pulling her forward, allowing Juliette to start kissing her on the neck, shoulders, and working down toward the breasts.
+
+"Hurry, apprentice!" Tamara cries. "Make her come. I don't know if I can take much more!"
+*page_break
+You dig into Juliette's snatch, catching a glimpse of Juliette nestling her head between Tamara's boobs, mouthing passionately first one nipple, then the other.
+
+"Ew...." Tamara mutters.
+*page_break
+The passion is indeed mounting in Juliette's body, and you sense she's close. Her hips buck, and her moans become more and more impassioned, her grasping on Tamara more and more desperate.
+
+"Gah!" Tamara cries. "She's getting in my pants!"
+
+You look up to glimpse Juliette, holding Tamara to her with one arm, the other working below, struggling with her belt. It gets her breeches open and plunges in.
+
+"Woman's hand! Woman's hand where it doesn't belong!" Tamara cries.
+*page_break
+You keep eating away, Juliette getting closer and closer to orgasm.
+
+"EW, she's fingerbanging me!" Tamara cries, struggling to escape. "It feels good but is disgusting at the same time. That's... disgusting!"
+*page_break
+Finally, Juliette erupts, screaming and bucking, completely losing control. In fact, you fear for Tamara's life, Juliette's love-spasms so violent that it seems she could crush her or throw her, but though Tamara's body is rocked violently, she's not actually injured.
+
+You have trouble maintaining contact, rocked wildly yourself, but you hold onto the ropes still wrapped loosely about Juliette's body, locking your mouth against her orgasming pussy. You thrash your tongue around inside her while she thrashes her whole body, splitting a few nearby rocks in two.
+*page_break
+*achieve jultie
+Incredible! A berserker-powered orgasm lasts a long, long time, and the whole time, its fury is double or more than of a normal woman's, which already can be powerfully intense. The throes of desperate ecstasy Juliette exhibited simply cannot be described, for there's no point of reference. None.
+
+In the end, she lies exhausted, utterly spent, sprawled in a field of uprooted and toppled boulders, hand still inside Tamara's pants.
+
+"Okay, get that out of there," Tamara says, gripping Juliette's wrist and extracting herself.
+
+"We're safe now?" she asks Juliette, who, eyes still closed, nods reassuringly.
+*page_break
+Tamara hurriedly picks her way through the scattered stones to you, the front of her pants still splayed wide open.
+
+"I need cock cock cock," she whispers. "Take me behind a tree and fuck me."
+*page_break
+Once behind a tree, you pull down both your pants and join in normal man-woman embrace.
+
+"Oooooohhhhhh!" Tamara shudders. "I still feel so weird! Fuck me, apprentice. Shake all the cooties outta me!"
+
+You fuck her hard up against the tree.
+
+"Yes, yes, now I'm starting to feel right again," Tamara says, relaxing.
+*page_break
+When you explode inside her, Tamara says, "Yes, yes. It's washing that cootie feeling out of my snatch."
+
+When you're done, Tamara still holds you for a long while, savoring the breadth of your shoulders, the solidity of your musculature.
+
+"Oh, how could any woman not cream in the face of this," she whispers in your ear.
+*page_break
+The two of you remain conjoined a little longer, but finally Tamara says, "We better go check on Juliette."
+
+You pull your pants back up, and Tamara makes herself presentable. Then, you both return to the clearing to find Juliette, also fully dressed again, sitting on a boulder, the dragonlance resting upon her shoulder.
+
+Tamara walks up to her tentatively.
+
+"Hi," she says, embarrassed now.
+
+Juliette, embarrassed too, nods but refuses eye contact.
+
+"Well..." Tamara says. "Dragonslaying time?"
+
+Juliette doesn't move, remains motionless a long time.
+*page_break
+At long last, she stirs, glances first back at you, then Tamara next to her. 
+
+"We shall not speak of this," she says.
+*page_break Resuming the journey...
+*goto_scene crack
+
+*label nokeepeating2
+Lust transforms to bloodlust, and with one unimaginably powerful surge, Juliette bursts free before you can do anything.
+
+Tamara tries to scramble away, but Juliette grabs her.
+
+What happens next is a blur. You see Juliette's naked snatch, running and turning. Tamara's body flying and crashing against a tree. A horrible blow from above... and... nothing more.
+
+THE END.
+
+You have reached Ending #8: Slaughtered by a Berserker.
+*page_break
+*achieve ending8
+*ending
+
+*label nostayback
+The moment you take a step forward, Juliette charges, and from her mouth issues a bone-chilling battlecry that seems like it alone could cleave an enemy in two. Her eyes are frenzied as if possessed, but mostly you notice the incredible speed at which she swings the dragonlance!
+
+It's a blur as she pulls it from her shoulder and whips it down and to one side. In a split second, she will be in range, and with one mighty sweep cleave both you and Tamara in two with a single stroke.
+
+Tamara seems to leap into a nearby tree in a single bound and readies her crossbow even before landing in its boughs.
+
+"Run!" she screams, aiming.
+
+This particular area 
+*choice
+	#Run, though you doubt you can get away in time. If Tamara's aim isn't true, you're done for.
+		*goto rundoubt
+	#Try to evade Juliette's attack.
+		*goto norundoubt
+
+*label rundoubt
+[This option is yet to be written.]
+
+*label norundoubt
+The rocky ground makes

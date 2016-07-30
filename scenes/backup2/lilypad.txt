@@ -1,0 +1,382 @@
+A few minutes later, 
+*if with_tamara
+	Tamara pauses and thinks a moment.
+	
+	"Wait here," she says. "I need to shake the dew from my lily pad."
+
+	She goes off into the forest by herself.
+	
+	*goto lilypad
+*else
+	with Tamara trailing along behind, you hear her say, "I need to shake the dew from my lily pad, but since we're not traveling together or anything, you don't have to wait for me or anything like that. Bye."
+	
+	She goes off into the forest by herself.
+	
+*label lilypad
+*choice
+	#Stealthily follow her.
+		*goto stealth
+	#Wait
+		*goto waitpee
+	*if (not (with_tamara)) #Continue on by yourself.
+		*goto continuebyself
+	
+*label continuebyself
+You feel yourself relax now that Tamara's not around, but your relief is short-lived. After only a little while, Tamara appears a little ways ahead of you. She glances at you, then at the ground.
+
+"Their tracks are here," she says.
+
+She starts heading on. "This way," she says, pointing up the slope. 
+
+You inwardly groan.
+
+"You were going fifteen degrees off their course," she goes on. "Now that there's no path anymore, and your tracking skills are non-existent, don't you think you should man up and just accept that you could use my help?
+*choice
+	#"Fine," you say, just to shut her up.
+		*gosub_scene agreement
+		*goto_scene oldman
+	#"No, I'm going it alone."
+		"Fine," Tamara says. "That's actually better for me anyway."
+
+*goto_scene oldman
+	
+*label stealth
+You wait a moment, then follow her, being as quiet as you can. You marvel at how quietly she's able to walk, never rustling leaves or grass, nor stepping on any twigs. Maybe she really is a master thief like she claims? You do your best to move quietly as well, and you are, for the most part, successful. At least, Tamara doesn't show any sign that she knows you're following her.
+
+Eventually, she stops, and you watch her from behind a tree a few dozen yards away.
+
+She fumbles with her belt a little, then squats on the other side of a tree which partially obstructs your view of her. You can't really see much more than her left arm and shoulder.
+
+*choice
+	#Creep up closer
+		*goto creep
+	#Walk up and say, "Gotcha!"
+		*goto gotcha
+	#Head back
+		*goto headback
+	#Keep watching
+		*goto keepwatching
+	
+*label creep
+You, creep, begin to creep in a small arc in order to see more of her body, but you just begin to see the back-left side of her head when a twig snaps underfoot. Tamara is up like a shot, her pants already up, belt fastened, and her hand whips to the pommel of her sword.
+
+When she sees that it's you, she signs irritably. "What in the world do you think you're doing???" she hisses.
+
+*choice
+	#"Look, I don't know you well yet, so I was just making sure you were really doing what you claimed to be doing."
+		*goto suspicions
+	#"I was just looking for my own place to shake my lilypad."
+		*goto looklily
+	#Stammer
+		*goto stammer
+	
+*label suspicions
+*set tamara_respect %+20
+"It wasn't just an excuse to watch me make water?" Tamara asks, her eyes narrowed suspiciously.
+
+"No, of course not!" you say.
+
+"Then... I guess I'll let you off the hook this one time," she says. "I'd have done the same thing, but if you do it again, I'll show you no mercy."
+
+*goto camp
+
+*label looklily
+"Oh my gods," Tamara cries. "Do you really expect me to believe that? Look, you and I have a professional relationship, so I expect there to be NO funny business between us. Understand?"
+
+She puts something she was holding back into her belt pouch and stomps off, making as much noise as a normal person stomping around in the woods. I guess when she's mad, she no longer uses her thieves step.
+
+*goto peeupslope
+
+*label stammer
+*set had_pro_talk true
+"I thought so," Tamara says. "You men are all alike. Look, you and I have a professional relationship, so I expect there to be NO funny business between us. Understand?"
+
+She puts something she was holding back into her belt pouch and stomps off, making as much noise as a normal person stomping around in the woods. I guess when she's mad, she no longer uses her thieves step.
+
+*label peeupslope
+She's heading up the slope of the foothill, so you assume she's resuming the journey.
+
+*choice
+	#Catch up with her and apologize.
+		*goto catchupa
+	#Catch up but say nothing.
+		*goto catchupn
+	#Follow from a distance.
+		*goto follow
+	
+*label catchupa
+*set tamara_respect %+10
+You hurry to catch up.
+
+"I'm sorry, Tamara," you say. "It won't happen again."
+
+Tamara's face softens, and she smiles. "Oh, it's all right," she says. "I'm not a priss like I'm sure your princess is going to be. Just don't do it again, or I'll cut something off."
+
+*goto camp
+
+*label catchupn
+As soon as you're in range, Tamara slaps you on the cheek.
+
+"That's for trying to spy on a lady," she says.
+
+*choice
+	#Slap her back
+		*goto slap
+	#Do nothing
+		*goto noslap
+	
+*label slap
+*set tamara_respect %-20
+Tamara's face becomes a mixture of disbelief and fury.
+
+"How dare you!" she cries. "That's it. We're done. You go rescue your princess by yourself."
+
+She stalks off into the woods.
+
+*choice
+	#Catch up to her.
+		*goto slapcatchup
+	#Good riddance.
+		*goto slapbye
+	
+*label slapcatchup
+You quickly catch up to Tamara, but she refuses to acknowledge you and continues to stomp her way through the forest.
+
+*choice
+	#Apologize.
+		*goto slapapol
+	#Say nothing. Just continue to follow her.
+		*goto slapnothing
+	
+*label slapapol
+"What part of 'we're done,' don't you understand?" Tamara spats. "Stop following me or face my wrath!"
+
+*choice
+	#Stop following.
+		*goto slapbye
+	#Keep apologizing.
+		*goto slapkeepapol
+	
+*label slapkeepapol
+*set tamara_respect %+20
+Finally Tamara stops walking, but she still doesn't acknowledge you or your apologetic words. Instead, she just stares at the ground, shaking with anger.
+
+It takes a long time, but it seems she finally calms down.
+
+"Okay," she says. "Let's forget this ever happened. We need to work together on our assault on DragonKeep, and that's the only reason you're not dead right now."
+
+She holds out her hand.
+
+"Shake it before I change my mind."
+
+*fake_choice
+	#Shake it.
+		
+Tamara smiles and even seems to almost giggle now, as if now that it's over, the whole incident seems silly to her. She shakes her head, rolling her eyes.
+
+"Come on. We've wasted enough time, and if the dragon didn't know we were here before, it does now."
+
+You ask her if this changes things.
+
+"Yes, but it's not enough for us to abort the endeavor," she replies. "I know what I'm doing."
+
+*goto camp
+		
+*label slapnothing
+"Why are you following me!" Tamara cries and slaps you again. She grips you by the shoulders and shakes you, overcome with rage, and slaps you again. She stares into your eyes, utterly consumed with the emotions roiling in her body, not knowing what to do with them, and then she kisses you. Hard. Her hands snake around you and pull you into a bone-crushing embrace, and her pelvis is pressing hard into yours.
+
+*choice
+	#Kiss her back.
+		*goto slapkiss
+	#Push her away.
+		*goto slappush
+	
+*label slapkiss
+You wrap your arms around Tamara just as passionately, returning her kiss with equal intensity.
+
+She moans as her kisses come fast and hard, but then suddenly she pushes you away, making you both fall backward a few steps.
+
+"No," she says, panting to catch her breath. "We mustn't. We're here for one reason only, and that's the dragon."
+
+*choice
+	#Agree.
+		You know it's for the best. She's here to rob the beast, and your quest is to rescue Princess Elsbeth. To get involved romantically would complicate matters too much.
+		
+		You nod reluctantly, and silently the two of you resume your journey, neither speaking for a long time.
+		
+		*goto camp
+	#Ask why you can't have a relationship and continue your quest at the same time.
+		"Because," Tamara says, "My aid to you extends only to the point of our entrance into the lair. After that, we part ways, each left to their own fate. I still think you're going to die in your foolish quest, and even if you succeed, having the princess, you'll have no more need of me."
+		
+		Chastened by her frank honesty, you can do nothing other than nod in silent acknowledgment of her hard truths. Silently, the two of you resume your journey, neither speaking for a long time.
+		
+		*goto camp
+	
+*label slappush
+"What are you doing, Tamara?" you cry, startled by her sudden, amorous transformation.
+
+Your push causes her to take a few step back, and when she recovers her balance, she smiles disdainfully.
+
+"You weak man," she sneers. "Am I too much woman for you?"
+
+*choice
+	#Be reasonable: Tell her that's not it. You're just trying to maintain a professional relationship.
+		*goto slapreasonable
+	#Get angry: Tell her no one calls you weak and gets away with it.
+		*goto slapweak
+	#Change your mind: Tell her she's not too much woman and kiss her.
+		*goto slapkiss2
+	
+*label slapreasonable
+Tamara tosses her head to one side disdainfully. "That's a noble idea," she says, "But I still think you're weak."
+
+She turns and starts walking away.
+
+"Come on," she says. "The dragon won't wait forever."
+
+*goto camp
+
+*label slapweak
+[This option is yet to be written.]
+
+*label slapkiss2
+[This option is yet to be written.]
+
+*label slapbye
+[This option is yet to be written.]
+
+*label noslap
+[This option is yet to be written.]
+
+*label follow
+[This option is yet to be written.]
+
+*label gotcha
+[This option is yet to be written.]
+
+*label headback
+[This option is yet to be written.]
+
+*label keepwatching
+In a few moments, Tamara stands and begins returning the way she came, adjusting the pouch on her belt while she walks, seeming completely oblivious to your presence. She's coming right towards you.
+
+*choice
+	#OH NO, why didn't you realize this would happen??? Hide!
+		*goto hidecloser
+	#Show yourself
+		*goto show
+	
+*label hidecloser
+You try to hide, but it's no use. Tamara sees you, and you cringe, ready for a tongue-lashing or even a blow. 
+
+"What did you see!" she demands.
+
+*choice
+	#Tell her you saw nothing, the trees were in the way.
+		*goto sawtrees
+	#Tell her you saw her beautiful body.
+		*goto sawbody
+
+*label sawtrees
+*label sawbody
+"But nothing more?" Gabriella questions, her eyes narrowed suspiciously.
+
+*choice
+	#"Nothing more."
+		*goto sawnothingmore
+	#"What were you doing there?"
+		*goto peesuspicious
+	
+
+*label sawnothingmore
+"Why did you follow me when I told you to stay put?" she asks, obviously very angry with you. "Can't a lady make water in peace?"
+
+*choice
+	#Apologize
+		*goto peeapologize
+	#Tell her it's been a long time since you've been with a woman, and even a glimpse of her peeing was too hard to resist.
+		*goto resistpee
+	#Tell her you just met her, so you needed to make sure she wasn't up to anything suspicious.
+		*goto peesuspicious
+	
+*label peeapologize
+"That's it?" Gabriella asks in disbelief. "You hide to watch me pee and think just an apology is good enough?"
+
+Gabriella stares at you for a long time, thinking. Finally, she seems to have come to a decision.
+	
+"All right," she says. "I'll let you off the hook this one time, but if you ever do anything like that again, I'll cut something off."
+	
+*goto peeresume
+
+*label bow
+
+
+*label promisenotbow
+
+
+*label refuseapologetic
+
+
+*label refuseangrily
+
+
+*label peepartways
+
+
+*label whatgems
+
+
+*label resistpee
+"Men are all alike," Gabriella says, shaking her head. "I was kinda liking you before, was even gonna make a pass at you in a bit, but now, no way. No nookie for you ever!"
+
+*goto peeresume
+	
+*label peesuspicious	
+
+	
+label keepwatching
+You can't see much from this distance, but it seems like she really might just be "shaking the dew off her lily pad." 
+
+In a short while, you see her stand and pull her breaches back on. She refastens her belt, taking her time, totally oblivious of your presence. Then she starts heading back and is coming right towards you. 
+
+*choice
+	#OH NO, why didn't you realize this would happen??? Hide!
+		*goto hide
+	#Show yourself
+		*goto show
+	
+*label hide
+
+
+*label show
+
+
+*label peeresume
+She walks past you, resuming the journey, and you walk in silence for about an hour, making slow progress through the thick forest foliage.
+
+*goto camp
+
+*label waitpee
+*if with_tamara
+	You wait, and you wait. It always seems a long time when you're waiting.
+
+	Finally, she returns, sees you, and says, "Good. I'm glad you didn't follow me in there to rape me when I had my pants down."
+
+	She smiles at her joke, and you realize it's the first time you've seen her smile. She's pretty when she does that, but the smile's woefully shortlived.
+	
+	*goto_scene oldman
+*else
+	You decide to wait for Tamara, though you're not sure why. Maybe it's the fact that she really might be able to help you on your quest or maybe it's just the vague possibility you might get lucky. It's certainly not her charming personality.
+	
+	In a few minutes, she finally comes back.
+	
+	"Hey, you're still here," she says. "Does that mean we're traveling together now?"
+	
+	*fake_choice
+		#"Yeah, I guess..."
+	*gosub_scene agreement
+	*goto_scene oldman
+
+*label camp
+*comment It's not the campsite anymore, so should change the label
+*goto_scene oldman
